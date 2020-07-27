@@ -42,7 +42,7 @@ extra:
 # Software Repository
 # TODO Update links and repos
 repo_name: Consensys/Tessera
-repo_url: https://github.com/Consensys/Tessera
+repo_url: https://github.com/jpmorganchase/tessera
 
 theme:
   name: material
@@ -67,7 +67,8 @@ nav:
          - Hashicorp Vault: HowTo/Configure/KeyVault/Hashicorp-Vault.md
          - AWS Secrets Manager: HowTo/Configure/KeyVault/AWS-Secrets-Manager.md
          - Azure Key Vault: HowTo/Configure/KeyVault/Azure-Key-Vault.md
-    - Override configuration file: HowTo/Override-config.md
+      - Override configuration file: HowTo/Configure/Override-config.md
+    - Migrate from Constellation: HowTo/MigrateFromConstellation.md
   - Concepts:
     - Transaction manager: Concepts/Transaction-manager.md
     - Enclave: Concepts/Enclave.md

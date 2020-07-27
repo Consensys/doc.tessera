@@ -7,14 +7,12 @@ description: Tessera is an open-source private transaction manager developed und
 ## What is Tessera?
 
 Orion is an open-source private transaction manager developed under the Apache 2.0 license and written in Java. 
-The primary application of Tessera is as the private transaction manager for [ConsenSys GoQuorum](TODO - add link).
+The primary application of Tessera is as the private transaction manager for [ConsenSys GoQuorum](https://docs.goquorum.consensys.net).
 
 ## Is Tessera part of ConsenSys Quorum? 
 
-Yes. [ConsenSys Quorum](TODO - add link ) is the complete open source blockchain layer. [Contact us](TODO - add link)
-to discuss on-demand or regular support for ConsenSys Quorum.  
-
-<TODO - add image when available> 
+Yes. [ConsenSys Quorum](https://consensys.net/quorum/developers) is the complete open source blockchain
+layer with enterprise support available from ConsenSys.
 
 ## What can you do with Tessera?
 

@@ -1,6 +1,7 @@
+---
 title: Tessera Private Transaction Manager
 description: Tessera is an open-source private transaction manager developed under the Apache 2.0 license and written in Java. 
-<!--- END of page meta data -->
+---
 
 # Tessera Private Transaction Manager
 
@@ -23,5 +24,3 @@ Tessera:
 * Self manages and discovers all nodes in the Orion network.
 
 * Provides an API for communicating between Tessera nodes and an API for communicating with GoQuorum.
-
-

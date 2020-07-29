@@ -4,10 +4,10 @@ use with Tessera.  These utilites are included in the Tessera project and are av
 
 A full migration workflow would be as follows:
 
-1. Shut down the Constellation/GoQuorum nodes
+1. Shut down the Constellation and GoQuorum nodes
 2. Perform [database migration](#data-migration)
 3. Perform [configuration migration](#configuration-migration)
-4. Start Tessera/GoQuorum nodes
+4. Start Tessera and GoQuorum nodes
 
 
 ## Data Migration

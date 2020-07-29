@@ -99,7 +99,7 @@ To make running the utility commands simpler, you can first create an `alias`:
 alias tessera-config-migration="java -jar /path/to/tessera/config-migration/target/config-migration-${version}-cli.jar"
 ```
 
-Most of the Constellation configuration command line parameters are supported.  For details of the Constellation configuration see the [Constellation documentation](../../Constellation/Constellation).
+Most of the Constellation configuration command line parameters are supported.
 
 To see the CLI help which provides details on overriding specific configuration items from a `.toml` file, run:
 ```

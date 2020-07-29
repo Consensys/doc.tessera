@@ -6,13 +6,13 @@ description: Configure Tessera
 
 A `.json` file including required configuration details must be provided using the `-configfile` command-line property when starting Tessera.
 
-Many configuration options can be overridden using the command-line.  See the [Using CLI to override config](../Using%20CLI%20to%20override%20config) page for more information.
+Many configuration options can be overridden using the command-line.  See the [Using CLI to override config](Override-config.md) page for more information.
 
 ## Configuration options
 The configuration options are explained in more detail in this section.  Configuration options that require more than a brief explanation are covered in separate pages.
 
 ### Cryptographic Keys
-See [Keys page](../Keys).
+See [Keys page](Keys.md).
 
 ### Whitelist
 If set to true, the `peers` list will be used as the whitelisted urls for the Tessera node:
@@ -84,7 +84,6 @@ If the database password is not wrapped inside `ENC()`, Tessera will simply trea
 ---
 
 ### Server
-> **For Tessera versions prior to 0.8:** See [Legacy Server Settings](../Legacy%20server%20settings).
 
 To allow for a greater level of control, Tessera's API has been separated into distinct groups.  Each group is only accessible over a specific server type.  Tessera can be started with different combinations of these servers depending on the functionality required.  This is defined in the configuration and determines the APIs that are available and how they are accessed.
  

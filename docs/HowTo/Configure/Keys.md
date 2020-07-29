@@ -11,7 +11,7 @@ description: Configure keys
 
 Tessera uses cryptographic keys to provide transaction privacy.  
 
-You can use existing private/public key pairs as well as use Tessera to generate new key pairs for you.  See [Generating & securing keys](../../Tessera%20Services/Keys/Keys) for more info.
+You can use existing private/public key pairs as well as use Tessera to generate new key pairs for you.  See [Generating & securing keys](../Generate-keys.md) for more info.
 
 ```json tab="v0.10.3 onwards"
 "keys": {
@@ -350,7 +350,7 @@ Tessera requires TLS certificates and keys to be stored in `.jks` Java keystore 
 * `HASHICORP_CLIENT_TRUSTSTORE_PWD` 
 
 !!! info
-    If using a Hashicorp Vault additional environment variables must be set and a version 2 K/V secret engine must be enabled.  For more information see [Setting up a Hashicorp Vault](../../Tessera%20Services/Keys/Setting%20up%20a%20Hashicorp%20Vault).
+    If using a Hashicorp Vault additional environment variables must be set and a version 2 K/V secret engine must be enabled.  For more information see [Setting up a Hashicorp Vault](KeyVault/Hashicorp-Vault.md).
 
 ### AWS Secrets Manager key pairs
 The keys in the pair are stored as secrets in the _AWS Secrets Manager_.  This requires providing the secret IDs for both keys.  The endpoint is optional as the _AWS SDK_ can fallback to its inbuilt property retrieval chain (e.g. using the environment variable `AWS_REGION` or `~/.aws/config` file - see [the AWS docs](https://docs.aws.amazon.com/sdk-for-java/v2/developer-guide/credentials.html) for similar behaviour explained in the context of credentials):
@@ -380,7 +380,7 @@ This example configuration will retrieve the secrets `secretIdPub` and `secretId
     A `Credential should be scoped to a valid region` error when starting means that the region specified in the `endpoint` differs from the region the AWS SDK has retrieved from its [property retrieval chain](https://docs.aws.amazon.com/sdk-for-java/v2/developer-guide/credentials.html).  This can be resolved by setting the `AWS_REGION` environment variable to the same region as defined in the `endpoint`.
 
 !!! info
-    Environment variables must be set if using an _AWS Secrets Manager_, for more information see [Setting up an AWS Secrets Manager](../../Tessera%20Services/Keys/Setting%20up%20an%20AWS%20Secrets%20Manager)
+    Environment variables must be set if using an _AWS Secrets Manager_, for more information see [Setting up an AWS Secrets Manager](KeyVault/AWS-Secrets-Manager.md)
 
 ## Providing key passwords at runtime
 Tessera will start a CLI password prompt if it has incomplete password data for its locked keys.  This prompt can be used to provide the required passwords for each key without having to provide them in the configfile itself.  
@@ -435,4 +435,4 @@ request: adminhost:port/config/keypairs
 ]
 ```
 
-The corresponding server must be configured in the node's configuration file, as described in [Configuration Overview](../Configuration%20Overview).
+The corresponding server must be configured in the node's configuration file, as described in [Configuration Overview](Tessera.md).

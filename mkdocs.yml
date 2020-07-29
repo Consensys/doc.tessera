@@ -17,8 +17,8 @@ site_url: https://docs.tessera.consensys.net/
 site_description: --Description--
 site_author: Tessera community
 # TODO Update
-copyright: Tessera and its documentation are licensed under LGPL-3.0 License /
-  This <a href="https://readthedocs.org/">Readthedocs.org</a> documentation is maintained with love by <a href="https://consensys.net/">Consensys</a>.
+copyright: Tessera and its documentation are licensed under TBD License /
+  This documentation is maintained by <a href="https://consensys.net/">ConsenSys</a>.
 
 #extra project info and template customisation
 extra:
@@ -29,9 +29,12 @@ extra:
     You can switch to stable version using the version box at screen bottom.'
   support:
     # TODO Update links
-    gitter: https://gitter.im/PegaSysEng/Tessera
-    email: support@pegasys.tech
-    pegasys_website: https://consensys.net/
+    company: ConsenSys
+    tool: Discord
+    faq: https://consensys.net/quorum/faq
+    channel: https://gitter.im/PegaSysEng/Tessera
+    email: quorum@consensys.net
+    website: https://consensys.net/
     issues: https://github.com/PegaSysEng/doc.tessera/issues
   google:
     # TODO Update codes
@@ -46,7 +49,7 @@ repo_url: https://github.com/jpmorganchase/tessera
 
 theme:
   name: material
-  custom_dir: common/custom_theme
+  custom_dir: override/custom_theme
   font:
     text: 'Roboto'
     code: 'Roboto Mono'

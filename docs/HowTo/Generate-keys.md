@@ -36,7 +36,7 @@ tessera -keygen -keygenvaulttype AZURE -keygenvaulturl <url> -filename id1,id2
 ```
 
 !!! warning
-    If saving new keys with the same ID as keys that already exist in the vault, the existing keys will be replaced by the newer version.  When doing this, make sure to [specify the correct secret version in your Tessera configuration](../../../Configuration/Keys/#azure-key-vault-key-pairs) 
+    If saving new keys with the same ID as keys that already exist in the vault, the existing keys will be replaced by the newer version.  When doing this, make sure to [specify the correct secret version in your Tessera configuration](Configure/Keys.md#azure-key-vault-key-pairs). 
 
 !!! note
     Environment variables must be set if using an Azure Key Vault, for more information see [Setting up an Azure key vault](../Setting%20up%20an%20Azure%20Key%20Vault)
@@ -61,10 +61,10 @@ tessera -keygen -keygenvaulttype HASHICORP -keygenvaulturl <url> \
 ```
 
 !!! warning 
-    Saving a new key pair to an existing secret will overwrite the values stored at that secret.  Previous versions of secrets may be retained and be retrievable by Tessera depending on how the K/V secrets engine is configured.  When doing this, make sure to [specify the correct secret version in your Tessera configuration](../../../Configuration/Keys/#hashicorp-vault-key-pairs)
+    Saving a new key pair to an existing secret will overwrite the values stored at that secret.  Previous versions of secrets may be retained and be retrievable by Tessera depending on how the K/V secrets engine is configured.  When doing this, make sure to [specify the correct secret version in your Tessera configuration](Configure/Keys.md#hashicorp-vault-key-pairs). 
 
 !!! note
-    Environment variables must be set if using a Hashicorp Vault, and a version 2 K/V secret engine must be enabled.  For more information see [Setting up a Hashicorp Vault](../Setting%20up%20a%20Hashicorp%20Vault)
+    Environment variables must be set if using a Hashicorp Vault, and a version 2 K/V secret engine must be enabled.  For more information see [Setting up a Hashicorp Vault](Configure/KeyVault/Hashicorp-Vault.md)
     
     
 ## AWS Secrets Manager-stored keys
@@ -81,7 +81,7 @@ tessera -keygen -keygenvaulttype AWS -keygenvaulturl <url> -filename id1,id2
 ```
 
 !!! note
-    Environment variables must be set if using an AWS Secrets Manager, for more information see [Setting up an AWS Secrets Manager](../Setting%20up%20an%20AWS%20Secrets%20Manager)
+    Environment variables must be set if using an AWS Secrets Manager, for more information see [Setting up an AWS Secrets Manager](Configure/KeyVault/AWS-Secrets-Manager.md)
 
 ## Updating a configfile with newly generated keys 
 Any newly generated keys must be added to a Tessera `.json` configfile.  Often it is easiest to do this manually.  
@@ -163,7 +163,7 @@ The following steps detail the process of password-protecting a private key:
 ## Using alternative curve key types
 By default the `-keygen` and `-updatepassword` commands generate and update [NaCl](https://nacl.cr.yp.to/) compatible keys.  
 
-As of Tessera v0.10.2, the `--encryptor.type=EC` CLI option can be provided to generate/update keys of different types.  See [encryptor config](../../../Configuration/Configuration Overview/#encryptor-supporting-alternative-curves-in-tessera) for more details.
+As of Tessera v0.10.2, the `--encryptor.type=EC` CLI option can be provided to generate/update keys of different types.  See [encryptor config](Configure/Tessera.md#alternative-cryptographic-elliptic-curves) for more details.
 
 ## Rotation
 Tessera is built to support rotation trivially, by allowing counterparties to advertise multiple keys at once. The tooling to make rotation seamless and automatic is on our Roadmap.

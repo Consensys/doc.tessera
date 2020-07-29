@@ -39,7 +39,7 @@ tessera -keygen -keygenvaulttype AZURE -keygenvaulturl <url> -filename id1,id2
     If saving new keys with the same ID as keys that already exist in the vault, the existing keys will be replaced by the newer version.  When doing this, make sure to [specify the correct secret version in your Tessera configuration](Configure/Keys.md#azure-key-vault-key-pairs). 
 
 !!! note
-    Environment variables must be set if using an Azure Key Vault, for more information see [Setting up an Azure key vault](../Setting%20up%20an%20Azure%20Key%20Vault)
+    Environment variables must be set if using an Azure Key Vault, for more information see [Setting up an Azure key vault](Configure/KeyVault/Azure-Key-Vault.md)
 
 ## Hashicorp Vault-stored keys
 Generate a key pair and save to a Hashicorp Vault at the secret path `secretEngine/secretName` with IDs `publicKey` and `privateKey`:

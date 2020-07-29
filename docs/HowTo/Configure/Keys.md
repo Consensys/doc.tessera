@@ -290,7 +290,7 @@ The keys in the pair are stored as secrets in an Azure Key Vault.  This requires
 This example configuration will retrieve the specified versions of the secrets `Key` and `Pub` from the key vault with DNS name `https://my-vault.vault.azure.net`.    If no version is specified then the latest version of the secret is retrieved.
 
 !!! info
-    Environment variables must be set if using an Azure Key Vault, for more information see [Setting up an Azure Key Vault](../../Tessera%20Services/Keys/Setting%20up%20an%20Azure%20Key%20Vault)
+    Environment variables must be set if using an Azure Key Vault, for more information see [Setting up an Azure Key Vault](KeyVault/Azure-Key-Vault.md)
 
 ### Hashicorp Vault key pairs
 The keys in the pair are stored as a secret in a Hashicorp Vault.  Additional configuration can also be provided if the Vault is configured to use TLS and if the AppRole auth method is being used at a different path to the default (`approle`):

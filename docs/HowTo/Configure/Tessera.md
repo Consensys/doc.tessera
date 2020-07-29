@@ -91,7 +91,7 @@ The possible server types are:
 
 - `P2P` - Tessera uses this server to communicate with other Transaction Managers (the URI for this server can be shared with other nodes to be used in their `peer` list - see below)
 - `Q2T` - This server is used for communications between Tessera and its corresponding Quorum node
-- `ENCLAVE` - If using a remote enclave, this defines the connection details for the remote enclave server (see the [Enclave docs](../../Tessera%20Services/Enclave#types-of-enclave) for more info) 
+- `ENCLAVE` - If using a remote enclave, this defines the connection details for the remote enclave server (see the [Enclave docs](../../Concepts/Enclave.md) for more info) 
 - `ThirdParty` - This server is used to expose certain Transaction Manager functionality to external services such as Quorum.js
 
 The servers to be started are provided as a list:
@@ -183,7 +183,7 @@ Unix Socket:
 ```
 
 ### TLS/SSL: server sub-config
-See [TLS/SSL](../TLS) page.
+See [TLS/SSL](TLS.md) page.
 
 ### CORS: server sub-config
 For the ThirdParty server type it may be relevant to configure CORS.

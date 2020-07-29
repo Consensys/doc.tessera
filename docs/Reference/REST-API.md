@@ -25,4 +25,4 @@ The Tessera REST API consists of:
     - Check if the local Tessera node is running
     - Send and receive details of private transactions
 
-Refer to the [Swagger reference for endpoint documentation](https://jpmorganchase.github.io/tessera-swagger/index.html#/Third%20party%20APIs/getPartyInfoKeys). 
+Refer to the [Swagger reference for endpoint documentation](https://jpmorganchase.github.io/tessera-swagger/index.html#/). 

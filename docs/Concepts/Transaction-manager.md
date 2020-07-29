@@ -23,4 +23,4 @@ does not contain access to any private keys and does not perform and encryption/
 
 The transaction manager is the touch point for Quorum to distribute it's private payloads. It connects directly to Quorum and interfaces with the attached enclave, as well as with other transaction managers.
 
-![Quorum Tessera Privacy Flow](https://github.com/jpmorganchase/tessera/raw/master/Tessera%20Privacy%20flow.jpeg)
+![Quorum Tessera Privacy Flow](https://docs.goquorum.consensys.net/Concepts/Privacy/PrivateTransactionLifecycle/)

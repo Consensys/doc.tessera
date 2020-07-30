@@ -8,10 +8,8 @@ The private/public key pairs used by Tessera can be [stored](../Keys.md) in and 
 
 This page details how to set up and configure an Azure Key Vault for use with Tessera.
 
-The Microsoft Azure documentation provides much of the information needed to get started.  The information in this section has been taken from the following pages of the Azure documentation:
-
-* https://docs.microsoft.com/en-us/azure/key-vault/quick-create-node
-* https://docs.microsoft.com/en-us/azure/key-vault/key-vault-get-started
+The Microsoft Azure documentation provides much of the information needed to get started.  The information
+in this section has been taken from the [Azure documentation](https://docs.microsoft.com/en-us/azure/key-vault).
 
 ## Creating the vault
 The Key Vault can be created using either the [Azure Web Portal](https://azure.microsoft.com/en-gb/features/azure-portal/) or the [Azure CLI](https://docs.microsoft.com/en-gb/cli/azure/install-azure-cli?view=azure-cli-latest).

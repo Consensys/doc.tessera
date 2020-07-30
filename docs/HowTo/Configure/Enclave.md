@@ -6,7 +6,7 @@ description: Configuring Tessera enclave
  
 The configuration for the [Tessera enclave](../../Concepts/Enclave.md) is designed to be the same as for the Transaction Manager.
  
- ### Local Enclave Setup
+### Local Enclave Setup
  The following should be present in the TM configuration:
  ```json
  {

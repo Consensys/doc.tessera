@@ -22,7 +22,7 @@
 
 <!-- Logo -->
 {% if config.theme.logo %}
-<img src="{{ config.theme.logo | url }}" alt="logo" id="header-logo"/>
+<img src="{{ config.theme.logo | url }}" alt="{{ config.site_name }}" id="header-logo"/>
 {% else %}
 {% set icon = config.theme.icon.logo or "material/library" %}
 {% include ".icons/" ~ icon ~ ".svg" %}

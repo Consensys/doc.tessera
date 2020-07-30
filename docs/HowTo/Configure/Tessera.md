@@ -281,7 +281,7 @@ The NaCl primitives provide good security and speed and should be sufficient in 
 
 However, the Enclave also supports the JCA (Java Cryptography Architecture) framework.  Supplying a compatible JCA provider (e.g. [SunEC provider](https://docs.oracle.com/javase/8/docs/technotes/guides/security/SunProviders.html#SunEC)) and the necessary Tessera config allows the NaCl primitives to be replaced with alternative curves and symmetric ciphers.
 
-The same Enclave encryption process as described in [Lifecycle of a private transaction](../../../Lifecycle-of-a-private-transaction) is used regardless of whether the NaCl or JCA Encryptor are configured.
+The same Enclave encryption process as described in [Lifecycle of a private transaction](https://docs.goquorum.consensys.net/Concepts/Privacy/PrivateTransactionLifecycle/) is used regardless of whether the NaCl or JCA Encryptor are configured.
 
 This is a feature introduced in Tessera v0.10.2.  Providing no `encryptor` configuration means the default NaCl encryptor is used.
 

@@ -21,7 +21,7 @@ The configuration for the [Tessera enclave](../../Concepts/Enclave.md) is design
  }
  ```
   
- ### Remote Enclave Setup
+### Remote Enclave Setup
  The configuration required is minimal, and only requires the following from the main config (as an example):
  
  In the remote Enclave config:

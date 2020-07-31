@@ -14,10 +14,10 @@
 site_name: "Tessera"
 site_url: https://docs.tessera.consensys.net/
 # TODO Update
-site_description: --Description--
+site_description: Tessera is an open-source private transaction manager developed under the Apache 2.0 license and written in Java.
 site_author: Tessera community
-# TODO Update
-copyright: Tessera and its documentation are licensed under TBD License /
+# TODO Update license if needed
+copyright: Tessera is licensed under Apache 2.0 License /
   This documentation is maintained by <a href="https://consensys.net/">ConsenSys</a>.
 
 #extra project info and template customisation
@@ -28,18 +28,16 @@ extra:
     some displayed features may not be available in the stable release.
     You can switch to stable version using the version box at screen bottom.'
   support:
-    # TODO Update links
     company: ConsenSys
-    tool: Discord
+    tool: Slack
     faq: https://consensys.net/quorum/faq
-    channel: https://gitter.im/PegaSysEng/Tessera
+    channel: https://93ecjxb0d3.execute-api.us-east-1.amazonaws.com/Express/
     email: quorum@consensys.net
     website: https://consensys.net/
     issues: https://github.com/PegaSysEng/doc.tessera/issues
   google:
-    # TODO Update codes
-    site_verification: 'TODO'
-    tag_manager: 'TODO'
+    site_verification: 'L2MgMm7Gj-fEOH3SkAuP4eXOY7rIShFFbTI5RktuA0'
+    tag_manager: 'GTM-N4VQ49H'
 
 
 # Software Repository

@@ -62,4 +62,4 @@ The configuration for the [Tessera enclave](../../Concepts/Enclave.md) is design
  
  If using the all-in-one Transaction Manager jar, all the relevant files are included, and just the configuration needs to be updated for the TM.
  
- If using the individual "make-your-own" jars, you will need the "core Transaction Manager" jar along with the "Enclave clients" jar, and add them both to the classpath as such: `java -cp /path/to/transactionmanager.jar:/path/to/enclave-client.jar com.quroum.tessera.Launcher -configfile /path/to/config.json`
+ If using the individual "make-your-own" jars, you will need the "core Transaction Manager" jar along with the "Enclave clients" jar, and add them both to the classpath as such: `java -cp /path/to/transactionmanager.jar:/path/to/enclave-client.jar com.quorum.tessera.Launcher -configfile /path/to/config.json`

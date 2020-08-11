@@ -32,33 +32,33 @@
     <div class="md-header-nav__title" data-md-component="header-title">
       {% if config.site_name == page.title %}
       <div class="md-header-nav__ellipsis md-ellipsis">
-        {{ config.site_name }}
+        {% if not config.extra.logo_is_text %}{{ config.site_name }}{% endif %}
       </div>
       {% else %}
       <div class="md-header-nav__ellipsis">
-        {% if config.site_name == page.title %}
-        {{ config.site_name }}
-        {% else %}
-        <span class="md-header-nav__topic md-ellipsis">
-              {{ config.site_name }}
+          {% if config.site_name == page.title %}
+        {% if not config.extra.logo_is_text %}{{ config.site_name }}{% endif %}
+          {% else %}
+            <span class="md-header-nav__topic md-ellipsis">
+              {% if not config.extra.logo_is_text %}{{ config.site_name }}{% endif %}
             </span>
-        <span class="md-header-nav__topic md-ellipsis">
+            <span class="md-header-nav__topic md-ellipsis">
               {{ page.title }}
             </span>
-        {% endif %}
+          {% endif %}
       </div>
       {% endif %}
     </div>
     {% if "search" in config["plugins"] %}
-    <label class="md-header-nav__button md-icon" for="__search">
-      {% include ".icons/material/magnify.svg" %}
-    </label>
-    {% include "partials/search.html" %}
+      <label class="md-header-nav__button md-icon" for="__search">
+        {% include ".icons/material/magnify.svg" %}
+      </label>
+      {% include "partials/search.html" %}
     {% endif %}
     {% if config.repo_url %}
-    <div class="md-header-nav__source">
-      {% include "partials/source.html" %}
-    </div>
+      <div class="md-header-nav__source">
+        {% include "partials/source.html" %}
+      </div>
     {% endif %}
   </nav>
 </header>

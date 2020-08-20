@@ -35,6 +35,7 @@ extra:
     channel: https://93ecjxb0d3.execute-api.us-east-1.amazonaws.com/Express/
     email: quorum@consensys.net
     website: https://consensys.net/
+    lead_gen: https://consensys.net/quorum/contact-us
     issues: https://github.com/PegaSysEng/doc.tessera/issues
   google:
     site_verification: 'L2MgMm7Gj-fEOH3SkAuP4eXOY7rIShFFbTI5RktuA0'

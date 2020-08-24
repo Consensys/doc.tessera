@@ -123,7 +123,7 @@ To allow Tessera to communicate with a TLS-secured InfluxDB, `sslConfig` must be
 ```
 where `truststore.jks` is a Java KeyStore format file containing the trusted certificates for the Tessera client (e.g. the certificate of the CA used to create the InfluxDB certificate).  
 
-If securing the keystore with a password this password should be provided.  Passwords can be provided either in the config (e.g. `clientTrustStorePassword`) or as environment variables (using `environmentVariablePrefix` and setting `<PREFIX>_TESSERA_CLIENT_TRUSTSTORE_PWD`).  The [TLS Config](../../Configuration/TLS) documentation explains this in more detail.
+If securing the keystore with a password this password should be provided.  Passwords can be provided either in the config (e.g. `clientTrustStorePassword`) or as environment variables (using `environmentVariablePrefix` and setting `<PREFIX>_TESSERA_CLIENT_TRUSTSTORE_PWD`).  The [TLS Config](../Configure/TLS.md) documentation explains this in more detail.
 
 As Tessera expects 2-way TLS, a `.jks` file for the `clientKeyStore` must also be provided.  This will not be used so can simply be set as the truststore.
 

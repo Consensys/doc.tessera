@@ -72,7 +72,7 @@ nav:
          - Azure Key Vault: HowTo/Configure/KeyVault/Azure-Key-Vault.md
       - Override configuration file: HowTo/Configure/Override-config.md
     - Use:
-      - Monitoring: HowTo/Use/Montoring.md
+      - Monitoring: HowTo/Use/Monitoring.md
       - Logging: HowTo/Use/Logging.md
       - Add peer: HowTo/Use/Add-peer.md
     - Migrate from Constellation: HowTo/MigrateFromConstellation.md

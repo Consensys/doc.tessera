@@ -160,7 +160,7 @@ Grafana can be used to create dashboards from data stored in InfluxDB or Prometh
     * Visualization: How to present the data queried, including panel type, axis headings etc.
     
 #### Example dashboard
-[![example-grafana-dashboard.png](../images/tessera/monitoring/example-grafana-dashboard.png)](../images/tessera/monitoring/example-grafana-dashboard.png)
+[![example-grafana-dashboard.png](../../images/tessera/monitoring/example-grafana-dashboard.png)](../../images/tessera/monitoring/example-grafana-dashboard.png)
 
 To create this dashboard, a [7nodes example network](../../../../Getting Started/Quorum-Examples) was started, with each Tessera node configured to store its `P2P` and `Q2T` metrics to the same InfluxDB.  Several runs of the Quorum Acceptance Tests were run against this network to simulate network activity.  
 
@@ -174,38 +174,38 @@ To create a dashboard similar to this:
     1. Add data source
     1. Select the type of DB to connect to (e.g. InfluxDB or Prometheus)
     1. Fill out the form to provide all necessary DB connection information, e.g.: 
-    [![grafana-influxdb-datasource.png](../images/tessera/monitoring/grafana-influxdb-datasource.png)](../images/tessera/monitoring/grafana-influxdb-datasource.png)
+    [![grafana-influxdb-datasource.png](../../images/tessera/monitoring/grafana-influxdb-datasource.png)](../../images/tessera/monitoring/grafana-influxdb-datasource.png)
 
 1. Create a new dashboard
     1. Hover over the plus icon in the left sidebar
     1. Dashboard
     1. Add Query to configure the first panel
     1. Add Panel in the top-right to add additional panels
-    [![grafana-new-dashboard.png](../images/tessera/monitoring/grafana-new-dashboard.png)](../images/tessera/monitoring/grafana-new-dashboard.png)
+    [![grafana-new-dashboard.png](../../images/tessera/monitoring/grafana-new-dashboard.png)](../../images/tessera/monitoring/grafana-new-dashboard.png)
 
     !!! note
         For each of the following examples, additional options such as titles, axis labels and formatting can be configured by navigating the menus in the left-hand sidebar
     
-        [![grafana-panel-sidebar.png](../images/tessera/monitoring/grafana-panel-sidebar.png)](../images/tessera/monitoring/grafana-panel-sidebar.png)
+        [![grafana-panel-sidebar.png](../../images/tessera/monitoring/grafana-panel-sidebar.png)](../../images/tessera/monitoring/grafana-panel-sidebar.png)
 
 1. Create *sendRaw requests* panel
     1. Select the correct datasource from the *Queries to* dropdown list
     1. Construct the query as shown in the below image.  This retrieves the data for the `sendraw` API from the InfluxDB, finds the sum of the `RequestCount` for this data (i.e. the total number of requests) and groups by `instance` (i.e. each Tessera node).  `time($_interval)` automatically scales the graph resolution for the time range and graph width.
-    [![grafana-send-raw-query.png](../images/tessera/monitoring/grafana-send-raw-query.png)](../images/tessera/monitoring/grafana-send-raw-query.png)
+    [![grafana-send-raw-query.png](../../images/tessera/monitoring/grafana-send-raw-query.png)](../../images/tessera/monitoring/grafana-send-raw-query.png)
 
     This panel shows the number of private payloads sent to Tessera using the `sendraw` API over time.
 
 1. Create *receiveRaw requests* panel
     1. Select the correct datasource from the *Queries to* dropdown list
     1. Construct the query as shown in the below image.  This retrieves the data for the `receiveraw` API from the InfluxDB, finds the sum of the `RequestCount` for this data (i.e. the total number of requests) and groups by `instance` (i.e. each Tessera node).  `time($_interval)` automatically scales the graph resolution for the time range and graph width.
-    [![grafana-receive-raw-query.png](../images/tessera/monitoring/grafana-receive-raw-query.png)](../images/tessera/monitoring/grafana-receive-raw-query.png)
+    [![grafana-receive-raw-query.png](../../images/tessera/monitoring/grafana-receive-raw-query.png)](../../images/tessera/monitoring/grafana-receive-raw-query.png)
 
     This panel shows the number of private payloads retrieved from Tessera using the `receiveraw` API over time.
 
 1. Create *partyinfo request rate (Tessera network health)* panel
     1. Select the correct datasource from the *Queries to* dropdown list
     1. Construct the query as shown in the below image.  This retrieves the data for the `partyinfo` API from the InfluxDB, finds the non-negative derivative of the `RequestCount` for this data and groups by `instance` (i.e. each Tessera node).  `non_negative_derivative(1s)` calculates the per second change in `RequestCount` and ignores negative values that will occur if a node is stopped and restarted.
-    [![grafana-partyinfo-rate.png](../images/tessera/monitoring/grafana-partyinfo-rate.png)](../images/tessera/monitoring/grafana-partyinfo-rate.png)
+    [![grafana-partyinfo-rate.png](../../images/tessera/monitoring/grafana-partyinfo-rate.png)](../../images/tessera/monitoring/grafana-partyinfo-rate.png)
 
     This panel shows the rate of POST requests per second to `partyinfo`. For this network of 7 healthy nodes, this rate fluctuates between 5.5 and 6.5 requests/sec.  At approx 09:37 node 1 was killed and the partyinfo rate across all nodes immediately drops.  This is because they are no longer receiving requests to their `partyinfo` API from node 1.  At 09:41 node 1 is restarted and the rates return to their original values.  
     
@@ -216,7 +216,7 @@ To create a dashboard similar to this:
 1. Create *sendRaw rate* panel
     1. Select the correct datasource from the *Queries to* dropdown list
     1. Construct the query as shown in the below image.  This retrieves the data for the `sendraw` API from the InfluxDB, finds the sum of the `RequestRate` for this data and groups by `instance` (i.e. each Tessera node).  `time($_interval)` automatically scales the graph resolution for the time range and graph width.
-    [![grafana-sendraw-rate-query.png](../images/tessera/monitoring/grafana-sendraw-rate-query.png)](../images/tessera/monitoring/grafana-sendraw-rate-query.png)
+    [![grafana-sendraw-rate-query.png](../../images/tessera/monitoring/grafana-sendraw-rate-query.png)](../../images/tessera/monitoring/grafana-sendraw-rate-query.png)
 
     The POST `sendraw` API is used by Quorum whenever a private transaction is sent using the `eth_sendTransaction` or `personal_sendTransaction` API.  This panel gives a good indication of the private tx throughput in Quorum.  Note that if the `sendraw` API is called by another process, the count will not be a true representation of Quorum traffic.
 

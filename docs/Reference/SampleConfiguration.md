@@ -69,7 +69,13 @@ description: Sample configuration file
         "knownClientsFile": "Path",
         "knownServersFile": "Path"
       },
-      "communicationType": "REST"
+      "communicationType": "REST",
+      "properties": {
+         "partyInfoInterval": "Long",
+         "enclaveKeySyncInterval": "Long",
+         "syncInterval": "Long",
+         "resendWaitTime": "Long"
+      }
     }
   ],
   "peer": [

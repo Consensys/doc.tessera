@@ -71,6 +71,10 @@ nav:
          - AWS Secrets Manager: HowTo/Configure/KeyVault/AWS-Secrets-Manager.md
          - Azure Key Vault: HowTo/Configure/KeyVault/Azure-Key-Vault.md
       - Override configuration file: HowTo/Configure/Override-config.md
+    - Use:
+      - Monitoring: HowTo/Use/Montoring.md
+      - Logging: HowTo/Use/Logging.md
+      - Add peer: HowTo/Use/Add-peer.md
     - Migrate from Constellation: HowTo/MigrateFromConstellation.md
   - Concepts:
     - Transaction manager: Concepts/Transaction-manager.md

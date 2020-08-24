@@ -71,12 +71,17 @@ nav:
          - AWS Secrets Manager: HowTo/Configure/KeyVault/AWS-Secrets-Manager.md
          - Azure Key Vault: HowTo/Configure/KeyVault/Azure-Key-Vault.md
       - Override configuration file: HowTo/Configure/Override-config.md
+    - Use:
+      - Monitoring: HowTo/Use/Monitoring.md
+      - Logging: HowTo/Use/Logging.md
+      - Add peer: HowTo/Use/Add-peer.md
     - Migrate from Constellation: HowTo/MigrateFromConstellation.md
   - Concepts:
     - Transaction manager: Concepts/Transaction-manager.md
     - Enclave: Concepts/Enclave.md
   - Reference:
     - Configuration file: Reference/SampleConfiguration.md
+    - Bootstrap configuration file: Reference/SampleConfiguration.md
     - REST API Methods: Reference/REST-API.md
 
 markdown_extensions:

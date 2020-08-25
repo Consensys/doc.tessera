@@ -10,13 +10,10 @@
 # specific language governing permissions and limitations under the License.
 
 # Project information
-# TODO Update links and repos
 site_name: "Tessera"
 site_url: https://docs.tessera.consensys.net/
-# TODO Update
 site_description: Tessera is an open-source private transaction manager developed under the Apache 2.0 license and written in Java.
 site_author: Tessera community
-# TODO Update license if needed
 copyright: Tessera is licensed under Apache 2.0 License /
   This documentation is maintained by <a href="https://consensys.net/">ConsenSys</a>.
 
@@ -35,21 +32,20 @@ extra:
     channel: https://93ecjxb0d3.execute-api.us-east-1.amazonaws.com/Express/
     email: quorum@consensys.net
     website: https://consensys.net/
-    lead_gen: https://consensys.net/quorum/contact-us
-    issues: https://github.com/PegaSysEng/doc.tessera/issues
+    issues: https://github.com/ConsenSys/tessera/issues
   google:
     site_verification: 'L2MgMm7Gj-fEOH3SkAuP4eXOY7rIShFFbTI5RktuA0'
     tag_manager: 'GTM-N4VQ49H'
+  inverted_logo: 'images/inverted_logo.svg'
 
 
 # Software Repository
-# TODO Update links and repos
-repo_name: Consensys/Tessera
-repo_url: https://github.com/jpmorganchase/tessera
+repo_name: Consensys/tessera
+repo_url: https://github.com/ConsenSys/tessera.git
 
 theme:
   name: material
-  custom_dir: override/custom_theme
+  custom_dir: common/custom_theme
   font:
     text: 'Roboto'
     code: 'Roboto Mono'

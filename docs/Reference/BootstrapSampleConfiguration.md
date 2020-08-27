@@ -1,16 +1,16 @@
----
-description: Sample configuration file  
----
+# Sample configuration for Tessera as bootstrap node 
 
-# Sample Configuration File 
+To start Tesssera as a bootstrap node, use: 
 
-!!! important 
-    The `keys.azureKeyVaultConfig` and `keys.hashicorpKeyVaultConfig` fields are now deprecated.  Instead,
-    the generic `keys.keyVaultConfigs` should be used.  See [Keys Config](../HowTo/Configure/Keys.md) for more info.
+- `bootstrapNode` is added to start Tessera as bootstrap node only with no Quorum connection.
+- `CUSTOM` encryptor type added to integrate third party encryptor implementation.
+
+**Sample:**
 
 ```json
 {
   "useWhiteList": "boolean",
+  "bootstrapNode": "boolean",
   "jdbc": {
     "url": "String",
     "username": "String",
@@ -69,13 +69,7 @@ description: Sample configuration file
         "knownClientsFile": "Path",
         "knownServersFile": "Path"
       },
-      "communicationType": "REST",
-      "properties": {
-         "partyInfoInterval": "Long",
-         "enclaveKeySyncInterval": "Long",
-         "syncInterval": "Long",
-         "resendWaitTime": "Long"
-      }
+      "communicationType": "REST"
     }
   ],
   "peer": [
@@ -133,7 +127,7 @@ description: Sample configuration file
     "enableRemoteKeyValidation": false
   },
   "encryptor": {
-    "type": "Enumeration: NACL, EC",
+    "type": "Enumeration: NACL, EC, CUSTOM",
     "properties":{
       "symmetricCipher":"String (defaults to AES/GCM/NoPadding if type = EC)",
       "ellipticCurve": "String (defaults to secp256r1 if type = EC)", 

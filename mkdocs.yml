@@ -34,10 +34,9 @@ extra:
     website: https://consensys.net/
     issues: https://github.com/ConsenSys/tessera/issues
   google:
-    site_verification: 'L2MgMm7Gj-fEOH3SkAuP4eXOY7rIShFFbTI5RktuA0'
+    site_verification: 'VL2MgMm7Gj-fEOH3SkAuP4eXOY7rIShFFbTI5RktuA0'
     tag_manager: 'GTM-N4VQ49H'
   inverted_logo: 'images/inverted_logo.svg'
-
 
 # Software Repository
 repo_name: Consensys/tessera

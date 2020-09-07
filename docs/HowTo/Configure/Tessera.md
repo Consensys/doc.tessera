@@ -182,7 +182,7 @@ password however this approach is not recommended for production environments.
 
         ```bash
         ./encrypt.sh input=dbpassword password=quorum
-       ```
+        ```
 
     === "Output"
 
@@ -202,10 +202,6 @@ password however this approach is not recommended for production environments.
         ```
 
 1. Place the wrapped output, `ENC(rJ70hNidkrpkTwHoVn2sGSp3h3uBWxjb)`, in the config json file
-
-
-
-
 
 ### InfluxDB Config: server sub-config
 

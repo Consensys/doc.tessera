@@ -83,7 +83,7 @@ these will be included as if you had specified them on the `privateFor` field to
 If set to true, then the Tessera instance functions as a bootstrap for other nodes (and no Q2T entry
 should exist in the serverConfigs):
 
-```
+```json
 "bootstrapNode": true,
 ```
 

@@ -8,13 +8,13 @@ description: Configuring Hashicorp Vault for storing private keys
 
 Generate a key pair and save in new files `new.pub` and `new.key` (will start an interactive prompt to provide passwords):
 
-```
+```bash
 tessera -keygen -filename new
 ```
 
 Multiple key pairs can be generated at the same time by providing a comma-separated list of values:
 
-```
+```bash
 tessera -keygen -filename /path/to/key1,/path/to/key2
 ```
 
@@ -36,14 +36,14 @@ To generate an unlocked key, the following can be used to tell Tessera to not ex
 
 Generate a key pair as secrets with IDs `Pub` and `Key` and save to an Azure Key Vault with DNS name `<url>`:
 
-```
+```bash
 tessera -keygen -keygenvaulttype AZURE -keygenvaulturl <url>
 ```
 
 The `-filename` option can be used to specify alternate IDs.  Multiple key pairs can be generated at
 the same time by providing a comma-separated list of values:
 
-```
+```bash
 tessera -keygen -keygenvaulttype AZURE -keygenvaulturl <url> -filename id1,id2
 ```
 
@@ -118,7 +118,7 @@ Any newly generated keys must be added to a Tessera `.json` configfile.  Often i
 However, the `tessera keygen` `-configfile` option can be used to automatically update a configfile
 after key generation.  This is particularly useful when scripting.
 
-```
+```bash
 tessera -keygen -filename key1 -configfile /path/to/config.json --configout /path/to/new.json --pwdout /path/to/new.pwds
 ```
 
@@ -135,7 +135,7 @@ If the `--configout` and `--pwdout` options are not provided, the updated `.json
     In v0.10.3, this behaviour was removed to ensure clearer distinction of responsibilities between each Tessera command.
     The same behaviour can be achieved in v0.10.3 onwards by running:
 
-    ```
+    ```bash
     tessera keygen ... -output /path/to/new.json
     tessera -configfile /path/to/new.json
     ```
@@ -154,7 +154,7 @@ second is not password secured, the 2nd argument/line must be blank or contain d
 
 Tessera uses Argon2 in the process of encrypting private keys.  By default, Argon2 is configured as follows:
 
-```
+```json
 {
     "variant": "id",
     "memory": 1048576,
@@ -166,7 +166,7 @@ Tessera uses Argon2 in the process of encrypting private keys.  By default, Argo
 The Argon2 configuration can be altered by using the `-keygenconfig` option. Any override file must
 have the same format as the default configuration above and all options must be provided.
 
-```
+```bash
 tessera -keygen -filename /path/to/key1 -keygenconfig /path/to/argonoptions.json
 ```
 
@@ -203,7 +203,7 @@ to allow you to set a new password.
 
 1. Use different Argon2 options from the defaults when updating the password
 
-    ```
+    ```bash
     tessera --keys.keyData.privateKeyPath <path to keyfile> --keys.keyData.config.data.aopts.algorithm <algorithm> --keys.keyData.config.data.aopts.iterations <iterations> --keys.keyData.config.data.aopts.memory <memory> --keys.keyData.config.data.aopts.parallelism <parallelism>
     ```
 

@@ -1,5 +1,5 @@
 ---
-description: Configuring Hashicorp Vault for storing private keys 
+description: Configuring Hashicorp Vault for storing private keys
 ---
 
 # Configuring use of Hashicorp Vault
@@ -17,7 +17,7 @@ When running in production situations it is advised to configure the Vault serve
 
 An example configuration for the Vault listener to use 2-way TLS is shown below.  This can be included as part of the `.hcl` used when starting the Vault server:
 
-```
+```json
 listener "tcp" {
         tls_min_version = "tls12"
         tls_cert_file = "/path/to/server.crt"
@@ -33,9 +33,11 @@ Tessera directly supports the [AppRole](https://www.vaultproject.io/docs/auth/ap
 When using AppRole, Tessera assumes the default auth path to be `approle`, however this value can be overwritten.  See [Keys](../Keys.md) for more information.
 
 ### Policies
+
 To be able to carry out all possible interactions with a Vault, Tessera requires the following policy capabilities: `["create", "update", "read"]`.  A subset of these capabilities can be configured if not all functionality is required.
 
 ### Secret engines
+
 Tessera can read and write keys to the following secret engine type:
 
 - [K/V Version 2](https://www.vaultproject.io/docs/secrets/kv/kv-v2.html)
@@ -43,7 +45,9 @@ Tessera can read and write keys to the following secret engine type:
 The K/V Version 2 secret engine supports versioning of secrets, however only a limited number of versions are retained.  This number can be changed as part of the Vault configuration process.
 
 ## Enabling Tessera to use the vault
+
 ### Environment Variables
+
 If using a Hashicorp Vault, Tessera requires certain environment variables to be set depending on the auth method being used.
 
 - If using the AppRole auth method, set:
@@ -59,4 +63,5 @@ If using a Hashicorp Vault, Tessera requires certain environment variables to be
     If using TLS additional environment variables must be set.  See [Keys](../Keys.md) for more information as well as details of the Tessera configuration required to retrieve keys from a Vault.
 
 ### Dependencies
+
 The Hashicorp dependencies are included in the `tessera-app-<version>-app.jar`.  If using the `tessera-simple-<version>-app.jar` then `hashicorp-key-vault-<version>-all.jar` must be added to the classpath.

@@ -1,8 +1,8 @@
 ---
-description: Overview of Tessera transaction manager 
+description: Overview of Tessera transaction manager
 ---
 
-# Tessara transaction Manager 
+# Tessara transaction Manager
 
 A transaction manager is the central piece in the lifecycle of a private transaction. It interfaces with
 most other parts of the network/infrastructure and manages the lifecycle of private data.
@@ -23,4 +23,5 @@ does not contain access to any private keys and does not perform and encryption/
 
 The transaction manager is the touch point for Quorum to distribute it's private payloads. It connects directly to Quorum and interfaces with the attached enclave, as well as with other transaction managers.
 
-![Quorum Tessera Privacy Flow](https://docs.goquorum.consensys.net/Concepts/Privacy/PrivateTransactionLifecycle/)
+![Quorum Tessera Privacy Flow](https://docs.goquorum.consensys.net/images/TesseraPrivacyFlow.jpeg)
+_Diagram from [Quorum Tessera Privacy Flow](https://docs.goquorum.consensys.net/en/latest/Concepts/Privacy/PrivateTransactionLifecycle/) documentation page._

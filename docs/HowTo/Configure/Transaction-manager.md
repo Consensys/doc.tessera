@@ -1,5 +1,5 @@
 ---
-description: Configure Tessera transaction manager 
+description: Configure Tessera transaction manager
 ---
 
 # Configure Tessera transaction manager
@@ -15,12 +15,13 @@ By default, Tessera uses an H2 file-based database, but any JDBC compatible data
 
 To do this, add the necessary drivers to the classpath, and run the `com.quorum.tessera.Launcher` class, like the following:
 
-```
+```bash
 java -cp some-jdbc-driver.jar:/path/to/tessera-app.jar:. com.quorum.tessera.Launcher
 ```
 
-For example, to use Oracle database: 
-```
+For example, to use Oracle database:
+
+```bash
 java -cp ojdbc7.jar:tessera-app.jar:. com.quorum.tessera.Launcher -configfile config.json
 ```
 
@@ -43,7 +44,7 @@ These must be built from source and can be found inside the `tessera-dist` modul
 
 ## Data recovery
 
-Tessera contains functionality to request transactions from other nodes in the network; this is useful if the database is lost or corrupted somehow. 
+Tessera contains functionality to request transactions from other nodes in the network; this is useful if the database is lost or corrupted somehow.
 However, depending on the size of the network and the number of transactions made between peers, this can put heavy strain on the network resending all the data.
 
 ### How to enable

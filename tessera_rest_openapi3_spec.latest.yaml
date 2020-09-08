@@ -269,7 +269,7 @@ paths:
       parameters:
       - name: c11n-to
         in: header
-        description: Constellation (c11n) encoded sender public key
+        description: Constellation (c11n) encoded recipient public key
         schema:
           type: string
       responses:

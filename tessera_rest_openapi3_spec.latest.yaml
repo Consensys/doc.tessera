@@ -1,0 +1,505 @@
+openapi: 3.0.1
+info:
+  title: Tessera rest
+  version: 0.10.6-SNAPSHOT
+servers:
+- url: http://localhost:8080/
+- url: https://localhost:8080/
+tags:
+- name: Provides access to OpenAPI schema documentation.
+- name: Peer-to-peer APIs
+- name: Third party APIs
+paths:
+  /api:
+    get:
+      tags:
+      - Provides access to OpenAPI schema documentation.
+      operationId: api
+      responses:
+        200:
+          description: Returns JSON or HTML OpenAPI document
+          content: {}
+  /partyinfo:
+    get:
+      tags:
+      - Peer-to-peer APIs
+      summary: Fetch network/peer information
+      operationId: getPartyInfo
+      responses:
+        200:
+          description: Peer/Network information
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PartyInfo'
+    post:
+      tags:
+      - Peer-to-peer APIs
+      summary: Request public key/url of other nodes
+      operationId: partyInfo
+      requestBody:
+        content:
+          application/octet-stream:
+            schema:
+              type: array
+              items:
+                pattern: ^(?:[A-Za-z0-9+/]{4})*(?:[A-Za-z0-9+/]{2}==|[A-Za-z0-9+/]{3}=)?$
+                type: string
+                format: byte
+        required: true
+      responses:
+        200:
+          description: Encoded PartyInfo Data
+          content: {}
+      x-codegen-request-body-name: body
+  /partyinfo/validate:
+    post:
+      tags:
+      - Peer-to-peer APIs
+      summary: Validate the party that tries to send partyinfo
+      operationId: validate
+      responses:
+        default:
+          description: successful operation
+          content: {}
+  /push:
+    post:
+      tags:
+      - Peer-to-peer APIs
+      summary: Transmit encrypted payload between P2PRestApp Nodes
+      operationId: push
+      requestBody:
+        description: Key data to be stored.
+        content:
+          application/octet-stream:
+            schema:
+              type: array
+              items:
+                pattern: ^(?:[A-Za-z0-9+/]{4})*(?:[A-Za-z0-9+/]{2}==|[A-Za-z0-9+/]{3}=)?$
+                type: string
+                format: byte
+        required: true
+      responses:
+        201:
+          description: Key created status
+          content: {}
+        500:
+          description: General error
+          content: {}
+      x-codegen-request-body-name: payload
+  /resend:
+    post:
+      tags:
+      - Peer-to-peer APIs
+      summary: Resend transactions for given key or message hash/recipient
+      operationId: resend
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ResendRequest'
+        required: true
+      responses:
+        200:
+          description: Encoded payload when TYPE is INDIVIDUAL
+          content: {}
+        500:
+          description: General error
+          content: {}
+      x-codegen-request-body-name: resendRequest
+  /partyinfo/keys:
+    get:
+      tags:
+      - Third party APIs
+      summary: Fetch network/peer public keys
+      operationId: getPartyInfoKeys
+      responses:
+        200:
+          description: Peer/Network public keys
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  keys:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        key:
+                          type: string
+  /keys:
+    get:
+      tags:
+      - Third party APIs
+      summary: Fetch local public keys managed by the enclave
+      operationId: getPublicKeys
+      responses:
+        200:
+          description: Managed public keys
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  keys:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        key:
+                          type: string
+  /storeraw:
+    post:
+      tags:
+      - Third party APIs
+      summary: Store raw private transaction payload
+      operationId: store
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/StoreRawRequest'
+        required: true
+      responses:
+        200:
+          description: Store response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/StoreRawResponse'
+        400:
+          description: For unknown sender
+          content: {}
+      x-codegen-request-body-name: storeRawRequest
+  /delete:
+    post:
+      summary: 'Deprecated: Replaced by /transaction/{hash} DELETE HTTP method'
+      operationId: delete
+      requestBody:
+        description: Key data to be deleted
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DeleteRequest'
+        required: true
+      responses:
+        200:
+          description: Status message
+          content: {}
+        404:
+          description: If the entity doesn't exist
+          content: {}
+      deprecated: true
+      x-codegen-request-body-name: deleteRequest
+  /receive:
+    get:
+      operationId: receive
+      responses:
+        default:
+          description: successful operation
+          content: {}
+  /receiveraw:
+    get:
+      summary: Submit keys to retrieve payload and decrypt it
+      operationId: receiveRaw
+      parameters:
+      - name: c11n-key
+        in: header
+        description: Encoded transaction hash
+        required: true
+        schema:
+          type: string
+      - name: c11n-to
+        in: header
+        description: Encoded Recipient Public Key
+        schema:
+          type: string
+      responses:
+        200:
+          description: Raw payload
+          content: {}
+  /send:
+    post:
+      summary: Send private transaction payload
+      operationId: send
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/SendRequest'
+        required: true
+      responses:
+        200:
+          description: Send response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SendResponse'
+        400:
+          description: For unknown and unknown keys
+          content: {}
+      x-codegen-request-body-name: sendRequest
+  /sendraw:
+    post:
+      summary: Send private transaction payload
+      operationId: sendRaw
+      parameters:
+      - name: c11n-from
+        in: header
+        schema:
+          type: string
+      - name: c11n-to
+        in: header
+        schema:
+          type: string
+      responses:
+        200:
+          description: Encoded Key
+          content: {}
+        500:
+          description: Unknown server error
+          content: {}
+  /sendsignedtx:
+    post:
+      summary: Send private raw transaction payload
+      operationId: sendSignedTransaction
+      parameters:
+      - name: c11n-to
+        in: header
+        schema:
+          type: string
+      responses:
+        200:
+          description: Send response
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/SendResponse'
+        400:
+          description: For unknown and unknown keys
+          content: {}
+  /transaction/{hash}:
+    get:
+      summary: Returns decrypted payload back to Quorum
+      operationId: transactionByHash
+      parameters:
+      - name: hash
+        in: path
+        description: Encoded hash used to decrypt the payload
+        required: true
+        schema:
+          type: string
+      - name: to
+        in: query
+        description: Encoded recipient key
+        schema:
+          type: string
+      responses:
+        200:
+          description: Receive Response object
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ReceiveResponse'
+    delete:
+      summary: Delete single transaction from P2PRestApp node
+      operationId: deleteTransactionByKey
+      parameters:
+      - name: hash
+        in: path
+        description: Encoded hash
+        required: true
+        schema:
+          type: string
+      responses:
+        204:
+          description: Successful deletion
+          content: {}
+        404:
+          description: If the entity doesn't exist
+          content: {}
+  /transaction/{key}/isSender:
+    get:
+      summary: Determine if local enclave is the sender of transaction
+      operationId: isSender
+      parameters:
+      - name: key
+        in: path
+        description: Encoded hash
+        required: true
+        schema:
+          type: string
+      responses:
+        default:
+          description: successful operation
+          content: {}
+  /transaction/{key}/participants:
+    get:
+      summary: Retrieve a list of participants for a transaction
+      operationId: getParticipants
+      parameters:
+      - name: key
+        in: path
+        description: Encoded hash
+        required: true
+        schema:
+          type: string
+      responses:
+        default:
+          description: successful operation
+          content: {}
+  /upcheck:
+    get:
+      summary: Check if local P2PRestApp Node is up
+      operationId: upCheck
+      responses:
+        200:
+          description: I'm up!
+          content:
+            text/plain:
+              schema:
+                type: string
+  /version:
+    get:
+      summary: Request current version of P2PRestApp
+      operationId: getVersion
+      responses:
+        200:
+          description: 'Current application version '
+          content:
+            text/plain:
+              schema:
+                type: string
+components:
+  schemas:
+    Party:
+      type: object
+      properties:
+        url:
+          type: string
+        lastContacted:
+          type: integer
+          format: int64
+    PartyInfo:
+      type: object
+      properties:
+        url:
+          type: string
+        recipients:
+          uniqueItems: true
+          type: array
+          items:
+            $ref: '#/components/schemas/Recipient'
+        parties:
+          uniqueItems: true
+          type: array
+          items:
+            $ref: '#/components/schemas/Party'
+    PublicKey:
+      type: object
+      properties:
+        keyBytes:
+          type: array
+          items:
+            pattern: ^(?:[A-Za-z0-9+/]{4})*(?:[A-Za-z0-9+/]{2}==|[A-Za-z0-9+/]{3}=)?$
+            type: string
+            format: byte
+    Recipient:
+      type: object
+      properties:
+        key:
+          $ref: '#/components/schemas/PublicKey'
+        url:
+          type: string
+    ResendRequest:
+      type: object
+      properties:
+        type:
+          type: string
+          description: Resend type INDIVIDUAL or ALL, to resend a single or all transactions
+          enum:
+          - ALL
+          - INDIVIDUAL
+        publicKey:
+          type: string
+          description: The recipient public key to resend transactions for
+        key:
+          type: string
+          description: Base64 encoded transaction hash
+    DeleteRequest:
+      required:
+      - Encoded transaction hash
+      type: object
+      properties:
+        Encoded transaction hash:
+          maxLength: 2147483647
+          minLength: 1
+          type: string
+    ReceiveResponse:
+      type: object
+      properties:
+        payload:
+          type: array
+          description: Encode response servicing receive requests
+          items:
+            pattern: ^(?:[A-Za-z0-9+/]{4})*(?:[A-Za-z0-9+/]{2}==|[A-Za-z0-9+/]{3}=)?$
+            type: string
+            format: byte
+    SendRequest:
+      required:
+      - payload
+      type: object
+      properties:
+        payload:
+          maxItems: 2147483647
+          minItems: 1
+          type: array
+          description: Encrypted payload to send to other parties.
+          items:
+            pattern: ^(?:[A-Za-z0-9+/]{4})*(?:[A-Za-z0-9+/]{2}==|[A-Za-z0-9+/]{3}=)?$
+            type: string
+            format: byte
+        from:
+          type: string
+          description: Sender public key
+        to:
+          type: array
+          description: Recipient public keys
+          items:
+            type: string
+    SendResponse:
+      type: object
+      properties:
+        key:
+          type: string
+          description: Base64 encoded transaction hash
+    StoreRawRequest:
+      required:
+      - payload
+      type: object
+      properties:
+        payload:
+          maxItems: 2147483647
+          minItems: 1
+          type: array
+          items:
+            pattern: ^(?:[A-Za-z0-9+/]{4})*(?:[A-Za-z0-9+/]{2}==|[A-Za-z0-9+/]{3}=)?$
+            type: string
+            format: byte
+        from:
+          type: array
+          description: Sender public key
+          items:
+            pattern: ^(?:[A-Za-z0-9+/]{4})*(?:[A-Za-z0-9+/]{2}==|[A-Za-z0-9+/]{3}=)?$
+            type: string
+            format: byte
+    StoreRawResponse:
+      type: object
+      properties:
+        key:
+          type: array
+          items:
+            pattern: ^(?:[A-Za-z0-9+/]{4})*(?:[A-Za-z0-9+/]{2}==|[A-Za-z0-9+/]{3}=)?$
+            type: string
+            format: byte

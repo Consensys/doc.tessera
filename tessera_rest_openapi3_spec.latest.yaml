@@ -206,13 +206,13 @@ paths:
       parameters:
       - name: c11n-key
         in: header
-        description: Encoded transaction hash
+        description: Constellation (c11n) encoded transaction hash
         required: true
         schema:
           type: string
       - name: c11n-to
         in: header
-        description: Encoded Recipient Public Key
+        description: Constellation (c11n) encoded recipient public key
         schema:
           type: string
       responses:
@@ -247,10 +247,12 @@ paths:
       parameters:
       - name: c11n-from
         in: header
+        description: Constellation (c11n) encoded sender public key
         schema:
           type: string
       - name: c11n-to
         in: header
+        description: Constellation (c11n) recipient public key
         schema:
           type: string
       responses:
@@ -267,6 +269,7 @@ paths:
       parameters:
       - name: c11n-to
         in: header
+        description: Constellation (c11n) encoded recipient public key
         schema:
           type: string
       responses:

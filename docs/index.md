@@ -21,6 +21,6 @@ Tessera:
 
 * Generates and maintains private/public keypairs.  
 
-* Self manages and discovers all nodes in the Orion network.
+* Self manages and discovers all nodes in the network.
 
 * Provides an API for communicating between Tessera nodes and an API for communicating with GoQuorum.

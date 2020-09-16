@@ -1,7 +1,7 @@
 <!-- # TODO Update links and repos-->
 # Tessera documentation [![Documentation Status](https://readthedocs.com/projects/pegasys-docgoquorum/badge/?version=latest&token=a1f890355e4d92ccefe20aeb7afd368862104746db05c15573295986f7628127)](https://pegasys-docgoquorum.readthedocs-hosted.com/en/latest/?badge=latest)
 
-Tessera is a Consensys Quorum Go client
+Tessera is a ConsenSys Quorum Private Transaction Manager
 
 The software sources are hosted in [Tessera] repository
 

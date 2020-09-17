@@ -6,15 +6,18 @@ description: REST API overview
 
 The Tessera REST API consists of:
 
-* Admin APIs
-    Use this API to:
-    - Access information about the Tessera node
-    - Make changes to the configuration of the Tessera node
-
 * Peer-to-peer APIs
    Tessera nodes communicate with each other using this API to:
    - Perform discovery
    - Send and receive encrypted payloads
+
+!!! note
+
+    From version 0.11.0, for every client side request i.e., `/push` and `/partyinfo`, Tessera will now include a parameter which is a list of API versions that it
+    supports into the http header called `supportedApiVersions`. Release 0.11.0 defines the first API version and during the partyinfo exchange these values will be
+    stored against the node in the `NetworkStore` so that a Tessera node at any time will be aware of the versions that its peers currently support. This can later
+    be used to ensure that a remote peer is actively supporting a certain feature before forwarding a transaction. Refer [API Reference site]
+    (https://consensys.github.io/doc.tessera/) for more information.
 
 * Third party APIs
    Tessera nodes communicate with third parties using this API to:

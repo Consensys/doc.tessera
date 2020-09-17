@@ -2,7 +2,7 @@
 description: Overview of Tessera transaction manager
 ---
 
-# Tessara transaction Manager
+# Tessera transaction Manager
 
 A transaction manager is the central piece in the lifecycle of a private transaction. It interfaces with
 most other parts of the network/infrastructure and manages the lifecycle of private data.

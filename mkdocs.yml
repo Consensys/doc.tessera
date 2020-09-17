@@ -69,11 +69,11 @@ nav:
     - Use:
       - Monitoring: HowTo/Use/Monitoring.md
       - Logging: HowTo/Use/Logging.md
-      - Add peer: HowTo/Use/Add-peer.md
     - Migrate from Constellation: HowTo/MigrateFromConstellation.md
   - Concepts:
     - Transaction manager: Concepts/Transaction-manager.md
     - Enclave: Concepts/Enclave.md
+    - Node Discovery: Concepts/p2p-discovery.md
   - Reference:
     - Configuration file: Reference/SampleConfiguration.md
     - Bootstrap configuration file: Reference/SampleConfiguration.md

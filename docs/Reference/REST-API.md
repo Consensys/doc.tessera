@@ -11,7 +11,7 @@ The Tessera REST API consists of:
    - Perform discovery
    - Send and receive encrypted payloads
 
-!!! important "Defining First API Version"
+!!! Warning "Defining First API Version"
 
     From version 0.11.0, for every client side request i.e., `/push` and `/partyinfo`, Tessera will now include a parameter which is a list of API versions that it
     supports into the http header called `supportedApiVersions`. Release 0.11.0 defines the first API version and during the partyinfo exchange these values will be

@@ -23,7 +23,7 @@ paths:
     get:
       tags:
       - Peer-to-peer APIs
-      summary: Fetch network/peer information
+      summary: Fetch 'active' network/peer information
       operationId: getPartyInfo
       responses:
         200:
@@ -35,8 +35,13 @@ paths:
     post:
       tags:
       - Peer-to-peer APIs
-      summary: Request public key/url of other nodes
+      summary: Broadcast own public key(s) and url of 'active nodes' to other nodes
       operationId: partyInfo
+      parameters:
+        - in: header
+          name: tesseraSupportedApiVersions
+          schema:
+            type: string
       requestBody:
         content:
           application/octet-stream:
@@ -68,6 +73,11 @@ paths:
       - Peer-to-peer APIs
       summary: Transmit encrypted payload between P2PRestApp Nodes
       operationId: push
+      parameters:
+        - in: header
+          name: tesseraSupportedApiVersions
+          schema:
+            type: string
       requestBody:
         description: Key data to be stored.
         content:

@@ -4,14 +4,14 @@ description: REST API overview
 
 # REST API
 
-The Tessera REST API consists of:
+The Tessera REST API consists of 3 parts.
 
 ## Peer-to-peer APIs
 
-   Tessera nodes communicate with each other using this API to:
+Tessera nodes communicate with each other using this API to:
 
-   - Perform discovery
-   - Send and receive encrypted payloads
+- Perform discovery
+- Send and receive encrypted payloads
 
 !!! Warning "Defining First API Version"
 
@@ -27,16 +27,16 @@ The Tessera REST API consists of:
 
 ## Third party APIs
 
-   Tessera nodes communicate with third parties using this API to:
+Tessera nodes communicate with third parties using this API to:
 
-   - Store encrypted payloads for external applications
+- Store encrypted payloads for external applications
 
 ## GoQuorum to Tessera APIs (default)
 
-    GoQuorum uses this API to:
+GoQuorum uses this API to:
 
-    - Check if the local Tessera node is running
-    - Send and receive details of private transactions
+- Check if the local Tessera node is running
+- Send and receive details of private transactions
 
-    This API is described in the OpenAPIv3 format available on
-    [Tessera API reference site](https://consensys.github.io/doc.tessera/).
+This API is described in the OpenAPIv3 format available on
+[Tessera API reference site](https://consensys.github.io/doc.tessera/).

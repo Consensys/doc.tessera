@@ -7,7 +7,7 @@ description: Overview of Tessera transaction manager
 A transaction manager is the central piece in the lifecycle of a private transaction. It interfaces with
 most other parts of the network/infrastructure and manages the lifecycle of private data.
 
-### What does a transaction manager do?
+## What does a transaction manager do?
 
 The transaction manager's duties include:
 
@@ -16,12 +16,12 @@ The transaction manager's duties include:
 - storing and retrieving saved data from the database
 - providing the gateway for Quorum to distribute private information
 
-The Transaction Manager, which handles peer management and database access, as well as GoQuorum communication,
+The Transaction Manager, which handles peer management, database access and GoQuorum communication,
 does not contain access to any private keys and does not perform and encryption/decryption, greatly reducing the impact an attack can have.
 
-### Where does the transaction manager sit in the private transaction flow?
+## Where does the transaction manager sit in the private transaction flow?
 
-The transaction manager is the touch point for Quorum to distribute its private payloads. It connects directly to Quorum and interfaces with the attached enclave, as well as with other transaction managers.
+The transaction manager is the touch point for Quorum to distribute its private payloads. It connects directly to Quorum and interfaces with the attached enclave, and with other transaction managers.
 
 ![Quorum Tessera Privacy Flow](https://docs.goquorum.consensys.net/images/TesseraPrivacyFlow.jpeg)
 _Diagram from [Quorum Tessera Privacy Flow](https://docs.goquorum.consensys.net/en/latest/Concepts/Privacy/PrivateTransactionLifecycle/) documentation page._

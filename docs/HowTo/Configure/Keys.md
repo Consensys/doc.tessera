@@ -11,8 +11,13 @@ description: Configure keys
 
 Tessera uses cryptographic keys to provide transaction privacy.
 
-You can use existing private/public key pairs as well as use Tessera to generate new key pairs for you.
-See [Generating & securing keys](../Generate-keys.md) for more info.
+!!!tip
+
+    You can use existing private/public key pairs and use Tessera to generate new key pairs for you.
+
+    All these keys can be used at the same time in Tessera inline or in a vault.
+
+    See [Generating & securing keys](../Generate-keys.md) for more info.
 
 === "v0.10.3 onwards"
 
@@ -111,7 +116,8 @@ The key pair data is provided in plain text in the configfile.
     configuration options available as the private key is exposed in the configuration file.
     The other options available are more secure and recommended for production environments.
 
-The key pair data is provided in plain text in the configfile.  The plain text private key is provided in a `config` json object:
+The key pair data is provided in plain text in the configfile.
+The plain text private key is provided in a `config` json object:
 
 ```json
 "keys": {
@@ -131,7 +137,10 @@ The key pair data is provided in plain text in the configfile.  The plain text p
 
 #### Protected
 
-The public key is provided in plain text.  The private key must be password-protected using Argon2.
+The public key is provided in plain text.
+
+The private key must be password-protected using Argon2.
+
 The corresponding encrypted data is provided in the `config` json object.
 
 === "v0.10.2 onwards"
@@ -194,9 +203,9 @@ Passwords can be provided in multiple ways:
 
 |        | Description                                                                                                                                                                                                          |
 |--------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| File   | `"passwordFile": "/path/to/pwds.txt"`<br/>Must contain only one password per line.  Empty lines should be used for unlocked keys.  Passwords must be provided in the order that key pairs are defined in the config. |
-| Direct | `"passwords": ["pwd1", "pwd2", ...]`<br/>Empty strings should be used for unlocked keys.  Passwords must be provided in the order that key pairs are defined in the config.  Not recommended for production use.     |
-| CLI    | Tessera will prompt on the CLI for the passwords of any encrypted keys that have not had passwords provided in the config.  This process only needs to be performed once, when starting the node.                    |
+| File   | `"passwordFile": "/path/to/pwds.txt"`<br/>Must contain only one password per line. Empty lines should be used for unlocked keys asswords must be provided in the order that key pairs are defined in the config. |
+| Direct | `"passwords": ["pwd1", "pwd2", ...]`<br/>Empty strings should be used for unlocked keys. Passwords must be provided in the order that key pairs are defined in the config. Not recommended for production use.     |
+| CLI    | Tessera will prompt on the CLI for the passwords of any encrypted keys that have not had passwords provided in the config. This process only needs to be performed once, when starting the node.                    |
 
 ### Filesystem key pairs
 
@@ -274,9 +283,9 @@ Passwords can be provided in multiple ways:
 
 |        | Description                                                                                                                                                                                                          |
 |--------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| File   | `"passwordFile": "/path/to/pwds.txt"`<br/>Must contain only one password per line.  Empty lines should be used for unlocked keys.  Passwords must be provided in the order that key pairs are defined in the config. |
-| Direct | `"passwords": ["pwd1", "pwd2", ...]`<br/>Empty strings should be used for unlocked keys.  Passwords must be provided in the order that key pairs are defined in the config.  Not recommended for production use.     |
-| CLI    | Tessera will prompt on the CLI for the passwords of any encrypted keys that have not had passwords provided in the config.  This process only needs to be performed once, when starting the node.                    |
+| File   | `"passwordFile": "/path/to/pwds.txt"`<br/>Must contain only one password per line. Empty lines should be used for unlocked keys. Passwords must be provided in the order that key pairs are defined in the config. |
+| Direct | `"passwords": ["pwd1", "pwd2", ...]`<br/>Empty strings should be used for unlocked keys. Passwords must be provided in the order that key pairs are defined in the config. Not recommended for production use.     |
+| CLI    | Tessera will prompt on the CLI for the passwords of any encrypted keys that have not had passwords provided in the config. This process only needs to be performed once, when starting the node.                    |
 
 ### Azure Key Vault key pairs
 
@@ -334,7 +343,7 @@ If no version is specified then the latest version of the secret is retrieved.
 
 ### Hashicorp Vault key pairs
 
-The keys in the pair are stored as a secret in a Hashicorp Vault.  Additional configuration can also
+The keys in the pair are stored as a secret in a Hashicorp Vault. Additional configuration can also
 be provided if the Vault is configured to use TLS and if the AppRole auth method is being used at a
 different path to the default (`approle`):
 
@@ -400,14 +409,15 @@ If the `.jks` files are password protected then the following environment variab
 
 !!! info
     If using a Hashicorp Vault additional environment variables must be set and a version 2 K/V
-    secret engine must be enabled.  For more information see [Setting up a Hashicorp Vault](KeyVault/Hashicorp-Vault.md).
+    secret engine must be enabled. For more information see [Setting up a Hashicorp Vault](KeyVault/Hashicorp-Vault.md).
 
 ### AWS Secrets Manager key pairs
 
-The keys in the pair are stored as secrets in the _AWS Secrets Manager_.  This requires providing
-the secret IDs for both keys.  The endpoint is optional as the _AWS SDK_ can fallback to its inbuilt
-property retrieval chain (e.g. using the environment variable `AWS_REGION` or `~/.aws/config` file
-- see [the AWS docs](https://docs.aws.amazon.com/sdk-for-java/v2/developer-guide/credentials.html)
+The keys in the pair are stored as secrets in the _AWS Secrets Manager_. This requires providing
+the secret IDs for both keys. The endpoint is optional as the _AWS SDK_ can fallback to its inbuilt
+property retrieval chain (for example using the environment variable `AWS_REGION` or `~/.aws/config` file.
+
+See [the AWS docs](https://docs.aws.amazon.com/sdk-for-java/v2/developer-guide/credentials.html)
 for similar behaviour explained in the context of credentials):
 
 === "v0.10.3 onwards"

@@ -1,6 +1,6 @@
-# Sample configuration for Tessera as bootstrap node 
+# Sample configuration for Tessera as bootstrap node
 
-To start Tesssera as a bootstrap node, use: 
+To start Tesssera as a bootstrap node, use:
 
 - `bootstrapNode` is added to start Tessera as bootstrap node only with no Quorum connection.
 - `CUSTOM` encryptor type added to integrate third party encryptor implementation.
@@ -82,7 +82,7 @@ To start Tesssera as a bootstrap node, use:
     "keyVaultConfigs": [
       {
         "keyVaultType": "Enumeration: AZURE, HASHICORP, AWS",
-        "properties": "Map[string]string" 
+        "properties": "Map[string]string"
       }
     ],
     "keyData": [
@@ -130,7 +130,7 @@ To start Tesssera as a bootstrap node, use:
     "type": "Enumeration: NACL, EC, CUSTOM",
     "properties":{
       "symmetricCipher":"String (defaults to AES/GCM/NoPadding if type = EC)",
-      "ellipticCurve": "String (defaults to secp256r1 if type = EC)", 
+      "ellipticCurve": "String (defaults to secp256r1 if type = EC)",
       "nonceLength": "String (defaults to 24 if type = EC)",
       "sharedKeyLength": "String (defaults to 32 if type = EC)"
     }

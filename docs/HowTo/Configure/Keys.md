@@ -11,8 +11,13 @@ description: Configure keys
 
 Tessera uses cryptographic keys to provide transaction privacy.
 
-You can use existing private/public key pairs or use Tessera to generate new key pairs for you.
-See [Generating & securing keys](../Generate-keys.md) for more info.
+!!!tip
+
+    You can use existing private/public key pairs and use Tessera to generate new key pairs for you.
+
+    All these keys can be used at the same time in Tessera inline or in a vault.
+
+    See [Generating & securing keys](../Generate-keys.md) for more info.
 
 === "v0.10.3 onwards"
 

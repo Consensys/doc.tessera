@@ -30,7 +30,7 @@ listener "tcp" {
 
 ### Auth methods
 
-Tessera directly supports the [AppRole](https://www.vaultproject.io/docs/auth/approle.html) auth method. If required, other auth methods can be used by logging in outside of Tessera (e.g. using the HTTP API) and providing the resulting vault token to Tessera ee the *Enabling Tessera to use the vault* section below for more information.
+Tessera directly supports the [AppRole](https://www.vaultproject.io/docs/auth/approle.html) auth method. If required, other auth methods can be used by logging in outside of Tessera (for instance using the HTTP API) and providing the resulting vault token to Tessera. See the *Enabling Tessera to use the vault* section below for more information.
 
 When using AppRole, Tessera assumes the default auth path to be `approle`, however this value can be overwritten. See [Keys](../Keys.md) for more information.
 
@@ -44,7 +44,7 @@ Tessera can read and write keys to the following secret engine type:
 
 - [K/V Version 2](https://www.vaultproject.io/docs/secrets/kv/kv-v2.html)
 
-The K/V Version 2 secret engine supports versioning of secrets, however only a limited number of versions are retained his number can be changed as part of the Vault configuration process.
+The K/V Version 2 secret engine supports multiple versions of secrets, however only a limited number of versions are retained. This number can be changed as part of the Vault configuration process.
 
 ## Enabling Tessera to use the vault
 
@@ -62,7 +62,7 @@ If using a Hashicorp Vault, Tessera requires certain environment variables to be
     - `HASHICORP_TOKEN`
 
 !!! note
-    If using TLS additional environment variables must be set ee [Keys](../Keys.md) for more information as well as details of the Tessera configuration required to retrieve keys from a Vault.
+    If using TLS additional environment variables must be set. See [Keys](../Keys.md) for more information and details of the Tessera configuration required to retrieve keys from a Vault.
 
 ### Dependencies
 

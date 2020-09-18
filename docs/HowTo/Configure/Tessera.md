@@ -29,7 +29,7 @@ NaCl provides public-key authenticated encryption by using `curve25519xsalsa20po
 The NaCl primitives provide good security and speed and should be sufficient in most circumstances.
 
 However, the Enclave also supports the JCA (Java Cryptography Architecture) framework. Supplying a
-compatible JCA provider (e.g. [SunEC provider](https://docs.oracle.com/javase/8/docs/technotes/guides/security/SunProviders.html#SunEC))
+compatible JCA provider (for example [SunEC provider](https://docs.oracle.com/javase/8/docs/technotes/guides/security/SunProviders.html#SunEC))
 and the necessary Tessera config allows the NaCl primitives to be replaced with alternative curves and symmetric ciphers.
 
 The same Enclave encryption process as described in
@@ -61,7 +61,7 @@ Field|Default Value|Description
 `ellipticCurve`|`secp256r1`|The elliptic curve to use. See [SunEC provider](https://docs.oracle.com/javase/8/docs/technotes/guides/security/SunProviders.html#SunEC) for other options. Depending on the JCE provider you are using there may be additional curves available.
 `symmetricCipher`|`AES/GCM/NoPadding`|The symmetric cipher to use for encrypting data (GCM IS MANDATORY as an initialisation vector is supplied during encryption).
 `nonceLength`|`24`|The nonce length (used as the initialization vector - IV - for symmetric encryption).
-`sharedKeyLength`|`32`|The key length used for symmetric encryption (keep in mind the key derivation operation always produces 32 byte keys - so the encryption algorithm must support it).
+`sharedKeyLength`|`32`|The key length used for symmetric encryption (keep in mind the key derivation operation always produces 32 byte keys and that the encryption algorithm must support it).
 
 If `type` is set to `CUSTOM`, it provides support for external encryptor implementation to integrate
 with Tessera. Our pilot third party integration is with **Unbound Tech's "Unbound Key Control" (UKC)**
@@ -87,7 +87,7 @@ should exist in the serverConfigs):
 "bootstrapNode": true,
 ```
 
-### CORS: server sub-config
+### CORS: Server sub-config
 
 For the ThirdParty server type it may be relevant to configure CORS.
 
@@ -146,7 +146,7 @@ communicated with; any peers notified by other nodes will be ignored. This allow
 #### Obfuscate database password in config file
 
 Certain entries in the Tessera config file must be obfuscated in order to prevent any attempts from
-attackers to gain access to critical parts of the application (e.g. database).
+attackers to gain access to critical parts of the application (for example the database).
 The database password can be encrypted using [Jasypt](http://www.jasypt.org) to avoid it being
 exposed as plain text in the configuration file.
 
@@ -203,7 +203,7 @@ password however this approach is not recommended for production environments.
 
 1. Place the wrapped output, `ENC(rJ70hNidkrpkTwHoVn2sGSp3h3uBWxjb)`, in the config json file
 
-### InfluxDB Config: server sub-config
+### InfluxDB Config: Server sub-config
 
 Configuration details to allow Tessera to record monitoring data to a running InfluxDB instance.
 
@@ -377,7 +377,7 @@ The servers to be started are provided as a list:
     }
     ```
 
-### TLS/SSL: server sub-config
+### TLS/SSL: Server sub-config
 
 See [TLS/SSL](TLS.md) page.
 

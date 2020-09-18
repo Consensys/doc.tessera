@@ -31,7 +31,7 @@ Some DDL scripts have been provided for more popular databases, but feel free to
 
 ## Configuration
 
-The configuration for the transaction manager is described in the [configuration overview](../../Configuration/Configuration Overview), as well as [sample configurations](../../Configuration/Sample Configuration).
+The configuration for the transaction manager is described in the [configuration overview](../../Configuration/Configuration Overview), and [sample configurations](../../Configuration/Sample Configuration).
 
 ## Flavours of transaction manager
 
@@ -52,7 +52,7 @@ However, depending on the size of the network and the number of transactions mad
 
 ### How to enable
 
-The data recovery mechanism is intended to be a "switch-on" feature as a startup command. The times when you will need this will be known prior to starting the application (usually after a disaster event). When starting Tessera, simply add the following property to the startup command: `-Dspring.profiles.active=enable-sync-poller`. This should go before any jar or class definitions, e.g. `java -Dspring.profiles.active=enable-sync-poller -jar tessera.jar -configfile config.json`.
+The data recovery mechanism is intended to be a "switch-on" feature as a startup command. The times when you will need this will be known prior to starting the application (usually after a disaster event). When starting Tessera, simply add the following property to the startup command: `-Dspring.profiles.active=enable-sync-poller`. This should go before any jar or class definitions, for example `java -Dspring.profiles.active=enable-sync-poller -jar tessera.jar -configfile config.json`.
 
 ### How it works
 

@@ -59,7 +59,7 @@ See the [InfluxDB documentation](https://docs.influxdata.com/influxdb) for detai
 !!! info
     The InfluxDB HTTP API can be called directly as an alternative to using the `influx` CLI
 
-Each Tessera server type (i.e. `P2P`, `Q2T`, `ADMIN`, `THIRDPARTY`, `ENCLAVE`) can be configured to store API metrics in an InfluxDB. These servers can be configured to store metrics to the same DB or separate ones. Not all servers need to be configured to store metrics.
+Each Tessera server type (for example `P2P`, `Q2T`, `ADMIN`, `THIRDPARTY`, `ENCLAVE`) can be configured to store API metrics in an InfluxDB. These servers can be configured to store metrics to the same DB or separate ones. Not all servers need to be configured to store metrics.
 
 To configure a server to use an InfluxDB, add `influxConfig` to the server config. For example:
 
@@ -136,9 +136,9 @@ To allow Tessera to communicate with a TLS-secured InfluxDB, `sslConfig` must be
 }
 ```
 
-where `truststore.jks` is a Java KeyStore format file containing the trusted certificates for the Tessera client (e.g. the certificate of the CA used to create the InfluxDB certificate).
+where `truststore.jks` is a Java KeyStore format file containing the trusted certificates for the Tessera client (for example the certificate of the CA used to create the InfluxDB certificate).
 
-If securing the keystore with a password this password should be provided. Passwords can be provided either in the config (e.g. `clientTrustStorePassword`) or as environment variables (using `environmentVariablePrefix` and setting `<PREFIX>_TESSERA_CLIENT_TRUSTSTORE_PWD`). The [TLS Config](../Configure/TLS.md) documentation explains this in more detail.
+If securing the keystore with a password this password should be provided. Passwords can be provided either in the config (for example `clientTrustStorePassword`) or as environment variables (using `environmentVariablePrefix` and setting `<PREFIX>_TESSERA_CLIENT_TRUSTSTORE_PWD`). The [TLS Config](../Configure/TLS.md) documentation explains this in more detail.
 
 As Tessera expects 2-way TLS, a `.jks` file for the `clientKeyStore` must also be provided. This will not be used so can simply be set as the truststore.
 
@@ -194,7 +194,7 @@ To create a dashboard similar to this:
     1. Hover over the cog icon in the left sidebar
     1. Data Sources
     1. Add data source
-    1. Select the type of DB to connect to (e.g. InfluxDB or Prometheus)
+    1. Select the type of DB to connect to (for example InfluxDB or Prometheus)
     1. Fill out the form to provide all necessary DB connection information, e.g.:
     [![grafana-influxdb-datasource.png](../../images/tessera/monitoring/grafana-influxdb-datasource.png)](../../images/tessera/monitoring/grafana-influxdb-datasource.png)
 
@@ -212,32 +212,32 @@ To create a dashboard similar to this:
 
 1. Create *sendRaw requests* panel
     1. Select the correct datasource from the *Queries to* dropdown list
-    1. Construct the query as shown in the below image. This retrieves the data for the `sendraw` API from the InfluxDB, finds the sum of the `RequestCount` for this data (i.e. the total number of requests) and groups by `instance` (i.e. each Tessera node). `time($_interval)` automatically scales the graph resolution for the time range and graph width.
+    1. Construct the query as shown in the below image. This retrieves the data for the `sendraw` API from the InfluxDB, finds the sum of the `RequestCount` for this data (for example the total number of requests) and groups by `instance` (that is each Tessera node). `time($_interval)` automatically scales the graph resolution for the time range and graph width.
     [![grafana-send-raw-query.png](../../images/tessera/monitoring/grafana-send-raw-query.png)](../../images/tessera/monitoring/grafana-send-raw-query.png)
 
     This panel shows the number of private payloads sent to Tessera using the `sendraw` API over time.
 
 1. Create *receiveRaw requests* panel
     1. Select the correct datasource from the *Queries to* dropdown list
-    1. Construct the query as shown in the below image. This retrieves the data for the `receiveraw` API from the InfluxDB, finds the sum of the `RequestCount` for this data (i.e. the total number of requests) and groups by `instance` (i.e. each Tessera node). `time($_interval)` automatically scales the graph resolution for the time range and graph width.
+    1. Construct the query as shown in the below image. This retrieves the data for the `receiveraw` API from the InfluxDB, finds the sum of the `RequestCount` for this data (for example the total number of requests) and groups by `instance` (that is each Tessera node). `time($_interval)` automatically scales the graph resolution for the time range and graph width.
     [![grafana-receive-raw-query.png](../../images/tessera/monitoring/grafana-receive-raw-query.png)](../../images/tessera/monitoring/grafana-receive-raw-query.png)
 
     This panel shows the number of private payloads retrieved from Tessera using the `receiveraw` API over time.
 
 1. Create *partyinfo request rate (Tessera network health)* panel
     1. Select the correct datasource from the *Queries to* dropdown list
-    1. Construct the query as shown in the below image. This retrieves the data for the `partyinfo` API from the InfluxDB, finds the non-negative derivative of the `RequestCount` for this data and groups by `instance` (i.e. each Tessera node). `non_negative_derivative(1s)` calculates the per second change in `RequestCount` and ignores negative values that will occur if a node is stopped and restarted.
+    1. Construct the query as shown in the below image. This retrieves the data for the `partyinfo` API from the InfluxDB, finds the non-negative derivative of the `RequestCount` for this data and groups by `instance` (that is each Tessera node). `non_negative_derivative(1s)` calculates the per second change in `RequestCount` and ignores negative values that will occur if a node is stopped and restarted.
     [![grafana-partyinfo-rate.png](../../images/tessera/monitoring/grafana-partyinfo-rate.png)](../../images/tessera/monitoring/grafana-partyinfo-rate.png)
 
     This panel shows the rate of POST requests per second to `partyinfo`. For this network of 7 healthy nodes, this rate fluctuates between 5.5 and 6.5 requests/sec. At approx 09:37 node 1 was killed and the partyinfo rate across all nodes immediately drops. This is because they are no longer receiving requests to their `partyinfo` API from node 1. At 09:41 node 1 is restarted and the rates return to their original values.
 
     This metric can be used as an indirect method of monitoring the health of the network. Using some of the more advanced InfluxDB query options available in Grafana and the other metrics measurements available it may be possible to make this result more explicit.
 
-    [Alerts and rules](https://grafana.com/docs/alerting/notifications/) can be configured to determine when a node has disconnected and send notifications to pre-configured channels (e.g. Slack, email, etc.).
+    [Alerts and rules](https://grafana.com/docs/alerting/notifications/) can be configured to determine when a node has disconnected and send notifications to pre-configured channels (for example Slack, email, etc.).
 
 1. Create *sendRaw rate* panel
     1. Select the correct datasource from the *Queries to* dropdown list
-    1. Construct the query as shown in the below image. This retrieves the data for the `sendraw` API from the InfluxDB, finds the sum of the `RequestRate` for this data and groups by `instance` (i.e. each Tessera node). `time($_interval)` automatically scales the graph resolution for the time range and graph width.
+    1. Construct the query as shown in the below image. This retrieves the data for the `sendraw` API from the InfluxDB, finds the sum of the `RequestRate` for this data and groups by `instance` (that is each Tessera node). `time($_interval)` automatically scales the graph resolution for the time range and graph width.
     [![grafana-sendraw-rate-query.png](../../images/tessera/monitoring/grafana-sendraw-rate-query.png)](../../images/tessera/monitoring/grafana-sendraw-rate-query.png)
 
     The POST `sendraw` API is used by Quorum whenever a private transaction is sent using the `eth_sendTransaction` or `personal_sendTransaction` API. This panel gives a good indication of the private tx throughput in Quorum. Note that if the `sendraw` API is called by another process, the count will not be a true representation of Quorum traffic.

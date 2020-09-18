@@ -11,7 +11,7 @@ description: Configure keys
 
 Tessera uses cryptographic keys to provide transaction privacy.
 
-You can use existing private/public key pairs as well as use Tessera to generate new key pairs for you.
+You can use existing private/public key pairs or use Tessera to generate new key pairs for you.
 See [Generating & securing keys](../Generate-keys.md) for more info.
 
 === "v0.10.3 onwards"
@@ -111,7 +111,8 @@ The key pair data is provided in plain text in the configfile.
     configuration options available as the private key is exposed in the configuration file.
     The other options available are more secure and recommended for production environments.
 
-The key pair data is provided in plain text in the configfile he plain text private key is provided in a `config` json object:
+The key pair data is provided in plain text in the configfile.
+The plain text private key is provided in a `config` json object:
 
 ```json
 "keys": {
@@ -131,7 +132,10 @@ The key pair data is provided in plain text in the configfile he plain text priv
 
 #### Protected
 
-The public key is provided in plain text he private key must be password-protected using Argon2.
+The public key is provided in plain text.
+
+The private key must be password-protected using Argon2.
+
 The corresponding encrypted data is provided in the `config` json object.
 
 === "v0.10.2 onwards"
@@ -196,7 +200,7 @@ Passwords can be provided in multiple ways:
 |--------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | File   | `"passwordFile": "/path/to/pwds.txt"`<br/>Must contain only one password per line mpty lines should be used for unlocked keys asswords must be provided in the order that key pairs are defined in the config. |
 | Direct | `"passwords": ["pwd1", "pwd2", ...]`<br/>Empty strings should be used for unlocked keys asswords must be provided in the order that key pairs are defined in the config ot recommended for production use.     |
-| CLI    | Tessera will prompt on the CLI for the passwords of any encrypted keys that have not had passwords provided in the config his process only needs to be performed once, when starting the node.                    |
+| CLI    | Tessera will prompt on the CLI for the passwords of any encrypted keys that have not had passwords provided in the config. This process only needs to be performed once, when starting the node.                    |
 
 ### Filesystem key pairs
 
@@ -406,7 +410,7 @@ If the `.jks` files are password protected then the following environment variab
 
 The keys in the pair are stored as secrets in the _AWS Secrets Manager_. This requires providing
 the secret IDs for both keys. The endpoint is optional as the _AWS SDK_ can fallback to its inbuilt
-property retrieval chain (e.g. using the environment variable `AWS_REGION` or `~/.aws/config` file.
+property retrieval chain (for example using the environment variable `AWS_REGION` or `~/.aws/config` file.
 
 See [the AWS docs](https://docs.aws.amazon.com/sdk-for-java/v2/developer-guide/credentials.html)
 for similar behaviour explained in the context of credentials):

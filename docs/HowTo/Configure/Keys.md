@@ -198,8 +198,8 @@ Passwords can be provided in multiple ways:
 
 |        | Description                                                                                                                                                                                                          |
 |--------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| File   | `"passwordFile": "/path/to/pwds.txt"`<br/>Must contain only one password per line mpty lines should be used for unlocked keys asswords must be provided in the order that key pairs are defined in the config. |
-| Direct | `"passwords": ["pwd1", "pwd2", ...]`<br/>Empty strings should be used for unlocked keys asswords must be provided in the order that key pairs are defined in the config ot recommended for production use.     |
+| File   | `"passwordFile": "/path/to/pwds.txt"`<br/>Must contain only one password per line. Empty lines should be used for unlocked keys asswords must be provided in the order that key pairs are defined in the config. |
+| Direct | `"passwords": ["pwd1", "pwd2", ...]`<br/>Empty strings should be used for unlocked keys. Passwords must be provided in the order that key pairs are defined in the config. Not recommended for production use.     |
 | CLI    | Tessera will prompt on the CLI for the passwords of any encrypted keys that have not had passwords provided in the config. This process only needs to be performed once, when starting the node.                    |
 
 ### Filesystem key pairs

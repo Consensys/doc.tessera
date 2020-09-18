@@ -56,7 +56,7 @@ If using a Hashicorp Vault, Tessera requires certain environment variables to be
     - `HASHICORP_ROLE_ID`
     - `HASHICORP_SECRET_ID`
 
-    These credentials are obtained as outlined in the [AppRole documentation](https://www.vaultproject.io/docs/auth/approle.html) essera will use these credentials to authenticate with Vault.
+    These credentials are obtained as outlined in the [AppRole documentation](https://www.vaultproject.io/docs/auth/approle.html) Tessera will use these credentials to authenticate with Vault.
 
 - If using the root token or you already have a token due to authorising with an alternative method, set:
     - `HASHICORP_TOKEN`
@@ -66,4 +66,4 @@ If using a Hashicorp Vault, Tessera requires certain environment variables to be
 
 ### Dependencies
 
-The Hashicorp dependencies are included in the `tessera-app-<version>-app.jar` f using the `tessera-simple-<version>-app.jar` then `hashicorp-key-vault-<version>-all.jar` must be added to the classpath.
+The Hashicorp dependencies are included in the `tessera-app-<version>-app.jar`. If using the `tessera-simple-<version>-app.jar` then `hashicorp-key-vault-<version>-all.jar` must be added to the classpath.

@@ -40,7 +40,7 @@ Generate a key pair as secrets with IDs `Pub` and `Key` and save to an Azure Key
 tessera -keygen -keygenvaulttype AZURE -keygenvaulturl <url>
 ```
 
-The `-filename` option can be used to specify alternate IDs.  Multiple key pairs can be generated at
+The `-filename` option can be used to specify alternate IDs. Multiple key pairs can be generated at
 the same time by providing a comma-separated list of values:
 
 ```bash
@@ -49,7 +49,7 @@ tessera -keygen -keygenvaulttype AZURE -keygenvaulturl <url> -filename id1,id2
 
 !!! warning
     If saving new keys with the same ID as keys that already exist in the vault, the existing keys
-    will be replaced by the newer version.  When doing this, make sure to
+    will be replaced by the newer version. When doing this, make sure to
     [specify the correct secret version in your Tessera configuration](Configure/Keys.md#azure-key-vault-key-pairs).
 
 !!! note
@@ -85,12 +85,12 @@ tessera -keygen -keygenvaulttype HASHICORP -keygenvaulturl <url> \
 !!! warning
     Saving a new key pair to an existing secret will overwrite the values stored at that secret.
     Previous versions of secrets may be retained and be retrievable by Tessera depending on how the K/V
-    secrets engine is configured.  When doing this, make sure to
+    secrets engine is configured. When doing this, make sure to
     [specify the correct secret version in your Tessera configuration](Configure/Keys.md#hashicorp-vault-key-pairs).
 
 !!! note
     Environment variables must be set if using a Hashicorp Vault, and a version 2 K/V secret engine
-    must be enabled.  For more information see [Setting up a Hashicorp Vault](Configure/KeyVault/Hashicorp-Vault.md)
+    must be enabled. For more information see [Setting up a Hashicorp Vault](Configure/KeyVault/Hashicorp-Vault.md)
 
 ## AWS Secrets Manager-stored keys
 
@@ -100,7 +100,7 @@ Generate a key pair and save to an AWS Secrets Manager, with endpoint `<url>`, a
 tessera -keygen -keygenvaulttype AWS -keygenvaulturl <url>
 ```
 
-The `-filename` option can be used to specify alternate IDs.  Multiple key pairs can be generated at
+The `-filename` option can be used to specify alternate IDs. Multiple key pairs can be generated at
 the same time by providing a comma-separated list of values:
 
 ```bash
@@ -113,10 +113,10 @@ tessera -keygen -keygenvaulttype AWS -keygenvaulturl <url> -filename id1,id2
 
 ## Updating a configfile with newly generated keys
 
-Any newly generated keys must be added to a Tessera `.json` configfile.  Often it is easiest to do this manually.
+Any newly generated keys must be added to a Tessera `.json` configfile. Often it is easiest to do this manually.
 
 However, the `tessera keygen` `-configfile` option can be used to automatically update a configfile
-after key generation.  This is particularly useful when scripting.
+after key generation. This is particularly useful when scripting.
 
 ```bash
 tessera -keygen -filename key1 -configfile /path/to/config.json --configout /path/to/new.json --pwdout /path/to/new.pwds
@@ -124,6 +124,7 @@ tessera -keygen -filename key1 -configfile /path/to/config.json --configout /pat
 
 The above command will prompt for a password and generate the `key1` pair as usual. The Tessera
 configuration from `/path/to/config.json` will be read, updated and saved to `/path/to/new.json`.
+
 New passwords will be appended to the existing password file as defined in `/path/to/config.json`
 and written to `/path/to/new.pwds`.
 
@@ -142,17 +143,24 @@ If the `--configout` and `--pwdout` options are not provided, the updated `.json
 
 ## Securing private keys
 
-Generated private keys can be encrypted with a password. This is prompted for on the console during key generation.
+Generated private keys can be encrypted with a password.
+
+This is prompted for on the console during key generation.
 After generating password-protected keys, the password must be added to your configuration to ensure
-Tessera can read the keys. The password is not saved anywhere but must be added to the configuration
+Tessera can read the keys.
+
+The password is not saved anywhere but must be added to the configuration
 else the key will not be able to be decrypted.
 
 Passwords can be added to the json config either inline using `"passwords":[]`, or stored in an
-external file that is referenced by `"passwordFile": "Path"`. Note that the number of arguments/file-lines
-provided must equal the total number of private keys. For example, if there are 3 total keys and the
-second is not password secured, the 2nd argument/line must be blank or contain dummy data.
+external file that is referenced by `"passwordFile": "Path"`.
 
-Tessera uses Argon2 in the process of encrypting private keys.  By default, Argon2 is configured as follows:
+!!!note
+    The number of arguments/file-lines provided must equal the total number of private keys.
+    For example, if there are 3 total keys and the second is not password secured,
+    the 2nd argument/line must be blank or contain dummy data.
+
+Tessera uses Argon2 in the process of encrypting private keys. By default, Argon2 is configured as follows:
 
 ```json
 {
@@ -213,19 +221,19 @@ to allow you to set a new password.
 
 The following steps detail the process of password-protecting a private key:
 
- 1. Given private key `K` and password `P`
- 1. Generate random Argon2i nonce
- 1. Generate random encryption nonce
- 1. Stretch `P` using Argon2i (with the Argon2i nonce and custom or default
+1. Given private key `K` and password `P`
+1. Generate random Argon2i nonce
+1. Generate random encryption nonce
+1. Stretch `P` using Argon2i (with the Argon2i nonce and custom or default
     [ArgonOptions](#securing-private-keys)) into a 32-byte master key (`MK`)
- 1. Symmetrically encrypt `K` with `MK` and the encryption nonce
+1. Symmetrically encrypt `K` with `MK` and the encryption nonce
 
 ## Using alternative curve key types
 
 By default the `-keygen` and `-updatepassword` commands generate and update [NaCl](https://nacl.cr.yp.to/) compatible keys.
 
 As of Tessera v0.10.2, the `--encryptor.type=EC` CLI option can be provided to generate/update keys
-of different types.  See [encryptor config](Configure/Tessera.md#alternative-cryptographic-elliptic-curves) for more details.
+of different types. See [encryptor config](Configure/Tessera.md#alternative-cryptographic-elliptic-curves) for more details.
 
 ## Rotation
 

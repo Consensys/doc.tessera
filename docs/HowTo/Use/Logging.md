@@ -1,5 +1,5 @@
 ---
-description: Tessera logging   
+description: Tessera logging
 ---
 
 # Tessera Logging
@@ -8,12 +8,13 @@ Messages are written to the logs using these rules for the log level:
 
 * `ERROR`: system failures or situations that require some action to ensure correct operation of the system.
 * `WARN`: notifications that don't require immediate action or that are indications that a transaction failed.
-* `INFO`: information message to allow investigation of issues or to provide reassurance that the system is operating correctly. 
+* `INFO`: information message to allow investigation of issues or to provide reassurance that the system is operating correctly.
 * `DEBUG`: very verbose logging to assist with investigation of issues
 
 The log level is written out in uppercase as part of the log message, this can be used for alert monitoring.
 
 ## Errors
+
 Below is a non-exhaustive list of error messages and suggested actions. Braces '{}' indicate where further detail of the root cause is logged as part of the message.
 
 <table>
@@ -29,8 +30,8 @@ Below is a non-exhaustive list of error messages and suggested actions. Braces '
     <td>Error occurred: {error details} Root cause: {root cause}</td>
     <td>Generated for a variety of reasons:
         <ul>
-            <li> Invalid content in message, e.g. <pre>curl -X POST "http://localhost:9001/push" \ <br>    -H "accept: application/json" \<br>    -H "Content-Type: application/octet-stream" \ <br>    -d "[ \"a garbage string\"]"</pre></li>
-            <li> Could not send message to peer, e.g. <pre>"Root cause: Unable to push payload to recipient url<br>http://localhost:9001/"</pre></li>
+            <li> Invalid content in message, example: <pre>curl -X POST "http://localhost:9001/push" \ <br>    -H "accept: application/json" \<br>    -H "Content-Type: application/octet-stream" \ <br>    -d "[ \"a garbage string\"]"</pre></li>
+            <li> Could not send message to peer, example: <pre>"Root cause: Unable to push payload to recipient url<br>http://localhost:9001/"</pre></li>
         </ul>
         <b>Action:</b> <em>depends on the root cause in the log message</em>
     </td>
@@ -45,7 +46,7 @@ Below is a non-exhaustive list of error messages and suggested actions. Braces '
 </tr>
 <tr>
     <td>Entity not found:{error details}</td>
-    <td>Thrown if endpoint doesn't exist on that API, e.g.<pre>curl -s http://localhost:9001/invalidendpoint</pre></td>
+    <td>Thrown if endpoint doesn't exist on that API, example:<pre>curl -s http://localhost:9001/invalidendpoint</pre></td>
 </tr>
 <tr>
     <td>Security exception {followed by exception message, like "java.lang.SecurityException: No key found for url 127.1.1.1"}</td>
@@ -53,7 +54,7 @@ Below is a non-exhaustive list of error messages and suggested actions. Braces '
 </tr>
 <tr>
     <td>ERROR c.q.t.a.e.DefaultExceptionMapper - HTTP 400 Bad Request</td>
-    <td>Logged if received message is corrupt/incorrectly formatted, e.g.<pre>curl -X POST "http://localhost:9001/resend" \<br>    -H "accept: text/plain" \<br>    -H "Content-Type: application/json" \<br>    -d "{ \"some rubbish\" }"</pre></td>
+    <td>Logged if received message is corrupt/incorrectly formatted, example:<pre>curl -X POST "http://localhost:9001/resend" \<br>    -H "accept: text/plain" \<br>    -H "Content-Type: application/json" \<br>    -d "{ \"some rubbish\" }"</pre></td>
 </tr>
 <tr>
     <td>Error while reading secret from file</td>
@@ -124,7 +125,9 @@ Below is a non-exhaustive list of error messages and suggested actions. Braces '
 </table>
 
 ## Warnings
-Below is a list of warning messages and possible causes. Braces '{}' indicate where further detail of the root cause is logged as part of the message.
+
+Below is a list of warning messages and possible causes. Braces '{}' indicate where further detail
+of the root cause is logged as part of the message.
 
 <table>
 <tr>
@@ -133,7 +136,7 @@ Below is a list of warning messages and possible causes. Braces '{}' indicate wh
 </tr>
 <tr>
     <td>Public key {publicKey} not found when searching for private key</td>
-    <td>The key in a transaction is not recognised, i.e. it is not the public key of a known participant node.</td>
+    <td>The key in a transaction is not recognised, example: it is not the public key of a known participant node.</td>
 </tr>
 <tr>
     <td>Recipient not found for key: {public key}</td>
@@ -245,14 +248,13 @@ Below is a list of warning messages and possible causes. Braces '{}' indicate wh
 <tr>
     <td>Failed to make resend request to node {remote node url} for key {public key}, due to {error details}</td>
     <td>Peer communication failed during '/resend' request.<br>
-        <b>Action:</b> <em>check reason message, or logs on peer to see why it failed</em> 
+        <b>Action:</b> <em>check reason message, or logs on peer to see why it failed</em>
     </td>
 </tr>
 </table>
 
-!!! Note 
+!!! Note
     Some messages will be rearranged to correct logging levels in our next release.
-
 
 ## To change the default log level
 

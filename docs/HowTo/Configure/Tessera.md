@@ -22,13 +22,13 @@ of the [NaCl](https://nacl.cr.yp.to/) library to encrypt/decrypt private payload
 
 NaCl provides public-key authenticated encryption by using `curve25519xsalsa20poly1305`, a combination of the:
 
- 1. **Curve25519 Diffie-Hellman key-exchange function**: based on fast arithmetic on a strong elliptic curve
- 1. **Salsa20 stream cipher**: encrypts a message using the shared secret
- 1. **Poly1305 message-authentication code**: authenticates the encrypted message using a shared secret
+1. **Curve25519 Diffie-Hellman key-exchange function**: based on fast arithmetic on a strong elliptic curve
+1. **Salsa20 stream cipher**: encrypts a message using the shared secret
+1. **Poly1305 message-authentication code**: authenticates the encrypted message using a shared secret
 
 The NaCl primitives provide good security and speed and should be sufficient in most circumstances.
 
-However, the Enclave also supports the JCA (Java Cryptography Architecture) framework.  Supplying a
+However, the Enclave also supports the JCA (Java Cryptography Architecture) framework. Supplying a
 compatible JCA provider (e.g. [SunEC provider](https://docs.oracle.com/javase/8/docs/technotes/guides/security/SunProviders.html#SunEC))
 and the necessary Tessera config allows the NaCl primitives to be replaced with alternative curves and symmetric ciphers.
 
@@ -36,7 +36,7 @@ The same Enclave encryption process as described in
 [Lifecycle of a private transaction](https://docs.goquorum.consensys.net/Concepts/Privacy/PrivateTransactionLifecycle/)
 is used regardless of whether the NaCl or JCA Encryptor are configured.
 
-This is a feature introduced in Tessera v0.10.2.  Providing no `encryptor` configuration means the default NaCl encryptor is used.
+This is a feature introduced in Tessera v0.10.2. Providing no `encryptor` configuration means the default NaCl encryptor is used.
 
 ```json
 "encryptor": {
@@ -50,7 +50,7 @@ This is a feature introduced in Tessera v0.10.2.  Providing no `encryptor` confi
 }
 ```
 
-| Field  | Default Value | Description                                                         |
+| Field | Default Value | Description                                                         |
 |--------|---------------|---------------------------------------------------------------------|
 | `type` | `NACL`        | The encryptor type. Possible values are `EC`, `NACL`, and `CUSTOM`. |
 
@@ -108,14 +108,14 @@ For the ThirdParty server type it may be relevant to configure CORS.
 
 The configurable fields are:
 
-- `allowedMethods` - the list of allowed HTTP methods. If omitted the default list containing
+* `allowedMethods` : the list of allowed HTTP methods. If omitted the default list containing
     `"GET", "POST", "PUT", "DELETE", "OPTIONS", "HEAD"` is used.
-- `allowedOrigins` - the list of domains from which to accept cross origin requests (browser enforced).
+* `allowedOrigins` : the list of domains from which to accept cross origin requests (browser enforced).
     Each entry in the list can contain the "*" (wildcard) character which matches any sequence of characters.
     Ex: "*locahost" would match "http://localhost" or "https://localhost". There is no default for this field.
-- `allowedHeaders` - the list of allowed headers. If omitted the request `Access-Control-Request-Headers`
+* `allowedHeaders` : the list of allowed headers. If omitted the request `Access-Control-Request-Headers`
     are copied into the response as `Access-Control-Allow-Headers`.
-- `allowCredentials` - the value for the `Access-Control-Allow-Credentials` response header.
+* `allowCredentials` : the value for the `Access-Control-Allow-Credentials` response header.
     If omitted the default `true` value would be used.
 
 ### Cryptographic Keys
@@ -218,7 +218,7 @@ Configuration details to allow Tessera to record monitoring data to a running In
 
 ### Peers
 
-A list of URLs used by Tessera to communicate with other nodes.  Peer info is shared between nodes during runtime (however, please note the section on `Peer Discovery` below).
+A list of URLs used by Tessera to communicate with other nodes. Peer info is shared between nodes during runtime (however, please note the section on `Peer Discovery` below).
 
 ```json
 "peer": [
@@ -255,18 +255,18 @@ To enable this, simple set below parameter to true in the configuration:
 ### Server
 
 To allow for a greater level of control, Tessera's API has been separated into distinct groups.
-Each group is only accessible over a specific server type.  Tessera can be started with different
+Each group is only accessible over a specific server type. Tessera can be started with different
 combinations of these servers depending on the functionality required.
 This is defined in the configuration and determines the APIs that are available and how they are accessed.
 
 The possible server types are:
 
-- `P2P` - Tessera uses this server to communicate with other Transaction Managers (the URI for this
+* `P2P` - Tessera uses this server to communicate with other Transaction Managers (the URI for this
     server can be shared with other nodes to be used in their `peer` list - see below)
-- `Q2T` - This server is used for communications between Tessera and its corresponding Quorum node
-- `ENCLAVE` - If using a remote enclave, this defines the connection details for the remote enclave
+* `Q2T` - This server is used for communications between Tessera and its corresponding Quorum node
+* `ENCLAVE` - If using a remote enclave, this defines the connection details for the remote enclave
     server (see the [Enclave docs](../../Concepts/Enclave.md) for more info)
-- `ThirdParty` - This server is used to expose certain Transaction Manager functionality to external
+* `ThirdParty` - This server is used to expose certain Transaction Manager functionality to external
     services such as Quorum.js
 
 The servers to be started are provided as a list:
@@ -285,7 +285,7 @@ The servers to be started are provided as a list:
     - `bindingAddress` - This is an optional endpoint to use for the binding. This is useful if you need
        to bind to an internal IP whilst advertising an external IP using `serverAddress`.
 
-    Each server is individually configurable and can advertise over HTTP, HTTPS or a Unix Socket.  The format
+    Each server is individually configurable and can advertise over HTTP, HTTPS or a Unix Socket. The format
     of an individual server config is slightly different between Tessera v0.9 and v0.8:
 
 #### Server configuration (v0.9)

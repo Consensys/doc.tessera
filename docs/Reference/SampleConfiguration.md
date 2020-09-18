@@ -1,12 +1,12 @@
 ---
-description: Sample configuration file  
+description: Sample configuration file
 ---
 
-# Sample Configuration File 
+# Sample Configuration File
 
-!!! important 
-    The `keys.azureKeyVaultConfig` and `keys.hashicorpKeyVaultConfig` fields are now deprecated.  Instead,
-    the generic `keys.keyVaultConfigs` should be used.  See [Keys Config](../HowTo/Configure/Keys.md) for more info.
+!!! important
+    The `keys.azureKeyVaultConfig` and `keys.hashicorpKeyVaultConfig` fields are now deprecated. Instead,
+    the generic `keys.keyVaultConfigs` should be used. See [Keys Config](../HowTo/Configure/Keys.md) for more info.
 
 ```json
 {
@@ -88,7 +88,7 @@ description: Sample configuration file
     "keyVaultConfigs": [
       {
         "keyVaultType": "Enumeration: AZURE, HASHICORP, AWS",
-        "properties": "Map[string]string" 
+        "properties": "Map[string]string"
       }
     ],
     "keyData": [
@@ -136,7 +136,7 @@ description: Sample configuration file
     "type": "Enumeration: NACL, EC",
     "properties":{
       "symmetricCipher":"String (defaults to AES/GCM/NoPadding if type = EC)",
-      "ellipticCurve": "String (defaults to secp256r1 if type = EC)", 
+      "ellipticCurve": "String (defaults to secp256r1 if type = EC)",
       "nonceLength": "String (defaults to 24 if type = EC)",
       "sharedKeyLength": "String (defaults to 32 if type = EC)"
     }

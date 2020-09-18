@@ -8,7 +8,7 @@ The private/public key pairs used by Tessera can be [stored](../Keys.md) in and 
 
 This page details how to set up and configure an Azure Key Vault for use with Tessera.
 
-The Microsoft Azure documentation provides much of the information needed to get started.  The information
+The Microsoft Azure documentation provides much of the information needed to get started he information
 in this section has been taken from the [Azure documentation](https://docs.microsoft.com/en-us/azure/key-vault).
 
 ## Creating the vault
@@ -47,10 +47,12 @@ The Key Vault can be created using either the [Azure Web Portal](https://azure.m
     ```bash
     az keyvault create --name <kv-name> --resource-group <rg-name> --location <location>
     ```
+
 A Key Vault has now been created that can be used to store secrets.
 
 ## Configuring the vault to work with Tessera
-Azure uses an Active Directory system to grant access to services.  We will create an 'application' that we will authorise to use the vault.  We will provide the credentials created as a result of this to authenticate our Tessera instance to use the key vault.
+
+Azure uses an Active Directory system to grant access to services e will create an 'application' that we will authorise to use the vault e will provide the credentials created as a result of this to authenticate our Tessera instance to use the key vault.
 
 In order for the vault to be accessible by Tessera, the following steps must be carried out:
 
@@ -79,4 +81,5 @@ If using an Azure Key Vault, Tessera requires two environment variables to be se
 Both of these values can be retrieved during the application registration process as outlined above.
 
 ### Dependencies
-The Azure dependencies are included in the `tessera-app-<version>-app.jar`.  If using the `tessera-simple-<version>-app.jar` then `azure-key-vault-<version>-all.jar` must be added to the classpath.
+
+The Azure dependencies are included in the `tessera-app-<version>-app.jar` f using the `tessera-simple-<version>-app.jar` then `azure-key-vault-<version>-all.jar` must be added to the classpath.

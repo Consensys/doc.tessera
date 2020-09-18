@@ -5,12 +5,14 @@ description: Configure Tessera transaction manager
 # Configure Tessera transaction manager
 
 ## Running Tessera
+
 The only mandatory parameter for running a minimal Transaction Manager is the location of the configuration file to use.
 Use the `-configfile <path>` argument to specify the location of the config file.
 
 Other CLI arguments can be passed, and details of these commands can be found in their respective pages - particularly around key vaults and key generation.
 
 ## Databases
+
 By default, Tessera uses an H2 file-based database, but any JDBC compatible database can be used.
 
 To do this, add the necessary drivers to the classpath, and run the `com.quorum.tessera.Launcher` class, like the following:
@@ -32,6 +34,7 @@ Some DDL scripts have been provided for more popular databases, but feel free to
 The configuration for the transaction manager is described in the [configuration overview](../../Configuration/Configuration Overview), as well as [sample configurations](../../Configuration/Sample Configuration).
 
 ## Flavours of transaction manager
+
 For advanced users, you may decide on certain options for the transaction manager, or to disable other parts.
 
 The default transaction manager comes with the standard options most setups will use, but other versions are as follows:
@@ -41,16 +44,18 @@ The default transaction manager comes with the standard options most setups will
 
 These must be built from source and can be found inside the `tessera-dist` module.
 
-
 ## Data recovery
 
 Tessera contains functionality to request transactions from other nodes in the network; this is useful if the database is lost or corrupted somehow.
+
 However, depending on the size of the network and the number of transactions made between peers, this can put heavy strain on the network resending all the data.
 
 ### How to enable
+
 The data recovery mechanism is intended to be a "switch-on" feature as a startup command. The times when you will need this will be known prior to starting the application (usually after a disaster event). When starting Tessera, simply add the following property to the startup command: `-Dspring.profiles.active=enable-sync-poller`. This should go before any jar or class definitions, e.g. `java -Dspring.profiles.active=enable-sync-poller -jar tessera.jar -configfile config.json`.
 
 ### How it works
+
 The data recovery procedure works by invoking a "resend request" to each new node it sees in the network. This request will cause the target node to resend each of its transactions to the intended recipient, meaning they will again save the transaction in their database.
 
-The target node will not send back transactions as a response the request in order to ensure that a malicious node cannot get access to the transactions. i.e. anyone can send a request for a particular key, but it will mean that the node that holds that key will receive the transactions, not the node making the request. In normal usage, the node making the request and the node holding the public key are the same.
+The target node will not send back transactions as a response the request in order to ensure that a malicious node cannot get access to the transactions. example: anyone can send a request for a particular key, but it will mean that the node that holds that key will receive the transactions, not the node making the request. In normal usage, the node making the request and the node holding the public key are the same.

@@ -1,14 +1,14 @@
 ---
-description: Configuring Hashicorp Vault for storing private keys
+description: Configuring HashiCorp Vault for storing private keys
 ---
 
-# Configuring use of Hashicorp Vault
+# Configuring use of HashiCorp Vault
 
 The private/public key pairs used by Tessera can be [stored](../Keys.md) in and [retrieved](../Keys.md) from a key vault, preventing the need to store the keys locally.
 
-This page details how to set up and configure a Hashicorp Vault for use with Tessera.
+This page details how to set up and configure a HashiCorp Vault for use with Tessera.
 
-The [Hashicorp Vault Getting Started documentation](https://learn.hashicorp.com/vault/) provides much of the information needed to get started. The following section goes over some additional considerations when running Tessera with Vault.
+The [HashiCorp Vault Getting Started documentation](https://learn.hashicorp.com/vault/) provides much of the information needed to get started. The following section goes over some additional considerations when running Tessera with Vault.
 
 ## Configuring the vault
 
@@ -50,7 +50,7 @@ The K/V Version 2 secret engine supports multiple versions of secrets, however o
 
 ### Environment Variables
 
-If using a Hashicorp Vault, Tessera requires certain environment variables to be set depending on the auth method being used.
+If using a HashiCorp Vault, Tessera requires certain environment variables to be set depending on the auth method being used.
 
 - If using the AppRole auth method, set:
     - `HASHICORP_ROLE_ID`
@@ -66,4 +66,4 @@ If using a Hashicorp Vault, Tessera requires certain environment variables to be
 
 ### Dependencies
 
-The Hashicorp dependencies are included in the `tessera-app-<version>-app.jar`. If using the `tessera-simple-<version>-app.jar` then `hashicorp-key-vault-<version>-all.jar` must be added to the classpath.
+The HashiCorp dependencies are included in the `tessera-app-<version>-app.jar`. If using the `tessera-simple-<version>-app.jar` then `hashicorp-key-vault-<version>-all.jar` must be added to the classpath.

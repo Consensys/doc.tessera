@@ -6,7 +6,7 @@ description: Sample configuration file
 
 !!! important
     The `keys.azureKeyVaultConfig` and `keys.hashicorpKeyVaultConfig` fields are now deprecated. Instead,
-    the generic `keys.keyVaultConfigs` should be used. See [Keys Config](../HowTo/Configure/Keys.md) for more info.
+    the generic `keys.keyVaultConfigs` should be used. See [Keys configuration](../HowTo/Configure/Keys.md) for more info.
 
 ```json
 {

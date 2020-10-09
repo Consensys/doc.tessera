@@ -1,6 +1,6 @@
 # Sample configuration for Tessera as bootstrap node
 
-To start Tesssera as a bootstrap node, use:
+To start Tessera as a bootstrap node, use:
 
 - `bootstrapNode` is added to start Tessera as bootstrap node only with no Quorum connection.
 - `CUSTOM` encryptor type added to integrate third party encryptor implementation.

@@ -24,7 +24,7 @@ Below is a non-exhaustive list of error messages and suggested actions. Braces '
 </tr>
 <tr>
     <td><code>Error decoding message: {error details}</code></td>
-    <td>Invalid base64 in privateFrom/privateFor from Quorum or in tx hash for resend<br><b>Action:</b> <em>Sender needs to provide valid base64</em></td>
+    <td>Invalid base64 in privateFrom/privateFor from GoQuorum or in transaction hash for resend<br><b>Action:</b> <em>Sender needs to provide valid base64</em></td>
 </tr>
 <tr>
     <td><code>Error occurred: {error details} Root cause: {root cause}</code></td>
@@ -42,7 +42,7 @@ Below is a non-exhaustive list of error messages and suggested actions. Braces '
 </tr>
 <tr>
     <td><code>Entity not found: {error details}</code></td>
-    <td>API request received against <code>q2tserver/transaction/{key}</code> where key is not a tx hash in the DB</td>
+    <td>API request received against <code>q2tserver/transaction/{key}</code> where key is not a transaction hash in the DB</td>
 </tr>
 <tr>
     <td><code>Entity not found:{error details}</code></td>
@@ -59,7 +59,7 @@ Below is a non-exhaustive list of error messages and suggested actions. Braces '
 <tr>
     <td><code>Error while reading secret from file</code></td>
     <td>Unable to read the secret key (password) from file specified by <code>TESSERA_CONFIG_SECRET</code><br>
-        <b>Action:</b> <em>ensure the secret key file config is correct, and file can be read</em>
+        <b>Action:</b> <em>ensure the secret key file configuration is correct, and file can be read</em>
     </td>
 </tr>
 <tr>
@@ -106,7 +106,7 @@ Below is a non-exhaustive list of error messages and suggested actions. Braces '
 </tr>
 <tr>
     <td><code>Invalid json, cause is {error details}</code></td>
-    <td>Invalid json in the configuration file<br>
+    <td>Invalid JSON in the configuration file<br>
         <b>Action:</b> <em>check the configuration file for mistakes.</em>
     </td>
 </tr>
@@ -154,8 +154,8 @@ of the root cause is logged as part of the message.
 </tr>
 <tr>
     <td><code>Ignoring unknown/unmatched json element: {element tag name}</code></td>
-    <td>An unrecognised element has been found in the config file.<br>
-        <b>Action:</b> <em>remove or correct the config file entry</em>
+    <td>An unrecognised element has been found in the configuration file.<br>
+        <b>Action:</b> <em>remove or correct the configuration file entry</em>
     </td>
 </tr>
 <tr>
@@ -170,7 +170,7 @@ of the root cause is logged as part of the message.
 </tr>
 <tr>
     <td><code>Not able to parse configured property. Will use default value instead</code></td>
-    <td>Error in config file</td>
+    <td>Error in configuration file</td>
 </tr>
 <tr>
     <td><code>IOException while attempting to close remote session {error details}</code></td>
@@ -190,8 +190,8 @@ of the root cause is logged as part of the message.
 </tr>
 <tr>
     <td><code>Could not open sealed payload using shared key {shared key}</code></td>
-    <td>Possible cause that wrong password was given for key file decryption or making a change to the values in the keyfile so that the password no longer works.<br>
-        <b>Action:</b> <em>ensure that password is correct for the keyfile</em>
+    <td>Possible cause that wrong password was given for key file decryption or making a change to the values in the <code>keyfile</code> so that the password no longer works.<br>
+        <b>Action:</b> <em>ensure that password is correct for the <code>keyfile</code></em>
     </td>
 </tr>
 <tr>
@@ -214,7 +214,7 @@ of the root cause is logged as part of the message.
 </tr>
 <tr>
     <td><code>PartyInfo returned status code for peer{remote peer url} was {status code}</code></td>
-    <td>The peer rejected a partyInfo request.<br>
+    <td>The peer rejected a <code>partyInfo</code> request.<br>
         <b>Action:</b> <em>check logs on peer to see why it failed</em></td>
 </tr>
 <tr>
@@ -229,7 +229,7 @@ of the root cause is logged as part of the message.
 </tr>
 <tr>
     <td><code>Failed to connect to node {remote node url}, due to {error details}</code></td>
-    <td>A remote node refused partyinfo request. Can occur if:
+    <td>A remote node refused <code>partyinfo</code> request. Can occur if:
         <ul>
             <li>remote node is not running</li>
             <li>remote node doesn't recognise this node's public key</li>
@@ -241,7 +241,7 @@ of the root cause is logged as part of the message.
 </tr>
 <tr>
     <td><code>Failed to connect to node {remote node url} for partyInfo, due to {error details}</code></td>
-    <td>A node failed partyInfo request during resend to peer.<br>
+    <td>A node failed <code>partyInfo</code> request during resend to peer.<br>
         <b>Action:</b> <em>check reason message, or logs on peer to see why it failed</em>
     </td>
 </tr>
@@ -258,7 +258,7 @@ of the root cause is logged as part of the message.
 
 ## To change the default log level
 
-The level of logging is controlled by the logback configuration file. The default file packaged with Tessera can be seen [here](https://github.com/jpmorganchase/tessera/blob/master/tessera-dist/tessera-launcher/src/main/resources/logback.xml).
+The level of logging is controlled by the Logback configuration file. The default file packaged with Tessera can be seen [here](https://github.com/jpmorganchase/tessera/blob/master/tessera-dist/tessera-launcher/src/main/resources/logback.xml).
 
-To specify a different logging configuration, pass a customised logback file on the command line using:
+To specify a different logging configuration, pass a customised Logback file on the command line using:
 `-Dlogback.configurationFile=/path/to/logback.xml`

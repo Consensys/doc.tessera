@@ -19,7 +19,7 @@ layer with enterprise support available from ConsenSys.
 
 Tessera:
 
-* Generates and maintains private/public keypairs.
+* Generates and maintains private/public key pairs.
 
 * Self manages and discovers all nodes in the network.
 

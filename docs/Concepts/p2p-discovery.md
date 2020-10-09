@@ -15,7 +15,7 @@ The changes are summarised below:
 - Introduction of `NetworkStore` that keeps track of `ActiveNodes` in the network.
     If a remote node is present in this list it means there is currently active direct communication
     with that node, meaning the local node is aware of remote node's keys and supportedApiVersions.
-- `PartyStore` maintains a list of urls that we use to broadcast our own `partyinfo`.
+- `PartyStore` maintains a list of URLs that we use to broadcast our own `partyinfo`.
     If there is a connection exception during an attempt to broadcast `partyinfo` (a peer temporarily being down),
     we will remove this peer from both our PartyStore and NetworkStore.
 - At any point in time there must be `at least one active node in the Tessera's configured peer list`.

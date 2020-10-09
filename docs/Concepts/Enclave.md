@@ -48,7 +48,7 @@ The local Enclave is the classical option that was included in versions of Tesse
 
 #### How to use?
 
-In order to use the local Enclave, you simply need to not specify an Enclave server type in the configuration. don't forget to specify the Enclave config in the Transaction Manager config file.
+In order to use the local Enclave, you simply need to not specify an Enclave server type in the configuration. don't forget to specify the Enclave configuration in the Transaction Manager configuration file.
 
 ### HTTP Enclave
 

@@ -25,9 +25,9 @@ The following should be present in the TM configuration:
 
 ## Remote Enclave Setup
 
-The configuration required is minimal, and only requires the following from the main config (as an example):
+The configuration required is minimal, and only requires the following from the main configuration (as an example):
 
-In the remote Enclave config:
+In the remote Enclave configuration:
 
 ```json
 {
@@ -61,13 +61,13 @@ and in the TM configuration:
 }],
 ```
 
-The keys are the same as the Transaction Manager configuration, and can use all the key types including vaults hen using a vault with the Enclave, be sure to include the corresponding jar on the classpath, either:
+The keys are the same as the Transaction Manager configuration, and can use all the key types including vaults when using a vault with the Enclave, be sure to include the corresponding JAR on the classpath, either:
 
 * `/path/to/azure-key-vault-0.9-SNAPSHOT-all.jar`
 * `/path/to/hashicorp-key-vault-0.9-SNAPSHOT-all.jar`
 
 If using the all-in-one Transaction Manager jar, all the relevant files are included, and just the configuration needs to be updated for the TM.
 
-If using the individual "make-your-own" jars, you will need the "core Transaction Manager" jar along with the "Enclave clients" jar, and add them both to the classpath as such: `java -cp /path/to/transactionmanager.jar:/path/to/enclave-client.jar com.quorum.tessera.Launcher -configfile /path/to/config.json`
+If using the individual "make-your-own" JARs, you will need the "core Transaction Manager" JAR along with the "Enclave clients" JAR, and add them both to the classpath as such: `java -cp /path/to/transactionmanager.jar:/path/to/enclave-client.jar com.quorum.tessera.Launcher -configfile /path/to/config.json`
 
 *[TM]: Transaction Manager

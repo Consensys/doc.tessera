@@ -4,8 +4,8 @@ descriotion: Migrating from Consetellation to Tessera
 
 # Migration Utilities
 
-Two utilities are included to help with migrating existing Constellation configurations and datastores for
-use with Tessera. These utilites are included in the Tessera project and are available for use after building Tessera with Maven.
+Two utilities are included to help with migrating existing Constellation configurations and data stores for
+use with Tessera. These utilities are included in the Tessera project and are available for use after building Tessera with Maven.
 
 A full migration workflow would be as follows:
 
@@ -16,7 +16,7 @@ A full migration workflow would be as follows:
 
 ## Data Migration
 
-This utility migrates a Constellation datastore (BerkeleyDB or directory/file storage) to a Tessera compatible one (H2, SQLITE). By default Tessera uses an H2 database, however alternatives can be configured. Refer [DDLs](https://github.com/jpmorganchase/tessera/tree/master/ddls/create-table) for help with defining with other databases.
+This utility migrates a Constellation data store (BerkeleyDB or directory/file storage) to a Tessera compatible one (H2, SQLITE). By default Tessera uses an H2 database, however alternatives can be configured. Refer [DDLs](https://github.com/jpmorganchase/tessera/tree/master/ddls/create-table) for help with defining with other databases.
 
 To make running the utility commands simpler, you can first create an `alias`:
 
@@ -38,9 +38,9 @@ usage: tessera-data-migration
 -dbpass              Set a password for the specified user (only applies to H2)
 ```
 
-### Migrating BerkeleyDB (bdb)
+### Migrating BerkeleyDB (`bdb`)
 
-To migrate a BerkeleyDB (bdb) database for use with Tessera you must first export your existing store using `db_dump`:
+To migrate a BerkeleyDB (`bdb`) database for use with Tessera you must first export your existing store using `db_dump`:
 
 ```bash
 db_dump -f exported.txt c1/cn§.db/payload.db
@@ -128,20 +128,20 @@ To migrate a `.toml` file to `.json` with no overrides, run:
 tessera-config-migration --tomlfile="/path/to/constellation-config.toml"
 ```
 
-By default, the generated `.json` config will be printed to the console and saved to `./tessera-config.json`. To save to another location/with a different filename use the `--outputfile <PATH>` CLI option.
+By default, the generated `.json` configuration will be printed to the console and saved to `./tessera-config.json`. To save to another location/with a different filename use the `--outputfile <PATH>` CLI option.
 
 ### Note about `ipwhitelist`
 
-Unlike Constellation, Tessera does not use a separate `ipwhitelist`. If `useWhiteList` is set to `true` in the `.json` config then the `peers` list will be used as the whitelist.
+Unlike Constellation, Tessera does not use a separate `ipwhitelist`. If `useWhiteList` is set to `true` in the `.json` configuration then the `peers` list will be used as the whitelist.
 
-If `ipwhitelist` is provided in an existing `.toml` config file then this will only be used to set `useWhiteList: true`; any nodes included in this list will not be added by default to the Tessera config. Make sure to add any nodes that were only included in `ipwhitelist` to `peers` after using the utility.
+If `ipwhitelist` is provided in an existing `.toml` configuration file then this will only be used to set `useWhiteList: true`; any nodes included in this list will not be added by default to the Tessera configuration. Make sure to add any nodes that were only included in `ipwhitelist` to `peers` after using the utility.
 
 ### Validation
 
-Validation is applied to the generated config. Messages will be printed to the terminal if the validation identifies issues. For example, if a `hostname` is not provided then the following message will be printed:
+Validation is applied to the generated configuration. Messages will be printed to the terminal if the validation identifies issues. For example, if a `hostname` is not provided then the following message will be printed:
 
 ```text
 Warning: may not be null on property serverConfig.hostName
 ```
 
-Any validation violations will have to be addressed before the config can be used with Tessera.
+Any validation violations will have to be addressed before the configuration can be used with Tessera.

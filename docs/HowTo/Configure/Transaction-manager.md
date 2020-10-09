@@ -7,7 +7,7 @@ description: Configure Tessera transaction manager
 ## Running Tessera
 
 The only mandatory parameter for running a minimal Transaction Manager is the location of the configuration file to use.
-Use the `-configfile <path>` argument to specify the location of the config file.
+Use the `-configfile <path>` argument to specify the location of the configuration file.
 
 Other CLI arguments can be passed, and details of these commands can be found in their respective pages - particularly around key vaults and key generation.
 
@@ -39,7 +39,7 @@ For advanced users, you may decide on certain options for the transaction manage
 
 The default transaction manager comes with the standard options most setups will use, but other versions are as follows:
 
-- GRPC communication (experimental)
+- gRPC communication (experimental)
 - Non-remote only enclaves (named "tessera-simple")
 
 These must be built from source and can be found inside the `tessera-dist` module.

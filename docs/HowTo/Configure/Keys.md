@@ -19,7 +19,7 @@ Tessera uses cryptographic keys to provide transaction privacy.
 
     See [Generating & securing keys](../Generate-keys.md) for more info.
 
-=== "v0.10.3 onwards"
+=== "v0.10.3 and later"
 
     ```json
     "keys": {
@@ -94,7 +94,7 @@ Key pairs can be provided in several ways:
     options available as the private key is exposed in the configuration file. The other options
     available are more secure and recommended for production environments.
 
-The key pair data is provided in plain text in the configfile.
+The key pair data is provided in plain text in the configuration file.
 
 ```json
 "keys": {
@@ -116,8 +116,8 @@ The key pair data is provided in plain text in the configfile.
     configuration options available as the private key is exposed in the configuration file.
     The other options available are more secure and recommended for production environments.
 
-The key pair data is provided in plain text in the configfile.
-The plain text private key is provided in a `config` json object:
+The key pair data is provided in plain text in the configuration file.
+The plain text private key is provided in a `config` JSON object:
 
 ```json
 "keys": {
@@ -141,9 +141,9 @@ The public key is provided in plain text.
 
 The private key must be password-protected using Argon2.
 
-The corresponding encrypted data is provided in the `config` json object.
+The corresponding encrypted data is provided in the `config` JSON object.
 
-=== "v0.10.2 onwards"
+=== "v0.10.2 and later"
 
     ```json
     "keys": {
@@ -203,15 +203,15 @@ Passwords can be provided in multiple ways:
 
 |        | Description                                                                                                                                                                                                          |
 |--------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| File   | `"passwordFile": "/path/to/pwds.txt"`<br/>Must contain only one password per line. Empty lines should be used for unlocked keys asswords must be provided in the order that key pairs are defined in the config. |
-| Direct | `"passwords": ["pwd1", "pwd2", ...]`<br/>Empty strings should be used for unlocked keys. Passwords must be provided in the order that key pairs are defined in the config. Not recommended for production use.     |
-| CLI    | Tessera will prompt on the CLI for the passwords of any encrypted keys that have not had passwords provided in the config. This process only needs to be performed once, when starting the node.                    |
+| File   | `"passwordFile": "/path/to/pwds.txt"`<br/> Must contain only one password per line. Empty lines should be used for unlocked keys passwords must be provided in the order that key pairs are defined in the configuration. |
+| Direct | `"passwords": ["pwd1", "pwd2", ...]`<br/>Empty strings should be used for unlocked keys. Passwords must be provided in the order that key pairs are defined in the configuration. Not recommended for production use.     |
+| CLI    | Tessera will prompt on the CLI for the passwords of any encrypted keys that have not had passwords provided in the configuration. This process only needs to be performed once, when starting the node.                    |
 
 ### Filesystem key pairs
 
 The keys in the pair are stored in files:
 
-=== "v0.10.2 onwards"
+=== "v0.10.2 and later"
 
     ```json
     "keys": {
@@ -283,16 +283,16 @@ Passwords can be provided in multiple ways:
 
 |        | Description                                                                                                                                                                                                          |
 |--------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| File   | `"passwordFile": "/path/to/pwds.txt"`<br/>Must contain only one password per line. Empty lines should be used for unlocked keys. Passwords must be provided in the order that key pairs are defined in the config. |
-| Direct | `"passwords": ["pwd1", "pwd2", ...]`<br/>Empty strings should be used for unlocked keys. Passwords must be provided in the order that key pairs are defined in the config. Not recommended for production use.     |
-| CLI    | Tessera will prompt on the CLI for the passwords of any encrypted keys that have not had passwords provided in the config. This process only needs to be performed once, when starting the node.                    |
+| File   | `"passwordFile": "/path/to/pwds.txt"`<br/>Must contain only one password per line. Empty lines should be used for unlocked keys. Passwords must be provided in the order that key pairs are defined in the configuration. |
+| Direct | `"passwords": ["pwd1", "pwd2", ...]`<br/>Empty strings should be used for unlocked keys. Passwords must be provided in the order that key pairs are defined in the configuration. Not recommended for production use.     |
+| CLI    | Tessera will prompt on the CLI for the passwords of any encrypted keys that have not had passwords provided in the configuration. This process only needs to be performed once, when starting the node.                    |
 
 ### Azure Key Vault key pairs
 
 The keys in the pair are stored as secrets in an Azure Key Vault.
-This requires providing the vault url and the secret IDs for both keys:
+This requires providing the vault URL and the secret IDs for both keys:
 
-=== "v0.10.3 onwards"
+=== "v0.10.3 and later"
 
     ```json
     "keys": {
@@ -341,13 +341,13 @@ If no version is specified then the latest version of the secret is retrieved.
     Environment variables must be set if using an Azure Key Vault, for more information see
     [Setting up an Azure Key Vault](KeyVault/Azure-Key-Vault.md)
 
-### Hashicorp Vault key pairs
+### HashiCorp Vault key pairs
 
-The keys in the pair are stored as a secret in a Hashicorp Vault. Additional configuration can also
+The keys in the pair are stored as a secret in a HashiCorp Vault. Additional configuration can also
 be provided if the Vault is configured to use TLS and if the AppRole auth method is being used at a
 different path to the default (`approle`):
 
-=== "v0.10.3 onwards"
+=== "v0.10.3 and later"
 
     ```json
     "keys": {
@@ -408,8 +408,8 @@ If the `.jks` files are password protected then the following environment variab
 - `HASHICORP_CLIENT_TRUSTSTORE_PWD`
 
 !!! info
-    If using a Hashicorp Vault additional environment variables must be set and a version 2 K/V
-    secret engine must be enabled. For more information see [Setting up a Hashicorp Vault](KeyVault/Hashicorp-Vault.md).
+    If using a HashiCorp Vault additional environment variables must be set and a version 2 K/V
+    secret engine must be enabled. For more information see [Setting up a HashiCorp Vault](KeyVault/Hashicorp-Vault.md).
 
 ### AWS Secrets Manager key pairs
 
@@ -420,7 +420,7 @@ property retrieval chain (for example using the environment variable `AWS_REGION
 See [the AWS docs](https://docs.aws.amazon.com/sdk-for-java/v2/developer-guide/credentials.html)
 for similar behaviour explained in the context of credentials):
 
-=== "v0.10.3 onwards"
+=== "v0.10.3 and later"
 
     ```json
     "keys": {
@@ -458,7 +458,7 @@ _AWS Secrets Manager_ using the endpoint `https://secretsmanager.us-west-2.amazo
 
 Tessera will start a CLI password prompt if it has incomplete password data for its locked keys.
 This prompt can be used to provide the required passwords for each key without having to provide
-them in the configfile itself.
+them in the configuration file itself.
 
 !!! example
 
@@ -482,7 +482,7 @@ Note that multiple key pairs can only be set up within the configuration file, n
 
 ## Viewing the keys registered for a node
 
-For Tessera v0.10.2 onwards the ThirdParty API `/keys` endpoint can be used to view the public keys
+For Tessera v0.10.2 and later the ThirdParty API `/keys` endpoint can be used to view the public keys
 of the key pairs currently in use by your Tessera node.
 
 For Tessera v0.10.1 and earlier, an ADMIN API endpoint `/config/keypairs` exists to allow you to view
@@ -490,7 +490,7 @@ the public keys of the key pairs currently in use by your Tessera node.
 
 A sample response for the request `adminhost:port/config/keypairs` is:
 
-=== "v0.10.2 onwards"
+=== "v0.10.2 and later"
 
     ```json
     request: thirdpartyhost:port/keys

@@ -90,7 +90,7 @@ tessera -keygen -keygenvaulttype HASHICORP -keygenvaulturl <url> \
 
 !!! note
     Environment variables must be set if using a HashiCorp Vault, and a version 2 K/V secret engine
-    must be enabled. For more information see [Setting up a HashiCorp Vault](Configure/KeyVault/HashiCorp-Vault.md)
+    must be enabled. For more information see [Setting up a HashiCorp Vault](Configure/KeyVault/Hashicorp-Vault.md)
 
 ## AWS Secrets Manager-stored keys
 

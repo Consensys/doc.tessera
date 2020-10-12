@@ -232,7 +232,6 @@ To create a dashboard similar to this:
     This retrieves the data for the `partyinfo` API from the InfluxDB, finds the non-negative derivative of the `RequestCount` for this data and groups by `instance` (that is each Tessera node).
         `non_negative_derivative(1s)` calculates the per second change in `RequestCount` and ignores negative values that will occur if a node is stopped and restarted.
 
-
     This panel shows the rate of POST requests per second to `partyinfo`. For this network of 7 healthy nodes, this rate fluctuates between 5.5 and 6.5 requests/sec. At approx 09:37 node 1 was killed and the `partyinfo` rate across all nodes immediately drops. This is because they are no longer receiving requests to their `partyinfo` API from node 1. At 09:41 node 1 is restarted and the rates return to their original values.
 
     This metric can be used as an indirect method of monitoring the health of the network. Using some of the more advanced InfluxDB query options available in Grafana and the other metrics measurements available it may be possible to make this result more explicit.

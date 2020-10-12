@@ -212,7 +212,7 @@ To create a dashboard similar to this:
 
         [![Grafana panel sidebar](../../images/tessera/monitoring/grafana-panel-sidebar.png)](../../images/tessera/monitoring/grafana-panel-sidebar.png)
 
-1. Create *sendRaw requests* panel
+1. Create *`sendRaw` requests* panel
     1. Select the correct data source from the *Queries to* dropdown list
     1. Construct the query as shown in the below image. This retrieves the data for the `sendraw` API from the InfluxDB, finds the sum of the `RequestCount` for this data (for example the total number of requests) and groups by `instance` (that is each Tessera node). `time($_interval)` automatically scales the graph resolution for the time range and graph width.
     [![Grafana send raw query](../../images/tessera/monitoring/grafana-send-raw-query.png)](../../images/tessera/monitoring/grafana-send-raw-query.png)
@@ -226,23 +226,22 @@ To create a dashboard similar to this:
 
     This panel shows the number of private payloads retrieved from Tessera using the `receiveraw` API over time.
 
-1. Create *`partyinfo` request rate (Tessera network health)* panel
+1. Create `partyinfo` request rate (Tessera network health) panel
     1. Select the correct data source from the *Queries to* dropdown list
     1. Construct the query as shown in the below image.
-        This retrieves the data for the `partyinfo` API from the InfluxDB, finds the non-negative derivative of the `RequestCount` for this data and groups by `instance` (that is each Tessera node).
+    This retrieves the data for the `partyinfo` API from the InfluxDB, finds the non-negative derivative of the `RequestCount` for this data and groups by `instance` (that is each Tessera node).
         `non_negative_derivative(1s)` calculates the per second change in `RequestCount` and ignores negative values that will occur if a node is stopped and restarted.
-    [![Grafana `partyinfo` rate](../../images/tessera/monitoring/grafana-partyinfo-rate.png)](../../images/tessera/monitoring/grafana-partyinfo-rate.png)
 
-    This panel shows the rate of POST requests per second to `partyinfo`. For this network of 7 healthy nodes, this rate fluctuates between 5.5 and 6.5 requests/sec. At approx 09:37 node 1 was killed and the partyinfo rate across all nodes immediately drops. This is because they are no longer receiving requests to their `partyinfo` API from node 1. At 09:41 node 1 is restarted and the rates return to their original values.
+
+    This panel shows the rate of POST requests per second to `partyinfo`. For this network of 7 healthy nodes, this rate fluctuates between 5.5 and 6.5 requests/sec. At approx 09:37 node 1 was killed and the `partyinfo` rate across all nodes immediately drops. This is because they are no longer receiving requests to their `partyinfo` API from node 1. At 09:41 node 1 is restarted and the rates return to their original values.
 
     This metric can be used as an indirect method of monitoring the health of the network. Using some of the more advanced InfluxDB query options available in Grafana and the other metrics measurements available it may be possible to make this result more explicit.
 
     [Alerts and rules](https://grafana.com/docs/alerting/notifications/) can be configured to determine when a node has disconnected and send notifications to pre-configured channels (for example Slack, email, etc.).
 
-1. Create *`sendRaw` rate* panel
+1. Create <code>sendRaw</code> rate panel
     1. Select the correct data source from the *Queries to* dropdown list
     1. Construct the query as shown in the below image. This retrieves the data for the `sendraw` API from the InfluxDB, finds the sum of the `RequestRate` for this data and groups by `instance` (that is each Tessera node). `time($_interval)` automatically scales the graph resolution for the time range and graph width.
-    [![Grafana `sendraw` rate query](../../images/tessera/monitoring/grafana-sendraw-rate-query.png)](../../images/tessera/monitoring/grafana-sendraw-rate-query.png)
 
     The POST `sendraw` API is used by Quorum whenever a private transaction is sent using the `eth_sendTransaction` or `personal_sendTransaction` API. This panel gives a good indication of the private transaction throughput in Quorum. Note that if the `sendraw` API is called by another process, the count will not be a true representation of Quorum traffic.
 

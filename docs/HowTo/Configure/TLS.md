@@ -41,7 +41,7 @@ If the value is set to `"OFF"`, the rest of the SSL configuration will not be co
     "knownClientsFile": "[TLS known clients file for the server. This contains the fingerprints of public keys of other nodes that are allowed to connect to this one.]",
     "knownServersFile": "[TLS known servers file for the client. This contains the fingerprints of public keys of other nodes that this node has encountered.]",
     "generateKeyStoreIfNotExisted": "[boolean]",
-    "environmentVariablePrefix": "[Prefix to uniquely identify environment variables for this particular server ssl config]"
+    "environmentVariablePrefix": "[Prefix to uniquely identify environment variables for this particular server ssl configuration]"
   }
 }
 ```
@@ -71,11 +71,11 @@ Passwords for secured `.jks` keystores can be provided in multiple ways, and in 
 * `<PREFIX>_TESSERA_CLIENT_KEYSTORE_PWD`, `<PREFIX>_TESSERA_CLIENT_TRUSTSTORE_PWD`
 
 The *prefixed* environment variables are only applied to the servers with that `environmentVariablePrefix`
-value defined in their config.
+value defined in their configuration.
 This allows, for example, a P2P and ADMIN server to be configured with different prefixes, `P2P` and `ADMIN`.
 Different keystores can then be used for each server and the individual passwords provided with `P2P_<...>` and `ADMIN_<...>`.
 
-#### Config file
+#### Configuration file
 
 * `serverKeyStorePassword`, `serverTrustStorePassword`
 * `clientKeyStorePassword`, `clientTrustStorePassword`
@@ -85,25 +85,25 @@ Different keystores can then be used for each server and the individual password
 * `TESSERA_SERVER_KEYSTORE_PWD`, `TESSERA_SERVER_TRUSTSTORE_PWD`
 * `TESSERA_CLIENT_KEYSTORE_PWD`, `TESSERA_CLIENT_TRUSTSTORE_PWD`
 
-The *global* environment variables, if set, are applied to all server configs defined in the configfile
+The *global* environment variables, if set, are applied to all server configurations defined in the configuration file
 
 !!!example
     If a P2P and ADMIN server are both configured with TLS then the values set for the global
     environment variables will be used for both).
-    These values are ignored if the passwords are also provided in the configfile or as prefixed environment variables.
+    These values are ignored if the passwords are also provided in the configuration file or as prefixed environment variables.
 
 #### Generating keystores
 
 If keystores do not already exist, Tessera can generate `.jks` (Java keystore) files for use with non-CA Trust Modes (see Trust Modes).
 
-By setting `"generateKeyStoreIfNotExisted": "true"`, Tessera will check whether files already exist at the paths provided in the `serverKeyStore` and `clientKeyStore` config values. If the files do not exist:
+By setting `"generateKeyStoreIfNotExisted": "true"`, Tessera will check whether files already exist at the paths provided in the `serverKeyStore` and `clientKeyStore` configuration values. If the files do not exist:
 
 1. New keystores will be generated and saved at the `serverKeyStore` and `clientKeyStore` paths
 1. The keystores will be secured using the corresponding passwords if they are provided (see Passwords)
 
 ### PEM files
 
-Below is a config sample for using the `.pem` file format:
+Below is a configuration sample for using the `.pem` file format:
 
 ```json
 "sslConfig" : {
@@ -135,7 +135,7 @@ The Trust Mode for both client and server must also be specified. Multiple trust
     These files will be generated if not already existed, using the values specified in
     `knownClientsFile` and `knownServersFile`.
 
-    A config sample for `TOFU` trust mode is:
+    A configuration sample for `TOFU` trust mode is:
 
     ```json
     "sslConfig" : {
@@ -160,7 +160,7 @@ This trust mode will not add new entries to the `knownClients` or `knownServers`
 
 With this trust mode, the whitelist files (`knownClientsFile` and `knownServersFile`) must be provided.
 
-A config sample for `WHITELIST` trust mode is:
+A configuration sample for `WHITELIST` trust mode is:
 
 ```json
 "sslConfig" : {
@@ -182,7 +182,7 @@ A config sample for `WHITELIST` trust mode is:
 Only nodes with a valid certificate and chain of trust are allowed to connect. For this trust mode,
 trust stores must be provided and must contain a list of trust certificates.
 
-A config sample for `CA` trust mode is:
+A configuration sample for `CA` trust mode is:
 
 ```json
 "sslConfig" : {

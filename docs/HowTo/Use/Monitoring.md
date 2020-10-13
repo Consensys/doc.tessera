@@ -4,7 +4,7 @@ description: Monitor Tessera
 
 # Monitor Tessera
 
-Tessera can be used with InfluxDB and Prometheus time-series databases to record API usage metrics. The data recorded can be visualised either by creating a custom dashboard or by using an existing dashboarding tool such as Grafana.
+Tessera can be used with InfluxDB and Prometheus time-series databases to record API usage metrics. The data recorded can be visualised either by creating a custom dashboard or by using an existing dashboard tool such as Grafana.
 
 In addition, Tessera logs can be searched, analyzed and monitored using Splunk. Splunk can be set up in such a way that the logs for multiple Tessera nodes in a network are accessible from a single centralized Splunk instance.
 
@@ -40,7 +40,7 @@ See the [InfluxDB documentation](https://docs.influxdata.com/influxdb) for detai
     ```
 
     For local development/testing the default configuration file (Linux: `/etc/influxdb/influxdb.conf`, macOS: `/usr/local/etc/influxdb.conf`), should be sufficient. For further configuration options see [Configuring InfluxDB](https://docs.influxdata.com/influxdb/v1.7/administration/config/)
-1. Connect to the InfluxDB server using the [`influx` CLI](https://docs.influxdata.com/influxdb/v1.7/tools/shell/) and create a new DB. If using the default config, this is simply:
+1. Connect to the InfluxDB server using the [`influx` CLI](https://docs.influxdata.com/influxdb/v1.7/tools/shell/) and create a new DB. If using the default configuration, this is simply:
 
     ```bash
     influx
@@ -61,7 +61,7 @@ See the [InfluxDB documentation](https://docs.influxdata.com/influxdb) for detai
 
 Each Tessera server type (for example `P2P`, `Q2T`, `ADMIN`, `THIRDPARTY`, `ENCLAVE`) can be configured to store API metrics in an InfluxDB. These servers can be configured to store metrics to the same DB or separate ones. Not all servers need to be configured to store metrics.
 
-To configure a server to use an InfluxDB, add `influxConfig` to the server config. For example:
+To configure a server to use an InfluxDB, add `influxConfig` to the server configuration. For example:
 
 ```json
 "serverConfigs": [
@@ -119,7 +119,7 @@ See [Enabling HTTPS with InfluxDB](https://docs.influxdata.com/influxdb/v1.7/adm
     https-private-key = "/path/to/certAndKey.pem"
     ```
 
-1. Restart the InfluxDB server to apply the config changes
+1. Restart the InfluxDB server to apply the configuration changes
 
 To allow Tessera to communicate with a TLS-secured InfluxDB, `sslConfig` must be provided. To configure Tessera as the client in 1-way TLS:
 
@@ -138,7 +138,9 @@ To allow Tessera to communicate with a TLS-secured InfluxDB, `sslConfig` must be
 
 where `truststore.jks` is a Java KeyStore format file containing the trusted certificates for the Tessera client (for example the certificate of the CA used to create the InfluxDB certificate).
 
-If securing the keystore with a password this password should be provided. Passwords can be provided either in the config (for example `clientTrustStorePassword`) or as environment variables (using `environmentVariablePrefix` and setting `<PREFIX>_TESSERA_CLIENT_TRUSTSTORE_PWD`). The [TLS Config](../Configure/TLS.md) documentation explains this in more detail.
+If securing the keystore with a password this password should be provided.
+Passwords can be provided either in the configuration (for example `clientTrustStorePassword`) or as environment variables (using `environmentVariablePrefix` and setting `<PREFIX>_TESSERA_CLIENT_TRUSTSTORE_PWD`).
+The [TLS Configuration](../Configure/TLS.md) documentation explains this in more detail.
 
 As Tessera expects 2-way TLS, a `.jks` file for the `clientKeyStore` must also be provided. This will not be used so can simply be set as the truststore.
 
@@ -147,7 +149,7 @@ As Tessera expects 2-way TLS, a `.jks` file for the `clientKeyStore` must also b
 The [Prometheus documentation](https://prometheus.io/docs/introduction/overview/) provides all the information needed to get Prometheus setup and ready to integrate with Tessera. The [Prometheus First Steps](https://prometheus.io/docs/introduction/first_steps/) is a good starting point. A summary of the steps to store Tessera metrics in a Prometheus DB are as follows:
 
 1. Install Prometheus
-1. Create a `prometheus.yml` configuration file to provide Prometheus with the necessary information to pull metrics from Tessera. A simple Prometheus config for use with the [7nodes example network](../../../../Getting Started/Quorum-Examples) is:
+1. Create a `prometheus.yml` configuration file to provide Prometheus with the necessary information to pull metrics from Tessera. A simple Prometheus configuration for use with the [7nodes example network](../../../../Getting Started/Quorum-Examples) is:
 
     ```yaml
     global:
@@ -173,74 +175,74 @@ The [Prometheus documentation](https://prometheus.io/docs/introduction/overview/
 
 Grafana can be used to create dashboards from data stored in InfluxDB or Prometheus databases. See the [Grafana documentation](http://docs.grafana.org/) and [Grafana Getting Started](https://grafana.com/docs/guides/getting_started/) for details on how to set up a Grafana instance and integrate it with databases. A summary of the steps is as follows:
 
-1. [Install and start Grafana](https://grafana.com/docs/) as described for your OS (if using the default config, Grafana will start on port `3000` and require login/password `admin/admin` to access the dashboard)
+1. [Install and start Grafana](https://grafana.com/docs/) as described for your OS (if using the default configuration, Grafana will start on port `3000` and require login/password `admin/admin` to access the dashboard)
 1. Create a Data Source to provide the necessary details to connect to the database
 1. Create a new Dashboard
 1. Add panels to the dashboard. Panels are the graphs, tables, statistics etc. that make up a dashboard. The New Panel wizard allows the components of the panel to be configured:
-    * Queries: Details the query to use retrieve data from the datasource, see the following links for info on using the Query Editor for [InfluxDB](https://grafana.com/docs/features/datasources/influxdb/) and [Prometheus](https://grafana.com/docs/features/datasources/prometheus/)
+    * Queries: Details the query to use retrieve data from the data source, see the following links for info on using the Query Editor for [InfluxDB](https://grafana.com/docs/features/datasources/influxdb/) and [Prometheus](https://grafana.com/docs/features/datasources/prometheus/)
     * Visualization: How to present the data queried, including panel type, axis headings etc.
 
 #### Example dashboard
 
-[![example-grafana-dashboard.png](../../images/tessera/monitoring/example-grafana-dashboard.png)](../../images/tessera/monitoring/example-grafana-dashboard.png)
+[![example Grafana dashboard](../../images/tessera/monitoring/example-grafana-dashboard.png)](../../images/tessera/monitoring/example-grafana-dashboard.png)
 
 To create this dashboard, a [7nodes example network](../../../../Getting Started/Quorum-Examples) was started, with each Tessera node configured to store its `P2P` and `Q2T` metrics to the same InfluxDB. Several runs of the Quorum Acceptance Tests were run against this network to simulate network activity.
 
-As can be seen in the top-right corner, the dashboard was set to only show data collected in the past 15 mins.
+As can be seen in the top-right corner, the dashboard was set to only show data collected in the past 15 minutes.
 
 To create a dashboard similar to this:
 
-1. Create an InfluxDB datasource within Grafana:
+1. Create an InfluxDB data source within Grafana:
     1. Hover over the cog icon in the left sidebar
     1. Data Sources
     1. Add data source
     1. Select the type of DB to connect to (for example InfluxDB or Prometheus)
     1. Fill out the form to provide all necessary DB connection information, e.g.:
-    [![grafana-influxdb-datasource.png](../../images/tessera/monitoring/grafana-influxdb-datasource.png)](../../images/tessera/monitoring/grafana-influxdb-datasource.png)
+    [![Grafana InfluxDB data source](../../images/tessera/monitoring/grafana-influxdb-datasource.png)](../../images/tessera/monitoring/grafana-influxdb-datasource.png)
 
 1. Create a new dashboard
     1. Hover over the plus icon in the left sidebar
     1. Dashboard
     1. Add Query to configure the first panel
     1. Add Panel in the top-right to add additional panels
-    [![grafana-new-dashboard.png](../../images/tessera/monitoring/grafana-new-dashboard.png)](../../images/tessera/monitoring/grafana-new-dashboard.png)
+    [![Grafana new dashboard](../../images/tessera/monitoring/grafana-new-dashboard.png)](../../images/tessera/monitoring/grafana-new-dashboard.png)
 
     !!! note
         For each of the following examples, additional options such as titles, axis labels and formatting can be configured by navigating the menus in the left-hand sidebar
 
-        [![grafana-panel-sidebar.png](../../images/tessera/monitoring/grafana-panel-sidebar.png)](../../images/tessera/monitoring/grafana-panel-sidebar.png)
+        [![Grafana panel sidebar](../../images/tessera/monitoring/grafana-panel-sidebar.png)](../../images/tessera/monitoring/grafana-panel-sidebar.png)
 
-1. Create *sendRaw requests* panel
-    1. Select the correct datasource from the *Queries to* dropdown list
+1. Create *`sendRaw` requests* panel
+    1. Select the correct data source from the *Queries to* dropdown list
     1. Construct the query as shown in the below image. This retrieves the data for the `sendraw` API from the InfluxDB, finds the sum of the `RequestCount` for this data (for example the total number of requests) and groups by `instance` (that is each Tessera node). `time($_interval)` automatically scales the graph resolution for the time range and graph width.
-    [![grafana-send-raw-query.png](../../images/tessera/monitoring/grafana-send-raw-query.png)](../../images/tessera/monitoring/grafana-send-raw-query.png)
+    [![Grafana send raw query](../../images/tessera/monitoring/grafana-send-raw-query.png)](../../images/tessera/monitoring/grafana-send-raw-query.png)
 
     This panel shows the number of private payloads sent to Tessera using the `sendraw` API over time.
 
 1. Create *receiveRaw requests* panel
-    1. Select the correct datasource from the *Queries to* dropdown list
+    1. Select the correct data source from the *Queries to* dropdown list
     1. Construct the query as shown in the below image. This retrieves the data for the `receiveraw` API from the InfluxDB, finds the sum of the `RequestCount` for this data (for example the total number of requests) and groups by `instance` (that is each Tessera node). `time($_interval)` automatically scales the graph resolution for the time range and graph width.
-    [![grafana-receive-raw-query.png](../../images/tessera/monitoring/grafana-receive-raw-query.png)](../../images/tessera/monitoring/grafana-receive-raw-query.png)
+    [![Grafana receive raw query](../../images/tessera/monitoring/grafana-receive-raw-query.png)](../../images/tessera/monitoring/grafana-receive-raw-query.png)
 
     This panel shows the number of private payloads retrieved from Tessera using the `receiveraw` API over time.
 
-1. Create *partyinfo request rate (Tessera network health)* panel
-    1. Select the correct datasource from the *Queries to* dropdown list
-    1. Construct the query as shown in the below image. This retrieves the data for the `partyinfo` API from the InfluxDB, finds the non-negative derivative of the `RequestCount` for this data and groups by `instance` (that is each Tessera node). `non_negative_derivative(1s)` calculates the per second change in `RequestCount` and ignores negative values that will occur if a node is stopped and restarted.
-    [![grafana-partyinfo-rate.png](../../images/tessera/monitoring/grafana-partyinfo-rate.png)](../../images/tessera/monitoring/grafana-partyinfo-rate.png)
+1. Create `partyinfo` request rate (Tessera network health) panel
+    1. Select the correct data source from the *Queries to* dropdown list
+    1. Construct the query as shown in the below image.
+    This retrieves the data for the `partyinfo` API from the InfluxDB, finds the non-negative derivative of the `RequestCount` for this data and groups by `instance` (that is each Tessera node).
+        `non_negative_derivative(1s)` calculates the per second change in `RequestCount` and ignores negative values that will occur if a node is stopped and restarted.
 
-    This panel shows the rate of POST requests per second to `partyinfo`. For this network of 7 healthy nodes, this rate fluctuates between 5.5 and 6.5 requests/sec. At approx 09:37 node 1 was killed and the partyinfo rate across all nodes immediately drops. This is because they are no longer receiving requests to their `partyinfo` API from node 1. At 09:41 node 1 is restarted and the rates return to their original values.
+    This panel shows the rate of POST requests per second to `partyinfo`. For this network of 7 healthy nodes, this rate fluctuates between 5.5 and 6.5 requests/sec. At approx 09:37 node 1 was killed and the `partyinfo` rate across all nodes immediately drops. This is because they are no longer receiving requests to their `partyinfo` API from node 1. At 09:41 node 1 is restarted and the rates return to their original values.
 
     This metric can be used as an indirect method of monitoring the health of the network. Using some of the more advanced InfluxDB query options available in Grafana and the other metrics measurements available it may be possible to make this result more explicit.
 
     [Alerts and rules](https://grafana.com/docs/alerting/notifications/) can be configured to determine when a node has disconnected and send notifications to pre-configured channels (for example Slack, email, etc.).
 
-1. Create *sendRaw rate* panel
-    1. Select the correct datasource from the *Queries to* dropdown list
+1. Create <code>sendRaw</code> rate panel
+    1. Select the correct data source from the *Queries to* dropdown list
     1. Construct the query as shown in the below image. This retrieves the data for the `sendraw` API from the InfluxDB, finds the sum of the `RequestRate` for this data and groups by `instance` (that is each Tessera node). `time($_interval)` automatically scales the graph resolution for the time range and graph width.
-    [![grafana-sendraw-rate-query.png](../../images/tessera/monitoring/grafana-sendraw-rate-query.png)](../../images/tessera/monitoring/grafana-sendraw-rate-query.png)
 
-    The POST `sendraw` API is used by Quorum whenever a private transaction is sent using the `eth_sendTransaction` or `personal_sendTransaction` API. This panel gives a good indication of the private tx throughput in Quorum. Note that if the `sendraw` API is called by another process, the count will not be a true representation of Quorum traffic.
+    The POST `sendraw` API is used by Quorum whenever a private transaction is sent using the `eth_sendTransaction` or `personal_sendTransaction` API. This panel gives a good indication of the private transaction throughput in Quorum. Note that if the `sendraw` API is called by another process, the count will not be a true representation of Quorum traffic.
 
 ## Monitoring a Tessera network with Splunk
 
@@ -257,9 +259,9 @@ The general steps to consolidate the logs for a Tessera network in Splunk are:
 
 1. Set up a central Splunk instance if one does not already exist. Typically this will be on a separate host to the hosts running the Tessera nodes. This is known as the *Receiver*.
 1. Configure the Tessera hosts to forward their node's logs to the *Receiver* by:
-    1. Configuring the format and output location of the node's logs. This is achieved by configuring logback (the logging framework used by Tessera) at node start-up.
+    1. Configuring the format and output location of the node's logs. This is achieved by configuring Logback (the logging framework used by Tessera) at node start-up.
 
-        The following example XML configures logback to save Tessera's logs to a file. See the [Logback documentation](https://logback.qos.ch/manual/configuration.html#syntax) for more information on configuring logback:
+        The following example XML configures Logback to save Tessera's logs to a file. See the [Logback documentation](https://logback.qos.ch/manual/configuration.html#syntax) for more information on configuring Logback:
 
         ``` xml
         <?xml version="1.0" encoding="UTF-8"?>
@@ -289,5 +291,3 @@ The general steps to consolidate the logs for a Tessera network in Splunk are:
 
     1. Set up Splunk *Universal Forwarders* (lightweight Splunk clients) on each Tessera host to forward log data for their node to the *Receiver*
     1. Set up the Splunk *Receiver* to listen and receive logging data from the *Universal Forwarders*
-
-

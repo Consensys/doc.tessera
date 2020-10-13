@@ -4,7 +4,7 @@ description: Overriding configuration file settings on the command line
 
 # Override configuration file settings on the command line
 
-The `-o, --override` option is used to define overrides as key/value pairs. The key is the json path of the field to be overwritten.
+The `-o, --override` option is used to define overrides as key/value pairs. The key is the JSON path of the field to be overwritten.
 
 For example, given `configfile.json`:
 
@@ -32,7 +32,7 @@ The command:
 tessera --configfile configfile.json -o jdbc.username=username-override --override peer[1].url=http://peer-override:9001
 ```
 
-Starts Tessera with the following effective config:
+Starts Tessera with the following effective configuration:
 
 ```json
 {

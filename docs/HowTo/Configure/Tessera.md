@@ -8,7 +8,7 @@ A `.json` file including required configuration details must be provided using t
 command-line property when starting Tessera.
 
 Many configuration options can be overridden using the command-line.
-See the [Using CLI to override config](Override-config.md) page for more information.
+See the [Using CLI to override configuration](Override-config.md) page for more information.
 
 ## Configuration options
 
@@ -17,8 +17,8 @@ Configuration options that require more than a brief explanation are covered in 
 
 ### Alternative cryptographic elliptic curves
 
-By default Tessera's Enclave uses the [jnacl](https://github.com/neilalexander/jnacl) implementation
-of the [NaCl](https://nacl.cr.yp.to/) library to encrypt/decrypt private payloads.
+By default Tessera's Enclave uses the [`jnacl`](https://github.com/neilalexander/jnacl) implementation
+of the [`NaCl`](https://nacl.cr.yp.to/) library to encrypt/decrypt private payloads.
 
 NaCl provides public-key authenticated encryption by using `curve25519xsalsa20poly1305`, a combination of the:
 
@@ -28,18 +28,18 @@ NaCl provides public-key authenticated encryption by using `curve25519xsalsa20po
 
 The NaCl primitives provide good security and speed and should be sufficient in most circumstances.
 
-However, the Enclave also supports the JCA (Java Cryptography Architecture) framework. Supplying a
-compatible JCA provider (for example [SunEC provider](https://docs.oracle.com/javase/8/docs/technotes/guides/security/SunProviders.html#SunEC))
-and the necessary Tessera config allows the NaCl primitives to be replaced with alternative curves and symmetric ciphers.
+However, the Enclave also supports the JCA framework.
+Supplying a compatible JCA provider (for example [SunEC provider](https://docs.oracle.com/javase/8/docs/technotes/guides/security/SunProviders.html#SunEC))
+and the necessary Tessera configuration allows the NaCl primitives to be replaced with alternative curves and symmetric ciphers.
 
 The same Enclave encryption process as described in
 [Lifecycle of a private transaction](https://docs.goquorum.consensys.net/Concepts/Privacy/PrivateTransactionLifecycle/)
-is used regardless of whether the NaCl or JCA Encryptor are configured.
+is used regardless of whether the NaCl or JCA encryptor are configured.
 
-This is a feature introduced in Tessera v0.10.2. Providing no `encryptor` configuration means the default NaCl encryptor is used.
+This is a feature introduced in Tessera v0.10.2. Not providing an encryptor configuration means the default NaCl encryptor is used.
 
 ```json
-"encryptor": {
+"encryptor":{
     "type":"EC",
     "properties":{
         "symmetricCipher":"AES/GCM/NoPadding",
@@ -103,16 +103,16 @@ For the ThirdParty server type it may be relevant to configure CORS.
         "allowedHeaders" : ["content-type"],
         "allowCredentials" : true
     }
-},
+}
 ```
 
 The configurable fields are:
 
 * `allowedMethods` : the list of allowed HTTP methods. If omitted the default list containing
-    `"GET", "POST", "PUT", "DELETE", "OPTIONS", "HEAD"` is used.
+    `GET`, `POST`, `PUT`, `DELETE`, `OPTIONS` and `HEAD` is used.
 * `allowedOrigins` : the list of domains from which to accept cross origin requests (browser enforced).
     Each entry in the list can contain the "*" (wildcard) character which matches any sequence of characters.
-    Ex: "*locahost" would match "http://localhost" or "https://localhost". There is no default for this field.
+    Example: `*locahost` would match `http://localhost` or `https://localhost`. This field has no default value.
 * `allowedHeaders` : the list of allowed headers. If omitted the request `Access-Control-Request-Headers`
     are copied into the response as `Access-Control-Allow-Headers`.
 * `allowCredentials` : the value for the `Access-Control-Allow-Credentials` response header.
@@ -124,7 +124,8 @@ See [Keys page](Keys.md).
 
 ### Database
 
-Tessera's database uses JDBC to connect to an external database. Any valid JDBC URL may be specified, refer to your providers details to construct a valid JDBC URL.
+Tessera's database uses JDBC to connect to an external database.
+Any valid JDBC URL may be specified, refer to your providers details to construct a valid JDBC URL.
 
 ```json
 "jdbc": {
@@ -137,15 +138,16 @@ Tessera's database uses JDBC to connect to an external database. Any valid JDBC 
 ### Disabling peer discovery
 
 If peer discovery is disabled, then **only** peers defined in the configuration file will be
-communicated with; any peers notified by other nodes will be ignored. This allows nodes to be 'locked down' if desired.
+communicated with; any peers notified by other nodes will be ignored.
+This allows nodes to be 'locked down' if desired.
 
 ```json
 "disablePeerDiscovery": true
 ```
 
-#### Obfuscate database password in config file
+#### Obfuscate database password in configuration file
 
-Certain entries in the Tessera config file must be obfuscated in order to prevent any attempts from
+Certain entries in the Tessera configuration file must be obfuscated in order to prevent any attempts from
 attackers to gain access to critical parts of the application (for example the database).
 The database password can be encrypted using [Jasypt](http://www.jasypt.org) to avoid it being
 exposed as plain text in the configuration file.
@@ -163,9 +165,9 @@ and wrap it inside an `ENC()` function.
 ```
 
 Being a Password-Based Encryptor, Jasypt requires a secret key (password) and a configured algorithm
-to encrypt/decrypt this config entry. This password can either be loaded into Tessera from file system
-or user input. For file system input, the location of this secret file needs to be set in Environment
-Variable `TESSERA_CONFIG_SECRET`
+to encrypt/decrypt this configuration entry. This password can either be loaded into Tessera from file system
+or user input. For file system input, the location of this secret file needs to be set in environment
+variable `TESSERA_CONFIG_SECRET`
 
 If the database password is not wrapped inside `ENC()`, Tessera will simply treat it as a plain-text
 password however this approach is not recommended for production environments.
@@ -201,9 +203,9 @@ password however this approach is not recommended for production environments.
         rJ70hNidkrpkTwHoVn2sGSp3h3uBWxjb
         ```
 
-1. Place the wrapped output, `ENC(rJ70hNidkrpkTwHoVn2sGSp3h3uBWxjb)`, in the config json file
+1. Place the wrapped output, `ENC(rJ70hNidkrpkTwHoVn2sGSp3h3uBWxjb)`, in the configuration JSON file
 
-### InfluxDB Config: Server sub-config
+### InfluxDB Configuration: Server sub-config
 
 Configuration details to allow Tessera to record monitoring data to a running InfluxDB instance.
 
@@ -241,7 +243,7 @@ In order to prevent attackers trying to inject malicious addresses against publi
 will try to assign the address to direct private transactions to them instead of the real owner of
 the key, we have added a feature to enable node level validation on the remote key that checks the
 remote node does in fact own the keys that were advertised. Only after the keys are validated with
-the remote node to ensure they own them, the keys are added to the local network info (partyinfo) store.
+the remote node to ensure they own them, the keys are added to the local network info (`partyinfo`) store.
 
 Default configuration for this is `false` as this is BREAKABLE change to lower versions to Tessera 0.10.0.
 To enable this, simple set below parameter to true in the configuration:
@@ -383,8 +385,10 @@ See [TLS/SSL](TLS.md) page.
 
 ### Whitelist
 
-If set to true, the `peers` list will be used as the allowed urls for the Tessera node:
+If set to true, the `peers` list will be used as the allowed URLs for the Tessera node:
 
 ```json
 "useWhiteList": true,
 ```
+
+*[JCA]: Java Cryptography Architecture

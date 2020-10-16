@@ -1,0 +1,455 @@
+components:
+  schemas:
+    StoreRawRequest:
+      required:
+        - payload
+      type: object
+      properties:
+        payload:
+          type: string
+          format: base64
+          description: data to be encrypted and stored
+        from:
+          type: string
+          format: base64
+          description: >
+            public key identifying the key pair that will be used in the encryption; if not set, default used
+    StoreRawResponse:
+      type: object
+      properties:
+        key:
+          type: string
+          format: base64
+          description: hash of encrypted payload
+    GetPublicKeysResponse:
+      type: object
+      properties:
+        keys:
+          type: array
+          items:
+            type: object
+            properties:
+              key:
+                type: string
+                format: base64
+                description: public key
+    GetPartiesPublicKeysResponse:
+      type: object
+      properties:
+        keys:
+          type: array
+          items:
+            type: object
+            properties:
+              key:
+                type: string
+                format: base64
+                description: public key
+    GetPartyInfoResponse:
+      type: object
+      properties:
+        keys:
+          type: array
+          items:
+            type: object
+            properties:
+              key:
+                type: string
+                format: base64
+                description: known public key of peer
+              url:
+                type: string
+                description: public key's corresponding peer url
+        peers:
+          type: array
+          items:
+            type: object
+            properties:
+              url:
+                type: string
+                description: peer's server url
+        url:
+          type: string
+          description: server's url
+    BroadcastPartyInfoRequest:
+      type: array
+      items:
+        description: octet-stream of partyinfo object
+        type: string
+        format: byte
+    BroadcastPartyInfoResponse:
+      type: array
+      items:
+        description: empty if server is using remote key validation, else is encoded partyinfo object containing only the server's URL
+        type: string
+        format: byte
+    ValidatePartyRequest:
+      type: array
+      items:
+        description: octet-stream of encrypted UUID
+        type: string
+        format: byte
+    ValidatePartyResponse:
+      description: decrypted UUID
+      type: string
+    PushBatchRequest:
+      description: list of encoded payloads
+      type: array
+      items:
+        type: array
+        items:
+          description: list of encoded payloads
+          type: string
+          format: byte
+    PushRequest:
+      type: array
+      items:
+        description: octet-stream of payload
+        type: string
+        format: byte
+    PushResponse:
+      description: hash of encrypted payload
+      type: string
+      format: base64
+    ResendRequest:
+      type: object
+      properties:
+        type:
+          enum:
+            - ALL
+            - INDIVIDUAL
+          type: string
+          required: true
+        publicKey:
+          type: string
+          format: base64
+          description: resend transactions involving this public key
+          required: true
+        key:
+          type: string
+          format: base64
+          description: hash of encoded transaction (INDIVIDUAL only)
+    ResendResponse:
+      description: empty if request was for ALL; else the encoded INDIVIDUAL transaction
+      type: array
+      items:
+        type: string
+        format: byte
+    ResendBatchRequest:
+      type: object
+      properties:
+        publicKey:
+          type: string
+          format: base64
+          required: true
+          description: resend transactions involving this public key
+        batchSize:
+          type: integer
+          description: default value is used if not provided
+    ResendBatchResponse:
+      description: count of total transactions being resent
+      type: integer
+      format: int64
+    EncryptPayloadRequest:
+      type: object
+      properties:
+        payload:
+          type: string
+          format: base64
+          required: true
+          description: private tx data to be encrypted
+        from:
+          type: string
+          format: base64
+          description: public key identifying the sender of the payload
+        to:
+          type: array
+          description: public keys identifying the recipients of the payload
+          items:
+            type: string
+            format: base64
+          required: true
+        privacyFlag:
+          type: int
+          description: |
+            the privacy mode to enforce
+            * 0 = standard private
+            * 1 = party protection
+            * 3 = private-state validation
+        affectedContractTransactions:
+          description: encoded payload hashes identifying all affected private contracts after tx simulation
+          type: array
+          items:
+            type: string
+            format: base64
+        execHash:
+          type: string
+          format: base64
+          description: execution hash; merkle root of all affected contracts after tx simulation
+    EncryptPayloadResponse:
+      type: object
+      properties:
+        senderKey:
+          type: string
+          format: base64
+          description: public key identifying the sender of the payload
+        cipherText:
+          type: string
+          format: base64
+          description: encrypted data
+        cipherTextNonce:
+          type: string
+          format: base64
+          description: nonce used in data encryption
+        recipientBoxes:
+          description: master key used in data encryption, wrapped for each payload recipient
+          type: array
+          items:
+            type: string
+            format: base64
+        recipientNonce:
+          type: string
+          format: base64
+          description: nonce used in master encryption
+        recipientKeys:
+          description: public keys identifying each recipient of the payload
+          type: array
+          items:
+            type: string
+            format: base64
+        privacyMode:
+          type: int
+          description: |
+            the privacy mode of the transaction
+            * 0 = standard private
+            * 1 = party protection
+            * 3 = private-state validation
+        affectedContractTransactions:
+          description: mapping of encoded payload hashes (base64 encoded) to security hashes (base64 encoded)
+          type: object
+          additionalProperties:
+            type: string
+            format: base64
+            description: security hash
+        execHash:
+          type: string
+          format: base64
+          description: execution hash; merkle root of all affected contracts after tx simulation
+    DecryptPayloadRequest:
+      type: object
+      properties:
+        senderKey:
+          type: string
+          format: base64
+          description: public key identifying the sender of the payload
+        cipherText:
+          type: string
+          format: base64
+          description: data to be decrypted
+        cipherTextNonce:
+          type: string
+          format: base64
+          description: nonce to use in data encryption
+        recipientBoxes:
+          description: master key used in data decryption, wrapped for each payload recipient
+          type: array
+          items:
+            type: string
+            format: base64
+        recipientNonce:
+          type: string
+          format: base64
+          description: nonce to use to unwrap master key
+        recipientKeys:
+          description: public keys identifying each recipient of the payload
+          type: array
+          items:
+            type: string
+            format: base64
+        privacyMode:
+           type: int
+           description: |
+             the privacy mode of the transaction
+             * 0 = standard private
+             * 1 = party protection
+             * 3 = private-state validation
+        affectedContractTransactions:
+          description: mapping of encoded payload hashes (base64 encoded) to security hashes (base64 encoded)
+          type: object
+          additionalProperties:
+            type: string
+            format: base64
+            description: security hash
+        execHash:
+          type: string
+          format: base64
+          description: execution hash; merkle root of all affected contracts after tx simulation
+    DecryptPayloadResponse:
+      type: object
+      properties:
+        payload:
+          type: string
+          format: base64
+          description: decrypted ciphertext payload
+        privacyFlag:
+          type: int
+          description: |
+            the privacy mode of the transaction
+            * 0 = standard private
+            * 1 = party protection
+            * 3 = private-state validation
+        affectedContractTransactions:
+          description: encoded payload hashes identifying all affected private contracts after tx simulation
+          type: array
+          items:
+            type: string
+            format: base64
+        execHash:
+          type: string
+          format: base64
+          description: execution hash; merkle root of all affected contracts after tx simulation
+    SendPayloadRequest:
+      type: object
+      properties:
+        payload:
+          type: string
+          format: base64
+          description: private tx data to be encrypted
+        from:
+          type: string
+          format: base64
+          description: public key identifying the sender of the payload
+        to:
+          description: public keys identifying the recipients of the payload
+          type: array
+          items:
+            type: string
+            format: base64
+        privacyFlag:
+          type: int
+          description: |
+            the privacy mode of the transaction
+            * 0 = standard private
+            * 1 = party protection
+            * 3 = private-state validation
+        affectedContractTransactions:
+          description: encoded payload hashes identifying all affected private contracts after tx simulation
+          type: array
+          items:
+            type: string
+            format: base64
+        execHash:
+          type: string
+          format: base64
+          description: execution hash; merkle root of all affected contracts after tx simulation
+    SendPayloadResponse:
+      type: object
+      properties:
+        key:
+          type: string
+          format: base64
+          description: encrypted payload hash
+    SendStoredPayloadRequestOctetStream:
+      type: array
+      items:
+        description: octet-stream of hash of pre-stored payload
+        type: string
+        format: byte
+    SendStoredPayloadRequestJson:
+      type: object
+      properties:
+        hash:
+          type: string
+          format: base64
+          description: hash of pre-stored payload
+        to:
+          type: array
+          description: public keys identifying the recipients of the payload
+          items:
+            type: string
+            format: base64
+        privacyFlag:
+          type: int
+          description: |
+            the privacy mode of the transaction
+            * 0 = standard private
+            * 1 = party protection
+            * 3 = private-state validation
+        affectedContractTransactions:
+          description: encoded payload hashes identifying all affected private contracts after tx simulation
+          type: array
+          items:
+            type: string
+            format: base64
+        execHash:
+          type: string
+          format: base64
+          description: execution hash; merkle root of all affected contracts after tx simulation
+    SendStoredPayloadResponse:
+      type: string
+      format: base64
+      description: hash of rewrapped payload
+    SendRawPayloadRequest:
+      type: array
+      items:
+        description: octet-stream of data to be encrypted
+        type: string
+        format: byte
+    SendRawPayloadResponse:
+      type: string
+      format: base64
+      description: encrypted payload hash
+    GetDecryptedPayloadRequestJson:
+      type: object
+      properties:
+        key:
+          type: string
+          format: base64
+          description: hash indicating encrypted payload to retrieve from database
+        to:
+          type: string
+          format: base64
+          description: (optional) public key of recipient of the encrypted payload; used in decryption; if not provided, decryption is attempted with all known recipient keys in turn
+        isRaw:
+          type: boolean
+          description: |
+            (optional) indicates whether the payload is raw; determines which database the payload is retrieved from; possible values
+            * true - for pre-stored payloads in the "raw" database
+            * false (default) - for already sent payloads in "standard" database
+    GetDecryptedPayloadResponseJson:
+      type: object
+      properties:
+        payload:
+          type: string
+          format: base64
+          description: decrypted ciphertext payload
+        privacyFlag:
+          type: int
+          description: |
+            the privacy mode of the transaction
+            * 0 = standard private
+            * 1 = party protection
+            * 3 = private-state validation
+        affectedContractTransactions:
+          description: encoded payload hashes identifying all affected private contracts after tx simulation
+          type: array
+          items:
+            type: string
+            format: base64
+        execHash:
+          type: string
+          format: base64
+          description: execution hash; merkle root of all affected contracts after tx simulation
+    GetDecryptedPayloadResponseOctetStream:
+      type: array
+      items:
+        type: string
+        format: byte
+        description: octet-stream of decrypted ciphertext payload
+    DeleteRequest:
+      type: object
+      properties:
+        key:
+          type: string
+          format: base64
+          description: hash indicating encrypted payload to delete from database

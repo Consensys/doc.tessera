@@ -250,7 +250,7 @@ paths:
               $ref: "#/components/schemas/PushRequest"
       responses:
         "201":
-          description: hash of encrypted payload
+          description: hash of encoded payload
           content:
             text/plain:
               schema:
@@ -697,7 +697,7 @@ components:
         type: string
         format: byte
     PushResponse:
-      description: hash of encrypted payload
+      description: hash of encoded payload
       type: string
       format: base64
     ResendRequest:

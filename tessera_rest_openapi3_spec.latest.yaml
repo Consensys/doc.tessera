@@ -180,7 +180,7 @@ paths:
       summary: /partyinfo
       operationId: broadcastPartyInfo
       parameters:
-      - name: clientSupportedApiVersions
+      - name: tesseraSupportedApiVersions
         in: header
         description: client's supported API versions
         schema:

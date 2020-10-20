@@ -1,4 +1,4 @@
-openapi: 3.0.3
+openapi: 3.0.1
 info:
   title: Tessera API reference
   description: |
@@ -18,26 +18,6 @@ tags:
   - name: third-party
     description: Operations for third party clients (for example external tools)
 paths:
-  /api:
-    get:
-      tags:
-        - quorum-to-tessera
-        - peer-to-peer
-        - third-party
-      description: returns JSON or HTML OpenAPI document
-      operationId: getOpenApiDocument
-      responses:
-        "200":
-          description: JSON or HTML OpenAPI document
-          content:
-            application/json:
-              schema:
-                description: JSON OpenAPI document
-                type: string
-            text/html:
-              schema:
-                description: HTML OpenAPI document
-                type: string
   /upcheck:
     get:
       tags:
@@ -45,6 +25,7 @@ paths:
         - peer-to-peer
         - third-party
       description: simple operation to check the server is up
+      summary: /upcheck
       operationId: upcheck
       responses:
         "200":
@@ -61,6 +42,7 @@ paths:
         - peer-to-peer
         - third-party
       description: Tessera distribution version
+      summary: /version
       operationId: getVersion
       responses:
         "200":
@@ -78,6 +60,7 @@ paths:
         - peer-to-peer
         - third-party
       description: Tessera distribution version
+      summary: /version/distribution
       operationId: getDistributionVersion
       responses:
         "200":
@@ -94,6 +77,7 @@ paths:
         - peer-to-peer
         - third-party
       description: list currently available API versions
+      summary: /version/api
       operationId: getApiVersions
       responses:
         "200":
@@ -105,18 +89,40 @@ paths:
                 items:
                   type: string
               example: ["1.0", "2.0"]
+  /api:
+    get:
+      tags:
+        - quorum-to-tessera
+        - peer-to-peer
+        - third-party
+      description: returns JSON or HTML OpenAPI document
+      summary: /api
+      operationId: getOpenApiDocument
+      responses:
+        "200":
+          description: JSON or HTML OpenAPI document
+          content:
+            application/json:
+              schema:
+                description: JSON OpenAPI document
+                type: string
+            text/html:
+              schema:
+                description: HTML OpenAPI document
+                type: string
   /storeraw:
     post:
       tags:
         - quorum-to-tessera
         - third-party
       description: encrypts a payload and stores result in the "raw" database
+      summary: /storeraw
       operationId: encryptAndStore
       requestBody:
         content:
           application/json:
             schema:
-              $ref: components.yaml#/components/schemas/StoreRawRequest
+              $ref: "#/components/schemas/StoreRawRequest"
         required: true
       responses:
         "200":
@@ -124,12 +130,13 @@ paths:
           content:
             application/json:
               schema:
-                $ref: components.yaml#/components/schemas/StoreRawResponse
+                $ref: "#/components/schemas/StoreRawResponse"
   /keys:
     get:
       tags:
         - third-party
       description: get all public keys managed by the server's enclave
+      summary: /keys
       operationId: getPublicKeys
       responses:
         "200":
@@ -137,12 +144,13 @@ paths:
           content:
             application/json:
               schema:
-                $ref: components.yaml#/components/schemas/GetPublicKeysResponse
+                $ref: "#/components/schemas/GetPublicKeysResponse"
   /partyinfo/keys:
     get:
       tags:
         - third-party
       description: get public keys of all known nodes in the network, including the server's own keys
+      summary: /partyinfo/keys
       operationId: getPartiesPublicKeys
       responses:
         "200":
@@ -150,12 +158,13 @@ paths:
           content:
             application/json:
               schema:
-                $ref: components.yaml#/components/schemas/GetPartiesPublicKeysResponse
+                $ref: "#/components/schemas/GetPartiesPublicKeysResponse"
   /partyinfo:
     get:
       tags:
         - peer-to-peer
       description: fetch network/peer information
+      summary: /partyinfo
       operationId: getPartyInfo
       responses:
         "200":
@@ -163,11 +172,12 @@ paths:
           content:
             application/json:
               schema:
-                $ref: components.yaml#/components/schemas/GetPartyInfoResponse
+                $ref: "#/components/schemas/GetPartyInfoResponse"
     post:
       tags:
         - peer-to-peer
       description: broadcast partyinfo information to server
+      summary: /partyinfo
       operationId: broadcastPartyInfo
       parameters:
       - name: clientSupportedApiVersions
@@ -182,32 +192,33 @@ paths:
         content:
           application/octet-stream:
             schema:
-              $ref: components.yaml#/components/schemas/BroadcastPartyInfoRequest
+              $ref: "#/components/schemas/BroadcastPartyInfoRequest"
       responses:
         "200":
           description: server successfully updated its party info
           content:
             application/octet-stream:
               schema:
-                $ref: components.yaml#/components/schemas/BroadcastPartyInfoResponse
+                $ref: "#/components/schemas/BroadcastPartyInfoResponse"
   /partyinfo/validate:
     post:
       tags:
         - peer-to-peer
       description: decrypt a UUID payload (used to validate ownership of an asymmetric key pair)
+      summary: /partyinfo/validate
       operationId: validateParty
       requestBody:
         content:
           application/octet-stream:
             schema:
-              $ref: components.yaml#/components/schemas/ValidatePartyRequest
+              $ref: "#/components/schemas/ValidatePartyRequest"
       responses:
         "200":
           description: successfully decrypted payload
           content:
             text/plain:
               schema:
-                $ref: components.yaml#/components/schemas/ValidatePartyResponse
+                $ref: "#/components/schemas/ValidatePartyResponse"
         "400":
           description: decrypted payload is not a valid UUID
   /pushBatch:
@@ -215,12 +226,13 @@ paths:
       tags:
         - peer-to-peer
       description: store batch of encoded payloads to the server's database (available only when the server is in recovery mode)
+      summary: /pushBatch
       operationId: pushPayloadBatch
       requestBody:
         content:
           application/json:
             schema:
-              $ref: components.yaml#/components/schemas/PushBatchRequest
+              $ref: "#/components/schemas/PushBatchRequest"
       responses:
         "200":
           description: batch successfully stored
@@ -229,19 +241,20 @@ paths:
       tags:
         - peer-to-peer
       description: store encoded payload to the server's database
+      summary: /push
       operationId: pushPayload
       requestBody:
         content:
           application/octet-stream:
             schema:
-              $ref: components.yaml#/components/schemas/PushRequest
+              $ref: "#/components/schemas/PushRequest"
       responses:
         "201":
           description: hash of encrypted payload
           content:
             text/plain:
               schema:
-                $ref: components.yaml#/components/schemas/PushResponse
+                $ref: "#/components/schemas/PushResponse"
         "403":
           description: server is in recovery mode and encoded payload is not a Standard Private transaction
   /resend:
@@ -249,98 +262,103 @@ paths:
       tags:
         - peer-to-peer
       description: initiate resend of either an INDIVIDUAL transaction or ALL transactions involving a given public key
+      summary: /resend
       operationId: requestPayloadResend
       requestBody:
         content:
           application/json:
             schema:
-              $ref: components.yaml#/components/schemas/ResendRequest
+              $ref: "#/components/schemas/ResendRequest"
       responses:
         "200":
           description: resent payload
           content:
             text/plain:
               schema:
-                $ref: components.yaml#/components/schemas/ResendResponse
+                $ref: "#/components/schemas/ResendResponse"
   /resendBatch:
     post:
       tags:
         - peer-to-peer
       description: initiate resend of all transactions for a given public key in batches
+      summary: /resendBatch
       operationId: requestPayloadBatchResend
       requestBody:
         content:
           application/json:
             schema:
-              $ref: components.yaml#/components/schemas/ResendBatchRequest
+              $ref: "#/components/schemas/ResendBatchRequest"
       responses:
         "200":
           description: count of total transactions being resent
           content:
             application/json:
               schema:
-                $ref: components.yaml#/components/schemas/ResendBatchResponse
+                $ref: "#/components/schemas/ResendBatchResponse"
   /encodedPayload/create:
     post:
       tags:
         - quorum-to-tessera
       description: encrypt a payload and return the result; does not store to the database or push to peers
+      summary: /encodedPayload/create
       operationId: encrypt
       requestBody:
         content:
           application/json:
             schema:
-              $ref: components.yaml#/components/schemas/EncryptPayloadRequest
+              $ref: "#/components/schemas/EncryptPayloadRequest"
       responses:
         "200":
           description: encrypted payload
           content:
             application/json:
               schema:
-                $ref: components.yaml#/components/schemas/EncryptPayloadResponse
+                $ref: "#/components/schemas/EncryptPayloadResponse"
   /encodedPayload/decrypt:
     post:
       tags:
         - quorum-to-tessera
       description: decrypt an encrypted payload and return the result; does not store to the database or push to peers
+      summary: /encodedPayload/decrypt
       operationId: decrypt
       requestBody:
         content:
           application/json:
             schema:
-              $ref: components.yaml#/components/schemas/DecryptPayloadRequest
+              $ref: "#/components/schemas/DecryptPayloadRequest"
       responses:
         "200":
           description: decrypted payload
           content:
             application/json:
               schema:
-                $ref: components.yaml#/components/schemas/DecryptPayloadResponse
+                $ref: "#/components/schemas/DecryptPayloadResponse"
   /send:
     post:
       tags:
         - quorum-to-tessera
       description: encrypts a payload, stores result in database, and publishes result to recipients
-      operationId: encryptStoreAndSend
+      summary: /send
+      operationId: encryptStoreAndSendJson
       requestBody:
         content:
           application/json:
             schema:
-              $ref: components.yaml#/components/schemas/SendPayloadRequest
+              $ref: "#/components/schemas/SendPayloadRequest"
       responses:
         "201":
           description: encrypted payload hash
           content:
             application/json:
               schema:
-                $ref: components.yaml#/components/schemas/SendPayloadResponse
+                $ref: "#/components/schemas/SendPayloadResponse"
   /sendraw:
     post:
       tags:
         - quorum-to-tessera
       description: encrypts a payload, stores result in database, and publishes result to recipients
-      operationId: encryptStoreAndSend (deprecated)
-      deprecated: true
+      summary: /sendraw
+      operationId: encryptStoreAndSendOctetStream
       parameters:
         - name: c11n-from
           in: header
@@ -358,19 +376,20 @@ paths:
         content:
           application/octet-stream:
             schema:
-              $ref: components.yaml#/components/schemas/SendRawPayloadRequest
+              $ref: "#/components/schemas/SendRawPayloadRequest"
       responses:
         "200":
           description: encrypted payload hash
           content:
             text/plain:
               schema:
-                $ref: components.yaml#/components/schemas/SendRawPayloadResponse
+                $ref: "#/components/schemas/SendRawPayloadResponse"
   /sendsignedtx:
     post:
       tags:
         - quorum-to-tessera
       description: re-wraps a pre-stored & pre-encrypted payload, stores result in database, and publishes result to recipients
+      summary: /sendsignedtx
       operationId: sendStored
       parameters:
       - name: c11n-to
@@ -383,48 +402,49 @@ paths:
         content:
           application/octet-stream:
             schema:
-              $ref: components.yaml#/components/schemas/SendStoredPayloadRequestOctetStream
+              $ref: "#/components/schemas/SendStoredPayloadRequestOctetStream"
           application/json:
             schema:
-              $ref: components.yaml#/components/schemas/SendStoredPayloadRequestJson
+              $ref: "#/components/schemas/SendStoredPayloadRequestJson"
       responses:
         "200":
           description: hash of rewrapped payload (for application/octet-stream requests)
           content:
             text/plain:
               schema:
-                $ref: components.yaml#/components/schemas/SendStoredPayloadResponse
+                $ref: "#/components/schemas/SendStoredPayloadResponse"
         "201":
           description: hash of rewrapped payload (for application/json requests)
           content:
             application/json:
               schema:
-                $ref: components.yaml#/components/schemas/SendStoredPayloadResponse
+                $ref: "#/components/schemas/SendStoredPayloadResponse"
   /receive:
     get:
       tags:
         - quorum-to-tessera
       description: get payload from database, decrypt, and return
-      operationId: getDecryptedPayload
+      summary: /receive
+      operationId: getDecryptedPayloadJson
       requestBody:
         content:
           application/json:
             schema:
-              $ref: components.yaml#/components/schemas/GetDecryptedPayloadRequestJson
+              $ref: "#/components/schemas/GetDecryptedPayloadRequestJson"
       responses:
         "200":
           description: decrypted payload
           content:
             application/json:
               schema:
-                $ref: components.yaml#/components/schemas/GetDecryptedPayloadResponseJson
+                $ref: "#/components/schemas/GetDecryptedPayloadResponseJson"
   /transaction/{hash}:
     get:
       tags:
         - quorum-to-tessera
       description: get payload from database, decrypt, and return
-      operationId: getDecryptedPayload (deprecated)
-      deprecated: true
+      summary: /transaction/{hash}
+      operationId: getDecryptedPayloadJsonUrl
       parameters:
         - name: hash
           in: path
@@ -453,11 +473,12 @@ paths:
           content:
             application/json:
               schema:
-                $ref: components.yaml#/components/schemas/GetDecryptedPayloadResponseJson
+                $ref: "#/components/schemas/GetDecryptedPayloadResponseJson"
     delete:
       tags:
         - quorum-to-tessera
       description: delete payload from database
+      summary: /transaction/{hash}
       operationId: delete
       parameters:
         - name: hash
@@ -474,9 +495,9 @@ paths:
     get:
       tags:
         - quorum-to-tessera
-      description: get payload from database, decrypt, and return (for Constellation backwards compatibility)
-      operationId: getDecryptedPayload (deprecated-c11n)
-      deprecated: true
+      description: get payload from database, decrypt, and return
+      summary: /receiveraw
+      operationId: getDecryptedPayloadOctetStream
       parameters:
         - name: c11n-key
           in: header
@@ -497,19 +518,20 @@ paths:
           content:
             application/octet-stream:
               schema:
-                $ref: components.yaml#/components/schemas/GetDecryptedPayloadResponseOctetStream
+                $ref: "#/components/schemas/GetDecryptedPayloadResponseOctetStream"
   /delete:
     post:
       tags:
         - quorum-to-tessera
       description: delete payload from database
-      operationId: delete (deprecated)
+      summary: /delete
+      operationId: deleteDeprecated
       deprecated: true
       requestBody:
         content:
           application/json:
             schema:
-              $ref: components.yaml#/components/schemas/DeleteRequest
+              $ref: "#/components/schemas/DeleteRequest"
       responses:
         "200":
           description: delete successful
@@ -523,6 +545,7 @@ paths:
       tags:
         - quorum-to-tessera
       description: check if the server was the sender of a transaction
+      summary: /transaction/{hash}/isSender
       operationId: isSender
       parameters:
         - name: hash
@@ -545,6 +568,7 @@ paths:
       tags:
         - quorum-to-tessera
       description: get list of recipient public keys for a transaction
+      summary: /transaction/{hash}/participants
       operationId: getRecipients
       parameters:
         - name: hash
@@ -563,4 +587,462 @@ paths:
                 type: string
                 description: comma-separated list of recipients
               example: "ROAZBWtSacxXQrOe3FGAqJDyJjFePR5ce4TSIzmJ0Bc=,BULeR8JyUWhiuuCMU/HLA0Q5pzkYT+cHII3ZKBey3Bo="
+components:
+  schemas:
+    StoreRawRequest:
+      required:
+        - payload
+      type: object
+      properties:
+        payload:
+          type: string
+          format: base64
+          description: data to be encrypted and stored
+        from:
+          type: string
+          format: base64
+          description: >
+            public key identifying the key pair that will be used in the encryption; if not set, default used
+    StoreRawResponse:
+      type: object
+      properties:
+        key:
+          type: string
+          format: base64
+          description: hash of encrypted payload
+    GetPublicKeysResponse:
+      type: object
+      properties:
+        keys:
+          type: array
+          items:
+            type: object
+            properties:
+              key:
+                type: string
+                format: base64
+                description: public key
+    GetPartiesPublicKeysResponse:
+      type: object
+      properties:
+        keys:
+          type: array
+          items:
+            type: object
+            properties:
+              key:
+                type: string
+                format: base64
+                description: public key
+    GetPartyInfoResponse:
+      type: object
+      properties:
+        keys:
+          type: array
+          items:
+            type: object
+            properties:
+              key:
+                type: string
+                format: base64
+                description: known public key of peer
+              url:
+                type: string
+                description: public key's corresponding peer url
+        peers:
+          type: array
+          items:
+            type: object
+            properties:
+              url:
+                type: string
+                description: peer's server url
+        url:
+          type: string
+          description: server's url
+    BroadcastPartyInfoRequest:
+      type: array
+      items:
+        description: octet-stream of partyinfo object
+        type: string
+        format: byte
+    BroadcastPartyInfoResponse:
+      type: array
+      items:
+        description: empty if server is using remote key validation, else is encoded partyinfo object containing only the server's URL
+        type: string
+        format: byte
+    ValidatePartyRequest:
+      type: array
+      items:
+        description: octet-stream of encrypted UUID
+        type: string
+        format: byte
+    ValidatePartyResponse:
+      description: decrypted UUID
+      type: string
+    PushBatchRequest:
+      description: list of encoded payloads
+      type: array
+      items:
+        type: array
+        items:
+          description: list of encoded payloads
+          type: string
+          format: byte
+    PushRequest:
+      type: array
+      items:
+        description: octet-stream of payload
+        type: string
+        format: byte
+    PushResponse:
+      description: hash of encrypted payload
+      type: string
+      format: base64
+    ResendRequest:
+      type: object
+      required:
+        - type
+        - publicKey
+      properties:
+        type:
+          enum:
+            - ALL
+            - INDIVIDUAL
+          type: string
+        publicKey:
+          type: string
+          format: base64
+          description: resend transactions involving this public key
+        key:
+          type: string
+          format: base64
+          description: hash of encoded transaction (INDIVIDUAL only)
+    ResendResponse:
+      description: empty if request was for ALL; else the encoded INDIVIDUAL transaction
+      type: array
+      items:
+        type: string
+        format: byte
+    ResendBatchRequest:
+      type: object
+      required:
+        - publicKey
+      properties:
+        publicKey:
+          type: string
+          format: base64
+          description: resend transactions involving this public key
+        batchSize:
+          type: integer
+          description: default value is used if not provided
+    ResendBatchResponse:
+      description: count of total transactions being resent
+      type: integer
+      format: int64
+    EncryptPayloadRequest:
+      type: object
+      required:
+        - payload
+        - to
+      properties:
+        payload:
+          type: string
+          format: base64
+          description: private tx data to be encrypted
+        from:
+          type: string
+          format: base64
+          description: public key identifying the sender of the payload
+        to:
+          type: array
+          description: public keys identifying the recipients of the payload
+          items:
+            type: string
+            format: base64
+        privacyFlag:
+          type: integer
+          description: |
+            the privacy mode to enforce
+            * 0 = standard private
+            * 1 = party protection
+            * 3 = private-state validation
+        affectedContractTransactions:
+          description: encoded payload hashes identifying all affected private contracts after tx simulation
+          type: array
+          items:
+            type: string
+            format: base64
+        execHash:
+          type: string
+          format: base64
+          description: execution hash; merkle root of all affected contracts after tx simulation
+    EncryptPayloadResponse:
+      type: object
+      properties:
+        senderKey:
+          type: string
+          format: base64
+          description: public key identifying the sender of the payload
+        cipherText:
+          type: string
+          format: base64
+          description: encrypted data
+        cipherTextNonce:
+          type: string
+          format: base64
+          description: nonce used in data encryption
+        recipientBoxes:
+          description: master key used in data encryption, wrapped for each payload recipient
+          type: array
+          items:
+            type: string
+            format: base64
+        recipientNonce:
+          type: string
+          format: base64
+          description: nonce used in master encryption
+        recipientKeys:
+          description: public keys identifying each recipient of the payload
+          type: array
+          items:
+            type: string
+            format: base64
+        privacyMode:
+          type: integer
+          description: |
+            the privacy mode of the transaction
+            * 0 = standard private
+            * 1 = party protection
+            * 3 = private-state validation
+        affectedContractTransactions:
+          description: mapping of encoded payload hashes (base64 encoded) to security hashes (base64 encoded)
+          type: object
+          additionalProperties:
+            type: string
+            format: base64
+            description: security hash
+        execHash:
+          type: string
+          format: base64
+          description: execution hash; merkle root of all affected contracts after tx simulation
+    DecryptPayloadRequest:
+      type: object
+      properties:
+        senderKey:
+          type: string
+          format: base64
+          description: public key identifying the sender of the payload
+        cipherText:
+          type: string
+          format: base64
+          description: data to be decrypted
+        cipherTextNonce:
+          type: string
+          format: base64
+          description: nonce to use in data encryption
+        recipientBoxes:
+          description: master key used in data decryption, wrapped for each payload recipient
+          type: array
+          items:
+            type: string
+            format: base64
+        recipientNonce:
+          type: string
+          format: base64
+          description: nonce to use to unwrap master key
+        recipientKeys:
+          description: public keys identifying each recipient of the payload
+          type: array
+          items:
+            type: string
+            format: base64
+        privacyMode:
+          type: integer
+          description: |
+            the privacy mode of the transaction
+            * 0 = standard private
+            * 1 = party protection
+            * 3 = private-state validation
+        affectedContractTransactions:
+          description: mapping of encoded payload hashes (base64 encoded) to security hashes (base64 encoded)
+          type: object
+          additionalProperties:
+            type: string
+            format: base64
+            description: security hash
+        execHash:
+          type: string
+          format: base64
+          description: execution hash; merkle root of all affected contracts after tx simulation
+    DecryptPayloadResponse:
+      type: object
+      properties:
+        payload:
+          type: string
+          format: base64
+          description: decrypted ciphertext payload
+        privacyFlag:
+          type: integer
+          description: |
+            the privacy mode of the transaction
+            * 0 = standard private
+            * 1 = party protection
+            * 3 = private-state validation
+        affectedContractTransactions:
+          description: encoded payload hashes identifying all affected private contracts after tx simulation
+          type: array
+          items:
+            type: string
+            format: base64
+        execHash:
+          type: string
+          format: base64
+          description: execution hash; merkle root of all affected contracts after tx simulation
+    SendPayloadRequest:
+      type: object
+      properties:
+        payload:
+          type: string
+          format: base64
+          description: private tx data to be encrypted
+        from:
+          type: string
+          format: base64
+          description: public key identifying the sender of the payload
+        to:
+          description: public keys identifying the recipients of the payload
+          type: array
+          items:
+            type: string
+            format: base64
+        privacyFlag:
+          type: integer
+          description: |
+            the privacy mode of the transaction
+            * 0 = standard private
+            * 1 = party protection
+            * 3 = private-state validation
+        affectedContractTransactions:
+          description: encoded payload hashes identifying all affected private contracts after tx simulation
+          type: array
+          items:
+            type: string
+            format: base64
+        execHash:
+          type: string
+          format: base64
+          description: execution hash; merkle root of all affected contracts after tx simulation
+    SendPayloadResponse:
+      type: object
+      properties:
+        key:
+          type: string
+          format: base64
+          description: encrypted payload hash
+    SendStoredPayloadRequestOctetStream:
+      type: array
+      items:
+        description: octet-stream of hash of pre-stored payload
+        type: string
+        format: byte
+    SendStoredPayloadRequestJson:
+      type: object
+      properties:
+        hash:
+          type: string
+          format: base64
+          description: hash of pre-stored payload
+        to:
+          type: array
+          description: public keys identifying the recipients of the payload
+          items:
+            type: string
+            format: base64
+        privacyFlag:
+          type: integer
+          description: |
+            the privacy mode of the transaction
+            * 0 = standard private
+            * 1 = party protection
+            * 3 = private-state validation
+        affectedContractTransactions:
+          description: encoded payload hashes identifying all affected private contracts after tx simulation
+          type: array
+          items:
+            type: string
+            format: base64
+        execHash:
+          type: string
+          format: base64
+          description: execution hash; merkle root of all affected contracts after tx simulation
+    SendStoredPayloadResponse:
+      type: string
+      format: base64
+      description: hash of rewrapped payload
+    SendRawPayloadRequest:
+      type: array
+      items:
+        description: octet-stream of data to be encrypted
+        type: string
+        format: byte
+    SendRawPayloadResponse:
+      type: string
+      format: base64
+      description: encrypted payload hash
+    GetDecryptedPayloadRequestJson:
+      type: object
+      properties:
+        key:
+          type: string
+          format: base64
+          description: hash indicating encrypted payload to retrieve from database
+        to:
+          type: string
+          format: base64
+          description: (optional) public key of recipient of the encrypted payload; used in decryption; if not provided, decryption is attempted with all known recipient keys in turn
+        isRaw:
+          type: boolean
+          description: |
+            (optional) indicates whether the payload is raw; determines which database the payload is retrieved from; possible values
+            * true - for pre-stored payloads in the "raw" database
+            * false (default) - for already sent payloads in "standard" database
+    GetDecryptedPayloadResponseJson:
+      type: object
+      properties:
+        payload:
+          type: string
+          format: base64
+          description: decrypted ciphertext payload
+        privacyFlag:
+          type: integer
+          description: |
+            the privacy mode of the transaction
+            * 0 = standard private
+            * 1 = party protection
+            * 3 = private-state validation
+        affectedContractTransactions:
+          description: encoded payload hashes identifying all affected private contracts after tx simulation
+          type: array
+          items:
+            type: string
+            format: base64
+        execHash:
+          type: string
+          format: base64
+          description: execution hash; merkle root of all affected contracts after tx simulation
+    GetDecryptedPayloadResponseOctetStream:
+      type: array
+      items:
+        type: string
+        format: byte
+        description: octet-stream of decrypted ciphertext payload
+    DeleteRequest:
+      type: object
+      properties:
+        key:
+          type: string
+          format: base64
+          description: hash indicating encrypted payload to delete from database
 

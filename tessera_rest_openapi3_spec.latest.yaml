@@ -295,12 +295,12 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/ResendBatchResponse"
-  /encodedPayload/create:
+  /encodedpayload/create:
     post:
       tags:
         - quorum-to-tessera
       description: encrypt a payload and return the result; does not store to the database or push to peers
-      summary: /encodedPayload/create
+      summary: /encodedpayload/create
       operationId: encrypt
       requestBody:
         content:
@@ -314,12 +314,12 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/EncryptPayloadResponse"
-  /encodedPayload/decrypt:
+  /encodedpayload/decrypt:
     post:
       tags:
         - quorum-to-tessera
       description: decrypt an encrypted payload and return the result; does not store to the database or push to peers
-      summary: /encodedPayload/decrypt
+      summary: /encodedpayload/decrypt
       operationId: decrypt
       requestBody:
         content:
@@ -738,9 +738,12 @@ components:
           type: integer
           description: default value is used if not provided
     ResendBatchResponse:
-      description: count of total transactions being resent
-      type: integer
-      format: int64
+      type: object
+      properties:
+        total:
+          type: integer
+          description: count of total transactions being resent
+          format: int64
     EncryptPayloadRequest:
       type: object
       required:

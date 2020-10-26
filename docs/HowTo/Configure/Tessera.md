@@ -87,6 +87,15 @@ should exist in the serverConfigs):
 "bootstrapNode": true,
 ```
 
+### Privacy Enhancements Flag 
+
+Privacy enhancement feature to support Party Production (PP) and Private State Valudate (PSV) are enabled by setting the flag to true. The default value is set to FALSE
+
+```json
+"privacyEnhancement": true,
+```
+
+
 ### CORS: Server sub-config
 
 For the ThirdParty server type it may be relevant to configure CORS.

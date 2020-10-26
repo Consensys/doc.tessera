@@ -128,9 +128,11 @@ description: Sample configuration file
   "alwaysSendTo": [
     "String..."
   ],
+  "bootstrapNode": false,
   "unixSocketFile": "Path",
   "features": {
-    "enableRemoteKeyValidation": false
+    "enableRemoteKeyValidation": false,
+    "enablePrivacyEnhancements": false
   },
   "encryptor": {
     "type": "Enumeration: NACL, EC",

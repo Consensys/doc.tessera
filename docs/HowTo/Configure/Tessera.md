@@ -92,7 +92,7 @@ should exist in the serverConfigs):
 Privacy enhancement feature to support Party Production (PP) and Private State Valudate (PSV) are enabled by setting the flag to true. The default value is set to FALSE
 
 ```json
-"privacyEnhancement": true,
+"enablePrivacyEnhancements" : "true",
 ```
 
 

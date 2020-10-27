@@ -15,6 +15,11 @@ The primary application of Tessera is as the private transaction manager for [Go
 Yes. [ConsenSys Quorum](https://consensys.net/quorum/developers) is the complete open source blockchain
 layer with enterprise support available from ConsenSys.
 
+## New to ConsenSys Quorum?
+
+Get started with the [Quorum Developer Quickstart](Tutorials/Quorum-Dev-Quickstart.md). Use the quickstart
+to rapidly generate local Quorum blockchain networks.
+
 ## What can you do with Tessera?
 
 Tessera:

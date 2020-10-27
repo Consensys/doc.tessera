@@ -70,6 +70,8 @@ nav:
       - Monitoring: HowTo/Use/Monitoring.md
       - Logging: HowTo/Use/Logging.md
     - Migrate from Constellation: HowTo/MigrateFromConstellation.md
+  - Tutorials:
+      - Quorum Developer Quickstart: Tutorials/Quorum-Dev-Quickstart.md
   - Concepts:
     - Transaction manager: Concepts/Transaction-manager.md
     - Enclave: Concepts/Enclave.md

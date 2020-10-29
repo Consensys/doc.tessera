@@ -251,6 +251,18 @@ of the root cause is logged as part of the message.
         <b>Action:</b> <em>check reason message, or logs on peer to see why it failed</em>
     </td>
 </tr>
+<tr>
+    <td><code>Connection error while communicating with {uri}</code></td>
+    <td>Peer communication failed during '/push' request.<br>
+        <b>Action:</b> <em>check logs on peer to see why it failed - it may be a failed node requiring restart or removal from peer list</em>
+    </td>
+</tr>
+<tr>
+    <td><code>An error occurred during batch resend sync stage. {exception error details}</code></td>
+    <td>During the Data Recovery process (`sync` stage), transaction data from a peer either failed the enhanced privacy checks, or could not be stored in the database.<br>
+        <b>Action:</b> <em>check error details to see why it failed and determine action to be taken</em>
+    </td>
+</tr>
 </table>
 
 !!! Note

@@ -4,7 +4,7 @@ description: Configuring Tessera enclave
 
 # Configure Tessera enclave
 
-Configure the [Tessera enclave](../../Concepts/Enclave.md) in the same way as the transaction manager.
+[Enclave](../../Concepts/Enclave.md) configuration depends on the [type of enclave](../../Concepts/Enclave-types.md) being used.
 
 ## Local enclave
 

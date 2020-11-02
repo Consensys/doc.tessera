@@ -15,7 +15,6 @@ configuration file:
 * Specify the enclave keys.
 
 !!! example "Local enclave configuration"
-
     ```json
     {
      "keys": {
@@ -29,19 +28,18 @@ configuration file:
     }
     ```
 
-## Remote enclave
+## Remote HTTP enclave
 
-To configure a [remote HTTP enclave](../../Concepts/Enclave-types.md#http-enclave), in the remote enclave
+To configure a [remote HTTP enclave](../../Concepts/Enclave-types.md#remote-http-enclave), in the remote HTTP enclave
 configuration file:
 
 * Specify an `ENCLAVE` server app type with REST as the communication type.
 * Specify TLS settings as appropriate, with the transaction manager as a client of the enclave.
 
 In the transaction manager configuration file, specify the same enclave configuration so the transaction
-manager can find the remote enclave.
+manager can find the remote HTTP enclave.
 
-!!! example "Remote enclave configuration file"
-
+!!! example "Remote HTTP enclave configuration file"
     ```json
     {
      "serverConfigs": [{
@@ -62,7 +60,6 @@ manager can find the remote enclave.
      "alwaysSendTo": []
     }
     ```
-
 !!! example "Transaction manager configuration file"
 
     ```json
@@ -74,23 +71,14 @@ manager can find the remote enclave.
     }],
     ```
 
-Specify the same keys as the transaction manager configuration. The remote enclaves can use all key types, including
-vaults.
-
-## Including jar files
-
-When using individual jars (that is, not `tessera-app--app.jar`), the core transaction manager
-jar and enclave clients jars are both needed and must be included in the classpath.
-
-!!! example
-    ```
-    java -cp /path/to/transactionmanager.jar:/path/to/enclave-client.jar com.quorum.tessera.Launcher -configfile /path/to/config.json
-    ```
-
-When using the complete transaction manager jar (that is, `tessera-app--app.jar`), all relevant files
-are included and only the configuration file must be updated.
-
-When using a vault with a remote enclave, include the corresponding JAR on the classpath. For example:
+Specify the same keys as the transaction manager configuration. The remote HTTP enclaves can use all key types, including
+vaults. When using a vault with the enclave, include the corresponding JAR on the classpath. For example:
 
 * `/path/to/azure-key-vault-0.9-SNAPSHOT-all.jar`
 * `/path/to/hashicorp-key-vault-0.9-SNAPSHOT-all.jar`
+
+If using the all-in-one Transaction Manager jar, all the relevant files are included, and just the
+configuration needs to be updated for the TM.
+
+If using the individual "make-your-own" JARs, you will need the "core Transaction Manager" JAR along
+with the "Enclave clients" JAR, and add them both to the classpath as such: `java -cp /path/to/transactionmanager.jar:/path/to/enclave-client.jar com.quorum.tessera.Launcher -configfile /path/to/config.json`

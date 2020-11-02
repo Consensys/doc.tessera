@@ -2,7 +2,14 @@
 description: Overview of Tessera enclave
 ---
 
-# Tessera enclave
+# Enclave
+
+!!! info
+    An enclave is a secure processing environment that acts as a black box for processing commands and data.
+
+    Enclaves come in various forms, both in hardware and software.
+
+    An enclave protects the information that exists inside it from malicious attack.
 
 The Tessera enclave handles all:
 
@@ -17,10 +24,6 @@ often more stringent, such as hardware enclaves.
 The transaction manager handles peer management, database access, and GoQuorum communication but does
 not perform any encryption or decryption. Separating the transaction manager and the enclave greatly
 reduces the potential impact of an attack.
-
-An enclave is a secure processing environment that acts as a black box for processing commands and data.
-Enclaves come in various forms, some on hardware and others in software. The purpose of an enclave
-is to protect information that exists inside the enclave from malicious attack.
 
 ## Enclave data
 

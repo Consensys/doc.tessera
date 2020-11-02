@@ -2,22 +2,17 @@
 description: Overview of Tessera transaction manager
 ---
 
-# Tessera transaction Manager
+# Private transaction Manager
 
-A transaction manager is the central piece in the lifecycle of a private transaction. It interfaces with
-most other parts of the network/infrastructure and manages the lifecycle of private data.
+Tessera is the private transaction manager for GoQuorum. Tessera:
 
-## What does a transaction manager do?
+- Forms the peer to peer network of private transaction managers
+- Interfaces with the enclave for encrypting and decrypting of private payloads
+- Stores and retrieves saved data from the database
+- Distributes private transaction payloads for GoQuorum. 
 
-The transaction manager's duties include:
-
-- forming a P2P network of transaction managers & broadcasting peer/key information
-- interfacing with the enclave for encrypting/decrypting private payloads
-- storing and retrieving saved data from the database
-- providing the gateway for Quorum to distribute private information
-
-The Transaction Manager, which handles peer management, database access and GoQuorum communication,
-does not contain access to any private keys and does not perform and encryption/decryption, greatly reducing the impact an attack can have.
+Tessera does not have access to any private keys and does not perform encryption/decryption. Separating 
+the private transaction , greatly reducing the impact an attack can have.
 
 ## Where does the transaction manager sit in the private transaction flow?
 

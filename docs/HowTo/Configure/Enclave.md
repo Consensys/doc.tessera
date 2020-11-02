@@ -8,67 +8,74 @@ description: Configuring Tessera enclave
 
 ## Local enclave
 
-To configure a [local enclave](../../Concepts/Enclave-types.md#local), in the transaction manager
-configuration file:
+In the transaction manager's configuration file:
 
-* Do not specify an enclave server type.
-* Specify the enclave keys.
+* Do not configure an `ENCLAVE` server.
+* Configure the [enclave's keys](Keys.md).
 
-!!! example "Local enclave configuration"
+!!! example "Transaction manager configuration file"
     ```json
     {
-     "keys": {
-         "keyData": [{
-             "privateKey": "yAWAJjwPqUtNVlqGjSrBmr1/iIkghuOh1803Yzx9jLM=",
-             "publicKey": "/+UuD63zItL1EbjxkKUljMgG8Z1w0AJ8pNOR4iq2yQc="
-         }]
-     },
-
-     "alwaysSendTo": []
+      "keys": {
+        "keyData": [{
+          "privateKey": "yAWAJjwPqUtNVlqGjSrBmr1/iIkghuOh1803Yzx9jLM=",
+          "publicKey": "/+UuD63zItL1EbjxkKUljMgG8Z1w0AJ8pNOR4iq2yQc="
+        }]
+      },
+      "alwaysSendTo": [],
+      ...
     }
     ```
 
 ## Remote HTTP enclave
 
-To configure a [remote HTTP enclave](../../Concepts/Enclave-types.md#remote-http-enclave), in the remote HTTP enclave
-configuration file:
+In the remote HTTP enclave's configuration file:
 
-* Specify an `ENCLAVE` server app type with REST as the communication type.
-* Specify TLS settings as appropriate, with the transaction manager as a client of the enclave.
-
-In the transaction manager configuration file, specify the same enclave configuration so the transaction
-manager can find the remote HTTP enclave.
+* Configure an [`ENCLAVE` server](Tessera.md#server).  Include TLS configuration as appropriate, with the transaction manager as a client of the enclave.
+* Configure the [enclave's keys](Keys.md).
 
 !!! example "Remote HTTP enclave configuration file"
     ```json
     {
      "serverConfigs": [{
        "app": "ENCLAVE",
-       "enabled": true,
        "serverAddress": "http://localhost:8080",
        "communicationType": "REST",
        "bindingAddress": "http://0.0.0.0:8080"
      }],
-
      "keys": {
        "keyData": [{
            "privateKey": "yAWAJjwPqUtNVlqGjSrBmr1/iIkghuOh1803Yzx9jLM=",
            "publicKey": "/+UuD63zItL1EbjxkKUljMgG8Z1w0AJ8pNOR4iq2yQc="
        }]
      },
-
      "alwaysSendTo": []
     }
     ```
+
+In the transaction manager's configuration file:
+
+* Configure an additional `serverConfig` for the `ENCLAVE` client.  Include TLS configuration as appropriate.
+* Do not configure any keys.
+
 !!! example "Transaction manager configuration file"
 
     ```json
-    "serverConfigs": [{
-      "app": "ENCLAVE",
-      "enabled": true,
-      "serverAddress": "http://localhost:8080",
-      "communicationType": "REST"
-    }],
+    {
+      "serverConfigs": [
+        {
+          "app": "ENCLAVE",
+          "serverAddress": "http://localhost:8080",
+          "communicationType": "REST"
+        },
+        {
+          "app": "Q2T",
+          ...
+        },
+        ...
+      ],
+      ...
+    }
     ```
 
 Specify the same keys as the transaction manager configuration. The remote HTTP enclaves can use all key types, including

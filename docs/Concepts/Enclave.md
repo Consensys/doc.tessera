@@ -26,21 +26,21 @@ is to protect information that exists inside the enclave from malicious attack.
 
 The Tessera enclave handles:
 
-- Public and private key access
-- Public keys of extra recipients
-- Default identity (that is, public key) of attached nodes.
+* Public and private key access
+* Public keys of extra recipients
+* Default identity (that is, public key) of attached nodes.
 
 ## Enclave actions
 
 The Tessera enclave performs the following actions on request:
 
-- Fetching the default identity (that is, public key) for attached nodes 
-- Providing forwarding keys for all transactions
-- Returning all public keys managed by the enclave
-- Encrypting a payload for given sender and recipients
-- Encrypting raw payloads for given sender
-- Decrypting transactions for a given recipient or sender
-- Adding new recipients for existing payloads.
+* Fetching the default identity (that is, public key) for attached nodes
+* Providing forwarding keys for all transactions
+* Returning all public keys managed by the enclave
+* Encrypting a payload for given sender and recipients
+* Encrypting raw payloads for given sender
+* Decrypting transactions for a given recipient or sender
+* Adding new recipients for existing payloads.
 
 ## Private transaction flow
 

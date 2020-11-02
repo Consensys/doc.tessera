@@ -10,7 +10,7 @@ Configure the [Tessera enclave](../../Concepts/Enclave.md) in the same way as th
 
 To configure a [local enclave](../../Concepts/Enclave-types.md#local), in the transaction manager
 configuration file:
- 
+
 * Do not specify an enclave server type.
 * Specify the enclave keys.
 
@@ -41,7 +41,7 @@ In the transaction manager configuration file, specify the same enclave configur
 manager can find the remote enclave.
 
 !!! example "Remote enclave configuration file"
-    
+
     ```json
     {
      "serverConfigs": [{

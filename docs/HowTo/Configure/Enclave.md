@@ -27,6 +27,13 @@ In the transaction manager's configuration file:
     }
     ```
 
+Starting the transaction manager will start the local enclave as part of the same process; for example:
+
+```shell
+# start the transaction manager and enclave
+java -jar /path/to/tessera-app-[version]-app.jar --configfile /path/to/tm-config.json
+```
+
 ## Remote HTTP enclave
 
 In the remote HTTP enclave's configuration file:
@@ -78,14 +85,33 @@ In the transaction manager's configuration file:
     }
     ```
 
-Specify the same keys as the transaction manager configuration. The remote HTTP enclaves can use all key types, including
-vaults. When using a vault with the enclave, include the corresponding JAR on the classpath. For example:
+The remote HTTP enclave must be started before the transaction manager; for example:
 
-* `/path/to/azure-key-vault-0.9-SNAPSHOT-all.jar`
-* `/path/to/hashicorp-key-vault-0.9-SNAPSHOT-all.jar`
+```shell
+# start the enclave
+java -jar /path/to/tessera-app-[version]-app.jar --configfile /path/to/enclave-config.json
 
-If using the all-in-one Transaction Manager jar, all the relevant files are included, and just the
-configuration needs to be updated for the TM.
+# start the transaction manager
+java -jar /path/to/tessera-app-[version]-app.jar --configfile /path/to/tm-config.json
+```
 
-If using the individual "make-your-own" JARs, you will need the "core Transaction Manager" JAR along
-with the "Enclave clients" JAR, and add them both to the classpath as such: `java -cp /path/to/transactionmanager.jar:/path/to/enclave-client.jar com.quorum.tessera.Launcher -configfile /path/to/config.json`
+!!! info "Considerations when not using the tessera-app JAR"
+    The `tessera-app-[version]-app.jar` contains everything needed to run a transaction manager or remote HTTP enclave.
+
+    For a more tailored remote HTTP enclave deployment, the `enclave-jaxrs-[version]-server.jar` can be used.  This contains only the core resources necessary to start a remote HTTP enclave.
+
+    If using key vault-stored keys, the corresponding JAR must be included on the classpath; for example:
+
+    ```shell
+    # start the enclave
+    java -cp /path/to/enclave-jaxrs-[version]-server.jar:/path/to/hashicorp-key-vault-[version]-all.jar com.quorum.tessera.enclave.rest.Main -configfile /path/to/enclave-config.json
+    ```
+
+    For a more tailored transaction manager deployment, the `tessera-simple-[version]-app.jar` can be used.  This contains only the core resources necessary to start a transaction manager.
+
+    The enclave client JAR must be included on the classpath if using a remote HTTP enclave; for example:
+
+    ```shell
+    # start the transaction manager
+    java -cp /path/to/tessera-simple-[version]-app.jar:/path/to/enclave-jaxrs-[version].jar com.quorum.tessera.launcher.Main -configfile /path/to/tm-config.json
+    ```

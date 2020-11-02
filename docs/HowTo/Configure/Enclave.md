@@ -15,6 +15,7 @@ configuration file:
 * Specify the enclave keys.
 
 !!! example "Local enclave configuration"
+
     ```json
     {
      "keys": {
@@ -40,6 +41,7 @@ In the transaction manager configuration file, specify the same enclave configur
 manager can find the remote enclave.
 
 !!! example "Remote enclave configuration file"
+    
     ```json
     {
      "serverConfigs": [{

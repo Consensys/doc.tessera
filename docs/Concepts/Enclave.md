@@ -10,7 +10,7 @@ The Tessera enclave handles all:
 * Key management.
 
 Separating the enclave from the transaction manager enables sensitive operations to be handled in a
-single place, without any leakage into areas of program memory that don't need access. 
+single place, without any leakage into areas of program memory that don't need access.
 The enclave is a smaller application can be run in a secure environment, where memory constraints are
 often more stringent, such as hardware enclaves.
 
@@ -28,9 +28,9 @@ The Tessera enclave handles:
 
 - Public and private key access
 - Public keys of extra recipients
-- Default identity (that is, public key) of attached nodes. 
+- Default identity (that is, public key) of attached nodes.
 
-## Enclave actions 
+## Enclave actions
 
 The Tessera enclave performs the following actions on request:
 
@@ -40,8 +40,8 @@ The Tessera enclave performs the following actions on request:
 - Encrypting a payload for given sender and recipients
 - Encrypting raw payloads for given sender
 - Decrypting transactions for a given recipient or sender
-- Adding new recipients for existing payloads. 
+- Adding new recipients for existing payloads.
 
-## Private transaction flow 
+## Private transaction flow
 
 Refer to [lifecycle of a private transaction](https://docs.goquorum.consensys.net/Concepts/Privacy/PrivateTransactionLifecycle/).

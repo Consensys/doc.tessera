@@ -11,39 +11,32 @@ description: Overview of Tessera enclave
 
     An enclave protects the information that exists inside it from malicious attack.
 
-The Tessera enclave handles all:
+Tessera's enclave handles all:
 
-* Encryption and decryption operations required by the transaction manager
+* Encryption and decryption operations required by the private transaction manager
 * Key management.
 
-Separating the enclave from the transaction manager enables sensitive operations to be handled in a
-single place, without any leakage into areas of program memory that don't need access.
-The enclave is a smaller application can be run in a secure environment, where memory constraints are
-often more stringent, such as hardware enclaves.
-
-The transaction manager handles peer management, database access, and GoQuorum communication but does
-not perform any encryption or decryption. Separating the transaction manager and the enclave greatly
-reduces the potential impact of an attack.
+By separating the enclave from the transaction manager, sensitive data is prevented from leaking into areas of program memory that do not require access, thus reducing the potential impact of a malicious attack.
 
 ## Enclave data
 
 The Tessera enclave handles:
 
-* Public and private key access
-* Public keys of extra recipients
-* Default identity (that is, public key) of attached nodes.
+- Public and private key access
+- Public keys of extra recipients
+- Default identity (that is, public key) of attached nodes.
 
 ## Enclave actions
 
 The Tessera enclave performs the following actions on request:
 
-* Fetching the default identity (that is, public key) for attached nodes
-* Providing forwarding keys for all transactions
-* Returning all public keys managed by the enclave
-* Encrypting a payload for given sender and recipients
-* Encrypting raw payloads for given sender
-* Decrypting transactions for a given recipient or sender
-* Adding new recipients for existing payloads.
+- Fetching the default identity (that is, public key) for attached nodes
+- Providing forwarding keys for all transactions
+- Returning all public keys managed by the enclave
+- Encrypting a payload for given sender and recipients
+- Encrypting raw payloads for given sender
+- Decrypting transactions for a given recipient or sender
+- Adding new recipients for existing payloads.
 
 ## Private transaction flow
 

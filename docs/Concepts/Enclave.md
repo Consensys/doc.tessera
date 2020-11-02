@@ -11,7 +11,7 @@ description: Overview of Tessera enclave
 
     An enclave protects the information that exists inside it from malicious attack.
 
-The Tessera enclave handles all:
+Tessera's enclave handles all:
 
 * Encryption and decryption operations required by the private transaction manager
 * Key management.
@@ -41,4 +41,4 @@ The Tessera enclave performs the following actions on request:
 
 ### Private transaction flow
 
-Refer to [lifecycle of a private transaction](https://docs.goquorum.consensys.net/Concepts/Privacy/PrivateTransactionLifecycle/) to see how the enclave is used.
+Refer to [lifecycle of a private transaction](https://docs.goquorum.consensys.net/Concepts/Privacy/PrivateTransactionLifecycle/) to see where the enclave is used in the private transaction flow.

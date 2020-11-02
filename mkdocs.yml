@@ -75,6 +75,7 @@ nav:
   - Concepts:
     - Transaction manager: Concepts/Transaction-manager.md
     - Enclave: Concepts/Enclave.md
+    - Enclave types: Concepts/Enclave-types.md
     - Node Discovery: Concepts/p2p-discovery.md
   - Reference:
     - Configuration file: Reference/SampleConfiguration.md

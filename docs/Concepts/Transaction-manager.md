@@ -2,21 +2,24 @@
 description: Overview of Tessera transaction manager
 ---
 
-# Private transaction Manager
+# Tessera
 
-Tessera is the private transaction manager for GoQuorum. Tessera:
+Tessera is the private transaction manager for [GoQuorum]. Tessera:
 
 - Forms the peer to peer network of private transaction managers
-- Interfaces with the enclave for encrypting and decrypting of private payloads
+- Interfaces with the [enclave](Enclave.md) for encrypting and decrypting of private payloads
 - Stores and retrieves saved data from the database
-- Distributes private transaction payloads for GoQuorum. 
+- Distributes private transaction payloads for [GoQuorum]. 
 
 Tessera does not have access to any private keys and does not perform encryption/decryption. Separating 
-the private transaction , greatly reducing the impact an attack can have.
+the private transaction manager from the [enclave](Enclave.md) greatly reduces the potential impact
+of an attack.
 
-## Where does the transaction manager sit in the private transaction flow?
+## Transaction flow 
 
-The transaction manager is the touch point for Quorum to distribute its private payloads. It connects directly to Quorum and interfaces with the attached enclave, and with other transaction managers.
+Tessera distributes the the private payloads received from [GoQuorum]. 
+Tessera connects to [GoQuorum], and interfaces with the attached enclave and other Tessera nodes.
 
 ![Quorum Tessera Privacy Flow](https://docs.goquorum.consensys.net/images/TesseraPrivacyFlow.jpeg)
-_Diagram from [Quorum Tessera Privacy Flow](https://docs.goquorum.consensys.net/en/latest/Concepts/Privacy/PrivateTransactionLifecycle/) documentation page._
+
+[GoQuorum]: https://docs.goquorum.consensys.net/

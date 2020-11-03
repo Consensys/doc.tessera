@@ -96,11 +96,11 @@ java -jar /path/to/tessera-app-[version]-app.jar --configfile /path/to/tm-config
 ```
 
 !!! info "Considerations when not using the tessera-app JAR"
-    The `tessera-app-[version]-app.jar` contains everything needed to run a transaction manager or remote HTTP enclave.
+    The `tessera-app-[version]-app.jar` can be used to run a complete privacy manager (transaction manager and enclave as a single process), a standalone transaction manager, or a remote HTTP enclave.
 
     For a more tailored remote HTTP enclave deployment, the `enclave-jaxrs-[version]-server.jar` can be used.  This contains only the core resources necessary to start a remote HTTP enclave.
 
-    If using key vault-stored keys, the corresponding JAR must be included on the classpath; for example:
+    If using key vault-stored keys, the corresponding key vault JAR must be included on the classpath; for example:
 
     ```shell
     # start the enclave

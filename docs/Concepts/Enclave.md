@@ -23,21 +23,21 @@ By separating the enclave from the transaction manager, sensitive data is preven
 
 The Tessera enclave handles:
 
-- Public and private key access
-- Identities (public keys) of forwarding recipients (`alwaysSendTo`)
-- Default identity (public key) of attached nodes.
+* Public and private key access
+* Identities (public keys) of forwarding recipients (`alwaysSendTo`)
+* Default identity (public key) of attached nodes.
 
 ### Actions
 
 The Tessera enclave performs the following actions on request:
 
-- Fetching the default identity (public key) for attached nodes
-- Providing identities of forwarding recipients (public keys)
-- Returning all identities (public keys) managed by the enclave
-- Encrypting a payload for given sender and recipients
-- Encrypting raw payloads for given sender
-- Decrypting payloads for a given recipient or sender
-- Adding new recipients for existing payloads.
+* Fetching the default identity (public key) for attached nodes
+* Providing identities of forwarding recipients (public keys)
+* Returning all identities (public keys) managed by the enclave
+* Encrypting a payload for given sender and recipients
+* Encrypting raw payloads for given sender
+* Decrypting payloads for a given recipient or sender
+* Adding new recipients for existing payloads.
 
 ### Private transaction flow
 

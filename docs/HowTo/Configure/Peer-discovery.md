@@ -83,5 +83,3 @@ remote keys before adding a node to the peer list, enable remote key validation.
        "enableRemoteKeyValidation": true
      }
     ```
-
-

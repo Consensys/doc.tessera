@@ -73,6 +73,7 @@ nav:
   - Tutorials:
       - Quorum Developer Quickstart: Tutorials/Quorum-Dev-Quickstart.md
   - Concepts:
+    - Privacy manager: Concepts/Privacy-manager.md
     - Transaction manager: Concepts/Transaction-manager.md
     - Enclave: Concepts/Enclave.md
     - Enclave types: Concepts/Enclave-types.md

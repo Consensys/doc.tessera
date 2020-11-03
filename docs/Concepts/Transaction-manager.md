@@ -2,26 +2,25 @@
 description: Overview of Tessera transaction manager
 ---
 
-# Tessera transaction Manager
+# Tessera
 
-A transaction manager is the central piece in the lifecycle of a private transaction. It interfaces with
-most other parts of the network/infrastructure and manages the lifecycle of private data.
+Tessera is the private transaction manager for [GoQuorum]. Tessera:
 
-## What does a transaction manager do?
+- Consists of a transaction manager and enclave
+- Forms the peer to peer network of Tessera nodes
+- Uses the [enclave](Enclave.md) for encrypting and decrypting of private payloads
+- Stores and retrieves saved data from the database
+- Distributes private transaction payloads for [GoQuorum].
 
-The transaction manager's duties include:
+The transaction manager does not have access to any private keys and does not perform encryption/decryption.
+Separating the transaction manager from the [enclave](Enclave.md) greatly reduces the potential impact
+of an attack.
 
-- forming a P2P network of transaction managers & broadcasting peer/key information
-- interfacing with the enclave for encrypting/decrypting private payloads
-- storing and retrieving saved data from the database
-- providing the gateway for Quorum to distribute private information
+## Transaction flow
 
-The Transaction Manager, which handles peer management, database access and GoQuorum communication,
-does not contain access to any private keys and does not perform and encryption/decryption, greatly reducing the impact an attack can have.
-
-## Where does the transaction manager sit in the private transaction flow?
-
-The transaction manager is the touch point for Quorum to distribute its private payloads. It connects directly to Quorum and interfaces with the attached enclave, and with other transaction managers.
+Tessera distributes the private payloads received from [GoQuorum].
+Tessera connects to [GoQuorum], and interfaces with the attached enclave and other Tessera nodes.
 
 ![Quorum Tessera Privacy Flow](https://docs.goquorum.consensys.net/images/TesseraPrivacyFlow.jpeg)
-_Diagram from [Quorum Tessera Privacy Flow](https://docs.goquorum.consensys.net/en/latest/Concepts/Privacy/PrivateTransactionLifecycle/) documentation page._
+
+[GoQuorum]: https://docs.goquorum.consensys.net/

@@ -4,70 +4,93 @@ description: Configuring Tessera enclave
 
 # Configure Tessera enclave
 
-The configuration for the [Tessera enclave](../../Concepts/Enclave.md) is designed to be the same as for the Transaction Manager.
+Configure the [Tessera enclave](../../Concepts/Enclave.md) in the same way as the transaction manager.
 
-## Local Enclave Setup
+## Local enclave
 
-The following should be present in the TM configuration:
+To configure a [local enclave](../../Concepts/Enclave-types.md#local), in the transaction manager
+configuration file:
 
-```json
-{
- "keys": {
-     "keyData": [{
-         "privateKey": "yAWAJjwPqUtNVlqGjSrBmr1/iIkghuOh1803Yzx9jLM=",
-         "publicKey": "/+UuD63zItL1EbjxkKUljMgG8Z1w0AJ8pNOR4iq2yQc="
-     }]
- },
+* Do not specify an enclave server type.
+* Specify the enclave keys.
 
- "alwaysSendTo": []
-}
-```
+!!! example "Local enclave configuration"
 
-## Remote Enclave Setup
+    ```json
+    {
+     "keys": {
+         "keyData": [{
+             "privateKey": "yAWAJjwPqUtNVlqGjSrBmr1/iIkghuOh1803Yzx9jLM=",
+             "publicKey": "/+UuD63zItL1EbjxkKUljMgG8Z1w0AJ8pNOR4iq2yQc="
+         }]
+     },
 
-The configuration required is minimal, and only requires the following from the main configuration (as an example):
+     "alwaysSendTo": []
+    }
+    ```
 
-In the remote Enclave configuration:
+## Remote enclave
 
-```json
-{
- "serverConfigs": [{
-     "app": "ENCLAVE",
-     "enabled": true,
-     "serverAddress": "http://localhost:8080",
-     "communicationType": "REST",
-     "bindingAddress": "http://0.0.0.0:8080"
- }],
+To configure a [remote HTTP enclave](../../Concepts/Enclave-types.md#http-enclave), in the remote enclave
+configuration file:
 
- "keys": {
-     "keyData": [{
-         "privateKey": "yAWAJjwPqUtNVlqGjSrBmr1/iIkghuOh1803Yzx9jLM=",
-         "publicKey": "/+UuD63zItL1EbjxkKUljMgG8Z1w0AJ8pNOR4iq2yQc="
-     }]
- },
+* Specify an `ENCLAVE` server app type with REST as the communication type.
+* Specify TLS settings as appropriate, with the transaction manager as a client of the enclave.
 
- "alwaysSendTo": []
-}
-```
+In the transaction manager configuration file, specify the same enclave configuration so the transaction
+manager can find the remote enclave.
 
-and in the TM configuration:
+!!! example "Remote enclave configuration file"
 
-```json
-"serverConfigs": [{
- "app": "ENCLAVE",
- "enabled": true,
- "serverAddress": "http://localhost:8080",
- "communicationType": "REST"
-}],
-```
+    ```json
+    {
+     "serverConfigs": [{
+       "app": "ENCLAVE",
+       "enabled": true,
+       "serverAddress": "http://localhost:8080",
+       "communicationType": "REST",
+       "bindingAddress": "http://0.0.0.0:8080"
+     }],
 
-The keys are the same as the Transaction Manager configuration, and can use all the key types including vaults when using a vault with the Enclave, be sure to include the corresponding JAR on the classpath, either:
+     "keys": {
+       "keyData": [{
+           "privateKey": "yAWAJjwPqUtNVlqGjSrBmr1/iIkghuOh1803Yzx9jLM=",
+           "publicKey": "/+UuD63zItL1EbjxkKUljMgG8Z1w0AJ8pNOR4iq2yQc="
+       }]
+     },
+
+     "alwaysSendTo": []
+    }
+    ```
+
+!!! example "Transaction manager configuration file"
+
+    ```json
+    "serverConfigs": [{
+      "app": "ENCLAVE",
+      "enabled": true,
+      "serverAddress": "http://localhost:8080",
+      "communicationType": "REST"
+    }],
+    ```
+
+Specify the same keys as the transaction manager configuration. The remote enclaves can use all key types, including
+vaults.
+
+## Including jar files
+
+When using individual jars (that is, not `tessera-app--app.jar`), the core transaction manager
+jar and enclave clients jars are both needed and must be included in the classpath.
+
+!!! example
+    ```
+    java -cp /path/to/transactionmanager.jar:/path/to/enclave-client.jar com.quorum.tessera.Launcher -configfile /path/to/config.json
+    ```
+
+When using the complete transaction manager jar (that is, `tessera-app--app.jar`), all relevant files
+are included and only the configuration file must be updated.
+
+When using a vault with a remote enclave, include the corresponding JAR on the classpath. For example:
 
 * `/path/to/azure-key-vault-0.9-SNAPSHOT-all.jar`
 * `/path/to/hashicorp-key-vault-0.9-SNAPSHOT-all.jar`
-
-If using the all-in-one Transaction Manager jar, all the relevant files are included, and just the configuration needs to be updated for the TM.
-
-If using the individual "make-your-own" JARs, you will need the "core Transaction Manager" JAR along with the "Enclave clients" JAR, and add them both to the classpath as such: `java -cp /path/to/transactionmanager.jar:/path/to/enclave-client.jar com.quorum.tessera.Launcher -configfile /path/to/config.json`
-
-*[TM]: Transaction Manager

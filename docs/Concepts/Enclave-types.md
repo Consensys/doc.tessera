@@ -8,8 +8,8 @@ Tessera support local and HTTP enclaves. [Configure the enclave in the Tessera c
 
 ## Local
 
-The local enclave is inside the same process as the transaction manager. For local enclaves the
-enclave configuration is inside the same configuration file as the transaction manager configuration.
+The local enclave is inside the same process as the transaction manager. For local enclaves, the
+enclave configuration is inside the [same configuration file as the transaction manager configuration](../HowTo/Configure/Enclave.md).
 
 ## HTTP Enclave
 

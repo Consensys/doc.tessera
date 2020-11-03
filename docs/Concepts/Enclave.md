@@ -6,7 +6,7 @@ description: Overview of Tessera enclave
 
 The Tessera enclave handles all:
 
-* Encryption and decryption operations required by the private transaction manager
+* Encryption and decryption operations required by the transaction manager
 * Key management.
 
 Separating the enclave from the transaction manager enables sensitive operations to be handled in a

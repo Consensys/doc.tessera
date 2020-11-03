@@ -79,7 +79,7 @@ nav:
     - Node Discovery: Concepts/p2p-discovery.md
   - Reference:
     - Configuration file: Reference/SampleConfiguration.md
-    - Bootstrap configuration file: Reference/SampleConfiguration.md
+    - Bootstrap node configuration file: Reference/BootstrapSampleConfiguration.md
     - REST API Methods: Reference/REST-API.md
 
 markdown_extensions:

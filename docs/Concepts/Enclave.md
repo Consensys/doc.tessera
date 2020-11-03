@@ -16,9 +16,10 @@ Tessera's enclave handles all:
 * Encryption and decryption operations required by the transaction manager
 * Key management.
 
-By separating enclave responsibilities from the transaction manager, sensitive data is prevented from leaking into areas of program memory that do not require access, thus reducing the potential impact of a malicious attack.
+Separating enclave responsibilities from the transaction manager prevents sensitive data from leaking into areas of program memory that don't require access. This reduces the potential impact of malicious attacks.
 
 ## Enclave responsibilities
+
 ### Data
 
 The Tessera enclave handles:
@@ -41,4 +42,4 @@ The Tessera enclave performs the following actions on request:
 
 ### Private transaction flow
 
-Refer to [lifecycle of a private transaction](https://docs.goquorum.consensys.net/Concepts/Privacy/PrivateTransactionLifecycle/) to see where the enclave is used in the private transaction flow.
+Refer to [lifecycle of a private transaction](https://docs.goquorum.consensys.net/Concepts/Privacy/PrivateTransactionLifecycle/) to see the enclave's use in the private transaction flow.

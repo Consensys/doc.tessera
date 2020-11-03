@@ -62,7 +62,7 @@ In the remote HTTP enclave's configuration file:
 
 In the transaction manager's configuration file:
 
-* Configure an additional `serverConfig` for the `ENCLAVE` client.  Include TLS configuration as appropriate.
+* Configure an additional [`serverConfig`](Tessera.md#server) for the `ENCLAVE` client. Include TLS configuration as appropriate.
 * Do not configure any keys.
 
 !!! example "Transaction manager configuration file"

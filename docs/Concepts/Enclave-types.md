@@ -8,7 +8,7 @@ Tessera supports local and remote HTTP enclaves.
 
 ## Local enclave
 
-The local enclave runs in the same process as the transaction manager.  There is still logical separation between enclave and transaction manager responsibilities.
+The local enclave runs in the same process as the transaction manager. Logical separation still exists between the enclave and transaction manager.
 
 ## Remote HTTP enclave
 

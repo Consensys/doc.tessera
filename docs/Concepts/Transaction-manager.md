@@ -15,6 +15,6 @@ Tessera's transaction manager:
 
 The transaction manager distributes private payloads received from [GoQuorum].
 
-Refer to [lifecycle of a private transaction](https://docs.goquorum.consensys.net/Concepts/Privacy/PrivateTransactionLifecycle/) to see where the transaction manager is used in the private transaction flow
+Refer to [lifecycle of a private transaction](https://docs.goquorum.consensys.net/Concepts/Privacy/PrivateTransactionLifecycle/) to see the transaction manager's use in the private transaction flow.
 
 [GoQuorum]: https://docs.goquorum.consensys.net/

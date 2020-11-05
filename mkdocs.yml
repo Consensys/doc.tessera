@@ -74,12 +74,14 @@ nav:
   - Tutorials:
       - Quorum Developer Quickstart: Tutorials/Quorum-Dev-Quickstart.md
   - Concepts:
+    - Privacy manager: Concepts/Privacy-manager.md
     - Transaction manager: Concepts/Transaction-manager.md
     - Enclave: Concepts/Enclave.md
+    - Enclave types: Concepts/Enclave-types.md
     - Peer discovery: Concepts/p2p-discovery.md
   - Reference:
     - Configuration file: Reference/SampleConfiguration.md
-    - Bootstrap configuration file: Reference/SampleConfiguration.md
+    - Bootstrap node configuration file: Reference/BootstrapSampleConfiguration.md
     - REST API Methods: Reference/REST-API.md
 
 markdown_extensions:

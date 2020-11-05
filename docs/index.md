@@ -8,7 +8,7 @@ description: Tessera is an open-source private transaction manager developed und
 ## What is Tessera?
 
 Tessera is an open-source private transaction manager developed under the Apache 2.0 license and written in Java.
-The primary application of Tessera is as the private transaction manager for [GoQuorum](https://docs.goquorum.consensys.net).
+The primary application of Tessera is as the privacy manager for [GoQuorum](https://docs.goquorum.consensys.net).
 
 ## Is Tessera part of ConsenSys Quorum?
 

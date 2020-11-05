@@ -274,8 +274,8 @@ The servers to be started are provided as a list:
     {
         "app": "<app type",
         "enabled": <boolean,
-        "serverAddress":"http://[host]:[port]/[path]
-        "communicationType" : <enum, // "REST" or "GRPC"
+        "serverAddress":"http://[host]:[port]/[path]",
+        "communicationType" : "REST"
     }
     ```
 
@@ -285,8 +285,8 @@ The servers to be started are provided as a list:
     {
         "app": "<app type",
         "enabled": <boolean,
-        "serverAddress":"https://[host]:[port]/[path]
-        "communicationType" : <enum, // "REST" or "GRPC"
+        "serverAddress":"https://[host]:[port]/[path]",
+        "communicationType" : "REST",
         "sslConfig": {
             ...<SSL settings, see below...
         }
@@ -299,7 +299,7 @@ The servers to be started are provided as a list:
     {
         "app": "<app type",
         "enabled": <boolean,
-        "serverAddress":"unix://[path],
+        "serverAddress":"unix://[path]",
         "communicationType" : "REST"
     }
     ```
@@ -317,7 +317,7 @@ The servers to be started are provided as a list:
             "port": <int, //The port to advertise and bind on (if binding address not set)
             "hostName": <string // The hostname to advertise and bind on (if binding address not set)
         },
-        "communicationType" : <enum, // "REST" or "GRPC"
+        "communicationType" : <enum, // "REST" or "GRPC",
         "bindingAddress": <string //An address to bind the server to that overrides the one defined above
     }
     ```

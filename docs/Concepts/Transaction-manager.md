@@ -2,26 +2,19 @@
 description: Overview of Tessera transaction manager
 ---
 
-# Tessera transaction Manager
+# Transaction Manager
 
-A transaction manager is the central piece in the lifecycle of a private transaction. It interfaces with
-most other parts of the network/infrastructure and manages the lifecycle of private data.
+Tessera's transaction manager:
 
-## What does a transaction manager do?
+- Creates a peer to peer network with other transaction managers
+- Delegates key management and payload encryption/decryption to the [enclave](Enclave.md)
+- Stores and retrieves saved data from the database
+- Distributes private transaction payloads for [GoQuorum].
 
-The transaction manager's duties include:
+## Private transaction flow
 
-- forming a P2P network of transaction managers & broadcasting peer/key information
-- interfacing with the enclave for encrypting/decrypting private payloads
-- storing and retrieving saved data from the database
-- providing the gateway for Quorum to distribute private information
+The transaction manager distributes private payloads received from [GoQuorum].
 
-The Transaction Manager, which handles peer management, database access and GoQuorum communication,
-does not contain access to any private keys and does not perform and encryption/decryption, greatly reducing the impact an attack can have.
+Refer to [lifecycle of a private transaction](https://docs.goquorum.consensys.net/Concepts/Privacy/PrivateTransactionLifecycle/) to see the transaction manager's use in the private transaction flow.
 
-## Where does the transaction manager sit in the private transaction flow?
-
-The transaction manager is the touch point for Quorum to distribute its private payloads. It connects directly to Quorum and interfaces with the attached enclave, and with other transaction managers.
-
-![Quorum Tessera Privacy Flow](https://docs.goquorum.consensys.net/images/TesseraPrivacyFlow.jpeg)
-_Diagram from [Quorum Tessera Privacy Flow](https://docs.goquorum.consensys.net/en/latest/Concepts/Privacy/PrivateTransactionLifecycle/) documentation page._
+[GoQuorum]: https://docs.goquorum.consensys.net/

@@ -11,8 +11,8 @@ current active communication.
 
 Tessera maintains two node lists, `PartyStore` and `NetworkStore`. `NetworkStore` lists nodes with
 which an active connection has been established. `PartyStore` lists URLs from the [`peer` entry in the Tessera configuration file](../HowTo/Configure/Peer-discovery.md#specify-peers)
-and URLs discovered from remote nodes. If Tessera can no communicate with a node, the peer is 
-removed from both the `PartyStore` and `NetworkStore` lists. 
+and URLs discovered from remote nodes. If Tessera can no communicate with a node, the peer is
+removed from both the `PartyStore` and `NetworkStore` lists.
 
 If all peers are removed from the `PartyStore` and `NetworkStore` lists, the `PartyStore` list is repopulated
 from the [`peer` entry in the Tessera configuration file](../HowTo/Configure/Peer-discovery.md#specify-peers).

@@ -2,46 +2,44 @@
 description: Overview of Tessera enclave
 ---
 
-# Tessera enclave
+# Enclave
 
-The Tessera enclave handles all:
+!!! info
+    An enclave is a secure processing environment that acts as a black box for processing commands and data.
+
+    Enclaves come in various forms, both in hardware and software.
+
+    An enclave protects the information that exists inside it from malicious attack.
+
+Tessera's enclave handles all:
 
 * Encryption and decryption operations required by the transaction manager
 * Key management.
 
-Separating the enclave from the transaction manager enables sensitive operations to be handled in a
-single place, without any leakage into areas of program memory that don't need access.
-The enclave is a smaller application can be run in a secure environment, where memory constraints are
-often more stringent, such as hardware enclaves.
+Separating enclave responsibilities from the transaction manager prevents sensitive data from leaking into areas of program memory that don't require access. This reduces the potential impact of malicious attacks.
 
-The transaction manager handles peer management, database access, and GoQuorum communication but does
-not perform any encryption or decryption. Separating the transaction manager and the enclave greatly
-reduces the potential impact of an attack.
+## Enclave responsibilities
 
-An enclave is a secure processing environment that acts as a black box for processing commands and data.
-Enclaves come in various forms, some on hardware and others in software. The purpose of an enclave
-is to protect information that exists inside the enclave from malicious attack.
-
-## Enclave data
+### Data
 
 The Tessera enclave handles:
 
 * Public and private key access
-* Public keys of extra recipients
-* Default identity (that is, public key) of attached nodes.
+* Identities (public keys) of forwarding recipients (`alwaysSendTo`)
+* Default identity (public key) of attached nodes.
 
-## Enclave actions
+### Actions
 
 The Tessera enclave performs the following actions on request:
 
-* Fetching the default identity (that is, public key) for attached nodes
-* Providing forwarding keys for all transactions
-* Returning all public keys managed by the enclave
+* Fetching the default identity (public key) for attached nodes
+* Providing identities of forwarding recipients (public keys)
+* Returning all identities (public keys) managed by the enclave
 * Encrypting a payload for given sender and recipients
 * Encrypting raw payloads for given sender
-* Decrypting transactions for a given recipient or sender
+* Decrypting payloads for a given recipient or sender
 * Adding new recipients for existing payloads.
 
-## Private transaction flow
+### Private transaction flow
 
-Refer to [lifecycle of a private transaction](https://docs.goquorum.consensys.net/Concepts/Privacy/PrivateTransactionLifecycle/).
+Refer to [lifecycle of a private transaction](https://docs.goquorum.consensys.net/Concepts/Privacy/PrivateTransactionLifecycle/) to see the enclave's use in the private transaction flow.

@@ -4,93 +4,114 @@ description: Configuring Tessera enclave
 
 # Configure Tessera enclave
 
-Configure the [Tessera enclave](../../Concepts/Enclave.md) in the same way as the transaction manager.
+[Enclave](../../Concepts/Enclave.md) configuration depends on the [type of enclave](../../Concepts/Enclave-types.md) being used.
 
 ## Local enclave
 
-To configure a [local enclave](../../Concepts/Enclave-types.md#local), in the transaction manager
-configuration file:
+In the transaction manager's configuration file:
 
-* Do not specify an enclave server type.
-* Specify the enclave keys.
+* Do not configure an `ENCLAVE` server.
+* Configure the [enclave's keys](Keys.md).
 
-!!! example "Local enclave configuration"
-
+!!! example "Transaction manager configuration file"
     ```json
     {
-     "keys": {
-         "keyData": [{
-             "privateKey": "yAWAJjwPqUtNVlqGjSrBmr1/iIkghuOh1803Yzx9jLM=",
-             "publicKey": "/+UuD63zItL1EbjxkKUljMgG8Z1w0AJ8pNOR4iq2yQc="
-         }]
-     },
-
-     "alwaysSendTo": []
+      "keys": {
+        "keyData": [{
+          "privateKey": "yAWAJjwPqUtNVlqGjSrBmr1/iIkghuOh1803Yzx9jLM=",
+          "publicKey": "/+UuD63zItL1EbjxkKUljMgG8Z1w0AJ8pNOR4iq2yQc="
+        }]
+      },
+      "alwaysSendTo": [],
+      ...
     }
     ```
 
-## Remote enclave
+Starting the transaction manager will start the local enclave as part of the same process; for example:
 
-To configure a [remote HTTP enclave](../../Concepts/Enclave-types.md#http-enclave), in the remote enclave
-configuration file:
+```shell
+# start the transaction manager and enclave
+java -jar /path/to/tessera-app-[version]-app.jar --configfile /path/to/tm-config.json
+```
 
-* Specify an `ENCLAVE` server app type with REST as the communication type.
-* Specify TLS settings as appropriate, with the transaction manager as a client of the enclave.
+## Remote HTTP enclave
 
-In the transaction manager configuration file, specify the same enclave configuration so the transaction
-manager can find the remote enclave.
+In the remote HTTP enclave's configuration file:
 
-!!! example "Remote enclave configuration file"
+* Configure an [`ENCLAVE` server](Tessera.md#server).  Include TLS configuration as appropriate, with the transaction manager as a client of the enclave.
+* Configure the [enclave's keys](Keys.md).
 
+!!! example "Remote HTTP enclave configuration file"
     ```json
     {
      "serverConfigs": [{
        "app": "ENCLAVE",
-       "enabled": true,
        "serverAddress": "http://localhost:8080",
        "communicationType": "REST",
        "bindingAddress": "http://0.0.0.0:8080"
      }],
-
      "keys": {
        "keyData": [{
            "privateKey": "yAWAJjwPqUtNVlqGjSrBmr1/iIkghuOh1803Yzx9jLM=",
            "publicKey": "/+UuD63zItL1EbjxkKUljMgG8Z1w0AJ8pNOR4iq2yQc="
        }]
      },
-
      "alwaysSendTo": []
     }
     ```
 
+In the transaction manager's configuration file:
+
+* Configure an additional [`serverConfig`](Tessera.md#server) for the `ENCLAVE` client. Include TLS configuration as appropriate.
+* Do not configure any keys.
+
 !!! example "Transaction manager configuration file"
 
     ```json
-    "serverConfigs": [{
-      "app": "ENCLAVE",
-      "enabled": true,
-      "serverAddress": "http://localhost:8080",
-      "communicationType": "REST"
-    }],
+    {
+      "serverConfigs": [
+        {
+          "app": "ENCLAVE",
+          "serverAddress": "http://localhost:8080",
+          "communicationType": "REST"
+        },
+        {
+          "app": "Q2T",
+          ...
+        },
+        ...
+      ],
+      ...
+    }
     ```
 
-Specify the same keys as the transaction manager configuration. The remote enclaves can use all key types, including
-vaults.
+The remote HTTP enclave must be started before the transaction manager; for example:
 
-## Including jar files
+```shell
+# start the enclave
+java -jar /path/to/tessera-app-[version]-app.jar --configfile /path/to/enclave-config.json
 
-When using individual jars (that is, not `tessera-app--app.jar`), the core transaction manager
-jar and enclave clients jars are both needed and must be included in the classpath.
+# start the transaction manager
+java -jar /path/to/tessera-app-[version]-app.jar --configfile /path/to/tm-config.json
+```
 
-!!! example
+!!! info "Considerations when not using the tessera-app JAR"
+    The `tessera-app-[version]-app.jar` can be used to run a complete privacy manager (transaction manager and enclave as a single process), a standalone transaction manager, or a remote HTTP enclave.
+
+    For a more tailored remote HTTP enclave deployment, the `enclave-jaxrs-[version]-server.jar` can be used.  This contains only the core resources necessary to start a remote HTTP enclave.
+
+    If using key vault-stored keys, the corresponding key vault JAR must be included on the classpath; for example:
+
+    ```shell
+    # start the enclave
+    java -cp /path/to/enclave-jaxrs-[version]-server.jar:/path/to/hashicorp-key-vault-[version]-all.jar com.quorum.tessera.enclave.rest.Main -configfile /path/to/enclave-config.json
     ```
-    java -cp /path/to/transactionmanager.jar:/path/to/enclave-client.jar com.quorum.tessera.Launcher -configfile /path/to/config.json
+
+    For a more tailored transaction manager deployment, the `tessera-simple-[version]-app.jar` can be used.  This contains only the core resources necessary to start a transaction manager.
+
+    The enclave client JAR must be included on the classpath if using a remote HTTP enclave; for example:
+
+    ```shell
+    # start the transaction manager
+    java -cp /path/to/tessera-simple-[version]-app.jar:/path/to/enclave-jaxrs-[version].jar com.quorum.tessera.launcher.Main -configfile /path/to/tm-config.json
     ```
-
-When using the complete transaction manager jar (that is, `tessera-app--app.jar`), all relevant files
-are included and only the configuration file must be updated.
-
-When using a vault with a remote enclave, include the corresponding JAR on the classpath. For example:
-
-* `/path/to/azure-key-vault-0.9-SNAPSHOT-all.jar`
-* `/path/to/hashicorp-key-vault-0.9-SNAPSHOT-all.jar`

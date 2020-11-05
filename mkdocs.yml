@@ -60,6 +60,7 @@ nav:
       - Transaction manager: HowTo/Configure/Transaction-manager.md
       - Enclave: HowTo/Configure/Enclave.md
       - Keys: HowTo/Configure/Keys.md
+      - Peer discovery: HowTo/Configure/Peer-discovery.md
       - TLS: HowTo/Configure/TLS.md
       - Key vault:
          - Hashicorp Vault: HowTo/Configure/KeyVault/Hashicorp-Vault.md
@@ -77,7 +78,7 @@ nav:
     - Transaction manager: Concepts/Transaction-manager.md
     - Enclave: Concepts/Enclave.md
     - Enclave types: Concepts/Enclave-types.md
-    - Node Discovery: Concepts/p2p-discovery.md
+    - Peer discovery: Concepts/p2p-discovery.md
   - Reference:
     - Configuration file: Reference/SampleConfiguration.md
     - Bootstrap node configuration file: Reference/BootstrapSampleConfiguration.md

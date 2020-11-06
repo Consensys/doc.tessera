@@ -147,13 +147,7 @@ Any valid JDBC URL may be specified, refer to your providers details to construc
 
 ### Disabling peer discovery
 
-If peer discovery is disabled, then **only** peers defined in the configuration file will be
-communicated with; any peers notified by other nodes will be ignored.
-This allows nodes to be 'locked down' if desired.
-
-```json
-"disablePeerDiscovery": true
-```
+See [Configure peer discovery](Peer-discovery.md).
 
 #### Obfuscate database password in configuration file
 
@@ -230,39 +224,11 @@ Configuration details to allow Tessera to record monitoring data to a running In
 
 ### Peers
 
-A list of URLs used by Tessera to communicate with other nodes. Peer info is shared between nodes during runtime (however, please note the section on `Peer Discovery` below).
+See [Configure peer discovery](Peer-discovery.md).
 
-```json
-"peer": [
-  {
-    "url": "http://myhost.com:9000"
-  },
-  {
-    "url": "http://myhost.com:9001"
-  },
-  {
-    "url": "http://myhost.com:9002"
-  }
-]
-```
+### Remote key validation
 
-### Remote-Key-Validation
-
-Tessera provides an API `/partyinfo` on Tessera P2P server to discover all the peers in the network.
-In order to prevent attackers trying to inject malicious addresses against public keys, where they
-will try to assign the address to direct private transactions to them instead of the real owner of
-the key, we have added a feature to enable node level validation on the remote key that checks the
-remote node does in fact own the keys that were advertised. Only after the keys are validated with
-the remote node to ensure they own them, the keys are added to the local network info (`partyinfo`) store.
-
-Default configuration for this is `false` as this is BREAKABLE change to lower versions to Tessera 0.10.0.
-To enable this, simple set below parameter to true in the configuration:
-
-```json
- "features": {
-    "enableRemoteKeyValidation": true
-  }
-```
+See [Configure peer discovery](Peer-discovery.md).
 
 ### Server
 
@@ -395,10 +361,6 @@ See [TLS/SSL](TLS.md) page.
 
 ### Whitelist
 
-If set to true, the `peers` list will be used as the allowed URLs for the Tessera node:
-
-```json
-"useWhiteList": true,
-```
+See [Configure peer discovery](Peer-discovery.md).
 
 *[JCA]: Java Cryptography Architecture

@@ -1,15 +1,21 @@
-<!-- # TODO Update links and repos-->
-# Tessera documentation [![Documentation Status](https://readthedocs.com/projects/pegasys-docgoquorum/badge/?version=latest&token=a1f890355e4d92ccefe20aeb7afd368862104746db05c15573295986f7628127)](https://pegasys-docgoquorum.readthedocs-hosted.com/en/latest/?badge=latest)
+---
+description: ConsenSys Tessera documentation repository overview
+---
+
+# Tessera documentation
+
+Latest: [![Documentation Status](https://readthedocs.com/projects/pegasys-tessera/badge/?version=latest)](https://docs.tessera.consensys.net/en/latest/?badge=latest)
+Stable: [![Documentation Status](https://readthedocs.com/projects/pegasys-tessera/badge/?version=stable)](https://docs.tessera.consensys.net/en/stable/?badge=stable)
 
 Tessera is a ConsenSys Quorum Private Transaction Manager
 
 The software sources are hosted in [Tessera] repository
 
-This repository only contains the sources for [Tessera documentation website hosted by ReadTheDocs].
+This repository only contains the sources for [Tessera documentation website hosted by ReadTheDocs.com].
 
 This repository uses a Git submodule. Please refer to the [common tools wiki] for explanation about
 how to build and contribute to this documentation.
 
-[Tessera]: https://github.com/jpmorganchase/tessera
-[common tools wiki]: https://github.com/PegaSysEng/doc.common/wiki
-[Tessera documentation website hosted by ReadTheDocs]: https://docs.tessera.consensys.net
+[Tessera]: https://github.com/Consensys/tessera
+[common tools wiki]: https://github.com/consensys/doc.common/wiki
+[Tessera documentation website hosted by ReadTheDocs.com]: https://docs.tessera.consensys.net

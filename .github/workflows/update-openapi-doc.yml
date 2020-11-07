@@ -30,7 +30,7 @@ jobs:
         with:
           repository: ${{ env.TESSERA_REPO }}
           ref: ${{ env.TESSERA_REF }}
-          token: ${{ secrets.TEST_PAT }}
+          token: ${{ secrets.QUORUMBOT_PAT }}
           path: ${{ env.TESSERA_DIR }}
       - name: Grant execute permission for gradlew
         working-directory: ${{ env.TESSERA_DIR }}
@@ -45,7 +45,7 @@ jobs:
         id: pr
         uses: peter-evans/create-pull-request@v3
         with:
-          token: $${{ secrets.TEST_PAT }}
+          token: $${{ secrets.QUORUMBOT_PAT }}
           path: $${{ env.DOC_DIR }}
           commit-message: Automated openapi doc update
           branch: automated-openapi-update

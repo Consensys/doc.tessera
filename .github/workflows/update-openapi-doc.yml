@@ -45,8 +45,8 @@ jobs:
         id: pr
         uses: peter-evans/create-pull-request@v3
         with:
-          token: $${{ secrets.QUORUMBOT_PAT }}
-          path: $${{ env.DOC_DIR }}
+          token: ${{ secrets.QUORUMBOT_PAT }}
+          path: ${{ env.DOC_DIR }}
           commit-message: Automated openapi doc update
           branch: automated-openapi-update
           delete-branch: true

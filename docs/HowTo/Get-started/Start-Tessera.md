@@ -34,10 +34,10 @@ Create a file called `tessera.conf` and add the following properties.
     {
        "useWhiteList": false,
        "jdbc": {
-          "username": "sa",
-          "password": "",
-          "url": "jdbc:h2:./target/h2/tessera1",
-          "autoCreateTables": true
+           "username": "sa",
+           "password": "",
+           "url": "jdbc:h2:./target/h2/tessera1",
+           "autoCreateTables": true
        },
        "serverConfigs":[
            {
@@ -73,12 +73,10 @@ Create a file called `tessera.conf` and add the following properties.
         "keys": {
             "passwords": [],
             "keyData": [
-                "keyData": [
-                  {
+                {
                     "privateKeyPath": "myKey.key",
                     "publicKeyPath": "myKey.pub"
-                  }
-                ]
+                }
             ]
        },
        "alwaysSendTo": []
@@ -95,7 +93,7 @@ tessera -configfile tessera.conf
     If the command line help is displayed, enable debugging and try again. 
     
     ```bash
-    tessera --debugging -configfile tessera.conf
+    tessera --debug -configfile tessera.conf
     ``` 
 
 ### 4. Upcheck 

@@ -13,13 +13,13 @@ NaCI cryptography implementation.
 
 ## Install jar 
 
-1. Download the [`tessera-app-VERSION-app.jar`](https://github.com/ConsenSys/tessera/releases/tag/tessera-20.10.0)
-from the `ConsenSys/tessera` repository.
+1. Download the [`tessera-app-VERSION-app.jar`](https://github.com/ConsenSys/tessera/releases/latest)
+from the `ConsenSys/tessera` repository. `VERSION` is the version of the latest release.
 
 2. Create an alias to the Tessera jar. 
  
     ```bash
-    alias tessera="java -jar ~/Downloads/tessera-app-0.11.0-app.jar" 
+    alias tessera="java -jar ~/Downloads/tessera-VERSION-app.jar" 
     ```
 
 3. Display the Tessera help to confirm installation. 

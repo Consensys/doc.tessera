@@ -15,7 +15,7 @@ requires the [Sodium cryptographic library](https://download.libsodium.org/doc/)
 
 ### Install libsodium
 
-#### MacOS
+#### macOS
 
 Install using [Homebrew](https://brew.sh/):
 

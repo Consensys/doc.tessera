@@ -9,9 +9,9 @@ description: Tessera dependencies
 If using the [kalium](https://github.com/abstractj/kalium) NaCI cryptography implementation, Tessera
 requires the [Sodium cryptographic library](https://download.libsodium.org/doc/) (libsodium) to provide the encryption primitives.
 
-!!! tip 
+!!! tip
     If using the default NaCI cryptography implementation, [jnacl](https://github.com/neilalexander/jnacl),
-    [libsodium](https://download.libsodium.org/doc/) is not required. 
+    [libsodium](https://download.libsodium.org/doc/) is not required.
 
 ### Install libsodium
 

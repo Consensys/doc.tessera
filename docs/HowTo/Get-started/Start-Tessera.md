@@ -1,5 +1,5 @@
 ---
-description: Get started with Tessera and send a payload 
+description: Get started with Tessera and send a payload
 ---
 
 # Getting started
@@ -8,26 +8,26 @@ description: Get started with Tessera and send a payload
 
 [Tessera](DistributionJar.md)
 
-## Starting Tessera and sending a payload 
+## Starting Tessera and sending a payload
 
 ### 1. Generate keys
 
-Generate a key pair in files called `myKey.pub` and `myKey.key`. 
+Generate a key pair in files called `myKey.pub` and `myKey.key`.
 
 !!! bash
     ```
     tessera -keygen -filename myKey
     ```
 
-When prompted to enter a password, press enter to generate an unlocked key. 
+When prompted to enter a password, press enter to generate an unlocked key.
 
-!!! caution 
+!!! caution
     We are using unlocked keys for educational purposes only. Ensure private keys are secured appropriately
-    in production environments. 
+    in production environments.
 
-### 2. Create a configuration file 
+### 2. Create a configuration file
 
-Create a file called `tessera.conf` and add the following properties. 
+Create a file called `tessera.conf` and add the following properties.
 
 !!! example "Tessera configuration file"
     ```json
@@ -83,22 +83,22 @@ Create a file called `tessera.conf` and add the following properties.
     }
     ```
 
-### 3. Start Tessera node 
+### 3. Start Tessera node
 
 ```bash
 tessera -configfile tessera.conf
 ```
 
 !!! tip
-    If the command line help is displayed, enable debugging and try again. 
-    
+    If the command line help is displayed, enable debugging and try again.
+
     ```bash
     tessera --debug -configfile tessera.conf
-    ``` 
+    ```
 
-### 4. Upcheck 
+### 4. Upcheck
 
-Use the `upcheck` method to confirm Tessera is up and running. 
+Use the `upcheck` method to confirm Tessera is up and running.
 
 === "Request"
 

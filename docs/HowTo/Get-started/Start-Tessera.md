@@ -114,7 +114,8 @@ Use the `upcheck` method to confirm Tessera is up and running.
 
 ### 5. Send a payload
 
-With one node running, send a payload to yourself where the `from` and `to` values are the [generated public key](#1-generate-keys) (`myKey.pub`):
+With one node running, send a payload to yourself where the `from` and `to` values are the
+[generated public key](#1-generate-keys) (`myKey.pub`).
 
 === "Request"
 
@@ -129,58 +130,69 @@ With one node running, send a payload to yourself where the `from` and `to` valu
         "privacyFlag": 0,
         "affectedContractTransactions": [],
         "execHash": ""
-    }'
+      }'
     ```
 
 === "Example"
 
     ```bash
     curl -X POST \
-    http://localhost:8888/send \
-    -H 'Content-Type: application/json' \
-    -d '{
-          "payload": "SGVsbG8sIFdvcmxkIQ==",
-          "from": "UPLeS7ZHZm02feA3qPTXcRBziB1APYCsjZmHGlV6EkQ=",
-          "to": ["UPLeS7ZHZm02feA3qPTXcRBziB1APYCsjZmHGlV6EkQ="]
+      http://localhost:22222/send \
+      -H 'Content-Type: application/json' \
+      -d '{
+        "payload": "SGVsbG8sIFdvcmxkIQ==",
+        "from": "UPLeS7ZHZm02feA3qPTXcRBziB1APYCsjZmHGlV6EkQ=",
+        "to": ["UPLeS7ZHZm02feA3qPTXcRBziB1APYCsjZmHGlV6EkQ="],
+        "privacyFlag": 0,
+        "affectedContractTransactions": [],
+        "execHash": ""
+      }'
+    ```
+
+=== "Result"
+
+    ```bash
+    {"key": "5jZPbwuxncr7qrL9esCTnz3PByLlD50kdZy5JkW/JMKcFeTl7I3NeLIsje4C410EYb93HabhddoAVGpwgYF1LQ=="}
+    ```
+
+### 6. Receive a payload
+
+Use the key received when [sending the payload](#5-send-a-payload) and recipient key (`myKey.pub`)
+to receive the payload.
+
+=== "Request"
+
+    ```bash
+    curl -X GET \
+      http://localhost:22222/receive \
+      -H 'Content-Type: application/json' \
+      -d '{
+        "key": "<PayloadKeyFromSend>",
+        "to": "<TesseraPublicKey>"
+      }'
+    ```
+
+=== "Example"
+
+    ```bash
+    curl -X GET \
+      http://localhost:22222/receive \
+        -H 'Content-Type: application/json' \
+        -d '{
+          "key": "5jZPbwuxncr7qrL9esCTnz3PByLlD50kdZy5JkW/JMKcFeTl7I3NeLIsje4C410EYb93HabhddoAVGpwgYF1LQ==",
+          "to": "UPLeS7ZHZm02feA3qPTXcRBziB1APYCsjZmHGlV6EkQ="
         }'
     ```
 
 === "Result"
 
     ```bash
-    {"key": "B+R5pQkDbSpgSgJcnx2A4LESHrYc5VcfYNo4fdmFbNlSgkmeGSePttYSZbC3gkCGCMY3Jp9eE5w7m65GE51Hgw=="}
-    ```
-
-### 6. Receive a payload
-
-Use the key received when [sending the payload](#5-send-a-payload) to receive the payload:
-
-=== "Request"
-
-    ```bash
-    curl -X POST \
-      http://localhost:22222/receive \
-      -H 'Content-Type: application/json' \
-      -d '{
-        "key": "<TesseraPublicKey>"
-    }'
-    ```
-
-=== "Example"
-
-    ```bash
-    curl -X POST \
-      http://localhost:22222/receive \
-      -H 'Content-Type: application/json' \
-      -d '{
-        "key": "B+R5pQkDbSpgSgJcnx2A4LESHrYc5VcfYNo4fdmFbNlSgkmeGSePttYSZbC3gkCGCMY3Jp9eE5w7m65GE51Hgw=="
-    }'
-    ```
-
-=== "Result"
-
-    ```bash
-    {"payload":"SGVsbG8sIFdvcmxkIQ=="}
+    {
+      "payload": "SGVsbG8sIFdvcmxkIQ==",
+      "affectedContractTransactions": [],
+      "execHash": "",
+      "privacyFlag": 0
+    }
     ```
 
 Where `SGVsbG8sIFdvcmxkIQ==` is `Hello, World!` in Base64.

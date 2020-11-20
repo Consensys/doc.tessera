@@ -36,7 +36,7 @@ The same Enclave encryption process as described in
 [Lifecycle of a private transaction](https://docs.goquorum.consensys.net/Concepts/Privacy/PrivateTransactionLifecycle/)
 is used regardless of whether the NaCl or JCA encryptor are configured.
 
-This is a feature introduced in Tessera v0.10.2. Not providing an encryptor configuration means the default NaCl encryptor is used.
+If an encryptor configuration is not specified, the default NaCl encryptor is used.
 
 ```json
 "encryptor":{
@@ -263,10 +263,10 @@ The servers to be started are provided as a list:
     - `bindingAddress` - This is an optional endpoint to use for the binding. This is useful if you need
        to bind to an internal IP whilst advertising an external IP using `serverAddress`.
 
-    Each server is individually configurable and can advertise over HTTP, HTTPS or a Unix Socket. The format
-    of an individual server config is slightly different between Tessera v0.9 and v0.8:
+    Each server is individually configurable and can advertise over HTTP, HTTPS or a Unix Socket.
+    Each server is individually configurable and can advertise over HTTP, HTTPS or a Unix Socket.
 
-#### Server configuration (v0.9)
+#### Server configuration
 
 === "HTTP"
 
@@ -301,57 +301,6 @@ The servers to be started are provided as a list:
         "enabled": <boolean,
         "serverAddress":"unix://[path]",
         "communicationType" : "REST"
-    }
-    ```
-
-#### Server configuration (v0.8)
-
-=== "HTTP"
-
-    ```json
-    {
-        "app": "<app type",
-        "enabled": <boolean,
-        "serverSocket":{
-            "type": "INET",
-            "port": <int, //The port to advertise and bind on (if binding address not set)
-            "hostName": <string // The hostname to advertise and bind on (if binding address not set)
-        },
-        "communicationType" : <enum, // "REST" or "GRPC",
-        "bindingAddress": <string //An address to bind the server to that overrides the one defined above
-    }
-    ```
-
-=== "HTTPS"
-
-    ```json
-    {
-        "app": "<app type",
-        "enabled": <boolean,
-        "serverSocket":{
-            "type": "INET",
-            "port": <int, //The port to advertise and bind on (if binding address not set)
-            "hostName": <string // The hostname to advertise and bind on (if binding address not set)
-        },
-        "communicationType" : <enum, // "REST" or "GRPC"
-        "bindingAddress": <string, //An address to bind the server to that overrides the one defined above
-        "sslConfig": {
-           ...<SSL settings, see below...
-        }
-    }
-    ```
-
-=== "Unix Socket"
-
-    ```json
-    {
-        "app": "<app type",
-        "enabled": <boolean,
-        "serverSocket":{
-            "type":"UNIX",
-            "path": <string //the path of the unix socket to create
-        },
-        "communicationType" : "UNIX_SOCKET"
     }
     ```
 

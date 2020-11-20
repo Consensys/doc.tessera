@@ -37,12 +37,10 @@ The configuration for the transaction manager is described in the [configuration
 
 For advanced users, you may decide on certain options for the transaction manager, or to disable other parts.
 
-The default transaction manager comes with the standard options most setups will use, but other versions are as follows:
+The default transaction manager comes with the standard options most setups use. Th other version
+is non-remote only enclaves (named "tessera-simple"). 
 
-- gRPC communication (experimental)
-- Non-remote only enclaves (named "tessera-simple")
-
-These must be built from source and can be found inside the `tessera-dist` module.
+The non-remote only enclave must be built from source and can be found inside the `tessera-dist` module.
 
 ## Data recovery (Legacy)
 

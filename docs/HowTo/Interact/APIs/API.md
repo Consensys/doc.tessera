@@ -1,0 +1,89 @@
+---
+description: How to interact with Tessera API 
+---
+
+# 
+
+## Access the Tessera REST API
+
+Access the [Tessera REST API](../../../Reference/API-Methods.md) over:
+* HTTP
+* HTTPS
+* Unix socket. 
+
+## Enabling API
+
+The Tessera
+
+To enable API access, use the
+[`--rpc-http-enabled`](../../../Reference/CLI/CLI-Syntax.md#rpc-http-enabled),
+[`--ws-http-enabled`](../../../Reference/CLI/CLI-Syntax.md#rpc-ws-enabled), and
+[`--graphql-http-enabled`](../../../Reference/CLI/CLI-Syntax.md#graphql-http-enabled) options.
+
+## Service hosts
+
+To specify the host the API service listens on, use the
+[`--rpc-http-host`](../../../Reference/CLI/CLI-Syntax.md#rpc-http-host),
+[`--rpc-ws-host`](../../../Reference/CLI/CLI-Syntax.md#rpc-ws-host), and
+[`--graphql-http-host`](../../../Reference/CLI/CLI-Syntax.md#graphql-http-host) options. The
+default host is `127.0.0.1`.
+
+To allow remote connections, set the host to `0.0.0.0`.
+
+!!! caution
+
+    Setting the host to `0.0.0.0` exposes the API service connection on your node to any remote
+    connection. In a production environment, ensure you use a firewall to avoid exposing your node
+    to the internet.
+
+## Service ports
+
+To specify the port the API service listens on, use the
+[`--rpc-http-port`](../../../Reference/CLI/CLI-Syntax.md#rpc-http-port),
+[`--rpc-ws-port`](../../../Reference/CLI/CLI-Syntax.md#rpc-ws-port), and
+[`--graphql-http-port`](../../../Reference/CLI/CLI-Syntax.md#graphql-http-port) options.
+
+The default ports are:
+
+* 8545 for JSON-RPC over HTTP
+* 8546 for JSON-RPC over WebSockets
+* 8547 for GraphQL over HTTP.
+
+Ports must be [exposed appropriately](../../Find-and-Connect/Managing-Peers.md#port-configuration).
+
+## Host allowlist
+
+To prevent DNS rebinding, Besu accepts incoming HTTP requests, WebSockets connections, and GraphQL
+requests only from hostnames specified using the
+[`--host-allowlist`](../../../Reference/CLI/CLI-Syntax.md#host-allowlist) option. Besu accepts
+incoming requests and connections from `localhost` and `127.0.0.1` by default.
+
+If your application publishes RPC ports, specify the hostnames when starting Besu.
+
+!!! example
+
+    ```bash
+    besu --host-allowlist=example.com
+    ```
+
+Specify "*" for `--host-allowlist` to effectively disable host protection.
+
+!!! caution
+
+    Specifying "*" for `--host-allowlist` is not recommended for production code.
+
+## Not supported by Besu
+
+### Account management
+
+Account management relies on private key management in the client, which is not supported by Besu.
+
+To send signed transactions, use
+[`eth_sendRawTransaction`](../../../Reference/API-Methods.md#eth_sendrawtransaction).
+`eth_sendTransaction` is not implemented.
+
+For [account management](../../Send-Transactions/Account-Management.md), use third-party wallets.
+
+### Protocols
+
+Besu does not support the Whisper and Swarm protocols.

@@ -264,7 +264,6 @@ The servers to be started are provided as a list:
        to bind to an internal IP whilst advertising an external IP using `serverAddress`.
 
     Each server is individually configurable and can advertise over HTTP, HTTPS or a Unix Socket.
-    Each server is individually configurable and can advertise over HTTP, HTTPS or a Unix Socket.
 
 #### Server configuration
 

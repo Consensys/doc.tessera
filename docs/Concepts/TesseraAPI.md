@@ -4,11 +4,11 @@ description: Tessera API
 
 # Tessera API 
 
-The Tessera REST API consists of three parts: 
+The Tessera API consists of three parts: 
 
-* GoQuorum to Tessera 
-* Peer to peer
-* Third party. 
+* [GoQuorum to Tessera](#goquorum-to-tessera-api) 
+* [Peer to peer](#peer-to-peer-api)
+* [Third party](#third-party-api). 
 
 ## GoQuorum to Tessera API 
 
@@ -26,5 +26,7 @@ Tessera uses the Peer to peer API to:
 
 ## Third party API 
 
-Tessera uses the third party API to store encrypted payloads for external applications.
+Tessera uses the third party API to store encrypted payloads for external applications. For example,
+[Quorum.js](https://github.com/consenSys/quorum.js).
 
+[Configure the Tessera API servers in `serverConfigs` in the Tessera configuration file.](../HowTo/Configure/TesseraAPI.md) 

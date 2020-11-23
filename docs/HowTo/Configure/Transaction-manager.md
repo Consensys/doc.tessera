@@ -38,7 +38,7 @@ The configuration for the transaction manager is described in the [configuration
 For advanced users, you may decide on certain options for the transaction manager, or to disable other parts.
 
 The default transaction manager comes with the standard options most setups use. The other version
-is non-remote only enclaves (named "tessera-simple"). 
+is non-remote only enclaves (named "tessera-simple").
 
 The non-remote only enclave must be built from source and can be found inside the `tessera-dist` module.
 

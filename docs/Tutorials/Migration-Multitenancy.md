@@ -3,7 +3,7 @@ title: Tessera Multi-tenancy Migration
 description: Migrate two Tessera nodes into a single multi-tenancy node
 ---
 
-# Multitenancy migration
+# Multi-tenancy migration
 
 The multi-tenancy migration tool enables node operators to take two existing nodes databases that they wish to operate
 under a single instance of Tessera, and merge them together.

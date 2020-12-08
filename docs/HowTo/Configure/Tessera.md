@@ -64,8 +64,7 @@ Field|Default Value|Description
 `sharedKeyLength`|`32`|The key length used for symmetric encryption (keep in mind the key derivation operation always produces 32 byte keys and that the encryption algorithm must support it).
 
 If `type` is set to `CUSTOM`, it provides support for external encryptor implementation to integrate
-with Tessera. Our pilot third party integration is with **Unbound Tech's "Unbound Key Control" (UKC)**
-implementation. For more information refer to [UKC site](https://github.com/unbound-tech/encryption-ub)
+with Tessera. The pilot third party integration is [Unbound Tech's Unbound Key Control (UKC) encryptor](https://github.com/unbound-tech/ub-integration/tree/master/Tessera) (jar available at `com.github.unbound-tech:encryption-ub:<version>`).
 
 ### Always-send-to
 

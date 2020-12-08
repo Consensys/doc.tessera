@@ -6,7 +6,9 @@ description: Get started with Tessera and send a payload
 
 ## Prerequisites
 
-[Tessera](DistributionJar.md)
+1. Install necessary [dependencies](Dependencies.md)
+
+1. Install [Tessera](DistributionJar.md)
 
 ## Starting Tessera and sending a payload
 

@@ -1,42 +1,19 @@
 ---
-description: REST API overview
+description: REST API reference
 ---
 
 # REST API
 
-The Tessera REST API consists of 3 parts.
+The Rest API consists of three parts: [Peer to Peer, GoQuorum to Tessera, and Third Party](../Concepts/TesseraAPI.md).
 
-## Peer-to-peer APIs
+[Configure the API servers in the Tessera configuration file](../HowTo/Configure/TesseraAPI.md).
 
-Tessera nodes communicate with each other using this API to:
+For the API methods, refer to the [API reference](https://consensys.github.io/doc.tessera/).
 
-- Perform discovery
-- Send and receive encrypted payloads
+## Defining API versions
 
-!!! Warning "Defining First API Version"
+Every client side request (that is, `/push` and [`/partyinfo`](https://consensys.github.io/tessera/#operation/broadcastPartyInfo))
+includes a header parameter listing the supported API versions. The parameter is called `tesseraSupportedApiVersions`.
 
-    From version 0.11.0, for every client side request i.e., `/push` and `/partyinfo`, Tessera will
-    now include a parameter which is a list of API versions that it supports into the http header called `supportedApiVersions`.
-
-    Release 0.11.0 defines the first API version and during the `partyinfo` exchange these values will be
-    stored against the node in the `NetworkStore` so that a Tessera node at any time will be aware of
-    the versions that its peers currently support.
-
-    This can later be used to ensure that a remote peer is actively supporting a certain feature before forwarding a transaction.
-    Refer [API Reference site](https://consensys.github.io/doc.tessera/) for more information.
-
-## Third party APIs
-
-Tessera nodes communicate with third parties using this API to:
-
-- Store encrypted payloads for external applications
-
-## GoQuorum to Tessera APIs (default)
-
-GoQuorum uses this API to:
-
-- Check if the local Tessera node is running
-- Send and receive details of private transactions
-
-This API is described in the OpenAPIv3 format available on
-[Tessera API reference site](https://consensys.github.io/doc.tessera/).
+Exchanging and storing the supported API versions enables Tessera nodes to know which API
+versions are supported by peers.

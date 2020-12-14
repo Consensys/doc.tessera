@@ -4,38 +4,16 @@ description: Tessera dependencies
 
 # Dependencies
 
-## libsodium
+## Java JDK
 
-If using the [kalium](https://github.com/abstractj/kalium) NaCI cryptography implementation, Tessera
-requires the [Sodium cryptographic library](https://download.libsodium.org/doc/) (libsodium) to provide the encryption primitives.
+Tessera requires [Java JDK 11+](http://www.oracle.com/technetwork/java/javase/downloads/index.html). Earlier versions are not supported.
 
-!!! tip
-    If using the default NaCI cryptography implementation, [jnacl](https://github.com/neilalexander/jnacl),
-    [libsodium](https://download.libsodium.org/doc/) is not required.
+## libsodium (optional)
 
-### Install libsodium
+[libsodium (the Sodium cryptographic library)](https://libsodium.gitbook.io/doc/)) must be installed if using [kalium](https://github.com/abstractj/kalium) instead of the default [jnacl](https://github.com/neilalexander/jnacl) NaCl implementation.
 
-#### macOS
-
-Install using [Homebrew](https://brew.sh/):
+See the [libsodium installation docs](https://libsodium.gitbook.io/doc/) or install using [brew](https://brew.sh/) (macOS only):
 
 ```bash
 brew install libsodium
 ```
-
-#### Linux
-
-Download the [latest stable version](https://download.libsodium.org/libsodium/releases/LATEST.tar.gz)
-of libsodium.
-
-Execute:
-
-```bash
-./configure
-make && make check
-sudo make install
-```
-
-#### Other systems
-
-See the [libsodium installation docs](https://download.libsodium.org/doc/installation/).

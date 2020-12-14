@@ -5,7 +5,7 @@ description: Configure servers for Tessera API
 # Configure servers for Tessera API
 
 Configure the [servers for the Tessera API](../../Concepts/TesseraAPI.md) in the
-[Tessera configuration file](Tessera.md). 
+[Tessera configuration file](Tessera.md).
 
 Specify the servers to be started as a list in `serverConfigs`.
 
@@ -19,7 +19,7 @@ Specify the servers to be started as a list in `serverConfigs`.
 
 The server configuration has two address entries:
 
-- `serverAddress` - Always specified. 
+- `serverAddress` - Always specified.
 - `bindingAddress` - Optional endpoint to use for the binding. Specify
 to bind to an internal IP while advertising an external IP using `serverAddress`.
 
@@ -48,7 +48,6 @@ Each server is individually configured and can advertise over HTTP, HTTPS, or a 
        "communicationType": "REST"
     }
     ```
-
 
 ### HTTPS server configuration
 
@@ -121,9 +120,9 @@ Each server is individually configured and can advertise over HTTP, HTTPS, or a 
         "communicationType" : "REST"
     }
     ```
-    
+
 === "Q2T Example"
-    
+
     ```json
     {
         "app": "Q2T",

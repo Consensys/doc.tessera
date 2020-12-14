@@ -17,7 +17,7 @@ Specify the servers to be started as a list in `serverConfigs`.
 
 ## Server Addresses
 
-There are two server address entries:
+The server configuration has two address entries:
 
 - `serverAddress` - Always specified. 
 - `bindingAddress` - Optional endpoint to use for the binding. Specify

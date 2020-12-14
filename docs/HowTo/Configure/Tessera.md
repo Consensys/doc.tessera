@@ -237,7 +237,7 @@ See [Configure Tessera API](TesseraAPI.md).
 ### Server for remote enclave
 
 If using an [remote enclave](../../Concepts/Enclave-types.md#remote-http-enclave), configure the
-`ENCLAVE` server. 
+`ENCLAVE` server.
 
 ```json
 "serverConfigs": [

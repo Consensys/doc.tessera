@@ -4,26 +4,43 @@ description: Install Tessera from jar
 
 # Install Tessera jar
 
-## Prerequisites
+1. Install necessary [dependencies](Dependencies.md)
 
-* [Java JDK](http://www.oracle.com/technetwork/java/javase/downloads/index.html). Tessera requires Java
-JDK 11+. Earlier versions are not supported.
-* [libsodium](https://download.libsodium.org/doc/), if using the [kalium](https://github.com/abstractj/kalium)
-NaCI cryptography implementation.
+1. Download the latest `tessera-app-<VERSION>-app.jar` from [`ConsenSys/tessera` repository](https://github.com/ConsenSys/tessera/releases/latest)
 
-## Install jar
-
-1. Download the [`tessera-app-VERSION-app.jar`](https://github.com/ConsenSys/tessera/releases/latest)
-from the `ConsenSys/tessera` repository. `VERSION` is the version of the latest release.
-
-2. Create an alias to the Tessera jar.
+1. (Optional) Create an alias
 
     ```bash
     alias tessera="java -jar ~/Downloads/tessera-VERSION-app.jar"
     ```
 
-3. Display the Tessera help to confirm installation.
+1. Verify installation.
 
     ```bash
     tessera --help
+
+      Usage:
+
+      Tessera private transaction manager for Quorum
+
+      tessera [OPTIONS] [COMMAND]
+
+      Description:
+
+      Start a Tessera node.  Other commands exist to manage Tessera encryption keys
+
+      Options:
+      -configfile, --configfile <config>
+      Path to node configuration file
+      --debug                Print full exception stack traces
+      -o, --override KEY=VALUE
+      -pidfile, --pidfile <pidFilePath>
+      the path to write the PID to
+      -r, --recover              Start Tessera in recovery mode
+
+      Commands:
+      help                        Displays help information about the specified
+      command
+      keygen, -keygen             Generate Tessera encryption keys
+      keyupdate, -updatepassword  Update the password for a key
     ```

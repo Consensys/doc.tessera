@@ -17,4 +17,5 @@ a clear separation between the enclave and transaction manager.
 
 For additional security, the remote HTTP Enclave can be deployed in a secure environment separate from the transaction manager.
 
-The enclave must be present and running at transaction manager startup.
+The enclave must be present and running at transaction manager startup. Specify the connection details
+for the remote enclave server in the [Tessera configuration file](../HowTo/Configure/Tessera.md).

@@ -64,8 +64,7 @@ Field|Default Value|Description
 `sharedKeyLength`|`32`|The key length used for symmetric encryption (keep in mind the key derivation operation always produces 32 byte keys and that the encryption algorithm must support it).
 
 If `type` is set to `CUSTOM`, it provides support for external encryptor implementation to integrate
-with Tessera. Our pilot third party integration is with **Unbound Tech's "Unbound Key Control" (UKC)**
-implementation. For more information refer to [UKC site](https://github.com/unbound-tech/encryption-ub)
+with Tessera. The pilot third party integration is [Unbound Tech's Unbound Key Control (UKC) encryptor](https://github.com/unbound-tech/ub-integration/tree/master/Tessera) (jar available at `com.github.unbound-tech:encryption-ub:<version>`).
 
 ### Always-send-to
 
@@ -230,78 +229,27 @@ See [Configure peer discovery](Peer-discovery.md).
 
 See [Configure peer discovery](Peer-discovery.md).
 
-### Server
+### Servers for Tessera API
 
-To allow for a greater level of control, Tessera's API has been separated into distinct groups.
-Each group is only accessible over a specific server type. Tessera can be started with different
-combinations of these servers depending on the functionality required.
-This is defined in the configuration and determines the APIs that are available and how they are accessed.
+See [Configure Tessera API](TesseraAPI.md).
 
-The possible server types are:
+### Server for remote enclave
 
-* `P2P` - Tessera uses this server to communicate with other Transaction Managers (the URI for this
-    server can be shared with other nodes to be used in their `peer` list - see below)
-* `Q2T` - This server is used for communications between Tessera and its corresponding Quorum node
-* `ENCLAVE` - If using a remote enclave, this defines the connection details for the remote enclave
-    server (see the [Enclave docs](../../Concepts/Enclave.md) for more info)
-* `ThirdParty` - This server is used to expose certain Transaction Manager functionality to external
-    services such as Quorum.js
-
-The servers to be started are provided as a list:
+If using an [remote enclave](../../Concepts/Enclave-types.md#remote-http-enclave), configure the
+`ENCLAVE` server.
 
 ```json
 "serverConfigs": [
-   ...<server settings...
-]
+   {
+     "app": "ENCLAVE",
+     "enabled": true,
+     "serverAddress": "http://localhost:9081",
+     //Where to find the remote enclave
+     "communicationType": "REST"
+   }
+ ...
+ ]
 ```
-
-!!! note
-
-    There are two server addresses configuration entries:
-
-    - `serverAddress` - In normal use, you will only need this (e.g. `http://localhost:9001`).
-    - `bindingAddress` - This is an optional endpoint to use for the binding. This is useful if you need
-       to bind to an internal IP whilst advertising an external IP using `serverAddress`.
-
-    Each server is individually configurable and can advertise over HTTP, HTTPS or a Unix Socket.
-
-#### Server configuration
-
-=== "HTTP"
-
-    ```json
-    {
-        "app": "<app type",
-        "enabled": <boolean,
-        "serverAddress":"http://[host]:[port]/[path]",
-        "communicationType" : "REST"
-    }
-    ```
-
-=== "HTTPS"
-
-    ```json
-    {
-        "app": "<app type",
-        "enabled": <boolean,
-        "serverAddress":"https://[host]:[port]/[path]",
-        "communicationType" : "REST",
-        "sslConfig": {
-            ...<SSL settings, see below...
-        }
-    }
-    ```
-
-=== "Unix Socket"
-
-    ```json
-    {
-        "app": "<app type",
-        "enabled": <boolean,
-        "serverAddress":"unix://[path]",
-        "communicationType" : "REST"
-    }
-    ```
 
 ### TLS/SSL: Server sub-config
 

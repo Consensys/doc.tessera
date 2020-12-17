@@ -65,6 +65,7 @@ nav:
       - Enclave: HowTo/Configure/Enclave.md
       - Keys: HowTo/Configure/Keys.md
       - Peer discovery: HowTo/Configure/Peer-discovery.md
+      - Tessera API: HowTo/Configure/TesseraAPI.md
       - TLS: HowTo/Configure/TLS.md
       - Key vault:
          - Hashicorp Vault: HowTo/Configure/KeyVault/Hashicorp-Vault.md
@@ -84,6 +85,7 @@ nav:
     - Enclave: Concepts/Enclave.md
     - Enclave types: Concepts/Enclave-types.md
     - Peer discovery: Concepts/p2p-discovery.md
+    - Tessera API: Concepts/TesseraAPI.md
   - Reference:
     - Configuration file: Reference/SampleConfiguration.md
     - Bootstrap node configuration file: Reference/BootstrapSampleConfiguration.md

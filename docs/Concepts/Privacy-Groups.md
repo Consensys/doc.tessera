@@ -3,7 +3,7 @@ description: Privacy Groups
 ---
 
 
-When operating on [isbesu]() mode, Tessera supports privacy groups. 
+When operating on [isbesu](../HowTo/Configure/Tessera.md#Besu-Mode) mode, Tessera supports privacy groups. 
 
 There are two types of Privacy Groups:
 

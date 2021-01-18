@@ -12,7 +12,7 @@ There are two types of Privacy Groups:
 
 ## Legacy Privacy Group
 
-  When [transactions are sent](https://consensys.github.io/tessera/#operation/encryptStoreAndSendJson) to a list of recipients using `privateFor` Tessera creates a Legacy Privacy group. It returns the Legacy privacy group on the `/receive` response back. The same privacy group is also created on all recipients during transaction processing. The legacy privacy group is created using list of recipient keys and it is unique to that list i.e., you cannot have more than one 'legacy' privacy group for list of recipients.
+  When [transactions are sent](https://consensys.github.io/tessera/#operation/encryptStoreAndSendJson) to a list of recipients using `privateFor` Tessera creates a Legacy Privacy group. It returns the Legacy privacy group on the `/receive` response back. The legacy privacy group is created only using list of recipient keys and it is unique to that list i.e., you cannot have more than one 'legacy' privacy group for list of recipients.
 
 ## Pantheon Privacy Group
 

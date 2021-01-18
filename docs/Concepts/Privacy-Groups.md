@@ -1,4 +1,7 @@
-# Privacy Groups:
+---
+description: Privacy Groups
+---
+
 
 When operating on [isbesu]() mode, Tessera supports privacy groups. 
 

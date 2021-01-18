@@ -88,11 +88,11 @@ should exist in the serverConfigs):
 
 ### Besu Mode
 
-If set to true, Tessera will support Besu client with below behaviour:
+If set to true, Tessera will support Besu client with alternate behaviour:
 
   * Instructs envlave to generate 32 byte hash for encrypted payload and return back to Besu.
   * Creates a ‘legacy’ privacy group type if transaction is send using ‘privateFor’ with list of recipients.     
-  * Includes Besu specific response object for ‘receive’ that includes privacy group and sender public key (for sender validation) and removes Quorum specific  fields to support enhanced privacy.
+  * Response object for ‘receive’ will include privacy group and sender public key (for sender validation).
   * Accepts standard json and headers for ‘/receive’ requests using POST.
  
  ```json

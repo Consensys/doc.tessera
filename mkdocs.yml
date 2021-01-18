@@ -85,6 +85,7 @@ nav:
     - Enclave: Concepts/Enclave.md
     - Enclave types: Concepts/Enclave-types.md
     - Peer discovery: Concepts/p2p-discovery.md
+    - Privacy Groups: Concepts/Privacy-Groups.md
     - Tessera API: Concepts/TesseraAPI.md
   - Reference:
     - Configuration file: Reference/SampleConfiguration.md

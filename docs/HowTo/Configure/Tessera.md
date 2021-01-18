@@ -86,6 +86,19 @@ should exist in the serverConfigs):
 "bootstrapNode": true,
 ```
 
+### Besu Mode
+
+If set to true, Tessera will support Besu client with below behaviour:
+
+  * Instructs envlave to generate 32 byte hash for encrypted payload and return back to Besu.
+  * Creates a ‘legacy’ privacy group type if transaction is send using ‘privateFor’ with list of recipients.     
+  * Includes Besu specific response object for ‘receive’ that includes privacy group and sender public key (for sender validation) and removes Quorum specific  fields to support enhanced privacy.
+  * Accepts standard json and headers for ‘/receive’ requests using POST.
+ 
+ ```json
+"isBesu": true,
+```
+
 ### Privacy Enhancements Flag
 
 Privacy enhancement features to support Party Protection (PP) and Private State Validation (PSV) are enabled by setting the flag to true. The default value is set to FALSE

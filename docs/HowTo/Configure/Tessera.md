@@ -90,10 +90,10 @@ should exist in the serverConfigs):
 
 If set to true, Tessera will support Besu client with alternate behaviour:
 
-  * Instructs envlave to generate 32 byte hash for encrypted payload and return back to Besu.
+  * Instructs enclave to generate 32 byte hash for encrypted payload and return back to Besu.
   * Creates a ‘legacy’ privacy group type if transaction is send using ‘privateFor’ with list of recipients.     
   * Response object for ‘receive’ will include privacy group and sender public key (for sender validation).
-  * Accepts standard json and headers for ‘/receive’ requests using POST.
+  * Accepts standard json for ‘/receive’ requests using POST.
  
  ```json
 "isBesu": true,

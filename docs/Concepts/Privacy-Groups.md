@@ -16,7 +16,7 @@ There are two types of Privacy Groups:
 
 ## Pantheon Privacy Group
 
-  Tessera supports API method to create 'Pantheon' Privacy Group. Upon creation the privacy group is distributed to all members ahead of transaction processing. Other methods to delete, retrieve and find privacy group is common to both privacy group types. Please refer our [API reference](https://consensys.github.io/doc.tessera/) for more details on these methods.
+  Tessera supports API method to create 'Pantheon' Privacy Group. Upon creation the privacy group is distributed to all members ahead of transaction processing. Other methods to delete, retrieve and find privacy group is common to both privacy group types. Please refer [API reference](https://consensys.github.io/doc.tessera/) for more details on these methods.
 
   When [transactions are sent](https://consensys.github.io/tessera/#operation/encryptStoreAndSendJson) to a privacy group, the transaction payload is distributed to all the members of the privacy group. The main difference to 'Legacy' privacy group is you could have more than one 'Pantheon' privacy group for the same list of recipients.
 

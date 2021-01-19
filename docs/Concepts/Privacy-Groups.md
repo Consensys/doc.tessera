@@ -23,5 +23,7 @@ There are two types of Privacy Groups:
 !!! note
 
     Both Privacy group types created off-chain are non-editable ie., adding a new recipient to a privacy group means creating a new privacy group including the recipient.
+   
+The API version is incremented with the introduction of privacy groups and Tessera will include the privacy group in the encoded payload to only those recipients supporting correct version, else the transaction is failed.
 
 These Privacy groups are currently supported for Hyperledger Besu client which maintains a [private state per privacy group](https://besu.hyperledger.org/en/stable/Concepts/Privacy/Privacy-Groups/).

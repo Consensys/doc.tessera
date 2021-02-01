@@ -121,7 +121,7 @@ The configurable fields are:
     `GET`, `POST`, `PUT`, `DELETE`, `OPTIONS` and `HEAD` is used.
 * `allowedOrigins` : the list of domains from which to accept cross origin requests (browser enforced).
     Each entry in the list can contain the "*" (wildcard) character which matches any sequence of characters.
-    Example: `*locahost` would match `http://localhost` or `https://localhost`. This field has no default value.
+    Example: `*localhost` would match `http://localhost` or `https://localhost`. This field has no default value.
 * `allowedHeaders` : the list of allowed headers. If omitted the request `Access-Control-Request-Headers`
     are copied into the response as `Access-Control-Allow-Headers`.
 * `allowCredentials` : the value for the `Access-Control-Allow-Credentials` response header.

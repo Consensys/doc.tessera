@@ -86,18 +86,24 @@ should exist in the serverConfigs):
 "bootstrapNode": true,
 ```
 
-### Besu Mode
+### Orion Mode
 
-If set to true, Tessera will support Besu client with alternate behaviour:
+When running on 'Orion' mode, Tessera will support Besu client with alternate behaviour:
 
-  * Instructs enclave to generate 32 byte hash for encrypted payload and return back to Besu.
+  * Attempts to retrieve privacy group and its associated members if the privacy group id is included in the request
+  * Instructs enclave to use SHA-512/256 to generate 32 byte hash for encrypted payload and return back to Besu.
   * Creates a ‘legacy’ privacy group type if transaction is send using ‘privateFor’ with list of recipients.     
-  * Response object for ‘receive’ will include privacy group and sender public key (for sender validation).
-  * Accepts standard json for ‘/receive’ requests using POST.
+  * /receive requests will be made via POST that accepts standard json media type. 
+  * Response to /recieve request will include senderKey (for Besu sender authentication), and the transaction’s associated privacy group id.
  
  ```json
-"isBesu": true,
+ "mode": "orion",
 ```
+
+This configuration (deafult=tessera) could also be enabled using command line override. Usage below
+
+java -jar tessera.jar --configfile config.json -o mode="orion"
+
 
 ### Privacy Enhancements Flag
 

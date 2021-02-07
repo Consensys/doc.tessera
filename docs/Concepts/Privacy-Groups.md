@@ -66,7 +66,7 @@ Privacy group data - before being persisted into the database will be encoded us
 
 With the introduction of privacy groups, a transaction being distributed can be associated with a privacy group id. A Tessera node that is running an old version will not be able to understand privacy group id and this can cause inconsistency of data being persisted on different nodes.
 
-Therefore, Tessera's supported api version is incremented to “3.0”, and this will be shared across the network during partyinfo exchange. 
+Therefore, Tessera's supported api version is incremented to **“3.0”**, and this will be shared across the network during partyinfo exchange. 
 
 !!! important
 

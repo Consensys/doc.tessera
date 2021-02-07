@@ -3,7 +3,7 @@ description: Privacy Groups
 ---
 
 
-When operating on [Besu](../HowTo/Configure/Tessera.md#Besu-Mode) mode, Tessera supports operations related to privacy groups such as managing privacy group data and handling transactions that are intended for a privacy group.
+When operating on [Orion](../HowTo/Configure/Tessera.md#Orion-Mode) mode, Tessera supports operations related to privacy groups such as managing privacy group data and handling transactions that are intended for a privacy group.
 
 There are two types of Privacy Groups:
 

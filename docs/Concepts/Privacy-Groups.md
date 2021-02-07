@@ -50,8 +50,27 @@ An example of a legacy group created:
 
     Both Privacy group types created off-chain are non-editable ie., adding a new recipient to a privacy group means creating a new privacy group including the recipient.
 
+## Privacy Group - Database Storage
+
+A new table called PRIVACY_GROUP is added to Tessera database to store Privacy Group data.
+
+DDLs will be provided along with release notes to create new privacy group tables.
+
+!!! example 
+
+      CREATE TABLE PRIVACY_GROUP(ID LONGVARBINARY NOT NULL, LOOKUP_ID LONGVARBINARY NOT NULL, DATA LONGVARBINARY NOT NULL, TIMESTAMP BIGINT, PRIMARY KEY (ID));
+
+Privacy group data - before being persisted into the database will be encoded using BinaryEncoder (same mechanism that Tessera used to encode its EncodedPayload data)
+
+## Privacy Group - API Versioning
+
+With the introduction of privacy groups, a transaction being distributed can be associated with a privacy group id. A Tessera node that is running an old version will not be able to understand privacy group id and this can cause inconsistency of data being persisted on different nodes.
+
+Therefore, Tessera's supported api version is incremented to “3.0”, and this will be shared across the network during partyinfo exchange. 
+
 !!! important
 
-    The API version is incremented with the introduction of privacy groups and Tessera will include the privacy group in the encoded payload in `/push` to only those recipients supporting correct version, else the transaction is failed.
+    The API version is incremented with the introduction of privacy groups and Tessera will include the privacy group in the encoded payload in `/push` to only those recipients supporting correct version, else the transaction is failed with PrivacyGroupNotSupportedException
 
 These Privacy groups are currently supported for Hyperledger Besu client which maintains a [private state per privacy group](https://besu.hyperledger.org/en/stable/Concepts/Privacy/Privacy-Groups/).
+

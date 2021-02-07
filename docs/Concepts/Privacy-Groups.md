@@ -58,7 +58,7 @@ DDLs will be provided along with release notes to create new privacy group table
 
 !!! example 
 
-      CREATE TABLE PRIVACY_GROUP(ID LONGVARBINARY NOT NULL, LOOKUP_ID LONGVARBINARY NOT NULL, DATA LONGVARBINARY NOT NULL, TIMESTAMP BIGINT, PRIMARY KEY (ID));
+    CREATE TABLE PRIVACY_GROUP(ID LONGVARBINARY NOT NULL, LOOKUP_ID LONGVARBINARY NOT NULL, DATA LONGVARBINARY NOT NULL, TIMESTAMP BIGINT, PRIMARY KEY (ID));
 
 Privacy group data - before being persisted into the database will be encoded using BinaryEncoder (same mechanism that Tessera used to encode its EncodedPayload data)
 

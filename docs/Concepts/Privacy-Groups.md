@@ -50,6 +50,8 @@ An example of a legacy group created:
 
     Both Privacy group types created off-chain are non-editable ie., adding a new recipient to a privacy group means creating a new privacy group including the recipient.
 
+These Privacy groups are currently supported for Hyperledger Besu client which maintains a [private state per privacy group](https://besu.hyperledger.org/en/stable/Concepts/Privacy/Privacy-Groups/).
+
 ## Privacy Group - Database Storage
 
 A new table called PRIVACY_GROUP is added to Tessera database to store Privacy Group data.
@@ -64,13 +66,8 @@ Privacy group data - before being persisted into the database will be encoded us
 
 ## Privacy Group - API Versioning
 
-With the introduction of privacy groups, a transaction being distributed can be associated with a privacy group id. A Tessera node that is running an old version will not be able to understand privacy group id and this can cause inconsistency of data being persisted on different nodes.
+With the introduction of privacy groups, a transaction being distributed can be associated with a privacy group id. A Tessera node that is running an old version will not be able to understand privacy group id and this can cause inconsistency of data being persisted on different nodes, hence API version **3.0** is introduced. Tessera will include the privacy group in the encoded payload in `/push` to only those recipients supporting correct version, else the transaction is failed with PrivacyGroupNotSupportedException
 
-Therefore, Tessera's supported api version is incremented to **“3.0”**, and this will be shared across the network during partyinfo exchange. 
+Please refer to [API reference](https://consensys.github.io/doc.tessera/) for more details on methods to create, find, delete & retrieve privacy groups.
 
-!!! important
-
-    The API version is incremented with the introduction of privacy groups and Tessera will include the privacy group in the encoded payload in `/push` to only those recipients supporting correct version, else the transaction is failed with PrivacyGroupNotSupportedException
-
-These Privacy groups are currently supported for Hyperledger Besu client which maintains a [private state per privacy group](https://besu.hyperledger.org/en/stable/Concepts/Privacy/Privacy-Groups/).
 

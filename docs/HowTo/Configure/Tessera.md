@@ -88,7 +88,7 @@ should exist in the serverConfigs):
 
 ### Orion Mode
 
-When running in `orion` mode, Tessera can be used as the privacy manager for a [Besu](https://besu.hyperledger.org/en/stable/) client.  Enabling this mode changes Tessera's behaviour in the following ways:
+When running in `orion` mode, Tessera can be used as the privacy manager for a [Besu](https://besu.hyperledger.org/en/stable/) client. Enabling this mode changes Tessera's behaviour in the following ways:
 
 * Will attempt to retrieve privacy group and its associated members for transactions sent with `privacyGroupId`.
 * Creates a `legacy` privacy group for transactions sent with `privateFor` containing a list of recipient keys.

@@ -88,22 +88,23 @@ should exist in the serverConfigs):
 
 ### Orion Mode
 
-When running on 'Orion' mode, Tessera will support Besu client with alternate behaviour:
+When running in `orion` mode, Tessera can be used as the privacy manager for a [Besu](https://besu.hyperledger.org/en/stable/) client.  Enabling this mode changes Tessera's behaviour in the following ways:
 
-  * Attempts to retrieve privacy group and its associated members if the privacy group id is included in the request
-  * Instructs enclave to use SHA-512/256 to generate 32 byte hash for encrypted payload and return back to Besu.
-  * Creates a ‘legacy’ privacy group type if transaction is send using ‘privateFor’ with list of recipients.     
-  * /receive requests will be made via POST that accepts standard json media type. 
-  * Response to /recieve request will include senderKey (for Besu sender authentication), and the transaction’s associated privacy group id.
- 
- ```json
- "mode": "orion",
+  * Will attempt to retrieve privacy group and its associated members for transactions sent with `privacyGroupId`.
+  * Creates a `legacy` privacy group for transactions sent with `privateFor` containing a list of recipient keys.
+  * Will use SHA-512/256 to generate 32 byte hash of encrypted payload to be returned to Besu.
+  * Adds support for `/receive` `POST` requests using `application/json` media type.
+  * Responses to `/receive` requests will include the `senderKey` (for Besu sender authentication), and the transaction’s associated `privacyGroupId`.
+
+```json
+"mode": "orion", // default = tessera
 ```
 
-This configuration (deafult=tessera) could also be enabled using command line override. Usage below
+This configuration can also be enabled using command line overrides:
 
+```shell
 java -jar tessera.jar --configfile config.json -o mode="orion"
-
+```
 
 ### Privacy Enhancements Flag
 

@@ -97,7 +97,7 @@ When running in `orion` mode, Tessera can be used as the privacy manager for a [
 * Responses to `/receive` requests will include the `senderKey` (for Besu sender authentication), and the transaction’s associated `privacyGroupId`.
 
 ```json
-"mode": "orion", // default = tessera
+"mode": "orion",
 ```
 
 This configuration can also be enabled using command line overrides:

@@ -77,5 +77,3 @@ Hence, API version **3.0** has been introduced. Tessera will include the privacy
 ## Privacy Group APIs
 
 Privacy group compatible blockchain clients (e.g. Besu) can be used to create, delete, find, and retrieve privacy groups.  Tessera's `Q2T` API adds support for these operations.  Please refer to [API reference](https://consensys.github.io/doc.tessera/) for more details.
-
-

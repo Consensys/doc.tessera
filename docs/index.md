@@ -20,6 +20,8 @@ layer with enterprise support available from ConsenSys.
 Get started with the [Quorum Developer Quickstart](Tutorials/Quorum-Dev-Quickstart.md). Use the quickstart
 to rapidly generate local Quorum blockchain networks.
 
+Learn about [use cases for Enterprise Ethereum](https://consensys.net/blockchain-use-cases/case-studies/).
+
 ## What can you do with Tessera?
 
 Tessera:

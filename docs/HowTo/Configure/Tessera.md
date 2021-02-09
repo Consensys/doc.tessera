@@ -36,7 +36,7 @@ The same Enclave encryption process as described in
 [Lifecycle of a private transaction](https://docs.goquorum.consensys.net/Concepts/Privacy/PrivateTransactionLifecycle/)
 is used regardless of whether the NaCl or JCA encryptor are configured.
 
-This is a feature introduced in Tessera v0.10.2. Not providing an encryptor configuration means the default NaCl encryptor is used.
+If an encryptor configuration is not specified, the default NaCl encryptor is used.
 
 ```json
 "encryptor":{
@@ -64,8 +64,7 @@ Field|Default Value|Description
 `sharedKeyLength`|`32`|The key length used for symmetric encryption (keep in mind the key derivation operation always produces 32 byte keys and that the encryption algorithm must support it).
 
 If `type` is set to `CUSTOM`, it provides support for external encryptor implementation to integrate
-with Tessera. Our pilot third party integration is with **Unbound Tech's "Unbound Key Control" (UKC)**
-implementation. For more information refer to [UKC site](https://github.com/unbound-tech/encryption-ub)
+with Tessera. The pilot third party integration is [Unbound Tech's Unbound Key Control (UKC) encryptor](https://github.com/unbound-tech/ub-integration/tree/master/Tessera) (jar available at `com.github.unbound-tech:encryption-ub:<version>`).
 
 ### Always-send-to
 
@@ -87,12 +86,32 @@ should exist in the serverConfigs):
 "bootstrapNode": true,
 ```
 
-### Privacy Enhancements Flag
+### Orion Mode
 
-Privacy enhancement features to support Party Protection (PP) and Private State Validation (PSV) are enabled by setting the flag to true. The default value is set to FALSE
+When running in `orion` mode, Tessera can be used as the privacy manager for a [Besu](https://besu.hyperledger.org/en/stable/) client. Enabling this mode changes Tessera's behaviour in the following ways:
+
+* Will attempt to retrieve privacy group and its associated members for transactions sent with `privacyGroupId`.
+* Creates a legacy privacy group for transactions sent with `privateFor` containing a list of recipient keys.
+* Will use SHA-512/256 to generate 32 byte hash of encrypted payload to be returned to Besu.
+* Adds support for `/receive` `POST` requests using `application/json` media type.
+* Responses to `/receive` requests will include the `senderKey` (for Besu sender authentication), and the transaction’s associated `privacyGroupId`.
 
 ```json
-"features" : {
+"mode": "orion",
+```
+
+This configuration can also be enabled using command line overrides:
+
+```shell
+java -jar tessera.jar --configfile config.json -o mode="orion"
+```
+
+### Privacy Enhancements Flag
+
+Privacy enhancement features to support Party Protection (PP) and Private State Validation (PSV) are enabled by setting the flag to `true`. The default value is `false`.
+
+```json
+"features": {
    "enablePrivacyEnhancements" : "true"
   }
 ```
@@ -122,7 +141,7 @@ The configurable fields are:
     `GET`, `POST`, `PUT`, `DELETE`, `OPTIONS` and `HEAD` is used.
 * `allowedOrigins` : the list of domains from which to accept cross origin requests (browser enforced).
     Each entry in the list can contain the "*" (wildcard) character which matches any sequence of characters.
-    Example: `*locahost` would match `http://localhost` or `https://localhost`. This field has no default value.
+    Example: `*localhost` would match `http://localhost` or `https://localhost`. This field has no default value.
 * `allowedHeaders` : the list of allowed headers. If omitted the request `Access-Control-Request-Headers`
     are copied into the response as `Access-Control-Allow-Headers`.
 * `allowCredentials` : the value for the `Access-Control-Allow-Credentials` response header.
@@ -230,130 +249,27 @@ See [Configure peer discovery](Peer-discovery.md).
 
 See [Configure peer discovery](Peer-discovery.md).
 
-### Server
+### Servers for Tessera API
 
-To allow for a greater level of control, Tessera's API has been separated into distinct groups.
-Each group is only accessible over a specific server type. Tessera can be started with different
-combinations of these servers depending on the functionality required.
-This is defined in the configuration and determines the APIs that are available and how they are accessed.
+See [Configure Tessera API](TesseraAPI.md).
 
-The possible server types are:
+### Server for remote enclave
 
-* `P2P` - Tessera uses this server to communicate with other Transaction Managers (the URI for this
-    server can be shared with other nodes to be used in their `peer` list - see below)
-* `Q2T` - This server is used for communications between Tessera and its corresponding Quorum node
-* `ENCLAVE` - If using a remote enclave, this defines the connection details for the remote enclave
-    server (see the [Enclave docs](../../Concepts/Enclave.md) for more info)
-* `ThirdParty` - This server is used to expose certain Transaction Manager functionality to external
-    services such as Quorum.js
-
-The servers to be started are provided as a list:
+If using an [remote enclave](../../Concepts/Enclave-types.md#remote-http-enclave), configure the
+`ENCLAVE` server.
 
 ```json
 "serverConfigs": [
-   ...<server settings...
-]
+   {
+     "app": "ENCLAVE",
+     "enabled": true,
+     "serverAddress": "http://localhost:9081",
+     //Where to find the remote enclave
+     "communicationType": "REST"
+   }
+ ...
+ ]
 ```
-
-!!! note
-
-    There are two server addresses configuration entries:
-
-    - `serverAddress` - In normal use, you will only need this (e.g. `http://localhost:9001`).
-    - `bindingAddress` - This is an optional endpoint to use for the binding. This is useful if you need
-       to bind to an internal IP whilst advertising an external IP using `serverAddress`.
-
-    Each server is individually configurable and can advertise over HTTP, HTTPS or a Unix Socket. The format
-    of an individual server config is slightly different between Tessera v0.9 and v0.8:
-
-#### Server configuration (v0.9)
-
-=== "HTTP"
-
-    ```json
-    {
-        "app": "<app type",
-        "enabled": <boolean,
-        "serverAddress":"http://[host]:[port]/[path]",
-        "communicationType" : "REST"
-    }
-    ```
-
-=== "HTTPS"
-
-    ```json
-    {
-        "app": "<app type",
-        "enabled": <boolean,
-        "serverAddress":"https://[host]:[port]/[path]",
-        "communicationType" : "REST",
-        "sslConfig": {
-            ...<SSL settings, see below...
-        }
-    }
-    ```
-
-=== "Unix Socket"
-
-    ```json
-    {
-        "app": "<app type",
-        "enabled": <boolean,
-        "serverAddress":"unix://[path]",
-        "communicationType" : "REST"
-    }
-    ```
-
-#### Server configuration (v0.8)
-
-=== "HTTP"
-
-    ```json
-    {
-        "app": "<app type",
-        "enabled": <boolean,
-        "serverSocket":{
-            "type": "INET",
-            "port": <int, //The port to advertise and bind on (if binding address not set)
-            "hostName": <string // The hostname to advertise and bind on (if binding address not set)
-        },
-        "communicationType" : <enum, // "REST" or "GRPC",
-        "bindingAddress": <string //An address to bind the server to that overrides the one defined above
-    }
-    ```
-
-=== "HTTPS"
-
-    ```json
-    {
-        "app": "<app type",
-        "enabled": <boolean,
-        "serverSocket":{
-            "type": "INET",
-            "port": <int, //The port to advertise and bind on (if binding address not set)
-            "hostName": <string // The hostname to advertise and bind on (if binding address not set)
-        },
-        "communicationType" : <enum, // "REST" or "GRPC"
-        "bindingAddress": <string, //An address to bind the server to that overrides the one defined above
-        "sslConfig": {
-           ...<SSL settings, see below...
-        }
-    }
-    ```
-
-=== "Unix Socket"
-
-    ```json
-    {
-        "app": "<app type",
-        "enabled": <boolean,
-        "serverSocket":{
-            "type":"UNIX",
-            "path": <string //the path of the unix socket to create
-        },
-        "communicationType" : "UNIX_SOCKET"
-    }
-    ```
 
 ### TLS/SSL: Server sub-config
 

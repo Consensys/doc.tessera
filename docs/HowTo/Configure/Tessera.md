@@ -86,12 +86,32 @@ should exist in the serverConfigs):
 "bootstrapNode": true,
 ```
 
-### Privacy Enhancements Flag
+### Orion Mode
 
-Privacy enhancement features to support Party Protection (PP) and Private State Validation (PSV) are enabled by setting the flag to true. The default value is set to FALSE
+When running in `orion` mode, Tessera can be used as the privacy manager for a [Besu](https://besu.hyperledger.org/en/stable/) client. Enabling this mode changes Tessera's behaviour in the following ways:
+
+* Will attempt to retrieve privacy group and its associated members for transactions sent with `privacyGroupId`.
+* Creates a legacy privacy group for transactions sent with `privateFor` containing a list of recipient keys.
+* Will use SHA-512/256 to generate 32 byte hash of encrypted payload to be returned to Besu.
+* Adds support for `/receive` `POST` requests using `application/json` media type.
+* Responses to `/receive` requests will include the `senderKey` (for Besu sender authentication), and the transaction’s associated `privacyGroupId`.
 
 ```json
-"features" : {
+"mode": "orion",
+```
+
+This configuration can also be enabled using command line overrides:
+
+```shell
+java -jar tessera.jar --configfile config.json -o mode="orion"
+```
+
+### Privacy Enhancements Flag
+
+Privacy enhancement features to support Party Protection (PP) and Private State Validation (PSV) are enabled by setting the flag to `true`. The default value is `false`.
+
+```json
+"features": {
    "enablePrivacyEnhancements" : "true"
   }
 ```

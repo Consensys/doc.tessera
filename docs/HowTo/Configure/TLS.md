@@ -41,7 +41,8 @@ If the value is set to `"OFF"`, the rest of the SSL configuration will not be co
     "knownClientsFile": "[TLS known clients file for the server. This contains the fingerprints of public keys of other nodes that are allowed to connect to this one.]",
     "knownServersFile": "[TLS known servers file for the client. This contains the fingerprints of public keys of other nodes that this node has encountered.]",
     "generateKeyStoreIfNotExisted": "[boolean]",
-    "environmentVariablePrefix": "[Prefix to uniquely identify environment variables for this particular server ssl configuration]"
+    "environmentVariablePrefix": "[Prefix to uniquely identify environment variables for this particular server ssl configuration]",
+    "clientAuth" : "[Configure if SSL needs client authentication - boolean - default is true]"
   }
 }
 ```
@@ -58,6 +59,9 @@ These can be defined in multiple ways:
 
 !!! important
     `.jks` files take precedence over `.pem` files if both are provided for client-side or server-side.
+
+!!! tip
+    To enable one-way SSL, set `clientAuth` flag to `false`.
 
 ## Keystores
 

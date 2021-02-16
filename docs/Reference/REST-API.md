@@ -4,7 +4,7 @@ description: REST API reference
 
 # REST API
 
-The Rest API consists of three parts: [Peer to Peer, GoQuorum to Tessera, and Third Party](../Concepts/TesseraAPI.md).
+The Rest API consists of three parts: [Peer to Peer, Ethereum client to Tessera, and Third Party](../Concepts/TesseraAPI.md).
 
 [Configure the API servers in the Tessera configuration file](../HowTo/Configure/TesseraAPI.md).
 

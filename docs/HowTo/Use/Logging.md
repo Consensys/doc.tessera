@@ -24,7 +24,7 @@ Below is a non-exhaustive list of error messages and suggested actions. Braces '
 </tr>
 <tr>
     <td><code>Error decoding message: {error details}</code></td>
-    <td>Invalid base64 in privateFrom/privateFor from GoQuorum or in transaction hash for resend<br><b>Action:</b> <em>Sender needs to provide valid base64</em></td>
+    <td>Invalid base64 in privateFrom/privateFor from the Ethereum client, or in transaction hash for resend<br><b>Action:</b> <em>Sender needs to provide valid base64</em></td>
 </tr>
 <tr>
     <td><code>Error occurred: {error details} Root cause: {root cause}</code></td>

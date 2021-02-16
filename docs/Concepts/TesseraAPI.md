@@ -6,13 +6,13 @@ description: Tessera API
 
 The Tessera API consists of three parts:
 
-* [GoQuorum to Tessera](#goquorum-to-tessera-api)
+* [Ethereum client to Tessera](#ethereum-client-to-tessera-api)
 * [Peer to peer](#peer-to-peer-api)
 * [Third party](#third-party-api).
 
-## GoQuorum to Tessera API
+## Ethereum client to Tessera API
 
-GoQuorum uses the GoQuorum to Tessera API to:
+The Ethereum client uses the Tessera API to:
 
 * Check if the associated Tessera node is running.
 * Send and receive private transactions.

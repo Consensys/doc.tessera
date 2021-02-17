@@ -4,15 +4,15 @@ description: Tessera API
 
 # Tessera API
 
-The Tessera API consists of three parts:
+The [Tessera API](https://consensys.github.io/tessera/) consists of the following parts:
 
-* [Ethereum client to Tessera](#ethereum-client-to-tessera-api)
-* [Peer to peer](#peer-to-peer-api)
-* [Third party](#third-party-api).
+* [`quorum-to-tessera`](#ethereum-to-tessera-api)
+* [`peer-to-peer`](#peer-to-peer-api)
+* [`third-party`](#third-party-api).
 
-## Ethereum client to Tessera API
+## Quorum to Tessera API
 
-The Ethereum client uses the Tessera API to:
+The privacy-enabled Ethereum client uses the Quorum to Tessera API to:
 
 * Check if the associated Tessera node is running.
 * Send and receive private transactions.

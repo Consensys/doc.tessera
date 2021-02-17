@@ -6,7 +6,7 @@ description: Tessera API
 
 The [Tessera API](https://consensys.github.io/tessera/) consists of the following parts:
 
-* [`quorum-to-tessera`](#ethereum-to-tessera-api)
+* [`quorum-to-tessera`](#quorum-to-tessera-api)
 * [`peer-to-peer`](#peer-to-peer-api)
 * [`third-party`](#third-party-api).
 

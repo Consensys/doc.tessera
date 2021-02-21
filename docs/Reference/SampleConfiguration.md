@@ -2,7 +2,11 @@
 description: Sample configuration file
 ---
 
-# Sample Configuration File
+# Configuration File
+
+The Configuration file is a JSON file that must be specified when [starting Tessera].
+
+Configuration entries can be [overridden from the command line].
 
 !!! important
     The `keys.azureKeyVaultConfig` and `keys.hashicorpKeyVaultConfig` fields are now deprecated. Instead,
@@ -14,7 +18,8 @@ description: Sample configuration file
   "jdbc": {
     "url": "String",
     "username": "String",
-    "password": "String"
+    "password": "String",
+    "autoCreateTables": "boolean"
   },
   "serverConfigs": [
     {
@@ -145,3 +150,26 @@ description: Sample configuration file
   }
 }
 ```
+
+## `useWhiteList`
+
+Use the `useWhiteList` field to restrict connections to Tessera to specified peers. If set to `true`,
+then only nodes listed in the [`peer`](#peer) list are allowed to connect.
+
+## `jdbc`
+
+Use the `jdbc` property to connect to the database. You can also specify an external database.
+Any valid JDBC URL can be specified.
+
+
+| Field                    | Required | Description                                                | Default                 |
+|--------------------------|--:- :----|------------------------------------------------------------|-------------------------|
+|`url`                     | Required | JDBC URL of the database.                                  | None                    |
+|`username`                | Required | Database username.                                         | None                    |
+|`password`                | Required | Database password. You can also [encrypt the password using Jasypt].                                         | None                    |
+|`autoCreateTables`        | Optional | Automatically generates the required database tables.      | `false`                 |
+
+<!--links-->
+[starting Tessera]: ../HowTo/Get-Started/Start-Tessera.md
+[overridden from the command line]: ../HowTo/Configure/Override-config.md
+[encrypt the password using Jasypt]: ../HowTo/Configure/Tessera.md

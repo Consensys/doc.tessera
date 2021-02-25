@@ -157,7 +157,6 @@ then only nodes listed in the [`peer`](#peer) list are allowed to connect.
 Use the `jdbc` property to connect to the database. You can also specify an external database.
 Any valid JDBC URL can be specified.
 
-
 | Field                    | Required | Description                                                                 |
 |--------------------------|--:- :----|-----------------------------------------------------------------------------|
 |`url`                     | Required | JDBC URL of the database.                                                   |
@@ -281,7 +280,6 @@ Configure access to your keys.
 | `keyVaultConfigs`        | Optional | [Configuration details of the vault being used](#keyvaultvonfigs). |
 | `keyData`                | Required | [Details to access the private and public key pair](#keydata).     |
 
-
 ### `keyVaultConfigs`
 
 Configuration details for the vault being used.
@@ -341,7 +339,6 @@ Enables additional security and privacy features.
 | `enableRemoteKeyValidation` | Optional | [Checks that a remote node owns the public keys being advertised]. Defaults to `false`   |
 | `enablePrivacyEnhancements` | Optional | [Enables privacy enhancement features]. Defaults to `false`.                             |
 
-
 ## `encryptor`
 
 | Field        | Description                                                           | Default Value |
@@ -349,7 +346,6 @@ Enables additional security and privacy features.
 | `type`       | [The encryptor type]. Possible values are `EC`, `NACL`, and `CUSTOM`. | `NACL`        |
 
 If `type` is set to `EC`, the following `properties` fields can also be configured:
-
 
 | Field             | Default    | Description                                                                             |
 |-------------------|------------|-----------------------------------------------------------------------------------------|

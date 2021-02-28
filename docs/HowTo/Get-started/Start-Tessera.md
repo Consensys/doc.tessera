@@ -98,7 +98,7 @@ tessera -configfile tessera.conf
     tessera --debug -configfile tessera.conf
     ```
 
-### 4. Upcheck
+### 4. Confirm Tessera is running
 
 Use the `upcheck` method to confirm Tessera is up and running.
 

@@ -17,7 +17,8 @@ For private transactions sent to a privacy group, the  corresponding `privacyGro
 !!! note
     Once created, the members of a privacy group cannot be changed. To add or remove members, a new privacy group must be created.
 
-Privacy groups are currently supported by the [Hyperledger Besu](https://besu.hyperledger.org/en/stable/) blockchain client which maintains a [private state per privacy group](https://besu.hyperledger.org/en/stable/Concepts/Privacy/Privacy-Groups/).
+Privacy groups are currently supported by [Hyperledger Besu](https://besu.hyperledger.org/en/stable/),
+which maintains a [private state per privacy group](https://besu.hyperledger.org/en/stable/Concepts/Privacy/Privacy-Groups/).
 
 An example of a privacy group and its related data:
 

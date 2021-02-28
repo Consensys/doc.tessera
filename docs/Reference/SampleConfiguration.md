@@ -152,6 +152,14 @@ Configuration entries can be [overridden from the command line].
 }
 ```
 
+## `mode`
+
+Set the `mode` to `orion` to use Tessera as the privacy manager for [Hyperledger Besu].
+
+Enabling this mode [changes Tessera’s behaviour] to be compatible with Besu.
+
+This property is optional.
+
 ## `useWhiteList`
 
 Use the `useWhiteList` field to restrict connections to Tessera to specified peers. If set to `true`,
@@ -397,3 +405,5 @@ If `type` is set to `EC`, the following `properties` fields can also be configur
 [Enables privacy enhancement features]: ../HowTo/Configure/Tessera.md#privacy-enhancements-flag
 [SunEC provider]: https://docs.oracle.com/javase/8/docs/technotes/guides/security/SunProviders.html#SunEC
 [The encryptor type]: ../HowTo/Configure/Tessera.md#alternative-cryptographic-elliptic-curves
+[Hyperledger Besu]: https://besu.hyperledger.org/
+[changes Tessera’s behaviour]: ../HowTo/Configure/Tessera.md#orion-mode

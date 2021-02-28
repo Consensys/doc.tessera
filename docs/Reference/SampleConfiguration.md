@@ -34,7 +34,12 @@ Configuration entries can be [overridden from the command line].
       "serverAddress": "http://localhost:9081",
       "bindingAddress": "String - url with port e.g. http://127.0.0.1:9081",
       "communicationType": "REST"
-    },
+      "cors" : {
+          "allowedMethods" : ["GET", "POST", "PUT", "DELETE", "OPTIONS", "HEAD"],
+          "allowedOrigins" : ["http://localhost:63342"],
+          "allowedHeaders" : ["content-type"],
+          "allowCredentials" : true
+      },
     {
       "app": "Q2T",
       "serverAddress": "unix:/tmp/tm.ipc",
@@ -173,8 +178,11 @@ Use the `serverConfigs` property to configure the following servers:
 * [`Q2T`](#q2t)
 * [`ThirdParty`](#thirdparty)
 
-Each server can also be configured to secure communication using [TLS], and to store API metrics in
-an [InfluxDB].
+Each server can also be configured to:
+
+* Secure communication using [TLS]
+* Store API metrics in an [InfluxDB]
+* Restrict resources from an outside domain by configuring [CORS].
 
 ### `ENCLAVE`
 
@@ -266,6 +274,17 @@ Configure InfuxDB settings to record metrics.
 | `knownServersFile`         | Optional | Known servers file for the client. This contains the fingerprints of public keys of other nodes that this node has encountered. |
 | `environmentVariablePrefix`| Optional | Prefix to uniquely identify environment variables for this server SSL configuration.       |
 
+### `cors`
+
+Configure cross-origin resource sharing (CORS) to control access to resources outside the domain.
+
+| Field                    | Required | Description                                                        |
+|--------------------------|--:- :----|--------------------------------------------------------------------|
+| `allowedMethods`         | Optional | List of methods to allow. Options are `GET`, `POST`, `PUT`, `DELETE`, `OPTIONS`, and `HEAD`. If omitted, then all methods are allowed.  |
+| `allowedOrigins`         | Optional | List of comma-separated origin domain URLs for CORS validation. Each entry in the list can contain the “*” (wildcard) character to match any sequence of characters. Example: ``*localhost` would match `http://localhost` or `https://localhost`. |
+| `allowedHeaders`         | Optional | List of allowed headers. If omitted, the request `Access-Control-Request-Headers` are copied into the response as `Access-Control-Allow-Headers`.     |
+| `allowCredentials`       | Optional | The value for the Access-Control-Allow-Credentials response header. Defaults to `true`.     |
+
 ## `peer`
 
 [List of Tessera node URLs] used to discover other nodes.
@@ -341,18 +360,18 @@ Enables additional security and privacy features.
 
 ## `encryptor`
 
-| Field        | Description                                                           | Default Value |
-|--------------|-----------------------------------------------------------------------|---------------|
-| `type`       | [The encryptor type]. Possible values are `EC`, `NACL`, and `CUSTOM`. | `NACL`        |
+| Field  | Description                                                           | Default Value |
+|:-------|:----------------------------------------------------------------------|:--------------|
+| `type` | [The encryptor type]. Possible values are `EC`, `NACL`, and `CUSTOM`. | `NACL`        |
 
 If `type` is set to `EC`, the following `properties` fields can also be configured:
 
-| Field             | Default    | Description                                                                             |
-|-------------------|------------|-----------------------------------------------------------------------------------------|
-| `ellipticCurve`   | `secp256r1`| The elliptic curve to use. See [SunEC provider] for other options. Depending on the JCE provider you are using there may be additional curves available. |
-| `symmetricCipher` | `AES/GCM/NoPadding`| The symmetric cipher to use for encrypting data (GCM IS MANDATORY as an initialisation vector is supplied during encryption). |
-| `nonceLength`     | `24`       | The nonce length (used as the initialization vector - IV - for symmetric encryption).   |
-| `sharedKeyLength` | `32`       | The key length used for symmetric encryption (keep in mind the key derivation operation always produces 32 byte keys and that the encryption algorithm must support it). |
+| Field             | Default             | Description                                                                                                                                                              |
+|:------------------|:--------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `ellipticCurve`   | `secp256r1`         | The elliptic curve to use. See [SunEC provider] for other options. Depending on the JCE provider you are using there may be additional curves available.                 |
+| `symmetricCipher` | `AES/GCM/NoPadding` | The symmetric cipher to use for encrypting data (GCM IS MANDATORY as an initialisation vector is supplied during encryption).                                            |
+| `nonceLength`     | `24`                | The nonce length (used as the initialization vector - IV - for symmetric encryption).                                                                                    |
+| `sharedKeyLength` | `32`                | The key length used for symmetric encryption (keep in mind the key derivation operation always produces 32 byte keys and that the encryption algorithm must support it). |
 
 <!--links-->
 [starting Tessera]: ../HowTo/Get-started/Start-Tessera.md

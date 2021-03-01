@@ -368,6 +368,10 @@ Enables additional security and privacy features.
 
 ## `encryptor`
 
+[Configure Tessera to use alternative curves and symmetric ciphers].
+
+If an encryptor configuration is not specified, the default NaCl encryptor is used.
+
 | Field  | Description                                                           | Default Value |
 |:-------|:----------------------------------------------------------------------|:--------------|
 | `type` | [The encryptor type]. Possible values are `EC`, `NACL`, and `CUSTOM`. | `NACL`        |
@@ -407,3 +411,4 @@ If `type` is set to `EC`, the following `properties` fields can also be configur
 [The encryptor type]: ../HowTo/Configure/Tessera.md#alternative-cryptographic-elliptic-curves
 [Hyperledger Besu]: https://besu.hyperledger.org/
 [changes Tessera’s behaviour]: ../HowTo/Configure/Tessera.md#orion-mode
+[Configure Tessera to use alternative curves and symmetric ciphers]: ../HowTo/Configure/Tessera.md#alternative-cryptographic-elliptic-curves

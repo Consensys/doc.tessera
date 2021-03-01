@@ -25,6 +25,8 @@ to bind to an internal IP while advertising an external IP using `serverAddress`
 
 Each server is individually configured and can advertise over HTTP, HTTPS, or a Unix Socket.
 
+You can also [configure CORS](#configure-cors) for the `ThirdParty` server type.
+
 ### HTTP server configuration
 
 === "HTTP"
@@ -131,3 +133,24 @@ Each server is individually configured and can advertise over HTTP, HTTPS, or a 
         "communicationType": "REST"
     }
     ```
+
+### Configure CORS
+
+The `ThirdParty` server type supports [configuring CORS] to control access to resources.
+
+```json
+{
+    "app":"ThirdParty",
+    "enabled": true,
+    "serverAddress": "http://localhost:9081",
+    "communicationType" : "REST",
+    "cors" : {
+        "allowedMethods" : ["GET", "POST", "PUT", "DELETE", "OPTIONS", "HEAD"],
+        "allowedOrigins" : ["http://localhost:63342"],
+        "allowedHeaders" : ["content-type"],
+        "allowCredentials" : true
+    }
+}
+```
+
+[configuring CORS]: ../../Reference/SampleConfiguration.md#cors

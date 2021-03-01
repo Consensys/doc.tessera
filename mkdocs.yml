@@ -60,18 +60,22 @@ nav:
       - Start Tessera: HowTo/Get-started/Start-Tessera.md
     - Generate keys: HowTo/Generate-keys.md
     - Configure:
-      - Tessera: HowTo/Configure/Tessera.md
+      - Configuration file: HowTo/Configure/Tessera.md
       - Transaction manager: HowTo/Configure/Transaction-manager.md
       - Enclave: HowTo/Configure/Enclave.md
       - Keys: HowTo/Configure/Keys.md
       - Peer discovery: HowTo/Configure/Peer-discovery.md
-      - Tessera API: HowTo/Configure/TesseraAPI.md
+      - Servers: HowTo/Configure/TesseraAPI.md
       - TLS: HowTo/Configure/TLS.md
+      - Database: HowTo/Configure/Database.md
+      - Data recovery: HowTo/Configure/Data-Recovery.md
       - Key vault:
          - Hashicorp Vault: HowTo/Configure/KeyVault/Hashicorp-Vault.md
          - AWS Secrets Manager: HowTo/Configure/KeyVault/AWS-Secrets-Manager.md
          - Azure Key Vault: HowTo/Configure/KeyVault/Azure-Key-Vault.md
       - Override configuration file: HowTo/Configure/Override-config.md
+      - Cryptographic elliptic curves: HowTo/Configure/Cryptographic-elliptic-curves.md
+      - Hyperledger Besu support: HowTo/Configure/Orion-Mode.md
     - Use:
       - Monitoring: HowTo/Use/Monitoring.md
       - Logging: HowTo/Use/Logging.md

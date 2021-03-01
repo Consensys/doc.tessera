@@ -38,7 +38,7 @@ java -jar /path/to/tessera-app-[version]-app.jar --configfile /path/to/tm-config
 
 In the remote HTTP enclave's configuration file:
 
-* Configure an [`ENCLAVE` server](Tessera.md#server).  Include TLS configuration as appropriate, with the transaction manager as a client of the enclave.
+* Configure an [`ENCLAVE` server](../../Reference/SampleConfiguration.md#enclave).  Include TLS configuration as appropriate, with the transaction manager as a client of the enclave.
 * Configure the [enclave's keys](Keys.md).
 
 !!! example "Remote HTTP enclave configuration file"

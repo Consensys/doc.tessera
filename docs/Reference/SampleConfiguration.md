@@ -190,7 +190,6 @@ Each server can also be configured to:
 
 * Secure communication using [TLS]
 * Store API metrics in an [InfluxDB]
-* Restrict resources from an outside domain by configuring [CORS].
 
 ### `ENCLAVE`
 
@@ -229,7 +228,7 @@ receive private transactions.
 | `serverAddress`          | Required | [Server address](../HowTo/Configure/TesseraAPI.md).                                      |
 | `bindingAddress`         | Optional | Specify a bind to an internal IP while advertising an external IP using `serverAddress`. |
 | `communicationType`      | Required | Type of server communication. Only `REST` is currently supported.                        |
-| `influxConfig`           | Optional | [Configure the server to use InfluxDB](#influxconfig).                                |
+| `influxConfig`           | Optional | [Configure the server to use InfluxDB](#influxconfig).                                   |
 | `sslConfig   `           | Optional | [Secure communication with TLS](#sslconfig).                                             |
 
 ### `ThirdParty`
@@ -242,7 +241,8 @@ Tessera uses the server to store encrypted payloads for external applications.
 | `serverAddress`          | Required | [Server address](../HowTo/Configure/TesseraAPI.md).                                      |
 | `bindingAddress`         | Optional | Specify a bind to an internal IP while advertising an external IP using `serverAddress`. |
 | `communicationType`      | Required | Type of server communication. Only `REST` is currently supported.                        |
-| `influxConfig`           | Optional | [Configure the server to use InfluxDB](#influxconfig).                                |
+| `cors`                   | Optional | [Configure CORS](#cors) to control access to resources outside the domain.               |
+| `influxConfig`           | Optional | [Configure the server to use InfluxDB](#influxconfig).                                   |
 | `sslConfig   `           | Optional | [Secure communication with TLS](#sslconfig).                                             |
 
 ### `influxConfig`
@@ -286,10 +286,14 @@ Configure InfuxDB settings to record metrics.
 
 Configure cross-origin resource sharing (CORS) to control access to resources outside the domain.
 
+!!! important
+
+    Only supported with the [`ThirdParty`](#thirdparty) server type.
+
 | Field                    | Required | Description                                                        |
 |--------------------------|--:- :----|--------------------------------------------------------------------|
 | `allowedMethods`         | Optional | List of methods to allow. Options are `GET`, `POST`, `PUT`, `DELETE`, `OPTIONS`, and `HEAD`. If omitted, then all methods are allowed.  |
-| `allowedOrigins`         | Optional | List of comma-separated origin domain URLs for CORS validation. Each entry in the list can contain the “*” (wildcard) character to match any sequence of characters. Example: ``*localhost` would match `http://localhost` or `https://localhost`. |
+| `allowedOrigins`         | Optional | List of comma-separated origin domain URLs for CORS validation. Each entry in the list can contain the “*” (wildcard) character to match any sequence of characters. Example: `*localhost` would match `http://localhost` or `https://localhost`. |
 | `allowedHeaders`         | Optional | List of allowed headers. If omitted, the request `Access-Control-Request-Headers` are copied into the response as `Access-Control-Allow-Headers`.     |
 | `allowCredentials`       | Optional | The value for the Access-Control-Allow-Credentials response header. Defaults to `true`.     |
 

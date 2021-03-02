@@ -50,21 +50,21 @@ If an encryptor configuration is not specified, the default NaCl encryptor is us
 }
 ```
 
-| Field | Default Value | Description                                                         |
-|--------|---------------|---------------------------------------------------------------------|
+| Field  | Default Value | Description                                                         |
+|:-------|:--------------|:--------------------------------------------------------------------|
 | `type` | `NACL`        | The encryptor type. Possible values are `EC`, `NACL`, and `CUSTOM`. |
 
 If `type` is set to `EC`, the following `properties` fields can also be configured:
 
-Field|Default Value|Description
--------------|-------------|-----------
-`ellipticCurve`|`secp256r1`|The elliptic curve to use. See [SunEC provider](https://docs.oracle.com/javase/8/docs/technotes/guides/security/SunProviders.html#SunEC) for other options. Depending on the JCE provider you are using there may be additional curves available.
-`symmetricCipher`|`AES/GCM/NoPadding`|The symmetric cipher to use for encrypting data (GCM IS MANDATORY as an initialisation vector is supplied during encryption).
-`nonceLength`|`24`|The nonce length (used as the initialization vector - IV - for symmetric encryption).
-`sharedKeyLength`|`32`|The key length used for symmetric encryption (keep in mind the key derivation operation always produces 32 byte keys and that the encryption algorithm must support it).
+| Field             | Default Value       | Description                                                                                                                                                                                                                                       |
+|:------------------|:--------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `ellipticCurve`   | `secp256r1`         | The elliptic curve to use. See [SunEC provider](https://docs.oracle.com/javase/8/docs/technotes/guides/security/SunProviders.html#SunEC) for other options. Depending on the JCE provider you are using there may be additional curves available. |
+| `symmetricCipher` | `AES/GCM/NoPadding` | The symmetric cipher to use for encrypting data (GCM IS MANDATORY as an initialisation vector is supplied during encryption).                                                                                                                     |
+| `nonceLength`     | `24`                | The nonce length (used as the initialization vector - IV - for symmetric encryption).                                                                                                                                                             |
+| `sharedKeyLength` | `32`                | The key length used for symmetric encryption (keep in mind the key derivation operation always produces 32 byte keys and that the encryption algorithm must support it).                                                                          |
 
 If `type` is set to `CUSTOM`, it provides support for external encryptor implementation to integrate
-with Tessera. The pilot third party integration is [Unbound Tech's Unbound Key Control (UKC) encryptor](https://github.com/unbound-tech/ub-integration/tree/master/Tessera) (jar available at `com.github.unbound-tech:encryption-ub:<version>`).
+with Tessera. The pilot third party integration is [Unbound Tech's Unbound Key Control (UKC) encryptor](https://github.com/unbound-tech/unbound-integration/tree/master/tessera) (jar available at `com.github.unbound-tech:encryption-ub:<version>`).
 
 ### Always-send-to
 

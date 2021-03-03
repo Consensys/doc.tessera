@@ -11,7 +11,3 @@ The configuration file must contain the options to start the transaction manager
 [local or remote Enclave](Enclave.md).
 
 [Many configuration options can be overridden](Override-config.md) using the command-line.
-
-<!--links-->
-[JSON configuration file]: ../../Reference/SampleConfiguration.md
-[starting Tessera]: ../Get-started/Start-Tessera.md

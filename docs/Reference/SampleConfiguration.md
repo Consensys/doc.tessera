@@ -418,4 +418,3 @@ If `type` is set to `EC`, the following `properties` fields can also be configur
 [Configure Tessera to use alternative curves and symmetric ciphers]: ../HowTo/Configure/Cryptographic-elliptic-curves.md
 [Hyperledger Besu]: https://besu.hyperledger.org/
 [changes Tessera’s behaviour]: ../HowTo/Configure/Orion-Mode
-

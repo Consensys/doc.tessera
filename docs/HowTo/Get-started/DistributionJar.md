@@ -10,7 +10,7 @@ description: Install Tessera from the jar file
     [`ConsenSys/tessera` repository](https://github.com/ConsenSys/tessera/releases/latest)
 
     !!! important
-    
+
         Multiple distributions are available for download, but the `tessera-app-<VERSION>-app.jar`
         contains all Tessera modules.
 

@@ -12,6 +12,7 @@ Enable `orion` mode in the configuration file if GoQuorum privacy mode is not en
 ```json
 "mode": "orion",
 ```
+
 The configuration can also be enabled using command line overrides:
 
 ```shell

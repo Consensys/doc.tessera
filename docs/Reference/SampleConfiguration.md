@@ -154,9 +154,10 @@ Configuration entries can be [overridden from the command line].
 
 ## `mode`
 
-Set the `mode` to `orion` to use Tessera as the privacy manager for [Hyperledger Besu].
+Set the `mode` to `orion` to use Tessera as the privacy manager when using [Hyperledger Besu] in
+non-GoQuorum mode.
 
-Enabling this mode [changes Tessera’s behaviour] to be compatible with Besu.
+Enabling this mode [changes Tessera’s behaviour].
 
 This property is optional.
 
@@ -345,9 +346,9 @@ Details to access the private key and public key.
 
 ## `alwaysSendTo`
 
-List of public keys to include as recipients for every transaction sent through the node.
-This allows you to configure a node that is sent a copy of every transaction, even if it is not
-specified as a party to the transaction.
+Comma-separated list of public keys to include as recipients for every transaction sent through the
+node. This allows you to configure a node that is sent a copy of every transaction, even if it is
+not specified as a party to the transaction.
 
 This could be used, for example, to send a copy of every transaction to a
 node for audit purposes. Specify the public keys to forward transactions to, and these will be
@@ -368,7 +369,7 @@ Enables additional security and privacy features.
 | Field                       | Required | Description                                                                              |
 |-----------------------------|--:- :----|------------------------------------------------------------------------------------------|
 | `enableRemoteKeyValidation` | Optional | [Checks that a remote node owns the public keys being advertised]. Defaults to `false`   |
-| `enablePrivacyEnhancements` | Optional | [Enables privacy enhancement features]. Defaults to `false`.                             |
+| `enablePrivacyEnhancements` | Optional | Enable Party Protection (PP) and Private State Validation (PSV). Defaults to `false`.    |
 
 ## `encryptor`
 
@@ -392,7 +393,7 @@ If `type` is set to `EC`, the following `properties` fields can also be configur
 <!--links-->
 [starting Tessera]: ../HowTo/Get-started/Start-Tessera.md
 [overridden from the command line]: ../HowTo/Configure/Override-config.md
-[encrypt the password using Jasypt]: ../HowTo/Configure/Tessera.md
+[encrypt the password using Jasypt]: ../HowTo/Configure/Database.md#encrypt-the-database-password
 [supplied DDLs]: https://github.com/ConsenSys/tessera/tree/master/ddls/create-table
 [InfluxDB]: ../HowTo/Use/Monitoring.md
 [TLS]: ../HowTo/Configure/TLS.md
@@ -412,7 +413,8 @@ If `type` is set to `EC`, the following `properties` fields can also be configur
 [Checks that a remote node owns the public keys being advertised]: ../HowTo/Configure/Peer-discovery.md#enable-remote-key-validation
 [Enables privacy enhancement features]: ../HowTo/Configure/Tessera.md#privacy-enhancements-flag
 [SunEC provider]: https://docs.oracle.com/javase/8/docs/technotes/guides/security/SunProviders.html#SunEC
-[The encryptor type]: ../HowTo/Configure/Tessera.md#alternative-cryptographic-elliptic-curves
+[The encryptor type]: ../HowTo/Configure/Cryptographic-elliptic-curves.md
+[Hyperledger Besu-extended privacy]: ../HowTo/Configure/Orion-Mode.md
+[Configure Tessera to use alternative curves and symmetric ciphers]: ../HowTo/Configure/Cryptographic-elliptic-curves.md
 [Hyperledger Besu]: https://besu.hyperledger.org/
-[changes Tessera’s behaviour]: ../HowTo/Configure/Tessera.md#orion-mode
-[Configure Tessera to use alternative curves and symmetric ciphers]: ../HowTo/Configure/Tessera.md#alternative-cryptographic-elliptic-curves
+[changes Tessera’s behaviour]: ../HowTo/Configure/Orion-Mode.md

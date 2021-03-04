@@ -12,6 +12,8 @@ description: Get started with Tessera and send a payload
 
 ## Starting Tessera and sending a payload
 
+The following example starts the [transaction manager and local enclave].
+
 ### 1. Generate keys
 
 Generate a key pair in files called `myKey.pub` and `myKey.key`.
@@ -113,3 +115,5 @@ Use the `upcheck` method to confirm Tessera is up and running.
     ```bash
     I'm up!
     ```
+
+[transaction manager and local enclave]: ../../Concepts/Privacy-manager.md

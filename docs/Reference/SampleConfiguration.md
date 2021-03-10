@@ -8,10 +8,6 @@ The Configuration file is a JSON file that must be specified when [starting Tess
 
 Configuration entries can be [overridden from the command line].
 
-!!! important
-    The `keys.azureKeyVaultConfig` and `keys.hashicorpKeyVaultConfig` fields are now deprecated. Instead,
-    the generic `keys.keyVaultConfigs` should be used. See [Keys configuration](../HowTo/Configure/Keys.md) for more info.
-
 ```json
 {
   "useWhiteList": "boolean",
@@ -402,14 +398,14 @@ If `type` is set to `EC`, the following `properties` fields can also be configur
 [Trust Mode]: ../HowTo/Configure/TLS.md#trust-modes
 [keystore]: ../HowTo/Configure/TLS.md#keystores
 [List of Tessera node URLs]: ../HowTo/Configure/Peer-discovery.md#specify-peers
-[Path to the password file]: ../HowTo/Generate-keys.md#securing-private-keys
-[AWS Secrets Manager]: ../HowTo/Configure/Keys.md#aws-secrets-manager-key-pairs
-[Azure Key Vault]: ../HowTo/Configure/Keys.md#azure-key-vault-key-pairs
-[HashiCorp Vault]: ../HowTo/Configure/Keys.md#hashicorp-vault-key-pairs
-[protected]: ../HowTo/Configure/Keys.md#protected
-[unprotected]: ../HowTo/Configure/Keys.md#unprotected
-[Path to the private key file]: ../HowTo/Configure/Keys.md#filesystem-key-pairs
-[Path to the public key file]: ../HowTo/Configure/Keys.md#filesystem-key-pairs
+[Path to the password file]: ../HowTo/Configure/Keys/Secure-Keys.md
+[AWS Secrets Manager]: ../HowTo/Configure/Keys/AWS-Secrets-Pairs.md
+[Azure Key Vault]: ../HowTo/Configure/Keys/Azure-Key-Vault-Pairs.md
+[HashiCorp Vault]: ../HowTo/Configure/Keys/Hashicorp-Vault-Pairs.md
+[protected]: ../HowTo/Configure/Keys/Inline-Key-Pairs.md#protected
+[unprotected]: ../HowTo/Configure/Keys/Inline-Key-Pairs.md#unprotected
+[Path to the private key file]: ../HowTo/Configure/Keys/File-Based-Key-Pairs.md
+[Path to the public key file]: ../HowTo/Configure/Keys/File-Based-Key-Pairs.md
 [Checks that a remote node owns the public keys being advertised]: ../HowTo/Configure/Peer-discovery.md#enable-remote-key-validation
 [Enables privacy enhancement features]: ../HowTo/Configure/Tessera.md#privacy-enhancements-flag
 [SunEC provider]: https://docs.oracle.com/javase/8/docs/technotes/guides/security/SunProviders.html#SunEC

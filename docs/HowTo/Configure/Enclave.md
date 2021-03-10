@@ -11,7 +11,7 @@ description: Configuring Tessera enclave
 In the transaction manager's configuration file:
 
 * Do not configure an `ENCLAVE` server.
-* Configure the [enclave's keys](Keys.md).
+* Configure the [enclave's keys](Keys/Overview.md).
 
 !!! example "Transaction manager configuration file"
     ```json
@@ -39,7 +39,7 @@ java -jar /path/to/tessera-app-[version]-app.jar --configfile /path/to/tm-config
 In the remote HTTP enclave's configuration file:
 
 * Configure an [`ENCLAVE` server](../../Reference/SampleConfiguration.md#enclave).  Include TLS configuration as appropriate, with the transaction manager as a client of the enclave.
-* Configure the [enclave's keys](Keys.md).
+* Configure the [enclave's keys](Keys/Overview.md).
 
 !!! example "Remote HTTP enclave configuration file"
     ```json

@@ -6,7 +6,7 @@ description: How to generate keys and store them in HashiCorp Vault
 
 **Prerequisites:**
 
-* [Hashicorp Vault configured and running](../Configure/KeyVault/Hashicorp-Vault.md).
+* [HashiCorp Vault configured and running](../Configure/KeyVault/Hashicorp-Vault.md).
 
 You can use Tessera to generate a private and public key pair in HashiCorp Vault. The following
 example creates secrets with IDs `publicKey` and `privateKey` at the secret path

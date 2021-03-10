@@ -48,13 +48,13 @@ You can configure multiple key pairs for a Tessera node. In this case, any one o
 keys can be used to address a private transaction to that node. Tessera sequentially tries each key
 to find one that can decrypt the payload.
 
-!!! Note 
+!!! Note
 
     Multiple key pairs can only be configured within the configuration file.
 
 ## Viewing the keys registered for a node
 
-The `ThirdParty` API [`/keys`]()https://consensys.github.io/tessera/#operation/getPublicKeys
+The `ThirdParty` API [`/keys`](https://consensys.github.io/tessera/#operation/getPublicKeys)
 endpoint can be used to view the public keys of the key pairs currently in use by your Tessera node.
 
 For example:

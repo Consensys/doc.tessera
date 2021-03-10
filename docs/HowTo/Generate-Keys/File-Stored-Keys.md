@@ -2,11 +2,11 @@
 description: How to generate file-stored keys
 ---
 
-# Store keys in files 
+# Store keys in files
 
-You can generate a private and public key pair and store it in files. 
+You can generate a private and public key pair and store it in files.
 
-The following command generates a key pair in the `new.pub` and `new.key` files. 
+The following command generates a key pair in the `new.pub` and `new.key` files.
 Provide the passwords at the interactive prompt that displays. Alternatively, leave the password
 empty to create an unencrypted private key file.
 
@@ -23,7 +23,7 @@ tessera -keygen -filename /path/to/key1,/path/to/key2
 !!! tip
 
     The following can be used to automatically generate an unencrypted (unlocked) private key file:
-    
+
     ```bash
     tessera -keygen -filename new < /dev/null
     ```

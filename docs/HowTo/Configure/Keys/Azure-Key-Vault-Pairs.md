@@ -28,7 +28,7 @@ This requires providing the vault URL and the secret IDs for both keys:
 }
 ```
 
-This example configuration retrieves the the secrets `Key` and `Pub` from the key vault with DNS
+This example configuration retrieves the secrets `Key` and `Pub` from the key vault with DNS
 name `https://my-vault.vault.azure.net`. If no version is specified then the latest version of the
 secret is retrieved.
 

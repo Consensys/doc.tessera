@@ -6,7 +6,6 @@ description: Configure file-based key pairs.
 
 The keys in the pair are stored in files. You can use Tessera to [generate file-based keys].
 
-
 ```json
 "keys": {
     "passwordFile": "/path/to/pwds.txt",

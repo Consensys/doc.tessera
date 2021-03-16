@@ -6,7 +6,7 @@ description: Tessera dependencies
 
 ## Java JDK
 
-Tessera requires [Java JDK 11+](http://www.oracle.com/technetwork/java/javase/downloads/index.html). Earlier versions are not supported.
+Tessera requires [Java JDK 11+](https://www.oracle.com/java/technologies/javase-downloads.html). Earlier versions are not supported.
 
 ## libsodium (optional)
 

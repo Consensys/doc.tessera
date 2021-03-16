@@ -150,3 +150,5 @@ plugins:
         # old_path.md: new_path.md
         # you can't use an already redirected path as an old_path.
         # new_path can be a file inside the docs/ folder or any URL (http://...)
+        HowTo/Generate-keys.md: index.md
+        HowTo/Configure/Keys.md: HowTo/Configure/Keys/Overview.md

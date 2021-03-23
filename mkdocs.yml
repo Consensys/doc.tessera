@@ -153,5 +153,5 @@ plugins:
         # new_path can be a file inside the docs/ folder or any URL (http://...)
         HowTo/Generate-keys.md: index.md
         HowTo/Configure/Keys.md: HowTo/Configure/Keys/Overview.md
-        HowTo/MigrateFromConstellation.md: HowTo/Migrate/MigrateFromConstellation
-        Tutorials/Migration-Multitenancy.md: HowTo/Migrate/Migration-Multitenancy
+        HowTo/MigrateFromConstellation.md: HowTo/Migrate/MigrateFromConstellation.md
+        Tutorials/Migration-Multitenancy.md: HowTo/Migrate/Migration-Multitenancy.md

@@ -91,10 +91,11 @@ nav:
     - Use:
       - Monitoring: HowTo/Use/Monitoring.md
       - Logging: HowTo/Use/Logging.md
-    - Migrate from Constellation: HowTo/MigrateFromConstellation.md
+    - Migrate:
+      - Migrate from Constellation: HowTo/Migrate/MigrateFromConstellation.md
+      - Multitenancy migration: HowTo/Migrate/Migration-Multitenancy.md
   - Tutorials:
       - Quorum Developer Quickstart: Tutorials/Quorum-Dev-Quickstart.md
-      - Multitenancy migration: Tutorials/Migration-Multitenancy.md
   - Concepts:
     - Privacy manager: Concepts/Privacy-manager.md
     - Transaction manager: Concepts/Transaction-manager.md
@@ -152,3 +153,5 @@ plugins:
         # new_path can be a file inside the docs/ folder or any URL (http://...)
         HowTo/Generate-keys.md: index.md
         HowTo/Configure/Keys.md: HowTo/Configure/Keys/Overview.md
+        HowTo/MigrateFromConstellation.md: HowTo/Migrate/MigrateFromConstellation
+        Tutorials/Migration-Multitenancy.md: HowTo/Migrate/Migration-Multitenancy

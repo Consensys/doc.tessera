@@ -4,7 +4,7 @@ description: Migrating from Constellation to Tessera
 
 # Migration Utilities
 
-Tessera provides utilities to migrate existing Constellation configurations and data stores to use
+Tessera provides utilities to migrate existing Constellation configurations and data stores for use
 with Tessera.
 
 !!! important
@@ -25,7 +25,7 @@ Use the data migration utility to migrate a Constellation data store
 uses an H2 database, however alternatives can be configured.
 
 [DDLs](https://github.com/jpmorganchase/tessera/tree/master/ddls/create-table) are available to help
-define with other databases.
+define other databases.
 
 Create an `alias` to simplify running the utility commands:
 

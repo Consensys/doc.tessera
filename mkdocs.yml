@@ -59,6 +59,7 @@ nav:
       - Install Tessera: HowTo/Get-started/DistributionJar.md
       - Start Tessera: HowTo/Get-started/Start-Tessera.md
     - Generate keys:
+      - Generate keys with Tessera: HowTo/Generate-Keys/Generate-Keys.md
       - File-based keys: HowTo/Generate-Keys/File-Stored-Keys.md
       - HashiCorp Vault: HowTo/Generate-Keys/Hashicorp-Vault.md
       - Azure Key Vault: HowTo/Generate-Keys/Azure-Key-Vault.md
@@ -105,6 +106,9 @@ nav:
     - Privacy Groups: Concepts/Privacy-Groups.md
     - Tessera API: Concepts/TesseraAPI.md
   - Reference:
+    - Command line:
+      - Options: Reference/CLI/CLI-Syntax.md
+      - Subcommand: Reference/CLI/CLI-Subcommands.md
     - Configuration file: Reference/SampleConfiguration.md
     - Bootstrap node configuration file: Reference/BootstrapSampleConfiguration.md
     - REST API Methods: Reference/REST-API.md

@@ -9,7 +9,7 @@ description: Tessera command line interface subcommands
 Use the `keygen` subcommand to [generate one or more key pairs] to store in files or a supported
 key vault.
 
-### argonconfig, keygenconfig
+### `argonconfig`, `keygenconfig`
 
 === "Syntax"
 
@@ -27,7 +27,7 @@ JSON file containing settings to override the [default Argon2 configuration].
 
 Alternate syntax for this option is `-keygenconfig <FILE>`.
 
-### debug
+### `debug`
 
 === "Syntax"
 
@@ -37,7 +37,7 @@ Alternate syntax for this option is `-keygenconfig <FILE>`.
 
 Prints full exception stack traces to STDOUT.
 
-### encryptor.ellipticCurve
+### `encryptor.ellipticCurve`
 
 === "Syntax"
 
@@ -53,7 +53,7 @@ Prints full exception stack traces to STDOUT.
 
 The elliptic curve to use for key generation. Defaults to `secp256r1`.
 
-### encryptor.nonceLength
+### `encryptor.nonceLength`
 
 === "Syntax"
 
@@ -69,7 +69,7 @@ The elliptic curve to use for key generation. Defaults to `secp256r1`.
 
 The nonce length used as the initialization vector (IV) for symmetric encryption. Defaults to 24.
 
-### encryptor.sharedKeyLength
+### `encryptor.sharedKeyLength`
 
 === "Syntax"
 
@@ -85,7 +85,7 @@ The nonce length used as the initialization vector (IV) for symmetric encryption
 
 The key length used for symmetric encryption when generating keys. Defaults to 32.
 
-### encryptor.symmetricCipher
+### `encryptor.symmetricCipher`
 
 === "Syntax"
 
@@ -101,7 +101,7 @@ The key length used for symmetric encryption when generating keys. Defaults to 3
 
 The symmetric cipher to use for encrypting data. Defaults to `AES/GCM/NoPadding`.
 
-### encryptor.type
+### `encryptor.type`
 
 === "Syntax"
 
@@ -117,7 +117,7 @@ The symmetric cipher to use for encrypting data. Defaults to `AES/GCM/NoPadding`
 
 The [encryption type]. Possible values are `EC`, `NACL`, and `CUSTOM`. Defaults to `NACL`
 
-### keyout, filename
+### `keyout`, `filename`
 
 === "Syntax"
 
@@ -134,7 +134,7 @@ The [encryption type]. Possible values are `EC`, `NACL`, and `CUSTOM`. Defaults 
 Comma-separated list of key files to generate. The number of arguments determines the number key
 pairs to generate. Defaults to `null`.
 
-### vault.hashicorp.approlepath
+### `vault.hashicorp.approlepath`
 
 === "Syntax"
 
@@ -152,7 +152,7 @@ The [AppRole] path for HashiCorp Vault authentication. Defaults to `approle`.
 
 Alternate syntax for this option is `-keygenvaultapprole <PATH>`
 
-### vault.hashicorp.tlskeystore
+### `vault.hashicorp.tlskeystore`
 
 === "Syntax"
 
@@ -170,7 +170,7 @@ Path to JKS keystore for TLS communication with HashiCorp Vault.
 
 Alternate syntax for this option is `-keygenvaultkeystore <FILE>`.
 
-### vault.hashicorp.secretenginepath
+### `vault.hashicorp.secretenginepath`
 
 === "Syntax"
 
@@ -188,7 +188,7 @@ Path to the v2 HashiCorp Vault secret engine.
 
 Alternate syntax for this option is `-keygenvaultsecretengine <PATH>`.
 
-### vault.hashicorp.tlstruststore
+### `vault.hashicorp.tlstruststore`
 
 === "Syntax"
 
@@ -206,7 +206,7 @@ Path to JKS truststore for TLS communication with HashiCorp Vault.
 
 Alternate syntax for this option is `-keygenvaulttruststore <FILE>`.
 
-### vault.type
+### `vault.type`
 
 === "Syntax"
 
@@ -227,7 +227,7 @@ If not specified, keys are encrypted and stored on the local filesystem. Valid o
 
 Alternate syntax for this option is `keygenvaulttype <STRING>`.
 
-### vault.url
+### `vault.url`
 
 === "Syntax"
 
@@ -245,7 +245,7 @@ Key vault base URL.
 
 Alternate syntax for this option is `-keygenvaulturl <STRING>`.
 
-### configfile
+### `configfile`
 
 === "Syntax"
 
@@ -261,7 +261,7 @@ Alternate syntax for this option is `-keygenvaulturl <STRING>`.
 
 The path to the [Node's configuration file](../../HowTo/Configure/Tessera.md).
 
-### configout
+### `configout`
 
 === "Syntax"
 
@@ -280,7 +280,7 @@ option.
 
 Alternate syntax for this option is `-output <FILE>`.
 
-### pwdout
+### `pwdout``
 
 === "Syntax"
 
@@ -297,12 +297,12 @@ Alternate syntax for this option is `-output <FILE>`.
 Path to save updated password list to. You must supply the [`--configout](#configout) and
 [`--configfile](#configfile) options.
 
-## keyupdate, updatepassword
+## `keyupdate`, `updatepassword`
 
 [Update the password or encryption options] for an already locked key, or apply a new password to an
 unlocked key.
 
-### configfile
+### `configfile`
 
 === "Syntax"
 
@@ -318,7 +318,7 @@ unlocked key.
 
 The path to the [Node's configuration file](../../HowTo/Configure/Tessera.md).
 
-### debug
+### `debug`
 
 === "Syntax"
 
@@ -328,7 +328,7 @@ The path to the [Node's configuration file](../../HowTo/Configure/Tessera.md).
 
 Prints full exception stack traces to STDOUT.
 
-### encryptor.ellipticCurve
+### `encryptor.ellipticCurve`
 
 === "Syntax"
 
@@ -344,7 +344,7 @@ Prints full exception stack traces to STDOUT.
 
 The elliptic curve to use for the updated keys. Defaults to `secp256r1`.
 
-### encryptor.nonceLength
+### `encryptor.nonceLength`
 
 === "Syntax"
 
@@ -360,7 +360,7 @@ The elliptic curve to use for the updated keys. Defaults to `secp256r1`.
 
 The nonce length used as the initialization vector (IV) for symmetric encryption. Defaults to 24.
 
-### encryptor.sharedKeyLength
+### `encryptor.sharedKeyLength`
 
 === "Syntax"
 
@@ -376,7 +376,7 @@ The nonce length used as the initialization vector (IV) for symmetric encryption
 
 The key length used for symmetric encryption when updating keys. Defaults to 32.
 
-### encryptor.symmetricCipher
+### `encryptor.symmetricCipher`
 
 === "Syntax"
 
@@ -392,7 +392,7 @@ The key length used for symmetric encryption when updating keys. Defaults to 32.
 
 The symmetric cipher to use for encrypting data. Defaults to `AES/GCM/NoPadding`.
 
-### encryptor.type
+### `encryptor.type`
 
 === "Syntax"
 
@@ -408,7 +408,7 @@ The symmetric cipher to use for encrypting data. Defaults to `AES/GCM/NoPadding`
 
 The [encryption type]. Possible values are `EC`, `NACL`, and `CUSTOM`. Defaults to `NACL`
 
-### keys.keyData.config.data.aopts.algorithm
+### `keys.keyData.config.data.aopts.algorithm`
 
 === "Syntax"
 
@@ -426,7 +426,7 @@ The [Argon2] variant to use. Defaults to `i`.
 
 Valid options are `i`, `d`, and `id`.
 
-### keys.keyData.config.data.aopts.iterations
+### `keys.keyData.config.data.aopts.iterations`
 
 === "Syntax"
 
@@ -442,7 +442,7 @@ Valid options are `i`, `d`, and `id`.
 
 The number of [Argon2] iterations to perform. Defaults to 10.
 
-### keys.keyData.config.data.aopts.memory
+### `keys.keyData.config.data.aopts.memory`
 
 === "Syntax"
 
@@ -458,7 +458,7 @@ The number of [Argon2] iterations to perform. Defaults to 10.
 
 Sets the [Argon2] memory usage. Defaults to 1048576.
 
-### keys.keyData.config.data.aopts.parallelism
+### `keys.keyData.config.data.aopts.parallelism`
 
 === "Syntax"
 
@@ -474,7 +474,7 @@ Sets the [Argon2] memory usage. Defaults to 1048576.
 
 Set the number of parallel [Argon2] threads. Defaults to 4.
 
-### keys.keyData.privateKeyPath
+### `keys.keyData.privateKeyPath`
 
 === "Syntax"
 
@@ -490,7 +490,7 @@ Set the number of parallel [Argon2] threads. Defaults to 4.
 
 Path to the private key file to update. This option is mandatory.
 
-### keys.passwordFile
+### `keys.passwordFile`
 
 === "Syntax"
 
@@ -507,7 +507,7 @@ Path to the private key file to update. This option is mandatory.
 File containing the password to unlock the private key specified using
 [`keys.keyData.privateKeyPath`](#keys.keyData.privateKeyPath).
 
-### keys.password
+### `keys.password`
 
 === "Syntax"
 

@@ -8,7 +8,7 @@ This reference describes the syntax of the Tessera Command Line Interface (CLI) 
 
 ## Options
 
-### configfile
+### `configfile`
 
 === "Syntax"
 
@@ -24,7 +24,7 @@ This reference describes the syntax of the Tessera Command Line Interface (CLI) 
 
 The path to the [Node's configuration file](../../HowTo/Configure/Tessera.md).
 
-### debug
+### `debug`
 
 === "Syntax"
 
@@ -34,7 +34,7 @@ The path to the [Node's configuration file](../../HowTo/Configure/Tessera.md).
 
 Prints full exception stack traces to STDOUT.
 
-### override
+### `override`
 
 === "Syntax"
 
@@ -53,7 +53,7 @@ option can be specified multiple times.
 
 Alternate syntax for this option is `-o <STING=STRING>`.
 
-### pidfile
+### `pidfile`
 
 === "Syntax"
 
@@ -69,7 +69,7 @@ Alternate syntax for this option is `-o <STING=STRING>`.
 
 Creates the specified file containing the process ID (PID) of the Tessera instance.
 
-### recover
+### `recover`
 
 === "Syntax"
 

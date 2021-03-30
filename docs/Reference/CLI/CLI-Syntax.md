@@ -78,4 +78,3 @@ Creates the specified file containing the process ID (PID) of the Tessera instan
     ```
 
 Runs Tessera in [data recovery mode](../../HowTo/Configure/Data-Recovery.md).
-

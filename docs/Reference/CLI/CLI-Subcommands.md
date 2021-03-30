@@ -9,7 +9,6 @@ description: Tessera command line interface subcommands
 Use the `keygen` subcommand to [generate one or more key pairs] to store in files or a supported
 key vault.
 
-
 ### argonconfig, keygenconfig
 
 === "Syntax"
@@ -532,4 +531,3 @@ Password to unlock the private key specified using
 [AppRole]: https://www.vaultproject.io/docs/auth/approle
 [Argon2]: https://github.com/P-H-C/phc-winner-argon2
 [Update the password or encryption options]: ../../HowTo/Generate-Keys/File-Stored-Keys.md#updating-password-protected-private-keys
-

@@ -12,4 +12,3 @@ the following formats:
     * [AWS Secrets Manager](AWS-Secrets-Manager.md)
     * [Azure Key Vault](Azure-Key-Vault.md)
     * [HashiCorp Vault](Hashicorp-Vault.md)
-

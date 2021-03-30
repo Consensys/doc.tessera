@@ -167,7 +167,7 @@ Alternate syntax for this option is `-keygenvaultapprole <PATH>`
     --vault.hashicorp.tlskeystore /Users/me/auth/keystore.jks
     ```
 
-Path to JKS keystore for TLS communication with Hashicorp Vault.
+Path to JKS keystore for TLS communication with HashiCorp Vault.
 
 Alternate syntax for this option is `-keygenvaultkeystore <FILE>`.
 
@@ -203,7 +203,7 @@ Alternate syntax for this option is `-keygenvaultsecretengine <PATH>`.
     --vault.hashicorp.tlstruststore /Users/me/auth/truststore.jks
     ```
 
-Path to JKS truststore for TLS communication with Hashicorp Vault.
+Path to JKS truststore for TLS communication with HashiCorp Vault.
 
 Alternate syntax for this option is `-keygenvaulttruststore <FILE>`.
 

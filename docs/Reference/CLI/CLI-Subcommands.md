@@ -275,12 +275,12 @@ The path to the [Node's configuration file](../../HowTo/Configure/Tessera.md).
     --configout /home/me/me_node/update/tessera.conf
     ```
 
-Path to save the updated configuration file to. You must supply the [`--configfile](#configfile)
+Path to save the updated configuration file to. You must supply the [`--configfile`](#configfile)
 option.
 
 Alternate syntax for this option is `-output <FILE>`.
 
-### `pwdout``
+### `pwdout`
 
 === "Syntax"
 
@@ -294,8 +294,8 @@ Alternate syntax for this option is `-output <FILE>`.
     --pwdout /home/me/me_node/passwordFile
     ```
 
-Path to save updated password list to. You must supply the [`--configout](#configout) and
-[`--configfile](#configfile) options.
+Path to save updated password list to. You must supply the [`--configout`](#configout) and
+[`--configfile`](#configfile) options.
 
 ## `keyupdate`, `updatepassword`
 

@@ -8,9 +8,9 @@ The migration tool reads all existing Orion config including any environment var
 to create a tessera config file and migrate data from an existing orion database to tessera. 
  
 
-The encryption algos etc are replicated in tessera this means no re-encryption is required. 
-The tool doesn't provide a means from migrating from one set of keys to another. Rather is allows you to 
-use your existing keys for current Orion deployments. 
+The encryption algorithm etc are replicated in tessera this means no re-encryption is required. 
+The tool doesn't provide a means for migrating from one set of keys to another. Rather it allows you to 
+use your existing keys for Orion deployments. 
 
 
 ## Migration

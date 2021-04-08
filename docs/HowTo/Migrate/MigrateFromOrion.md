@@ -15,7 +15,7 @@ use your existing keys for Orion deployments.
 
 ## Migration
 
-Download zip or tar distribution [link assuming it will be some time this century]
+Download zip or tar distribution [link to be added later]
 
 
 ```
@@ -42,12 +42,18 @@ define Tessera databases ahead of migration.
 
 ### After migration Validation
 
-Due to the private key file format differing between Orion and Tessera the private key file is updated to the 
-tessera format and the Orion key is backed up during migration. 
+At the end of migration number of encrypted transactions and privacy group data will be reported
 
+```
+Example:
 
-some text
+=== Migration report ===
+Migrated 2156 of 2156 transactions
+Migrated 56 of 56 privacy groups
+```
 
+If there is an error in migration the process will stop for the user to investigate and fix error before 
+restarting migration. The db needs to be empty before restart or else the migration will throw an exception.
 
 <!--links-->
 [building Tessera from source]: https://github.com/ConsenSys/tessera#building-tessera-from-source

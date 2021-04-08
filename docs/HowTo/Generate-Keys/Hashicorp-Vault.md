@@ -17,7 +17,8 @@ tessera -keygen -keygenvaulttype HASHICORP -keygenvaulturl <url> \
    -keygenvaultsecretengine secretEngine -filename secretName
 ```
 
-The `-filename` option can be used to generate and store multiple key pairs at the same time:
+The [`-filename`](../../Reference/CLI/CLI-Subcommands.md#keyout-filename) option can be used to
+generate and store multiple key pairs at the same time:
 
 ```bash
 tessera -keygen -keygenvaulttype HASHICORP -keygenvaulturl <url> \

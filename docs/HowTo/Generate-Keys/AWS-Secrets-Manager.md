@@ -16,8 +16,9 @@ example generates a private and public key pair and saves them to AWS Secrets Ma
 tessera -keygen -keygenvaulttype AWS -keygenvaulturl <url>
 ```
 
-The `-filename` option can be used to specify alternate IDs. Multiple key pairs can be generated at
-the same time by providing a comma-separated list of values:
+The [`-filename`](../../Reference/CLI/CLI-Subcommands.md#keyout-filename) option can be used to
+specify alternate IDs. Multiple key pairs can be generated at the same time by providing a
+comma-separated list of values:
 
 ```bash
 tessera -keygen -keygenvaulttype AWS -keygenvaulturl <url> -filename id1,id2

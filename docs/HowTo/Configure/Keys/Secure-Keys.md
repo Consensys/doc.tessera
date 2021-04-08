@@ -28,8 +28,10 @@ Tessera uses [Argon2] to encrypt private keys. By default, Argon2 is configured 
 }
 ```
 
-The Argon2 configuration can be altered by using the `-keygenconfig` option. Any override file must
-have the same format as the default configuration above, and all options must be provided.
+The Argon2 configuration can be altered by using the
+[`-keygenconfig`](../../../Reference/CLI/CLI-Subcommands.md#argonconfig-keygenconfig) option. Any
+override file must have the same format as the default configuration above, and all options must be
+provided.
 
 ```bash
 tessera -keygen -filename /path/to/key1 -keygenconfig /path/to/argonoptions.json

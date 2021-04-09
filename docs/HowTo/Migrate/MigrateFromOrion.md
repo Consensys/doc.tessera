@@ -24,9 +24,9 @@ Download zip or tar distribution [link to be added later]
    Orion config file options : [-f,orionfile, orionconfig]
    Tessera config output path : [-o,outputfile]
    Tessera jdbc options:
-	   tessera.jdbc.user=[Target Tessera DB username ]
-	   tessera.jdbc.password=[Target Tessera DB password ]
-	   tessera.jdbc.url=[Target Tessera DB JDBC connection string]
+        tessera.jdbc.user=[Target Tessera DB username ]
+        tessera.jdbc.password=[Target Tessera DB password ]
+        tessera.jdbc.url=[Target Tessera DB JDBC connection string]
  ```
 
 !!! important
@@ -34,9 +34,7 @@ Download zip or tar distribution [link to be added later]
      If migrating from a sql database to tessera then the driver must be added to the classpath
      and added to the start script [orion-to-tessera/bin/migrate].
 
-
 [DDLs](https://github.com/jpmorganchase/tessera/tree/master/ddls/create-table) are available to help define Tessera databases ahead of migration.
-
 
 ### After migration Validation
 

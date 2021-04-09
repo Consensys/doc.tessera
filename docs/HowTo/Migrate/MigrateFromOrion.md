@@ -37,7 +37,7 @@ Download zip or tar distribution [link to be added later]
 
 !!! important
 
-     If migration from a sql database to tessera then the driver must be added to the classpath 
+     If migrating from a sql database to tessera then the driver must be added to the classpath 
      and added to the start script [orion-to-tessera/bin/migrate]. 
 
 

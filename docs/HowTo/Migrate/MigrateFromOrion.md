@@ -19,7 +19,12 @@ Download zip or tar distribution [link to be added later]
 
 
 ```
-   ./orion-to-tessera/bin/migrate
+   The migration tool is built as a separate executable dist using gradle only. 
+
+   cd migration/orion-to-tessera/
+   gradle clean build
+
+   Run ./bin/migrate --help to see command line usage.
 
    Required options: 
    Orion config file options : [-f,orionfile, orionconfig]

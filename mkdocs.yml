@@ -95,6 +95,7 @@ nav:
     - Migrate:
       - Migrate from Constellation: HowTo/Migrate/MigrateFromConstellation.md
       - Multitenancy migration: HowTo/Migrate/Migration-Multitenancy.md
+      - Migrate from Orion: HowTo/Migrate/MigrateFromOrion.md
   - Tutorials:
       - Quorum Developer Quickstart: Tutorials/Quorum-Dev-Quickstart.md
   - Concepts:

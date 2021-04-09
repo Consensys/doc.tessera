@@ -12,7 +12,6 @@ The encryption algorithm etc are replicated in tessera this means no re-encrypti
 
 Download zip or tar distribution [link to be added later]
 
-
 ```bash
    The migration tool is built as a separate executable dist using gradle only.
 
@@ -36,15 +35,14 @@ Download zip or tar distribution [link to be added later]
      and added to the start script [orion-to-tessera/bin/migrate].
 
 
-[DDLs](https://github.com/jpmorganchase/tessera/tree/master/ddls/create-table) are available to help
-define Tessera databases ahead of migration.
+[DDLs](https://github.com/jpmorganchase/tessera/tree/master/ddls/create-table) are available to help define Tessera databases ahead of migration.
 
 
 ### After migration Validation
 
 At the end of migration number of encrypted transactions and privacy group data will be reported
 
-```
+```text
 Example:
 
 === Migration report ===

@@ -94,7 +94,7 @@ nav:
       - Logging: HowTo/Use/Logging.md
     - Migrate:
       - Migrate from Constellation: HowTo/Migrate/MigrateFromConstellation.md
-      - Multitenancy migration: HowTo/Migrate/Migration-Multitenancy.md
+      - Multi-tenancy migration: HowTo/Migrate/Migration-Multitenancy.md
   - Tutorials:
       - Quorum Developer Quickstart: Tutorials/Quorum-Dev-Quickstart.md
   - Concepts:

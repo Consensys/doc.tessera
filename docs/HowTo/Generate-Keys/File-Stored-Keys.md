@@ -31,7 +31,7 @@ tessera -keygen -filename /path/to/key1,/path/to/key2
 ## Updating password protected private keys
 
 The password of a private key stored in a file can be updated using the
-`--keys.keyData.privateKeyPath` CLI option.
+[`--keys.keyData.privateKeyPath`](../../Reference/CLI/CLI-Subcommands.md#keyskeydataprivatekeypath) CLI option.
 
 Running any of the following commands allow you to set a new password.
 

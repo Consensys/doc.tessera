@@ -134,6 +134,8 @@ The [encryption type]. Possible values are `EC`, `NACL`, and `CUSTOM`. Defaults 
 Comma-separated list of key files to generate. The number of arguments determines the number key
 pairs to generate. Defaults to `null`.
 
+Alternate syntax for this option is `-filename <FILE>[,<FILE>...]`.
+
 ### `vault.hashicorp.approlepath`
 
 === "Syntax"
@@ -260,6 +262,11 @@ Alternate syntax for this option is `-keygenvaulturl <STRING>`.
     ```
 
 The path to the [Node's configuration file](../../HowTo/Configure/Tessera.md).
+
+Provide this option when
+[updating a configuration file with new keys](../../HowTo/Configure/Keys/Overview.md#update-a-configuration-file-with-new-keys).
+If [`--configout`](#configout) and [`pwdout`](#pwdout) is not provided, the updated configuration
+file prints to the terminal.
 
 ### `configout`
 

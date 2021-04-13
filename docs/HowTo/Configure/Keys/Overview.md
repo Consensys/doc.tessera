@@ -98,8 +98,9 @@ them in the configuration file itself.
 Newly generated keys must be added to a Tessera configuration file, which is often easiest to do
 manually.
 
-However, the `tessera keygen -configfile` option can be used to automatically update a configuration
-file. This is particularly useful for scripting. For example:
+However, the [`tessera keygen -configfile`](../../../Reference/CLI/CLI-Subcommands.md#configfile)
+option can be used to automatically update a configuration file. This is particularly useful for
+scripting. For example:
 
 ```bash
 tessera -keygen -filename key1 -configfile /path/to/config.json --configout /path/to/new.json --pwdout /path/to/new.pwds
@@ -111,8 +112,9 @@ configuration `/path/to/config.json` is updated and saved to `/path/to/new.json`
 New passwords are appended to the existing password file defined in `/path/to/config.json` and
 written to `/path/to/new.pwds`.
 
-If the `--configout` and `--pwdout` options are not provided, the updated `.json` configuration
-prints to the terminal.
+If the [`--configout`](../../../Reference/CLI/CLI-Subcommands.md#configfile) and
+[`--pwdout`](../../../Reference/CLI/CLI-Subcommands.md#pwdout) options are not provided, the updated
+JSON configuration prints to the terminal.
 
 <!-- links -->
 [Direct]: Direct-Key-Pairs.md

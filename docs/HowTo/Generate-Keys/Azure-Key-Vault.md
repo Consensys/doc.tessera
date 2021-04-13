@@ -16,8 +16,9 @@ Azure Key Vault with the DNS name `<url>`:
 tessera -keygen -keygenvaulttype AZURE -keygenvaulturl <url>
 ```
 
-The `-filename` option can be used to specify alternate IDs. Multiple key pairs can be generated at
-the same time by providing a comma-separated list of values:
+The [`-filename`](../../Reference/CLI/CLI-Subcommands.md#keyout-filename) option can be used to
+specify alternate IDs. Multiple key pairs can be generated at the same time by providing a
+comma-separated list of values:
 
 ```bash
 tessera -keygen -keygenvaulttype AZURE -keygenvaulturl <url> -filename id1,id2

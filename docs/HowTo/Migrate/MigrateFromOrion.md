@@ -15,9 +15,9 @@ Download zip or tar distribution [link to be added later]
 ```bash
    The migration tool is built as a separate executable dist using gradle only.
 
-   Unzip it .. 
+   Unzip it run the executable.. 
 
-   Run ./bin/migrate --help to see command line usage.
+   ./orion-to-tessera/bin/migrate --help to see command line usage.
 
    Required options:
    Orion config file options : [-f,orionfile, orionconfig]

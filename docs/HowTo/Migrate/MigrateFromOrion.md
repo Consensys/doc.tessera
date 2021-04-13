@@ -15,7 +15,7 @@ Download zip or tar distribution [link to be added later]
 ```bash
    The migration tool is built as a separate executable dist using gradle only.
 
-   Unzip it run the executable.. 
+   Unzip and run the executable. 
 
    ./orion-to-tessera/bin/migrate --help to see command line usage.
 

@@ -4,7 +4,7 @@ description: Configuring AWS Secrets Manager for storing private keys
 
 # Configuring use of AWS Secrets Manager
 
-The private/public key pairs used by Tessera can be [stored](../Keys.md) in and [retrieved](../Keys.md) from a key vault, preventing the need to store the keys locally.
+The private/public key pairs used by Tessera can be [stored] in and [retrieved] from a key vault, preventing the need to store the keys locally.
 
 This page details how to set up and configure an _AWS Secrets Manager_ for use with Tessera.
 
@@ -34,3 +34,7 @@ The `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` for a particular user can be
 ### Dependencies
 
 The AWS Secrets Manager dependencies are included in the `tessera-app-<version>-app.jar`. If using the `tessera-simple-<version>-app.jar` then `aws-key-vault-<version>-all.jar` must be added to the classpath.
+
+<!-- links -->
+[stored]: ../../Generate-Keys/AWS-Secrets-Manager.md
+[retrieved]: ../Keys/AWS-Secrets-Pairs.md

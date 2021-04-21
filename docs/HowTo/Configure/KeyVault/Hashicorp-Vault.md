@@ -4,7 +4,7 @@ description: Configuring HashiCorp Vault for storing private keys
 
 # Configuring use of HashiCorp Vault
 
-The private/public key pairs used by Tessera can be [stored](../Keys.md) in and [retrieved](../Keys.md) from a key vault, preventing the need to store the keys locally.
+The private/public key pairs used by Tessera can be [stored] in and [retrieved] from a key vault, preventing the need to store the keys locally.
 
 This page details how to set up and configure a HashiCorp Vault for use with Tessera.
 
@@ -32,7 +32,7 @@ listener "tcp" {
 
 Tessera directly supports the [AppRole](https://www.vaultproject.io/docs/auth/approle.html) auth method. If required, other auth methods can be used by logging in outside of Tessera (for instance using the HTTP API) and providing the resulting vault token to Tessera. See the *Enabling Tessera to use the vault* section below for more information.
 
-When using AppRole, Tessera assumes the default auth path to be `approle`, however this value can be overwritten. See [Keys](../Keys.md) for more information.
+When using AppRole, Tessera assumes the default auth path to be `approle`, however this value can be [configured].
 
 ### Policies
 
@@ -62,8 +62,13 @@ If using a HashiCorp Vault, Tessera requires certain environment variables to be
     - `HASHICORP_TOKEN`
 
 !!! note
-    If using TLS additional environment variables must be set. See [Keys](../Keys.md) for more information and details of the Tessera configuration required to retrieve keys from a Vault.
+    [If using TLS, then additional environment variables must be set](../Keys/Hashicorp-Vault-Pairs.md#tls).
 
 ### Dependencies
 
 The HashiCorp dependencies are included in the `tessera-app-<version>-app.jar`. If using the `tessera-simple-<version>-app.jar` then `hashicorp-key-vault-<version>-all.jar` must be added to the classpath.
+
+<!--links -->
+[stored]: ../../Generate-Keys/Hashicorp-Vault.md
+[retrieved]: ../Keys/Hashicorp-Vault-Pairs.md
+[configured]: ../Keys/Hashicorp-Vault-Pairs.md

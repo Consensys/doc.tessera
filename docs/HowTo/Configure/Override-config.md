@@ -4,9 +4,10 @@ description: Overriding configuration file settings on the command line
 
 # Override configuration file settings on the command line
 
-The `-o, --override` option is used to define overrides as key/value pairs. The key is the JSON path of the field to be overwritten.
+The [`-o, --override`](../../Reference/CLI/CLI-Syntax.md#override) option is used to define
+overrides as key/value pairs. The key is the JSON path of the field to be overwritten.
 
-For example, given `configfile.json`:
+For example, in the following [configuration file](Tessera.md) snippet:
 
 ```json
 {

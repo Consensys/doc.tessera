@@ -4,7 +4,7 @@ description: Configuring Azure Key Vault for storing private keys
 
 # Configuring use of Azure Key Vault
 
-The private/public key pairs used by Tessera can be [stored](../Keys.md) in and [retrieved](../Keys.md) from a key vault, preventing the need to store the keys locally.
+The private/public key pairs used by Tessera can be [stored] in and [retrieved] from a key vault, preventing the need to store the keys locally.
 
 This page details how to set up and configure an Azure Key Vault for use with Tessera.
 
@@ -86,3 +86,7 @@ Both of these values can be retrieved during the application registration proces
 
 The Azure dependencies are included in the `tessera-app-<version>-app.jar`.
 If using the `tessera-simple-<version>-app.jar` then `azure-key-vault-<version>-all.jar` must be added to the classpath.
+
+<!--links -->
+[stored]: ../../Generate-Keys/Azure-Key-Vault.md
+[retrieved]: ../Keys/Azure-Key-Vault-Pairs.md

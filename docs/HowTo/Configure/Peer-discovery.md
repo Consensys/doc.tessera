@@ -16,6 +16,7 @@ Configure peer discovery in the [Tessera configuration file](Tessera.md). Option
 If peer discovery is disabled, communication is limited to peers listed in the configuration file.
 Communication from nodes not listed as a peer is ignored.
 Disable peer discovery to limit Tessera to communicating with known set of peers.
+Peer discovery is enabled by default.
 
 !!! example "Disable peer discovery"
 

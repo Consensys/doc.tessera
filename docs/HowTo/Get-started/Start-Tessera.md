@@ -31,7 +31,7 @@ When prompted to enter a password, press enter to generate an unlocked key.
 
 ### 2. Create a configuration file
 
-Create a file called `tessera.conf` and add the following properties.
+Create a file called `config.json` and add the following properties.
 
 !!! example "Tessera configuration file"
     ```json
@@ -90,14 +90,14 @@ Create a file called `tessera.conf` and add the following properties.
 ### 3. Start Tessera node
 
 ```bash
-tessera -configfile tessera.conf
+tessera -configfile config.json
 ```
 
 !!! tip
     If the command line help is displayed, enable debugging and try again.
 
     ```bash
-    tessera --debug -configfile tessera.conf
+    tessera --debug -configfile config.json
     ```
 
 ### 4. Confirm Tessera is running

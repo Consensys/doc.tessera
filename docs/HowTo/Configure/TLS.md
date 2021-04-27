@@ -133,7 +133,7 @@ The Trust Mode for both client and server must also be specified. Multiple trust
 
 !!! note
 
-    If you're using TLS on multiple endpoints (e.g., P2P and Q2T) and running everything on localhost (or a single
+    If you use TLS on multiple endpoints (e.g., P2P and Q2T) and run everything on localhost (or a single
     machine), then you must use different `knownClients` and `knownServers` files for the different endpoints.
 
 #### TOFU (Trust-on-first-use)

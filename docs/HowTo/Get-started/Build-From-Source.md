@@ -8,9 +8,9 @@ description: Build Tessera from source
 
 - [Java JDK](https://www.oracle.com/java/technologies/javase-downloads.html)
 
-  !!! important
+!!! important
 
-      Tessera requires Java 11+; earlier versions are not supported.
+    Tessera requires Java 11+; earlier versions are not supported.
 
 - [Maven](https://maven.apache.org)
 
@@ -18,9 +18,9 @@ description: Build Tessera from source
 
 ## Clone the Tessera repository
 
-Clone the `ConsenSys/Tessera` repository:
+Clone the `ConsenSys/tessera` repository:
 
-```bash
+``` bash
 git clone https://github.com/ConsenSys/tessera.git
 ```
 
@@ -32,10 +32,14 @@ The implementation to be used is specified when building the project:
 
 #### jnacl (default)
 
-`mvn install`
+``` bash
+mvn install
+```
 
 #### kalium
 
 Install libsodium as detailed on the [kalium project page](https://github.com/abstractj/kalium), then run
 
-`mvn install -P kalium`
+``` bash
+mvn install -P kalium
+```

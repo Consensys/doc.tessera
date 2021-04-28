@@ -131,15 +131,20 @@ Below is a configuration sample for using the `.pem` file format:
 The Trust Mode for both client and server must also be specified. Multiple trust modes are supported:
 `TOFU`, `WHITELIST`, `CA`, `CA_OR_TOFU`, and `NONE`.
 
+!!! note
+
+    If you use TLS on multiple endpoints (for example, P2P and Q2T) and run everything on localhost (or a single
+    machine), then you must use different `knownClients` and `knownServers` files for the different endpoints.
+
 #### TOFU (Trust-on-first-use)
 
-    Only the first node that connects identifying as a certain host will be allowed to connect as
-    the same host in the future. When connecting for the first time, the host and its certificate
-    will be added to `knownClientsFile` (for server), or `knownServersFile` (for client).
-    These files will be generated if not already existed, using the values specified in
-    `knownClientsFile` and `knownServersFile`.
+Only the first node that connects identifying as a certain host will be allowed to connect as
+the same host in the future. When connecting for the first time, the host and its certificate
+will be added to `knownClientsFile` (for server), or `knownServersFile` (for client).
+These files will be generated if not already existed, using the values specified in
+`knownClientsFile` and `knownServersFile`.
 
-    A configuration sample for `TOFU` trust mode is:
+A configuration sample for `TOFU` trust mode is:
 
     ```json
     "sslConfig" : {

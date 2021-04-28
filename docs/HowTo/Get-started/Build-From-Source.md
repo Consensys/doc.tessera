@@ -39,4 +39,3 @@ The implementation to be used is specified when building the project:
 Install libsodium as detailed on the [kalium project page](https://github.com/abstractj/kalium), then run
 
 `mvn install -P kalium`
-

@@ -56,7 +56,8 @@ nav:
   - How to:
     - Get started with Tessera:
       - Dependencies: HowTo/Get-started/Dependencies.md
-      - Install Tessera: HowTo/Get-started/DistributionJar.md
+      - Install distribution: HowTo/Get-started/DistributionJar.md
+      - Build from source: HowTo/Get-started/Build-From-Source.md
       - Start Tessera: HowTo/Get-started/Start-Tessera.md
     - Generate keys:
       - Generate keys with Tessera: HowTo/Generate-Keys/Generate-Keys.md

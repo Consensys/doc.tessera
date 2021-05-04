@@ -44,7 +44,7 @@ Expand the distribution archive:
 tar -xzf tessera-dist-<version>.tar.gz
 ```
 
-Move to the expanded folder and display the Orion help to confirm installation.
+Move to the expanded folder and display the Tessera help to confirm installation.
 
 ````bash
 cd tessera-<version>/

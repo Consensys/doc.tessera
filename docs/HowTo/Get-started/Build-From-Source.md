@@ -12,7 +12,7 @@ description: Build Tessera from source
 
     Tessera requires Java 11+; earlier versions are not supported.
 
-- [libsodium](https://download.libsodium.org/doc/installation/) (if using kalium as the NaCl implementation)
+- [libsodium](https://download.libsodium.org/doc/installation/)
 
 ## Clone the Tessera repository
 
@@ -26,27 +26,20 @@ git clone https://github.com/ConsenSys/tessera.git
 
 After cloning, go to the `tessera` directory.
 
-Build Tessera with the Gradle wrapper `gradlew`, omitting tests as follows:
+Build Tessera with the Gradle wrapper `gradlew`:
 
 ```bash
-./gradlew build -x test
+./gradlew installDist
 ```
 
 Go to the distribution directory:
 
 ```bash
-cd tessera-dist/build/distributions/
+cd tessera-dist/build/install/tessera-dist
 ```
 
-Expand the distribution archive:
-
-```bash
-tar -xzf tessera-dist-<version>.tar.gz
-```
-
-Move to the expanded folder and display the Tessera help to confirm installation.
+Display the Tessera help to confirm installation.
 
 ````bash
-cd tessera-<version>/
 bin/tessera-dist --help
 ````

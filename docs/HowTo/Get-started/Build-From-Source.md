@@ -10,7 +10,7 @@ description: Build Tessera from source
 
 !!! important
 
-    Tessera requires Java 11+; earlier versions are not supported.
+    Tessera version 0.10.3 or later requires Java version 11, and Tessera version 0.10.2 or earlier requires Java version 8 or 11.
 
 - [libsodium](https://download.libsodium.org/doc/installation/)
 

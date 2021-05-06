@@ -65,7 +65,7 @@ Key differences between a resident group and other types of privacy group:
 
 * A resident group can only contain local keys and no remote key is permitted
 * The name of the resident group will be used as the group identifier
-* Resident groups can be configured via config file, however `multiplePrivacyStates` feature will have to be switched on. See configuration section for more details
+* Resident groups can be configured via Tessera configuration file, however `multiplePrivacyStates` feature will have to be switched on. See configuration section for more details
 
 A number of validations will be performed against the resident group configuration during Tessera startup (when `multiplePrivacyStates` feature is switched on):
 

@@ -34,4 +34,4 @@ Tessera will load resident group configuration, perform the necessary validation
 ```
 
 !!! info
-    Tessera will not start with `enableMultiplePrivateStates` but invalid resident group config
+    Tessera will not start with `enableMultiplePrivateStates` but invalid resident group configuration

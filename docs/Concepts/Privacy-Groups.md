@@ -3,9 +3,10 @@ description: Privacy Groups
 ---
 
 
-When running in [Orion](../HowTo/Configure/Tessera.md#orion-mode) mode, Tessera supports operations related to privacy groups such as managing privacy group data and handling transactions that are intended for a privacy group.
+Tessera supports operations related to privacy groups such as managing privacy group data and handling transactions that are intended for a privacy group.
+However, there might be different in behaviours depending on which `mode` Tessera is running on. See [client mode](../HowTo/Configure/Tessera.md#orion-mode)
 
-Two types of privacy group:
+Types of privacy group:
 
 1. Legacy
 2. Pantheon

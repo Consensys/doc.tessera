@@ -90,6 +90,7 @@ nav:
       - Override configuration file: HowTo/Configure/Override-config.md
       - Cryptographic elliptic curves: HowTo/Configure/Cryptographic-elliptic-curves.md
       - Hyperledger Besu support: HowTo/Configure/Orion-Mode.md
+      - Support Multi Private States and Resident Groups: HowTo/Configure/Multiple-private-state.md
     - Use:
       - Monitoring: HowTo/Use/Monitoring.md
       - Logging: HowTo/Use/Logging.md

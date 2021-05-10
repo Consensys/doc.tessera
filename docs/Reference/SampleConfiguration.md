@@ -366,6 +366,7 @@ Enables additional security and privacy features.
 |-----------------------------|--:- :----|------------------------------------------------------------------------------------------|
 | `enableRemoteKeyValidation` | Optional | [Checks that a remote node owns the public keys being advertised]. Defaults to `false`   |
 | `enablePrivacyEnhancements` | Optional | Enable Party Protection (PP) and Private State Validation (PSV). Defaults to `false`.    |
+| `enableMultiplePrivateStates` | Optional | Enable Multiple Private States feature. Defaults to `false`.                           |
 
 ## `encryptor`
 

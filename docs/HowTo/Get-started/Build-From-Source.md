@@ -26,20 +26,27 @@ git clone https://github.com/ConsenSys/tessera.git
 
 After cloning, go to the `tessera` directory.
 
-Build Tessera with the Gradle wrapper `gradlew`:
+Build Tessera with the Gradle wrapper `gradlew`, omitting tests as follows:
 
 ```bash
-./gradlew installDist
+./gradlew build -x test
 ```
 
 Go to the distribution directory:
 
 ```bash
-cd tessera-dist/build/install/tessera-dist
+cd tessera-dist/build/distributions/
 ```
 
-Display the Tessera help to confirm installation.
+Expand the distribution archive:
+
+```bash
+tar -xzf tessera-dist-<version>.tar.gz
+```
+
+Move to the expanded folder and display the Tessera help to confirm installation.
 
 ````bash
+cd tessera-<version>/
 bin/tessera-dist --help
 ````

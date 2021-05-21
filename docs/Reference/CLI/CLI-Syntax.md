@@ -8,6 +8,12 @@ This reference describes the syntax of the Tessera Command Line Interface (CLI) 
 
 ## Options
 
+To start a Tessera node run:
+
+```bash
+tessera [OPTIONS] [COMMAND] [COMMAND OPTIONS]
+```
+
 ### `configfile`
 
 === "Syntax"
@@ -19,10 +25,10 @@ This reference describes the syntax of the Tessera Command Line Interface (CLI) 
 === "Example"
 
     ```bash
-    --config-file /home/me/me_node/tessera.conf
+    --configfile /home/me/me_node/tessera.conf
     ```
 
-The path to the [Node's configuration file](../../HowTo/Configure/Tessera.md).
+Path to the node's [configuration file](../../HowTo/Configure/Tessera.md).
 
 ### `debug`
 
@@ -32,14 +38,24 @@ The path to the [Node's configuration file](../../HowTo/Configure/Tessera.md).
     --debug
     ```
 
-Prints full exception stack traces to STDOUT.
+Prints full exception stack traces to `stdout`.
+
+### `help`
+
+=== "Syntax"
+
+    ```bash
+    help
+    ```
+
+Shows the help message and exits.
 
 ### `override`
 
 === "Syntax"
 
     ```bash
-    --override <STING=STRING>
+    --override <STRING=STRING>
     ```
 
 === "Example"
@@ -48,10 +64,10 @@ Prints full exception stack traces to STDOUT.
     --override jdbc.username=admin
     ```
 
-Overrides a value in the configuration file specified using [`--configfile`](#configfile). This
-option can be specified multiple times.
+Overrides a value in the configuration file specified using [`--configfile`](#configfile).
+This option can be specified multiple times.
 
-Alternate syntax for this option is `-o <STING=STRING>`.
+Alternate syntax for this option is `-o <STRING=STRING>`.
 
 ### `pidfile`
 
@@ -78,3 +94,15 @@ Creates the specified file containing the process ID (PID) of the Tessera instan
     ```
 
 Runs Tessera in [data recovery mode](../../HowTo/Configure/Data-Recovery.md).
+
+Alternate syntax for this option is `-r`.
+
+### `version`
+
+=== "Syntax"
+
+    ```bash
+    version
+    ```
+
+Prints version information and exits.

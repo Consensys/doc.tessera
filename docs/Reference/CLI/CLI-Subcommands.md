@@ -4,8 +4,6 @@ description: Tessera command line interface subcommands
 
 # Subcommands
 
-Subcommands exist to manage Tessera encryption keys.
-
 ## `keygen`
 
 Use the `keygen` subcommand to [generate one or more key pairs] to store in files or a supported
@@ -27,7 +25,7 @@ key vault.
 
 JSON file containing settings to override the [default Argon2 configuration].
 
-Alternate syntax for this option is `-keygenconfig <FILE>`.
+Legacy syntax for this option is `-keygenconfig <FILE>`.
 
 ### `configfile`
 
@@ -61,13 +59,13 @@ file prints to the terminal.
 === "Example"
 
     ```bash
-    tessera keygen --configout /home/me/me_node/update/tessera.conf
+    tessera keygen --configfile /home/me/me_node/tessera.conf --configout /home/me/me_node/update/tessera.conf
     ```
 
 Path to save the updated configuration file to.
 To use this option, you must supply the [`--configfile`](#configfile) option.
 
-Alternate syntax for this option is `-output <FILE>`.
+Legacy syntax for this option is `-output <FILE>`.
 
 ### `debug`
 
@@ -183,7 +181,7 @@ Comma-separated list of key files to generate.
 The number of arguments determines the number of key pairs to generate.
 Defaults to `null`.
 
-Alternate syntax for this option is `-filename <FILE>[,<FILE>...]`.
+Legacy syntax for this option is `-filename <FILE>[,<FILE>...]`.
 
 ### `pwdout`
 
@@ -219,7 +217,7 @@ To use this option, you must supply the [`--configout`](#configout) and [`--conf
 [AppRole] path for HashiCorp Vault authentication.
 Defaults to `approle`.
 
-Alternate syntax for this option is `-keygenvaultapprole <PATH>`.
+Legacy syntax for this option is `-keygenvaultapprole <PATH>`.
 
 ### `vault.hashicorp.secretenginepath`
 
@@ -237,7 +235,7 @@ Alternate syntax for this option is `-keygenvaultapprole <PATH>`.
 
 Path to the v2 HashiCorp Vault secret engine.
 
-Alternate syntax for this option is `-keygenvaultsecretengine <PATH>`.
+Legacy syntax for this option is `-keygenvaultsecretengine <PATH>`.
 
 ### `vault.hashicorp.tlskeystore`
 
@@ -255,7 +253,7 @@ Alternate syntax for this option is `-keygenvaultsecretengine <PATH>`.
 
 Path to JKS keystore for TLS communication with HashiCorp Vault.
 
-Alternate syntax for this option is `-keygenvaultkeystore <FILE>`.
+Legacy syntax for this option is `-keygenvaultkeystore <FILE>`.
 
 ### `vault.hashicorp.tlstruststore`
 
@@ -273,7 +271,7 @@ Alternate syntax for this option is `-keygenvaultkeystore <FILE>`.
 
 Path to JKS truststore for TLS communication with HashiCorp Vault.
 
-Alternate syntax for this option is `-keygenvaulttruststore <FILE>`.
+Legacy syntax for this option is `-keygenvaulttruststore <FILE>`.
 
 ### `vault.type`
 
@@ -294,7 +292,7 @@ Key vault provider in which to save the generated key.
 If not specified, keys are encrypted and stored on the local filesystem.
 Valid options are `AZURE`, `AWS`, and `HASHICORP`.
 
-Alternate syntax for this option is `keygenvaulttype <STRING>`.
+Legacy syntax for this option is `keygenvaulttype <STRING>`.
 
 ### `vault.url`
 
@@ -312,11 +310,13 @@ Alternate syntax for this option is `keygenvaulttype <STRING>`.
 
 Key vault base URL.
 
-Alternate syntax for this option is `-keygenvaulturl <STRING>`.
+Legacy syntax for this option is `-keygenvaulturl <STRING>`.
 
 ## `keyupdate`, `-updatepassword`
 
 [Update the password or encryption options] for an already locked key, or apply a new password to an unlocked key.
+
+Legacy syntax for this subcommand is `-updatepassword [COMMAND OPTIONS]`.
 
 ### `configfile`
 
@@ -549,6 +549,16 @@ Password to unlock the private key specified using [`keys.keyData.privateKeyPath
 
 File containing the password to unlock the private key specified using
 [`keys.keyData.privateKeyPath`](#keys.keyData.privateKeyPath).
+
+## `version`
+
+=== "Syntax"
+
+    ```bash
+    tessera version
+    ```
+
+Prints version information and exits.
 
 <!-- links -->
 [default Argon2 configuration]: ../../HowTo/Configure/Keys/Secure-Keys.md

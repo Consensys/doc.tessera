@@ -111,7 +111,7 @@ nav:
   - Reference:
     - Command line:
       - Options: Reference/CLI/CLI-Syntax.md
-      - Subcommand: Reference/CLI/CLI-Subcommands.md
+      - Subcommands: Reference/CLI/CLI-Subcommands.md
     - Configuration file: Reference/SampleConfiguration.md
     - Bootstrap node configuration file: Reference/BootstrapSampleConfiguration.md
     - REST API Methods: Reference/REST-API.md

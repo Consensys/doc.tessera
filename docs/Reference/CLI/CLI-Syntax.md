@@ -45,7 +45,7 @@ Prints full exception stack traces to `stdout`.
 === "Syntax"
 
     ```bash
-    help
+    --help
     ```
 
 Shows the help message and exits.
@@ -67,7 +67,7 @@ Shows the help message and exits.
 Overrides a value in the configuration file specified using [`--configfile`](#configfile).
 This option can be specified multiple times.
 
-Alternate syntax for this option is `-o <STRING=STRING>`.
+Short syntax for this option is `-o <STRING=STRING>`.
 
 ### `pidfile`
 
@@ -95,14 +95,4 @@ Creates the specified file containing the process ID (PID) of the Tessera instan
 
 Runs Tessera in [data recovery mode](../../HowTo/Configure/Data-Recovery.md).
 
-Alternate syntax for this option is `-r`.
-
-### `version`
-
-=== "Syntax"
-
-    ```bash
-    version
-    ```
-
-Prints version information and exits.
+Short syntax for this option is `-r`.

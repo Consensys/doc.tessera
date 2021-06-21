@@ -234,7 +234,7 @@ To create a dashboard similar to this:
 
     This metric can be used as an indirect method of monitoring the health of the network. Using some of the more advanced InfluxDB query options available in Grafana and the other metrics measurements available it may be possible to make this result more explicit.
 
-    [Alerts and rules](https://grafana.com/docs/alerting/notifications/) can be configured to determine when a node has disconnected and send notifications to pre-configured channels (for example Slack, email, etc.).
+    [Alerts and rules](https://grafana.com/docs/grafana/latest/alerting/) can be configured to determine when a node has disconnected and send notifications to pre-configured channels (for example Slack, email, etc.).
 
 1. Create <code>sendRaw</code> rate panel
     1. Select the correct data source from the *Queries to* dropdown list

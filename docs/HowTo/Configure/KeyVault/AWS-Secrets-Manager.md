@@ -33,7 +33,7 @@ The `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` for a particular user can be
 
 ### Dependencies
 
-The AWS Secrets Manager dependencies are included in the `tessera-app-<version>-app.jar`. If using the `tessera-simple-<version>-app.jar` then `aws-key-vault-<version>-all.jar` must be added to the classpath.
+Unpack `aws-key-vault-<version>.zip|tar` and `cp aws-key-vault-<version>/lib/* tessera-dist/lib/`
 
 <!-- links -->
 [stored]: ../../Generate-Keys/AWS-Secrets-Manager.md

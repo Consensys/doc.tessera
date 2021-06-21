@@ -69,7 +69,6 @@ To configure a server to use an InfluxDB, add `influxConfig` to the server confi
         "app":"Q2T",
         "enabled": true,
         "serverAddress":"unix:/path/to/tm.ipc",
-        "communicationType" : "REST",
         "influxConfig": {
             "serverAddress": "https://localhost:8086",  // InfluxDB server address
             "dbName": "myDb",                           // InfluxDB DB name (DB must already exist)
@@ -89,7 +88,6 @@ To configure a server to use an InfluxDB, add `influxConfig` to the server confi
         "app":"P2P",
         "enabled": true,
         "serverAddress":"http://localhost:9001",
-        "communicationType" : "REST",
         "influxConfig": {
             "serverAddress": "http://localhost:8087",
             "dbName": "anotherDb",
@@ -286,7 +284,7 @@ The general steps to consolidate the logs for a Tessera network in Splunk are:
         To start Tessera with an XML configuration file:
 
         ``` bash
-        java -Dlogback.configurationFile=/path/to/logback-config.xml -jar /path/to/tessera-app-<version>-app.jar -configfile /path/to/config.json
+        tessera -Dlogback.configurationFile=/path/to/logback-config.xml  -configfile /path/to/config.json
         ```
 
     1. Set up Splunk *Universal Forwarders* (lightweight Splunk clients) on each Tessera host to forward log data for their node to the *Receiver*

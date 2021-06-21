@@ -84,8 +84,7 @@ Both of these values can be retrieved during the application registration proces
 
 ### Dependencies
 
-The Azure dependencies are included in the `tessera-app-<version>-app.jar`.
-If using the `tessera-simple-<version>-app.jar` then `azure-key-vault-<version>-all.jar` must be added to the classpath.
+Unpack `azure-key-vault-<version>.zip|tar` and `cp azure-key-vault-<version>/lib/* tessera-dist/lib/`
 
 <!--links -->
 [stored]: ../../Generate-Keys/Azure-Key-Vault.md

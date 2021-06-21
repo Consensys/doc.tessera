@@ -28,7 +28,7 @@ used.
 To run the migration tool, run the following command:
 
 ```bash
-java -jar multitenancy_migration.jar --primary <primary node configuration file> --secondary <secondary node configuration file>
+./multitenancy-[version]/bin/multitenancy --primary <primary node configuration file> --secondary <secondary node configuration file>
 ```
 
 After performing the migration, the primary node can be started with both nodes key pairs, and can

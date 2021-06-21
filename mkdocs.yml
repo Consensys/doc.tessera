@@ -95,8 +95,6 @@ nav:
       - Monitoring: HowTo/Use/Monitoring.md
       - Logging: HowTo/Use/Logging.md
     - Migrate:
-      - Migrate from Orion: HowTo/Migrate/MigrateFromOrion.md
-      - Migrate from Constellation: HowTo/Migrate/MigrateFromConstellation.md
       - Multi-tenancy migration: HowTo/Migrate/Migration-Multitenancy.md
   - Tutorials:
       - Quorum Developer Quickstart: Tutorials/Quorum-Dev-Quickstart.md

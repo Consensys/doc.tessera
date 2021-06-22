@@ -38,7 +38,7 @@ configured.
     ```
 
 If `type` is set to `CUSTOM`, it provides support for an external encryptor implementation to
-integrate with Tessera. The pilot third party integration is [Unbound Tech's Unbound Key Control (UKC) encryptor](https://github.com/unbound-tech/unbound-integration/tree/master/tessera) (jar available at `com.github.unbound-tech:encryption-ub:<version>`).
+integrate with Tessera. The kalium support module is configured as a custom encryptor. Also the pilot third party integration is [Unbound Tech's Unbound Key Control (UKC) encryptor](https://github.com/unbound-tech/unbound-integration/tree/master/tessera) (jar available at `com.github.unbound-tech:encryption-ub:<version>`).
 
 <!--links-->
 [enclave encryption process]: https://docs.goquorum.consensys.net/Concepts/Privacy/PrivateTransactionLifecycle/

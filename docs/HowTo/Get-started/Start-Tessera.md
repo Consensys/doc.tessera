@@ -8,7 +8,7 @@ description: Get started with Tessera and send a payload
 
 1. Install necessary [dependencies](Dependencies.md)
 
-1. Install [Tessera](DistributionJar.md)
+1. Install [Tessera](Distribution.md)
 
 ## Starting Tessera and sending a payload
 
@@ -47,14 +47,12 @@ Create a file called `config.json` and add the following properties.
            {
                "app":"ThirdParty",
                "enabled": true,
-               "serverAddress": "http://localhost:9081",
-               "communicationType" : "REST"
+               "serverAddress": "http://localhost:9081"
            },
            {
                "app":"Q2T",
                "enabled": true,
-               "serverAddress": "unix:/tmp/test.ipc",
-               "communicationType" : "REST"
+               "serverAddress": "unix:/tmp/test.ipc"
            },
            {
                "app":"P2P",
@@ -62,8 +60,7 @@ Create a file called `config.json` and add the following properties.
                "serverAddress":"http://localhost:9001",
                "sslConfig": {
                    "tls": "OFF"
-               },
-               "communicationType" : "REST"
+               }
            }
        ],
        "peer": [

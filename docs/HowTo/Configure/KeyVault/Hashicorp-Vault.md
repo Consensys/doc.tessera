@@ -66,7 +66,7 @@ If using a HashiCorp Vault, Tessera requires certain environment variables to be
 
 ### Dependencies
 
-The HashiCorp dependencies are included in the `tessera-app-<version>-app.jar`. If using the `tessera-simple-<version>-app.jar` then `hashicorp-key-vault-<version>-all.jar` must be added to the classpath.
+Unpack `hashicorp-key-vault-<version>.zip|tar` and `cp hashicorp-key-vault-<version>/lib/* tessera-dist/lib/`
 
 <!--links -->
 [stored]: ../../Generate-Keys/Hashicorp-Vault.md

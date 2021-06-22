@@ -56,7 +56,7 @@ nav:
   - How to:
     - Get started with Tessera:
       - Dependencies: HowTo/Get-started/Dependencies.md
-      - Install distribution: HowTo/Get-started/DistributionJar.md
+      - Install distribution: HowTo/Get-started/Distribution.md
       - Build from source: HowTo/Get-started/Build-From-Source.md
       - Start Tessera: HowTo/Get-started/Start-Tessera.md
     - Generate keys:
@@ -96,7 +96,6 @@ nav:
       - Logging: HowTo/Use/Logging.md
     - Migrate:
       - Migrate from Orion: HowTo/Migrate/MigrateFromOrion.md
-      - Migrate from Constellation: HowTo/Migrate/MigrateFromConstellation.md
       - Multi-tenancy migration: HowTo/Migrate/Migration-Multitenancy.md
   - Tutorials:
       - Quorum Developer Quickstart: Tutorials/Quorum-Dev-Quickstart.md
@@ -160,5 +159,4 @@ plugins:
         # new_path can be a file inside the docs/ folder or any URL (http://...)
         HowTo/Generate-keys.md: index.md
         HowTo/Configure/Keys.md: HowTo/Configure/Keys/Overview.md
-        HowTo/MigrateFromConstellation.md: HowTo/Migrate/MigrateFromConstellation.md
         Tutorials/Migration-Multitenancy.md: HowTo/Migrate/Migration-Multitenancy.md

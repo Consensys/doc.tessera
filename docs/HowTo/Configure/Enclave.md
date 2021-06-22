@@ -31,7 +31,7 @@ Starting the transaction manager will start the local enclave as part of the sam
 
 ```shell
 # start the transaction manager and enclave
-java -jar /path/to/tessera-app-[version]-app.jar --configfile /path/to/tm-config.json
+tessera --configfile /path/to/tm-config.json
 ```
 
 ## Remote HTTP enclave
@@ -47,7 +47,6 @@ In the remote HTTP enclave's configuration file:
      "serverConfigs": [{
        "app": "ENCLAVE",
        "serverAddress": "http://localhost:8080",
-       "communicationType": "REST",
        "bindingAddress": "http://0.0.0.0:8080"
      }],
      "keys": {
@@ -73,7 +72,6 @@ In the transaction manager's configuration file:
         {
           "app": "ENCLAVE",
           "serverAddress": "http://localhost:8080",
-          "communicationType": "REST"
         },
         {
           "app": "Q2T",
@@ -89,29 +87,16 @@ The remote HTTP enclave must be started before the transaction manager; for exam
 
 ```shell
 # start the enclave
-java -jar /path/to/tessera-app-[version]-app.jar --configfile /path/to/enclave-config.json
+enclave-jaxrs/bin/enclave-jaxrs --configfile /path/to/enclave-config.json
 
 # start the transaction manager
-java -jar /path/to/tessera-app-[version]-app.jar --configfile /path/to/tm-config.json
+tessera --configfile /path/to/tm-config.json
 ```
 
-!!! info "Considerations when not using the tessera-app JAR"
-    The `tessera-app-[version]-app.jar` can be used to run a complete privacy manager (transaction manager and enclave as a single process), a standalone transaction manager, or a remote HTTP enclave.
-
-    For a more tailored remote HTTP enclave deployment, the `enclave-jaxrs-[version]-server.jar` can be used.  This contains only the core resources necessary to start a remote HTTP enclave.
-
-    If using key vault-stored keys, the corresponding key vault JAR must be included on the classpath; for example:
+If using key vault-stored keys, the corresponding key vault JAR must be included on the classpath; for example:
 
     ```shell
     # start the enclave
-    java -cp /path/to/enclave-jaxrs-[version]-server.jar:/path/to/hashicorp-key-vault-[version]-all.jar com.quorum.tessera.enclave.rest.Main -configfile /path/to/enclave-config.json
-    ```
-
-    For a more tailored transaction manager deployment, the `tessera-simple-[version]-app.jar` can be used.  This contains only the core resources necessary to start a transaction manager.
-
-    The enclave client JAR must be included on the classpath if using a remote HTTP enclave; for example:
-
-    ```shell
-    # start the transaction manager
-    java -cp /path/to/tessera-simple-[version]-app.jar:/path/to/enclave-jaxrs-[version].jar com.quorum.tessera.launcher.Main -configfile /path/to/tm-config.json
+    cp hashicorp-key-vault/lib/* path/to/enclave-jaxrs-[version]/lib
+    path/to/enclave-jaxrs-[version]/bin/enclave-jaxrs -configfile /path/to/enclave-config.json
     ```

@@ -69,7 +69,6 @@ To configure a server to use an InfluxDB, add `influxConfig` to the server confi
         "app":"Q2T",
         "enabled": true,
         "serverAddress":"unix:/path/to/tm.ipc",
-        "communicationType" : "REST",
         "influxConfig": {
             "serverAddress": "https://localhost:8086",  // InfluxDB server address
             "dbName": "myDb",                           // InfluxDB DB name (DB must already exist)
@@ -89,7 +88,6 @@ To configure a server to use an InfluxDB, add `influxConfig` to the server confi
         "app":"P2P",
         "enabled": true,
         "serverAddress":"http://localhost:9001",
-        "communicationType" : "REST",
         "influxConfig": {
             "serverAddress": "http://localhost:8087",
             "dbName": "anotherDb",
@@ -236,7 +234,7 @@ To create a dashboard similar to this:
 
     This metric can be used as an indirect method of monitoring the health of the network. Using some of the more advanced InfluxDB query options available in Grafana and the other metrics measurements available it may be possible to make this result more explicit.
 
-    [Alerts and rules](https://grafana.com/docs/alerting/notifications/) can be configured to determine when a node has disconnected and send notifications to pre-configured channels (for example Slack, email, etc.).
+    [Alerts and rules](https://grafana.com/docs/grafana/latest/alerting/) can be configured to determine when a node has disconnected and send notifications to pre-configured channels (for example Slack, email, etc.).
 
 1. Create <code>sendRaw</code> rate panel
     1. Select the correct data source from the *Queries to* dropdown list
@@ -286,7 +284,7 @@ The general steps to consolidate the logs for a Tessera network in Splunk are:
         To start Tessera with an XML configuration file:
 
         ``` bash
-        java -Dlogback.configurationFile=/path/to/logback-config.xml -jar /path/to/tessera-app-<version>-app.jar -configfile /path/to/config.json
+        tessera -Dlogback.configurationFile=/path/to/logback-config.xml  -configfile /path/to/config.json
         ```
 
     1. Set up Splunk *Universal Forwarders* (lightweight Splunk clients) on each Tessera host to forward log data for their node to the *Receiver*

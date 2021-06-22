@@ -79,17 +79,11 @@ password however this approach is not recommended for production environments.
 
 By default, Tessera uses an H2 file-based database, but any JDBC compatible database can be used.
 
-To do this, add the necessary drivers to the classpath, and run the `com.quorum.tessera.Launcher`
-class, as follows:
+To do this, add the necessary drivers to the lib directory and start as usual
 
 ```bash
-java -cp some-jdbc-driver.jar:/path/to/tessera-app.jar:. com.quorum.tessera.Launcher
-```
-
-For example, to use Oracle database:
-
-```bash
-java -cp ojdbc7.jar:tessera-app.jar:. com.quorum.tessera.Launcher -configfile config.json
+cp some-jdbc-driver.jar tessera-[version]/lib/
+./tessera-[version]/bin/tessera -configfile config.json
 ```
 
 [DDL scripts] are available for more popular databases, these can be adapted to whichever database

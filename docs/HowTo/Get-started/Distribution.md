@@ -9,7 +9,7 @@ description: Install Tessera
 * Download and unpack the latest `tessera-app-<VERSION>-app.zip|tar` distribution from the
     [`ConsenSys/tessera` repository](https://github.com/ConsenSys/tessera/releases/latest)
 
-```
+```shell
 $ tar xvf tessera-[version].tar
 $ tree tessera-[version]
 tessera-[version]
@@ -28,7 +28,8 @@ export PATH=$PATH:tessera-dist-[version]/bin
 ```
 
 * Run Tessera help to verify installation (use correct `/bin` script for your system): 
-```
+
+```shell
 ./tessera-dist-[version]/bin/tessera help
 ```
 
@@ -39,7 +40,8 @@ Additional functionality can be added to a distribution by adding `.jar` files t
 ### Adding Tessera artefacts
 
 Download and unpack the artefact:
-```
+
+```shell
 $ tar xvf aws-key-vault-[version].tar
 $ tree aws-key-vault-[version]
 aws-key-vault-[version].tar
@@ -50,6 +52,6 @@ aws-key-vault-[version].tar
 
 Copy the contents of the artefact's `/lib` into the distribution `/lib` (make sure to resolve any version conflicts/duplicated `.jar` files introduced during the copy):
 
-```
+```shell
  cp -a aws-key-vault-[version]/lib/. tessera-[version]/lib/
 ```

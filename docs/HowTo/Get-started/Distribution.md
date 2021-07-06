@@ -27,7 +27,7 @@ tessera-[version]
 export PATH=$PATH:tessera-dist-[version]/bin
 ```
 
-* Run Tessera help to verify installation (use correct `/bin` script for your system): 
+* Run Tessera help to verify installation (use correct `/bin` script for your system):
 
 ```shell
 ./tessera-dist-[version]/bin/tessera help

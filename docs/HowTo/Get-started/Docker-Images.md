@@ -6,7 +6,7 @@ description: Use Tessera Docker images
 
 Docker images are available at [quorumengineering/tessera](https://hub.docker.com/r/quorumengineering/tessera).
 
-Various images are available (Tessera, Tessera with additional key vault support, ...).  See Tessera's [Docker README](https://github.com/ConsenSys/tessera/blob/master/docker/README.md) for more information.
+Various images are available (Tessera, Tessera with additional key vault support, etc.).  See Tessera's [Docker README](https://github.com/ConsenSys/tessera/blob/master/docker/README.md) for more information.
 
 ## Usage
 

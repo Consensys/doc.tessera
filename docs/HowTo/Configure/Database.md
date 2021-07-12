@@ -47,7 +47,7 @@ password however this approach is not recommended for production environments.
 
 ### How to encrypt database password
 
-1. Download and unzip [Jasypt](http://www.jasypt.org) and redirect to the `bin` directory
+1. Download and unzip [Jasypt](https://github.com/jasypt/jasypt) and redirect to the `bin` directory
 1. Encrypt the password
 
     === "Command"

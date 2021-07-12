@@ -75,12 +75,13 @@ To authorise the newly registered app to use the Key Vault complete the followin
 
 ### Environment Variables
 
-If using an Azure Key Vault, Tessera requires two environment variables to be set:
+If using an Azure Key Vault, Tessera requires three environment variables to be set:
 
 1. `AZURE_CLIENT_ID`: The `Application ID`
 1. `AZURE_CLIENT_SECRET`: The application registration `key`
+1. `AZURE_TENANT_ID`: The Azure Active Directory `Tenant ID`
 
-Both of these values can be retrieved during the application registration process as outlined above.
+Each of these values can be retrieved during the application registration process as outlined above.
 
 ### Dependencies
 

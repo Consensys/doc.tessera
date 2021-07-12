@@ -19,7 +19,7 @@ Any valid JDBC URL may be specified, refer to your providers details to construc
 
 Certain entries in the Tessera configuration file must be obfuscated to prevent any attempts from
 attackers to gain access to critical parts of the application (for example the database).
-The database password can be encrypted using [Jasypt](http://www.jasypt.org) to avoid it being
+The database password can be encrypted using [Jasypt](https://github.com/jasypt/jasypt) to avoid it being
 exposed as plain text in the configuration file.
 
 To enable this feature, simply replace your plain-text database password with its encrypted value
@@ -47,7 +47,7 @@ password however this approach is not recommended for production environments.
 
 ### How to encrypt database password
 
-1. Download and unzip [Jasypt](http://www.jasypt.org) and redirect to the `bin` directory
+1. Download and unzip [Jasypt](https://github.com/jasypt/jasypt) and redirect to the `bin` directory
 1. Encrypt the password
 
     === "Command"

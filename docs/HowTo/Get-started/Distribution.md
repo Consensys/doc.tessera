@@ -6,7 +6,7 @@ description: Install Tessera
 
 * Install necessary [dependencies](Dependencies.md)
 
-* Download and unpack the latest `tessera-app-<VERSION>-app.zip|tar` distribution from the
+* Download and unpack the latest `tessera-dist-<VERSION>.zip|tar` distribution from the
     [`ConsenSys/tessera` repository](https://github.com/ConsenSys/tessera/releases/latest)
 
 ```shell
@@ -21,16 +21,17 @@ tessera-[version]
     ...
 ```
 
-* Add tessera script to path (optional but rest of documentation assumes its in the path)
-
-```shell
-export PATH=$PATH:tessera-dist-[version]/bin
-```
-
 * Verify the installation with the `help` command.
 
 ```shell
-./tessera-dist/build/distributions/tessera-<version>/ help
+./tessera-<version>/bin/tessera help
+```
+
+* Add tessera script to path (optional but rest of documentation assumes it's in the path)
+
+```shell
+export PATH=$PATH:tessera-[version]/bin
+tessera help
 ```
 
 ## Supplementing the distribution

@@ -16,7 +16,7 @@ Enable `orion` mode in the configuration file if GoQuorum privacy mode is not en
 The configuration can also be enabled using command line overrides:
 
 ```shell
-java -jar tessera.jar --configfile config.json -o mode="orion"
+tessera --configfile config.json -o mode="orion"
 ```
 
 Enabling `orion` mode changes Tessera's behaviour in the following ways:

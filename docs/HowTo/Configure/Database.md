@@ -19,7 +19,7 @@ Any valid JDBC URL may be specified, refer to your providers details to construc
 
 Certain entries in the Tessera configuration file must be obfuscated to prevent any attempts from
 attackers to gain access to critical parts of the application (for example the database).
-The database password can be encrypted using [Jasypt](http://www.jasypt.org) to avoid it being
+The database password can be encrypted using [Jasypt](https://github.com/jasypt/jasypt) to avoid it being
 exposed as plain text in the configuration file.
 
 To enable this feature, simply replace your plain-text database password with its encrypted value
@@ -47,7 +47,7 @@ password however this approach is not recommended for production environments.
 
 ### How to encrypt database password
 
-1. Download and unzip [Jasypt](http://www.jasypt.org) and redirect to the `bin` directory
+1. Download and unzip [Jasypt](https://github.com/jasypt/jasypt) and redirect to the `bin` directory
 1. Encrypt the password
 
     === "Command"
@@ -79,17 +79,11 @@ password however this approach is not recommended for production environments.
 
 By default, Tessera uses an H2 file-based database, but any JDBC compatible database can be used.
 
-To do this, add the necessary drivers to the classpath, and run the `com.quorum.tessera.Launcher`
-class, as follows:
+To do this, add the necessary drivers to the lib directory and start as usual
 
 ```bash
-java -cp some-jdbc-driver.jar:/path/to/tessera-app.jar:. com.quorum.tessera.Launcher
-```
-
-For example, to use Oracle database:
-
-```bash
-java -cp ojdbc7.jar:tessera-app.jar:. com.quorum.tessera.Launcher -configfile config.json
+cp some-jdbc-driver.jar tessera-[version]/lib/
+./tessera-[version]/bin/tessera -configfile config.json
 ```
 
 [DDL scripts] are available for more popular databases, these can be adapted to whichever database

@@ -29,13 +29,14 @@ Configuration entries can be [overridden from the command line].
       "app": "ThirdParty",
       "serverAddress": "http://localhost:9081",
       "bindingAddress": "String - url with port e.g. http://127.0.0.1:9081",
-      "communicationType": "REST"
+      "communicationType": "REST",
       "cors" : {
           "allowedMethods" : ["GET", "POST", "PUT", "DELETE", "OPTIONS", "HEAD"],
           "allowedOrigins" : ["http://localhost:63342"],
           "allowedHeaders" : ["content-type"],
           "allowCredentials" : true
-      },
+      }
+    },
     {
       "app": "Q2T",
       "serverAddress": "unix:/tmp/tm.ipc",

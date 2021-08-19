@@ -35,5 +35,5 @@ Build Tessera with the Gradle wrapper `gradlew`, omitting tests as follows:
 Verify the installation with the `help` command:
 
 ```bash
-java -jar tessera-dist/tessera-app/build/libs/tessera-app-<version>-app.jar help
+./tessera-dist/build/install/tessera/bin/tessera/ help
 ```

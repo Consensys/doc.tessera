@@ -1,5 +1,5 @@
 ---
-description: Configure servers for Tessera API 
+description: Configure servers for Tessera API
 ---
 
 # Configure servers for Tessera API
@@ -19,9 +19,10 @@ Specify the servers to be started as a list in `serverConfigs`.
 
 The server configuration has two address entries:
 
-- `serverAddress` - Always specified.
-- `bindingAddress` - Optional endpoint to use for the binding. Specify
-to bind to an internal IP while advertising an external IP using `serverAddress`.
+- `serverAddress` - Address of the server.
+  This can be specified as an IP address or a DNS name.
+- `bindingAddress` - (optional) Endpoint to use for the binding.
+  Specify to bind to an internal IP while advertising an external IP using `serverAddress`.
 
 Each server is individually configured and can advertise over HTTP, HTTPS, or a Unix Socket.
 
@@ -62,7 +63,7 @@ You can also [configure CORS](#configure-cors) for the `ThirdParty` server type.
         "serverAddress":"https://[host]:[port]/[path]",
         "communicationType" : "REST",
         "sslConfig": {
-            <SSL settings> 
+            <SSL settings>
         }
     }
     ```

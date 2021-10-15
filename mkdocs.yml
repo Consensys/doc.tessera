@@ -101,10 +101,11 @@ nav:
   - Tutorials:
       - Quorum Developer Quickstart: Tutorials/Quorum-Dev-Quickstart.md
   - Concepts:
-    - Privacy manager: Concepts/Privacy-manager.md
-    - Transaction manager: Concepts/Transaction-manager.md
-    - Enclave: Concepts/Enclave.md
-    - Enclave types: Concepts/Enclave-types.md
+    - Privacy manager:
+        - Overview: Concepts/Privacy-Manager/Privacy-manager.md
+        - Transaction manager: Concepts/Privacy-Manager/Transaction-manager.md
+        - Enclave: Concepts/Privacy-Manager/Enclave.md
+        - Enclave types: Concepts/Privacy-Manager/Enclave-types.md
     - Peer discovery: Concepts/p2p-discovery.md
     - Privacy Groups: Concepts/Privacy-Groups.md
     - Tessera API: Concepts/TesseraAPI.md
@@ -164,3 +165,7 @@ plugins:
         HowTo/Get-started/DistributionJar.md: HowTo/Get-started/Distribution.md
         Reference/SampleConfiguration.md: Reference/BootstrapSampleConfiguration.md
         HowTo/Use/Add-peer.md: Concepts/p2p-discovery.md
+        Concepts/Privacy-manager.md: Concepts/Privacy-Manager/Privacy-manager.md
+        Concepts/Transaction-manager.md: Concepts/Privacy-Manager/Transaction-manager.md
+        Concepts/Enclave.md: Concepts/Privacy-Manager/Enclave.md
+        Concepts/Enclave-types.md: Concepts/Privacy-Manager/Enclave-types.md

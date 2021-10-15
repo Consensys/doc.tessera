@@ -191,7 +191,7 @@ Each server can also be configured to:
 
 ### `ENCLAVE`
 
-Defines an optional remote enclave. Leave out if using a [local enclave](../Concepts/Enclave-types.md).
+Defines an optional remote enclave. Leave out if using a [local enclave](../Concepts/Privacy-Manager/Enclave-types.md).
 
 | Field                    | Required | Description                                                                              |
 |--------------------------|--:- :----|------------------------------------------------------------------------------------------|

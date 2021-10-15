@@ -113,4 +113,4 @@ Use the `upcheck` method to confirm Tessera is up and running.
     I'm up!
     ```
 
-[transaction manager and local enclave]: ../../Concepts/Privacy-manager.md
+[transaction manager and local enclave]: ../../Concepts/Privacy-Manager/Privacy-manager.md

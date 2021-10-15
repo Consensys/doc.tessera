@@ -4,7 +4,7 @@ description: Configuring Tessera enclave
 
 # Configure Tessera enclave
 
-[Enclave](../../Concepts/Enclave.md) configuration depends on the [type of enclave](../../Concepts/Enclave-types.md) being used.
+[Enclave](../../Concepts/Privacy-Manager/Enclave.md) configuration depends on the [type of enclave](../../Concepts/Privacy-Manager/Enclave-types.md) being used.
 
 ## Local enclave
 

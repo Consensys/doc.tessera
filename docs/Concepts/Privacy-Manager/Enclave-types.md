@@ -20,4 +20,4 @@ For additional security, the remote HTTP Enclave can be deployed in a secure env
 from the transaction manager.
 
 The enclave must be present and running at transaction manager startup. Specify the connection
-details for the remote enclave server in the [Tessera configuration file](../Reference/SampleConfiguration.md#enclave).
+details for the remote enclave server in the [Tessera configuration file](../../Reference/SampleConfiguration.md#enclave).

@@ -95,6 +95,7 @@ nav:
     - Use:
       - Monitoring: HowTo/Use/Monitoring.md
       - Logging: HowTo/Use/Logging.md
+      - Mandatory recipients: HowTo/Use/Mandatory-Recipients.md
     - Migrate:
       - Migrate from Orion: HowTo/Migrate/MigrateFromOrion.md
       - Multi-tenancy migration: HowTo/Migrate/Migration-Multitenancy.md

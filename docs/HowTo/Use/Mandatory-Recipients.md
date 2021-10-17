@@ -4,12 +4,12 @@ description: How to use mandatory recipients
 
 # Mandatory recipients
 
-Tessera allows you to define one or more recipients as "mandatory" for a private contract.
+Tessera allows you to define one or more recipients as mandatory for a private contract.
 
 The mandatory recipient is included in all subsequent transactions to the contract and has full private state, while
 normal recipients may only have partial state of the contract.
 
-Define mandatory recipients if you need "governing" or "central" nodes to have full private state for any contracts
+Define mandatory recipients if you need governing or central nodes to have full private state for any contracts
 deployed in the network.
 
 ## Using mandatory recipients

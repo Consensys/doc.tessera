@@ -9,6 +9,6 @@ The only mandatory parameter to run the [Transaction Manager] is the location of
 
 Other CLI arguments can be passed, and details of these commands can be found in their respective pages - particularly around key vaults and key generation.
 
-[Transaction Manager]: ../../Concepts/Transaction-manager.md
+[Transaction Manager]: ../../Concepts/Privacy-Manager/Transaction-manager.md
 [starting Tessera]: ../Get-started/Start-Tessera.md
 [configuration file]: ../../Reference/SampleConfiguration.md

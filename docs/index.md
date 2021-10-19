@@ -3,7 +3,7 @@ title: Tessera Private Transaction Manager
 description: Tessera is an open-source private transaction manager developed under the Apache 2.0 license and written in Java.
 ---
 
-# Tessera Private Transaction Manager
+# Tessera private transaction manager
 
 ## What is Tessera?
 

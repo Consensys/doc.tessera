@@ -78,15 +78,15 @@ nav:
          - AWS Secret Manager keys: HowTo/Configure/Keys/AWS-Secrets-Pairs.md
          - HashiCorp Vault keys: HowTo/Configure/Keys/Hashicorp-Vault-Pairs.md
          - Secure keys using Argon2: HowTo/Configure/Keys/Secure-Keys.md
+      - Key vault:
+          - Azure Key Vault: HowTo/Configure/KeyVault/Azure-Key-Vault.md
+          - AWS Secrets Manager: HowTo/Configure/KeyVault/AWS-Secrets-Manager.md
+          - Hashicorp Vault: HowTo/Configure/KeyVault/Hashicorp-Vault.md
       - Servers: HowTo/Configure/TesseraAPI.md
       - Peer discovery: HowTo/Configure/Peer-discovery.md
       - TLS: HowTo/Configure/TLS.md
       - Database: HowTo/Configure/Database.md
       - Data recovery: HowTo/Configure/Data-Recovery.md
-      - Key vault:
-         - Hashicorp Vault: HowTo/Configure/KeyVault/Hashicorp-Vault.md
-         - AWS Secrets Manager: HowTo/Configure/KeyVault/AWS-Secrets-Manager.md
-         - Azure Key Vault: HowTo/Configure/KeyVault/Azure-Key-Vault.md
       - Override configuration file: HowTo/Configure/Override-config.md
       - Cryptographic elliptic curves: HowTo/Configure/Cryptographic-elliptic-curves.md
       - Hyperledger Besu support: HowTo/Configure/Orion-Mode.md

@@ -4,16 +4,19 @@ description: Configuring Tessera enclave
 
 # Configure Tessera enclave
 
-[Enclave](../../Concepts/Privacy-Manager/Enclave.md) configuration depends on the [type of enclave](../../Concepts/Privacy-Manager/Enclave-types.md) being used.
+You must configure an [enclave](../../Concepts/Privacy-Manager/Enclave.md) in the Tessera [configuration file](Tessera.md).
+Enclave configuration depends on the [enclave type](../../Concepts/Privacy-Manager/Enclave-types.md) used.
 
 ## Local enclave
 
-In the transaction manager's configuration file:
+To configure a [local enclave](../../Concepts/Privacy-Manager/Enclave-types.md#local-enclave), in the
+[configuration file](Tessera.md):
 
-* Do not configure an `ENCLAVE` server.
+* Do not configure an [`ENCLAVE` server](../../Reference/SampleConfiguration.md#enclave).
 * Configure the [enclave's keys](Keys/Overview.md).
 
-!!! example "Transaction manager configuration file"
+!!! example "Transaction manager configuration file with a local enclave"
+
     ```json
     {
       "keys": {
@@ -27,21 +30,27 @@ In the transaction manager's configuration file:
     }
     ```
 
-Starting the transaction manager will start the local enclave as part of the same process; for example:
+Starting the transaction manager starts the local enclave as part of the same process:
 
-```shell
+```bash
 # start the transaction manager and enclave
 tessera --configfile /path/to/tm-config.json
 ```
 
 ## Remote HTTP enclave
 
-In the remote HTTP enclave's configuration file:
+To configure a [remote HTTP enclave](../../Concepts/Privacy-Manager/Enclave-types.md#remote-http-enclave), you must
+configure the enclave and [transaction manager](../../Concepts/Privacy-Manager/Transaction-manager.md) in separate
+[configuration files](Tessera.md).
 
-* Configure an [`ENCLAVE` server](../../Reference/SampleConfiguration.md#enclave).  Include TLS configuration as appropriate, with the transaction manager as a client of the enclave.
+In the remote HTTP enclave configuration file:
+
+* Configure an [`ENCLAVE` server](../../Reference/SampleConfiguration.md#enclave).
+  Include TLS configuration as appropriate, with the transaction manager as a client of the enclave.
 * Configure the [enclave's keys](Keys/Overview.md).
 
 !!! example "Remote HTTP enclave configuration file"
+
     ```json
     {
      "serverConfigs": [{
@@ -59,9 +68,10 @@ In the remote HTTP enclave's configuration file:
     }
     ```
 
-In the transaction manager's configuration file:
+In the transaction manager configuration file:
 
-* Configure an additional [`serverConfig`](Tessera.md#server) for the `ENCLAVE` client. Include TLS configuration as appropriate.
+* Configure an [`ENCLAVE` server](../../Reference/SampleConfiguration.md#enclave).
+  Include TLS configuration as appropriate.
 * Do not configure any keys.
 
 !!! example "Transaction manager configuration file"
@@ -83,9 +93,9 @@ In the transaction manager's configuration file:
     }
     ```
 
-The remote HTTP enclave must be started before the transaction manager; for example:
+The remote HTTP enclave must be started before the transaction manager:
 
-```shell
+```bash
 # start the enclave
 enclave-jaxrs/bin/enclave-jaxrs --configfile /path/to/enclave-config.json
 
@@ -93,10 +103,10 @@ enclave-jaxrs/bin/enclave-jaxrs --configfile /path/to/enclave-config.json
 tessera --configfile /path/to/tm-config.json
 ```
 
-If using key vault-stored keys, the corresponding key vault JAR must be included on the classpath; for example:
+If using vault-stored keys, the corresponding key vault JAR must be included on the classpath:
 
-    ```shell
-    # start the enclave
-    cp hashicorp-key-vault/lib/* path/to/enclave-jaxrs-[version]/lib
-    path/to/enclave-jaxrs-[version]/bin/enclave-jaxrs -configfile /path/to/enclave-config.json
-    ```
+```bash
+# start the enclave
+cp hashicorp-key-vault/lib/* path/to/enclave-jaxrs-[version]/lib
+path/to/enclave-jaxrs-[version]/bin/enclave-jaxrs -configfile /path/to/enclave-config.json
+```

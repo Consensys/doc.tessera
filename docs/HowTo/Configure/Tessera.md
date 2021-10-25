@@ -2,15 +2,23 @@
 description: Configure Tessera
 ---
 
-# Configure Tessera
+# Overview
 
 Provide a [JSON configuration file] using the [`--configfile`](../../Reference/CLI/CLI-Syntax.md#configfile)
-command-line option when [starting Tessera].
+command line option when [starting Tessera].
 
 The configuration file must contain the options to start the transaction manager with a
-[local or remote Enclave](Enclave.md).
+[local or remote enclave](Enclave.md).
 
-[Many configuration options can be overridden](Override-config.md) using the command-line.
+You can also configure:
+
+- Access to [keys](Keys/Overview.md).
+- The [Tessera API servers](TesseraAPI.md).
+
+You can [override configuration options](Override-config.md) using the command line.
+
+View an [example configuration file](../../Reference/SampleConfiguration.md#example-configuration-file) and
+[descriptions for each configuration item](../../Reference/SampleConfiguration.md#configuration-items).
 
 [JSON configuration file]: ../../Reference/SampleConfiguration.md
 [starting Tessera]: ../Get-started/Start-Tessera.md

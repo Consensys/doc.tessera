@@ -2,11 +2,13 @@
 description: Sample configuration file
 ---
 
-# Configuration File
+# Configuration file
 
-The Configuration file is a JSON file that must be specified when [starting Tessera].
+The [configuration file](../HowTo/Configure/Tessera.md) is a JSON file that must be specified when [starting Tessera].
 
-Configuration entries can be [overridden from the command line].
+Configuration items can be [overridden from the command line].
+
+## Example configuration file
 
 ```json
 {
@@ -149,7 +151,9 @@ Configuration entries can be [overridden from the command line].
 }
 ```
 
-## `mode`
+## Configuration items
+
+### `mode`
 
 Set the `mode` to `orion` to use Tessera as the privacy manager when using [Hyperledger Besu] in
 non-GoQuorum mode.
@@ -158,12 +162,12 @@ Enabling this mode [changes Tessera’s behaviour].
 
 This property is optional.
 
-## `useWhiteList`
+### `useWhiteList`
 
 Use the `useWhiteList` field to restrict connections to Tessera to specified peers. If set to `true`,
 then only nodes listed in the [`peer`](#peer) list are allowed to connect.
 
-## `jdbc`
+### `jdbc`
 
 Use the `jdbc` property to connect to the database. You can also specify an external database.
 Any valid JDBC URL can be specified.
@@ -175,7 +179,7 @@ Any valid JDBC URL can be specified.
 |`password`                | Required | Database password. You can also [encrypt the password using Jasypt].        |
 |`autoCreateTables`        | Optional | Automatically generates the required database tables. If `false`, then users must manually create the required tables using the [supplied DDLs]. Defaults to `false`.|
 
-## `serverConfigs`
+### `serverConfigs`
 
 Use the `serverConfigs` property to configure the following servers:
 
@@ -189,9 +193,10 @@ Each server can also be configured to:
 * Secure communication using [TLS]
 * Store API metrics in an [InfluxDB]
 
-### `ENCLAVE`
+#### `ENCLAVE`
 
-Defines an optional remote enclave. Leave out if using a [local enclave](../Concepts/Privacy-Manager/Enclave-types.md).
+Defines an optional [remote enclave](../Concepts/Privacy-Manager/Enclave-types.md#remote-http-enclave).
+Leave out if using a [local enclave](../Concepts/Privacy-Manager/Enclave-types.md#local-enclave).
 
 | Field                    | Required | Description                                                                              |
 |--------------------------|--:- :----|------------------------------------------------------------------------------------------|
@@ -199,10 +204,10 @@ Defines an optional remote enclave. Leave out if using a [local enclave](../Conc
 | `serverAddress`          | Required | [Server address](../HowTo/Configure/TesseraAPI.md).                                      |
 | `bindingAddress`         | Optional | Specify a bind to an internal IP while advertising an external IP using `serverAddress`. |
 | `communicationType`      | Required | Type of server communication. Only `REST` is currently supported.                        |
-| `influxConfig`           | Optional | [Configure the server to use InfluxDB](#influxconfig).                                |
+| `influxConfig`           | Optional | [Configure the server to use InfluxDB](#influxconfig).                                   |
 | `sslConfig   `           | Optional | [Secure communication with TLS](#sslconfig).                                             |
 
-### `P2P`
+#### `P2P`
 
 The P2P (peer-to-peer) server is used to perform discovery and send and receive encrypted payloads.
 
@@ -215,7 +220,7 @@ The P2P (peer-to-peer) server is used to perform discovery and send and receive 
 | `influxConfig`           | Optional | [Configure the server to use InfluxDB](#influxconfig).                                |
 | `sslConfig   `           | Optional | [Secure communication with TLS](#sslconfig).                                             |
 
-### `Q2T`
+#### `Q2T`
 
 The Q2T (Quorum-to-Tessera) server is used to check if the Tessera node is running, and send and
 receive private transactions.
@@ -229,7 +234,7 @@ receive private transactions.
 | `influxConfig`           | Optional | [Configure the server to use InfluxDB](#influxconfig).                                   |
 | `sslConfig   `           | Optional | [Secure communication with TLS](#sslconfig).                                             |
 
-### `ThirdParty`
+#### `ThirdParty`
 
 Tessera uses the server to store encrypted payloads for external applications.
 
@@ -243,7 +248,7 @@ Tessera uses the server to store encrypted payloads for external applications.
 | `influxConfig`           | Optional | [Configure the server to use InfluxDB](#influxconfig).                                   |
 | `sslConfig   `           | Optional | [Secure communication with TLS](#sslconfig).                                             |
 
-### `influxConfig`
+#### `influxConfig`
 
 Configure InfuxDB settings to record metrics.
 
@@ -254,7 +259,7 @@ Configure InfuxDB settings to record metrics.
 | `pushIntervalInSecs`     | Required | How frequently Tessera pushes metrics to the database.                                     |
 | `sslConfig   `           | Optional | [Configure one-way TLS]; meaning clients can validate the identity of the InfluxDB server. |
 
-### `sslConfig`
+#### `sslConfig`
 
 | Field                    | Required | Description                                                                                  |
 |--------------------------|--:- :----|----------------------------------------------------------------------------------------------|
@@ -280,7 +285,7 @@ Configure InfuxDB settings to record metrics.
 | `knownServersFile`         | Optional | Known servers file for the client. This contains the fingerprints of public keys of other nodes that this node has encountered. |
 | `environmentVariablePrefix`| Optional | Prefix to uniquely identify environment variables for this server SSL configuration.       |
 
-### `cors`
+#### `cors`
 
 Configure cross-origin resource sharing (CORS) to control access to resources outside the domain.
 
@@ -295,13 +300,13 @@ Configure cross-origin resource sharing (CORS) to control access to resources ou
 | `allowedHeaders`         | Optional | List of allowed headers. If omitted, the request `Access-Control-Request-Headers` are copied into the response as `Access-Control-Allow-Headers`.     |
 | `allowCredentials`       | Optional | The value for the Access-Control-Allow-Credentials response header. Defaults to `true`.     |
 
-## `peer`
+### `peer`
 
 [List of Tessera node URLs] used to discover other nodes.
 
-## `keys`
+### `keys`
 
-Configure access to your keys.
+Configure access to your [keys](../HowTo/Configure/Keys/Overview.md).
 
 | Field                    | Required | Description                                                        |
 |--------------------------|--:- :----|--------------------------------------------------------------------|
@@ -309,7 +314,7 @@ Configure access to your keys.
 | `keyVaultConfigs`        | Optional | [Configuration details of the vault being used](#keyvaultvonfigs). |
 | `keyData`                | Required | [Details to access the private and public key pair](#keydata).     |
 
-### `keyVaultConfigs`
+#### `keyVaultConfigs`
 
 Configuration details for the vault being used.
 
@@ -318,7 +323,7 @@ Configuration details for the vault being used.
 | `keyVaultType`           | Optional | Type of vault. Options are `HASHICORP`, `AWS`, and `AZURE`.                              |
 | `properties`             | Optional | Properties to access the [AWS Secrets Manager], [Azure Key Vault], or [HashiCorp Vault] vaults. |
 
-### `keyData`
+#### `keyData`
 
 Details to access the private key and public key.
 
@@ -341,7 +346,7 @@ Details to access the private key and public key.
 | `hashicorpVaultPrivateKeyId`  | Optional | ID of the private key secret in [HashiCorp Vault].                                       |
 | `hashicorpVaultPublicKeyId`   | Optional | ID of the public key secret in [HashiCorp Vault].                                        |
 
-## `alwaysSendTo`
+### `alwaysSendTo`
 
 Comma-separated list of public keys to include as recipients for every transaction sent through the
 node. This allows you to configure a node that is sent a copy of every transaction, even if it is
@@ -351,15 +356,15 @@ This could be used, for example, to send a copy of every transaction to a
 node for audit purposes. Specify the public keys to forward transactions to, and these will be
 included as if you had specified them on the `privateFor` field.
 
-## `bootstrapNode`
+### `bootstrapNode`
 
 If set to `true`, then the node functions as a bootstrap for other nodes.
 
-## `unixSocketFile`
+### `unixSocketFile`
 
 Path to the Unix socket file.
 
-## `features`
+### `features`
 
 Enables additional security and privacy features.
 
@@ -369,7 +374,7 @@ Enables additional security and privacy features.
 | `enablePrivacyEnhancements` | Optional | Enable Party Protection (PP) and Private State Validation (PSV). Defaults to `false`.    |
 | `enableMultiplePrivateStates` | Optional | Enable Multiple Private States feature. Defaults to `false`.                           |
 
-## `encryptor`
+### `encryptor`
 
 [Configure Tessera to use alternative curves and symmetric ciphers].
 

@@ -4,10 +4,9 @@ description: Configure servers for Tessera API
 
 # Configure servers for Tessera API
 
-Configure the [servers for the Tessera API](../../Concepts/TesseraAPI.md) in the
-[Tessera configuration file](Tessera.md).
+You can configure the [servers for the Tessera API](../../Concepts/TesseraAPI.md) in the Tessera [configuration file](Tessera.md).
 
-Specify the servers to be started as a list in `serverConfigs`.
+Specify the servers to be started as a list in [`serverConfigs`](../../Reference/SampleConfiguration.md#serverconfigs).
 
 ```json
 "serverConfigs": [
@@ -15,7 +14,7 @@ Specify the servers to be started as a list in `serverConfigs`.
 ]
 ```
 
-## Server Addresses
+## Server addresses
 
 The server configuration has two address entries:
 
@@ -24,13 +23,14 @@ The server configuration has two address entries:
 - `bindingAddress` - (optional) Endpoint to use for the binding.
   Specify to bind to an internal IP while advertising an external IP using `serverAddress`.
 
-Each server is individually configured and can advertise over HTTP, HTTPS, or a Unix Socket.
+Each server is individually configured and can advertise over [HTTP](#http-server-configuration),
+[HTTPS](#https-server-configuration), or a [Unix Socket](#unix-socket-server-configuration).
 
 You can also [configure CORS](#configure-cors) for the `ThirdParty` server type.
 
 ### HTTP server configuration
 
-=== "HTTP"
+=== "Syntax"
 
     ```json
     {
@@ -41,20 +41,20 @@ You can also [configure CORS](#configure-cors) for the `ThirdParty` server type.
     }
     ```
 
-=== "Third Party Example"
+=== "`ThirdParty` example"
 
     ```json
     {
-       "app": "ThirdParty",
-       "enabled": true,
-       "serverAddress": "http://localhost:9081",
-       "communicationType": "REST"
+        "app": "ThirdParty",
+        "enabled": true,
+        "serverAddress": "http://localhost:9081",
+        "communicationType": "REST"
     }
     ```
 
 ### HTTPS server configuration
 
-=== "HTTPS"
+=== "Syntax"
 
     ```json
     {
@@ -68,7 +68,7 @@ You can also [configure CORS](#configure-cors) for the `ThirdParty` server type.
     }
     ```
 
-=== "P2P Example"
+=== "P2P example"
 
     ```json
     {
@@ -113,7 +113,7 @@ You can also [configure CORS](#configure-cors) for the `ThirdParty` server type.
 
 ### Unix socket server configuration
 
-=== "Unix socket"
+=== "Syntax"
 
     ```json
     {

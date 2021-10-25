@@ -67,20 +67,19 @@ nav:
       - Azure Key Vault: HowTo/Generate-Keys/Azure-Key-Vault.md
       - AWS Secrets Manager: HowTo/Generate-Keys/AWS-Secrets-Manager.md
     - Configure:
-      - Configuration file: HowTo/Configure/Tessera.md
-      - Transaction manager: HowTo/Configure/Transaction-manager.md
+      - Overview: HowTo/Configure/Tessera.md
       - Enclave: HowTo/Configure/Enclave.md
       - Keys:
          - Overview: HowTo/Configure/Keys/Overview.md
          - Direct keys: HowTo/Configure/Keys/Direct-Key-Pairs.md
          - Inline keys: HowTo/Configure/Keys/Inline-Key-Pairs.md
          - File-based keys: HowTo/Configure/Keys/File-Based-Key-Pairs.md
-         - AWS Secret Manager keys: HowTo/Configure/Keys/AWS-Secrets-Pairs.md
          - Azure Key Vault keys: HowTo/Configure/Keys/Azure-Key-Vault-Pairs.md
+         - AWS Secret Manager keys: HowTo/Configure/Keys/AWS-Secrets-Pairs.md
          - HashiCorp Vault keys: HowTo/Configure/Keys/Hashicorp-Vault-Pairs.md
          - Secure keys using Argon2: HowTo/Configure/Keys/Secure-Keys.md
-      - Peer discovery: HowTo/Configure/Peer-discovery.md
       - Servers: HowTo/Configure/TesseraAPI.md
+      - Peer discovery: HowTo/Configure/Peer-discovery.md
       - TLS: HowTo/Configure/TLS.md
       - Database: HowTo/Configure/Database.md
       - Data recovery: HowTo/Configure/Data-Recovery.md
@@ -164,9 +163,9 @@ plugins:
         HowTo/Configure/Keys.md: HowTo/Configure/Keys/Overview.md
         Tutorials/Migration-Multitenancy.md: HowTo/Migrate/Migration-Multitenancy.md
         HowTo/Get-started/DistributionJar.md: HowTo/Get-started/Distribution.md
-        Reference/SampleConfiguration.md: Reference/BootstrapSampleConfiguration.md
         HowTo/Use/Add-peer.md: Concepts/p2p-discovery.md
         Concepts/Privacy-manager.md: Concepts/Privacy-Manager/Privacy-manager.md
         Concepts/Transaction-manager.md: Concepts/Privacy-Manager/Transaction-manager.md
         Concepts/Enclave.md: Concepts/Privacy-Manager/Enclave.md
         Concepts/Enclave-types.md: Concepts/Privacy-Manager/Enclave-types.md
+        HowTo/Configure/Transaction-Manager.md: HowTo/Configure/Tessera.md

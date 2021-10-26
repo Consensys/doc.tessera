@@ -348,17 +348,15 @@ Configuration details to [access the private key and public key](../HowTo/Config
 
 ### `alwaysSendTo`
 
-Comma-separated list of public keys to include as recipients for every transaction sent through the
-node. This allows you to configure a node that is sent a copy of every transaction, even if it is
-not specified as a party to the transaction.
+Comma-separated list of public keys to include as recipients for every transaction sent through the node.
+This allows you to configure a node that is sent a copy of every transaction, even if it isn't specified as a party to
+the transaction.
 
-This could be used, for example, to send a copy of every transaction to a
-node for audit purposes. Specify the public keys to forward transactions to, and these will be
-included as if you had specified them on the `privateFor` field.
+This can be used, for example, to send a copy of every transaction to a node for audit purposes.
 
 ### `bootstrapNode`
 
-If set to `true`, then the node functions as a bootstrap for other nodes.
+If set to `true`, the node functions as a [bootstrap](BootstrapSampleConfiguration.md) for other nodes.
 
 ### `unixSocketFile`
 

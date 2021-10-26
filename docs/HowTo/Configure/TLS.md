@@ -98,8 +98,8 @@ You can provide passwords for secured `.jks` key stores in multiple ways, and in
 
 #### 1. Prefixed environment variables
 
-* `<PREFIX>_TESSERA_SERVER_KEYSTORE_PWD`, `<PREFIX>_TESSERA_SERVER_TRUSTSTORE_PWD`
-* `<PREFIX>_TESSERA_CLIENT_KEYSTORE_PWD`, `<PREFIX>_TESSERA_CLIENT_TRUSTSTORE_PWD`
+- `<PREFIX>_TESSERA_SERVER_KEYSTORE_PWD`, `<PREFIX>_TESSERA_SERVER_TRUSTSTORE_PWD`
+- `<PREFIX>_TESSERA_CLIENT_KEYSTORE_PWD`, `<PREFIX>_TESSERA_CLIENT_TRUSTSTORE_PWD`
 
 The prefixed environment variables are only applied to the servers with that `environmentVariablePrefix` value defined
 in their configuration.
@@ -108,13 +108,13 @@ Different key stores can then be used for each server and the individual passwor
 
 #### 2. Configuration file
 
-* `serverKeyStorePassword`, `serverTrustStorePassword`
-* `clientKeyStorePassword`, `clientTrustStorePassword`
+- `serverKeyStorePassword`, `serverTrustStorePassword`
+- `clientKeyStorePassword`, `clientTrustStorePassword`
 
 #### 3. Global environment variables
 
-* `TESSERA_SERVER_KEYSTORE_PWD`, `TESSERA_SERVER_TRUSTSTORE_PWD`
-* `TESSERA_CLIENT_KEYSTORE_PWD`, `TESSERA_CLIENT_TRUSTSTORE_PWD`
+- `TESSERA_SERVER_KEYSTORE_PWD`, `TESSERA_SERVER_TRUSTSTORE_PWD`
+- `TESSERA_CLIENT_KEYSTORE_PWD`, `TESSERA_CLIENT_TRUSTSTORE_PWD`
 
 The global environment variables, if set, are applied to all server configurations defined in the configuration file.
 

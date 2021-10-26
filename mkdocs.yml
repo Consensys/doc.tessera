@@ -81,7 +81,7 @@ nav:
       - Key vault:
           - Azure Key Vault: HowTo/Configure/KeyVault/Azure-Key-Vault.md
           - AWS Secrets Manager: HowTo/Configure/KeyVault/AWS-Secrets-Manager.md
-          - Hashicorp Vault: HowTo/Configure/KeyVault/Hashicorp-Vault.md
+          - HashiCorp Vault: HowTo/Configure/KeyVault/Hashicorp-Vault.md
       - Servers: HowTo/Configure/TesseraAPI.md
       - Peer discovery: HowTo/Configure/Peer-discovery.md
       - TLS: HowTo/Configure/TLS.md
@@ -94,7 +94,7 @@ nav:
       - Monitoring: HowTo/Use/Monitoring.md
       - Logging: HowTo/Use/Logging.md
       - Mandatory recipients: HowTo/Use/Mandatory-Recipients.md
-      - Data recovery: HowTo/Configure/Data-Recovery.md
+      - Data recovery: HowTo/Use/Data-Recovery.md
     - Migrate:
       - Migrate from Orion: HowTo/Migrate/MigrateFromOrion.md
       - Multi-tenancy migration: HowTo/Migrate/Migration-Multitenancy.md

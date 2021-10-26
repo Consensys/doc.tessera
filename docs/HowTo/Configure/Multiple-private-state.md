@@ -5,7 +5,7 @@ description: Configure Tessera to support GoQuorum multiple private states featu
 # Configure multiple private states
 
 You can enable support for multiple GoQuorum private states by setting
-[`enableMultiplePrivateStates`](../../Reference/SampleConfiguration.md#features) in the [configuration file](Tessera.md)
+[`enableMultiplePrivateStates`](../../Reference/SampleConfiguration.md#features) in the Tessera [configuration file](Tessera.md)
 to `true`.
 
 !!! example "Enable multiple private states configuration"

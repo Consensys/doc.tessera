@@ -155,11 +155,9 @@ Configuration items can be [overridden from the command line].
 
 ### `mode`
 
-Set the `mode` to `orion` to use Tessera as the privacy manager when using [Hyperledger Besu] in
-non-GoQuorum mode.
-
-Enabling this mode [changes Tessera’s behaviour].
-
+Set the `mode` to `orion` to use Tessera as the privacy manager when using
+[Hyperledger Besu in non-GoQuorum mode](https://besu.hyperledger.org/en/stable/HowTo/Use-Privacy/Use-GoQuorum-compatible-privacy/).
+[Enabling this mode](../HowTo/Configure/Orion-Mode.md) changes Tessera's behavior.
 This property is optional.
 
 ### `useWhiteList`
@@ -310,43 +308,43 @@ resources outside the domain.
 
 Configure access to your [keys](../HowTo/Configure/Keys/Overview.md).
 
-| Field                    | Required | Description                                                        |
-|--------------------------|--:- :----|--------------------------------------------------------------------|
-| `passwordFile`           | Optional | [Path to the password file].                                       |
-| `keyVaultConfigs`        | Optional | [Configuration details of the vault being used](#keyvaultvonfigs). |
-| `keyData`                | Required | [Details to access the private and public key pair](#keydata).     |
+| Field             | Required | Description                                                        |
+|-------------------|--:- :----|--------------------------------------------------------------------|
+| `passwordFile`    | Optional | [Path to the password file].                                       |
+| `keyVaultConfigs` | Optional | [Configuration details of the vault being used](#keyvaultvonfigs). |
+| `keyData`         | Required | [Details to access the private and public key pair](#keydata).     |
 
 #### `keyVaultConfigs`
 
-Configuration details for the vault being used.
+Configuration details for the vault used.
 
-| Field                    | Required | Description                                                                              |
-|--------------------------|--:- :----|------------------------------------------------------------------------------------------|
-| `keyVaultType`           | Optional | Type of vault. Options are `HASHICORP`, `AWS`, and `AZURE`.                              |
-| `properties`             | Optional | Properties to access the [AWS Secrets Manager], [Azure Key Vault], or [HashiCorp Vault] vaults. |
+| Field          | Required | Description                                                                          |
+|----------------|--:- :----|--------------------------------------------------------------------------------------|
+| `keyVaultType` | Optional | Type of vault. Options are `HASHICORP`, `AWS`, and `AZURE`.                          |
+| `properties`   | Optional | Properties to access [AWS Secrets Manager], [Azure Key Vault], or [HashiCorp Vault]. |
 
 #### `keyData`
 
-Details to access the private key and public key.
+Configuration details to [access the private key and public key](../HowTo/Configure/Keys/Overview.md).
 
-| Field                         | Required | Description                                                                              |
-|-------------------------------|--:- :----|------------------------------------------------------------------------------------------|
-| `config`                      | Optional | Configuration details for the [protected] or [unprotected] inline key pairs.             |
-| `privateKey`                  | Optional | Private key in plain text.                                                               |
-| `privateKeyPath`              | Optional | [Path to the private key file].                                                          |
-| `publicKey`                   | Optional | Public key in plain text.                                                                |
-| `publicKeyPath`               | Optional | [Path to the public key file].                                                           |
-| `awsSecretsManagerPublicKeyId` | Optional | ID of the public key secret in [AWS Secrets Manager].                                   |
-| `awsSecretsManagerPrivateKeyId` | Optional | ID of the private key secret in [AWS Secrets Manager].                                 |
-| `azureVaultPrivateKeyId`      | Optional | ID of the private key secret in [Azure Key Vault].                                       |
-| `azureVaultPrivateKeyVersion` | Optional | Version of the private key to access in [Azure Key Vault].                               |
-| `azureVaultPublicKeyId`       | Optional | ID of the public key secret in [Azure Key Vault].                                        |
-| `azureVaultPublicKeyVersion`  | Optional | Version of the private key to access in [Azure Key Vault].                               |
-| `hashicorpVaultSecretEngineName` | Optional | Name of the [HashiCorp Vault] secrets engine.                                         |
-| `hashicorpVaultSecretName`    | Optional | Name of the secret in the [HashiCorp Vault] secrets engine.                              |
-| `hashicorpVaultSecretVersion` | Optional | Version of the secret in the [HashiCorp Vault] secrets engine.                           |
-| `hashicorpVaultPrivateKeyId`  | Optional | ID of the private key secret in [HashiCorp Vault].                                       |
-| `hashicorpVaultPublicKeyId`   | Optional | ID of the public key secret in [HashiCorp Vault].                                        |
+| Field                            | Required | Description                                                                  |
+|----------------------------------|--:- :----|------------------------------------------------------------------------------|
+| `config`                         | Optional | Configuration details for the [protected] or [unprotected] inline key pairs. |
+| `privateKey`                     | Optional | Private key in plain text.                                                   |
+| `privateKeyPath`                 | Optional | [Path to the private key file].                                              |
+| `publicKey`                      | Optional | Public key in plain text.                                                    |
+| `publicKeyPath`                  | Optional | [Path to the public key file].                                               |
+| `awsSecretsManagerPublicKeyId`   | Optional | ID of the public key secret in [AWS Secrets Manager].                        |
+| `awsSecretsManagerPrivateKeyId`  | Optional | ID of the private key secret in [AWS Secrets Manager].                       |
+| `azureVaultPrivateKeyId`         | Optional | ID of the private key secret in [Azure Key Vault].                           |
+| `azureVaultPrivateKeyVersion`    | Optional | Version of the private key to access in [Azure Key Vault].                   |
+| `azureVaultPublicKeyId`          | Optional | ID of the public key secret in [Azure Key Vault].                            |
+| `azureVaultPublicKeyVersion`     | Optional | Version of the private key to access in [Azure Key Vault].                   |
+| `hashicorpVaultSecretEngineName` | Optional | Name of the [HashiCorp Vault] secrets engine.                                |
+| `hashicorpVaultSecretName`       | Optional | Name of the secret in the [HashiCorp Vault] secrets engine.                  |
+| `hashicorpVaultSecretVersion`    | Optional | Version of the secret in the [HashiCorp Vault] secrets engine.               |
+| `hashicorpVaultPrivateKeyId`     | Optional | ID of the private key secret in [HashiCorp Vault].                           |
+| `hashicorpVaultPublicKeyId`      | Optional | ID of the public key secret in [HashiCorp Vault].                            |
 
 ### `alwaysSendTo`
 
@@ -417,7 +415,4 @@ If `type` is set to `EC`, the following `properties` fields can also be configur
 [Checks that a remote node owns the public keys being advertised]: ../HowTo/Configure/Peer-discovery.md#enable-remote-key-validation
 [Enables privacy enhancement features]: ../HowTo/Configure/Tessera.md#privacy-enhancements-flag
 [SunEC provider]: https://docs.oracle.com/javase/8/docs/technotes/guides/security/SunProviders.html#SunEC
-[Hyperledger Besu-extended privacy]: ../HowTo/Configure/Orion-Mode.md
 [Configure Tessera to use alternative curves and symmetric ciphers]: ../HowTo/Configure/Cryptographic-elliptic-curves.md
-[Hyperledger Besu]: https://besu.hyperledger.org/
-[changes Tessera’s behaviour]: ../HowTo/Configure/Orion-Mode.md

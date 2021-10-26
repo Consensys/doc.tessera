@@ -11,7 +11,7 @@ encrypt and decrypt private payloads.
 The `NaCl` primitives provide good security and speed and is sufficient in most circumstances.
 
 You can configure an alternative cryptographic elliptic curve by specifying
-[`encryptor`](../../Reference/SampleConfiguration.md#encryptor) in the [configuration file](Tessera.md).
+[`encryptor`](../../Reference/SampleConfiguration.md#encryptor) in the Tessera [configuration file](Tessera.md).
 
 ## Configure an alternative cryptographic elliptic curve
 

@@ -5,7 +5,7 @@ description: Configuring TLS
 # Configure TLS
 
 You can enable using TLS/SSL communications by setting [`tls`](../../Reference/SampleConfiguration.md#sslconfig) in the
-[configuration file](Tessera.md) to `STRICT`.
+Tessera [configuration file](Tessera.md) to `STRICT`.
 
 If the value is set to `OFF`, the rest of the `sslConfig` items aren't considered.
 

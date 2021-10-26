@@ -20,6 +20,7 @@ You can also configure:
 - An [external database](Database.md).
 - Support for [multiple private states](Multiple-private-state.md) and [resident groups](Multiple-private-state.md#resident-groups).
 - [Cryptographic elliptic curves](Cryptographic-elliptic-curves.md).
+- Support for [Hyperledger Besu](Orion-Mode.md).
 
 You can [override configuration options](Override-config.md) using the command line.
 

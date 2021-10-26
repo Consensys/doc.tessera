@@ -16,6 +16,7 @@ You can also configure:
 - [Key vaults](KeyVault/Azure-Key-Vault.md).
 - The [Tessera API servers](TesseraAPI.md).
 - [Peer discovery](Peer-discovery.md).
+- [TLS](TLS.md).
 
 You can [override configuration options](Override-config.md) using the command line.
 

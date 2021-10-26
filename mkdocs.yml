@@ -86,10 +86,10 @@ nav:
       - Peer discovery: HowTo/Configure/Peer-discovery.md
       - TLS: HowTo/Configure/TLS.md
       - Database: HowTo/Configure/Database.md
-      - Override configuration file: HowTo/Configure/Override-config.md
+      - Multiple private states: HowTo/Configure/Multiple-private-state.md
       - Cryptographic elliptic curves: HowTo/Configure/Cryptographic-elliptic-curves.md
       - Hyperledger Besu support: HowTo/Configure/Orion-Mode.md
-      - Support Multi Private States and Resident Groups: HowTo/Configure/Multiple-private-state.md
+      - Override configuration file: HowTo/Configure/Override-config.md
     - Use:
       - Monitoring: HowTo/Use/Monitoring.md
       - Logging: HowTo/Use/Logging.md

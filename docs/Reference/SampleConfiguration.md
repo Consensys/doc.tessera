@@ -379,21 +379,20 @@ Enables additional security and privacy features.
 ### `encryptor`
 
 [Configure Tessera to use alternative curves and symmetric ciphers].
+If an encryptor configuration is not specified, the default `NaCl` encryptor is used.
 
-If an encryptor configuration is not specified, the default NaCl encryptor is used.
-
-| Field  | Description                                                           | Default Value |
-|:-------|:----------------------------------------------------------------------|:--------------|
-| `type` | [The encryptor type]. Possible values are `EC`, `NACL`, and `CUSTOM`. | `NACL`        |
+| Field  | Description                                                                                |
+|:-------|:-------------------------------------------------------------------------------------------|
+| `type` | The encryptor type. Possible values are `EC`, `NACL`, and `CUSTOM`. The default is `NACL`. |
 
 If `type` is set to `EC`, the following `properties` fields can also be configured:
 
-| Field             | Default             | Description                                                                                                                                                              |
-|:------------------|:--------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `ellipticCurve`   | `secp256r1`         | The elliptic curve to use. See [SunEC provider] for other options. Depending on the JCE provider you are using there may be additional curves available.                 |
-| `symmetricCipher` | `AES/GCM/NoPadding` | The symmetric cipher to use for encrypting data (GCM IS MANDATORY as an initialization vector is supplied during encryption).                                            |
-| `nonceLength`     | `24`                | The nonce length (used as the initialization vector - IV - for symmetric encryption).                                                                                    |
-| `sharedKeyLength` | `32`                | The key length used for symmetric encryption (keep in mind the key derivation operation always produces 32 byte keys and that the encryption algorithm must support it). |
+| Field             | Default             | Description                                                                                                                                            |
+|:------------------|:--------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `ellipticCurve`   | `secp256r1`         | The elliptic curve to use. See [SunEC provider] for other options. Depending on the JCE provider you use, there may be additional curves available.    |
+| `symmetricCipher` | `AES/GCM/NoPadding` | The symmetric cipher to use for encrypting data (GCM is mandatory as an initialization vector is supplied during encryption).                          |
+| `nonceLength`     | `24`                | The nonce length (used as the initialization vector (IV) for symmetric encryption).                                                                    |
+| `sharedKeyLength` | `32`                | The key length used for symmetric encryption (the key derivation operation always produces 32-byte keys and the encryption algorithm must support it). |
 
 <!--links-->
 [starting Tessera]: ../HowTo/Get-started/Start-Tessera.md
@@ -418,7 +417,6 @@ If `type` is set to `EC`, the following `properties` fields can also be configur
 [Checks that a remote node owns the public keys being advertised]: ../HowTo/Configure/Peer-discovery.md#enable-remote-key-validation
 [Enables privacy enhancement features]: ../HowTo/Configure/Tessera.md#privacy-enhancements-flag
 [SunEC provider]: https://docs.oracle.com/javase/8/docs/technotes/guides/security/SunProviders.html#SunEC
-[The encryptor type]: ../HowTo/Configure/Cryptographic-elliptic-curves.md
 [Hyperledger Besu-extended privacy]: ../HowTo/Configure/Orion-Mode.md
 [Configure Tessera to use alternative curves and symmetric ciphers]: ../HowTo/Configure/Cryptographic-elliptic-curves.md
 [Hyperledger Besu]: https://besu.hyperledger.org/

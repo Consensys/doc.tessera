@@ -43,4 +43,4 @@ persists relevant data to its database.
 
 !!! important
 
-    Tessera won't start with `enableMultiplePrivateStates` set to `true` AND an invalid resident group configuration.
+    Tessera can't start with `enableMultiplePrivateStates` set to `true` AND an invalid resident group configuration.

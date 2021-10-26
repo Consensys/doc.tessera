@@ -7,7 +7,7 @@ description: Configure Azure Key Vault key pairs.
 You can configure [key pairs](Overview.md) by storing them as secrets in an Azure Key Vault.
 This requires providing the vault URL and the secret IDs for both keys.
 
-!!! example "Configuration file with an Azure Key Vault key pair"
+!!! example "Azure Key Vault key pair configuration"
 
     ```json
     "keys": {

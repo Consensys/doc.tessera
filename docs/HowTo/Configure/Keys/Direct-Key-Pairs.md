@@ -11,7 +11,7 @@ description: Configure direct key pairs.
 To configure direct [key pairs](Overview.md), provide the key pair data in plain text in the
 [configuration file](../../../Reference/SampleConfiguration.md#keydata).
 
-!!! example "Configuration file with a direct key pair"
+!!! example "Direct key pair configuration"
 
     ```json
     "keys": {

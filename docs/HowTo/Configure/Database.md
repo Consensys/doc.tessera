@@ -4,51 +4,55 @@ description: Database configuration
 
 # Database configuration
 
-Tessera's database uses JDBC to connect to an external database.
-Any valid JDBC URL may be specified, refer to your providers details to construct a valid JDBC URL.
+You can configure the [`jdbc`](../../Reference/SampleConfiguration.md#jdbc) item in the Tessera
+[configuration file](Tessera.md) to connect to an external database.
+You can specify any valid JDBC URL.
+Refer to your provider's details to construct a valid JDBC URL.
 
-```json
-"jdbc": {
-  "url": "[JDBC URL]",
-  "username": "[JDBC Username]",
-  "password": "[JDBC Password]"
-}
-```
+!!! example "JDBC configuration"
 
-## Encrypt the database password
+    ```json
+    "jdbc": {
+      "url": "[JDBC URL]",
+      "username": "[JDBC Username]",
+      "password": "[JDBC Password]"
+    }
+    ```
 
-Certain entries in the Tessera configuration file must be obfuscated to prevent any attempts from
-attackers to gain access to critical parts of the application (for example the database).
-The database password can be encrypted using [Jasypt](https://github.com/jasypt/jasypt) to avoid it being
-exposed as plain text in the configuration file.
+## Database password encryption
 
-To enable this feature, simply replace your plain-text database password with its encrypted value
-and wrap it inside an `ENC()` function.
+Certain entries in the Tessera configuration file must be obfuscated to prevent attempts to gain access to critical
+parts of the application (for example, the database).
+You can encrypt the database password using [Jasypt](https://github.com/jasypt/jasypt).
 
-```json
-"jdbc": {
-    "username": "sa",
-    "password": "ENC(ujMeokIQ9UFHSuBYetfRjQTpZASgaua3)",
-    "url": "jdbc:h2:/qdata/c1/db1",
-    "autoCreateTables": true
-}
-```
+To enable this feature, replace your plain-text database password with its encrypted value and wrap it inside an `ENC()` function.
 
-Being a Password-Based Encryptor, Jasypt requires a secret key (password) and a configured algorithm
-to encrypt/decrypt this configuration entry. This password can either be loaded into Tessera from file system
-or user input. For file system input, the location of this secret file needs to be set in environment
-variable `TESSERA_CONFIG_SECRET`
+!!! example "JDBC configuration with encrypted password"
 
-If the database password is not wrapped inside `ENC()`, Tessera will simply treat it as a plain-text
-password however this approach is not recommended for production environments.
+    ```json
+    "jdbc": {
+        "username": "sa",
+        "password": "ENC(ujMeokIQ9UFHSuBYetfRjQTpZASgaua3)",
+        "url": "jdbc:h2:/qdata/c1/db1",
+        "autoCreateTables": true
+    }
+    ```
+
+Jasypt requires a secret key (password) and a configured algorithm to encrypt/decrypt this configuration entry.
+This password can either be loaded into Tessera from the file system or user input.
+For file system input, the location of this secret file must set in the `TESSERA_CONFIG_SECRET` environment variable.
+
+If the database password isn't wrapped inside `ENC()`, Tessera treats it as a plain-text password.
+This approach is not recommended for production environments.
 
 !!! note
-    Jasypt encryption is currently only available for the `jdbc.password` field
 
-### How to encrypt database password
+    Jasypt encryption is currently only available for the `jdbc.password` field.
 
-1. Download and unzip [Jasypt](https://github.com/jasypt/jasypt) and redirect to the `bin` directory
-1. Encrypt the password
+### How to encrypt the database password
+
+1. Download and unzip [Jasypt](https://github.com/jasypt/jasypt) and navigate to the `bin` directory.
+1. Encrypt the password using the following command:
 
     === "Command"
 
@@ -73,21 +77,21 @@ password however this approach is not recommended for production environments.
         rJ70hNidkrpkTwHoVn2sGSp3h3uBWxjb
         ```
 
-1. Place the wrapped output, `ENC(rJ70hNidkrpkTwHoVn2sGSp3h3uBWxjb)`, in the configuration JSON file
+1. Place the wrapped output, `ENC(rJ70hNidkrpkTwHoVn2sGSp3h3uBWxjb)`, in the configuration JSON file.
 
 ## Configure an alternate database
 
-By default, Tessera uses an H2 file-based database, but any JDBC compatible database can be used.
+By default, Tessera uses an H2 file-based database, but you can use any JDBC-compatible database.
 
-To do this, add the necessary drivers to the lib directory and start as usual
+To do this, add the necessary drivers to the lib directory and start Tessera as usual.
 
 ```bash
 cp some-jdbc-driver.jar tessera-[version]/lib/
 ./tessera-[version]/bin/tessera -configfile config.json
 ```
 
-[DDL scripts] are available for more popular databases, these can be adapted to whichever database
-you choose.
+[DDL scripts] are available for more popular databases.
+These can be adapted to whichever database you choose.
 
 <!-- links -->
 [DDL scripts]: https://github.com/ConsenSys/tessera/tree/master/ddls/create-table

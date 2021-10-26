@@ -8,7 +8,7 @@ To configure file-based [key pairs](Overview.md), store the key pair in files, a
 the [configuration file](../../../Reference/SampleConfiguration.md#keydata).
 You can use Tessera to [generate file-based keys].
 
-!!! example "Configuration file with file-based key pairs"
+!!! example "File-based key pair configuration"
 
     ```json
     "keys": {

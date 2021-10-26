@@ -15,7 +15,7 @@ To configure a [local enclave](../../Concepts/Privacy-Manager/Enclave-types.md#l
 * Do not configure an [`ENCLAVE` server](../../Reference/SampleConfiguration.md#enclave).
 * Configure the [enclave's keys](Keys/Overview.md).
 
-!!! example "Transaction manager configuration file with a local enclave"
+!!! example "Local enclave configuration"
 
     ```json
     {
@@ -74,7 +74,7 @@ In the transaction manager configuration file:
   Include TLS configuration as appropriate.
 * Do not configure any keys.
 
-!!! example "Transaction manager configuration file"
+!!! example "Remote HTTP enclave configuration in the transaction manager configuration file"
 
     ```json
     {

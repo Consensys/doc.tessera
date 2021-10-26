@@ -86,7 +86,6 @@ nav:
       - Peer discovery: HowTo/Configure/Peer-discovery.md
       - TLS: HowTo/Configure/TLS.md
       - Database: HowTo/Configure/Database.md
-      - Data recovery: HowTo/Configure/Data-Recovery.md
       - Override configuration file: HowTo/Configure/Override-config.md
       - Cryptographic elliptic curves: HowTo/Configure/Cryptographic-elliptic-curves.md
       - Hyperledger Besu support: HowTo/Configure/Orion-Mode.md
@@ -95,6 +94,7 @@ nav:
       - Monitoring: HowTo/Use/Monitoring.md
       - Logging: HowTo/Use/Logging.md
       - Mandatory recipients: HowTo/Use/Mandatory-Recipients.md
+      - Data recovery: HowTo/Configure/Data-Recovery.md
     - Migrate:
       - Migrate from Orion: HowTo/Migrate/MigrateFromOrion.md
       - Multi-tenancy migration: HowTo/Migrate/Migration-Multitenancy.md
@@ -169,3 +169,4 @@ plugins:
         Concepts/Enclave.md: Concepts/Privacy-Manager/Enclave.md
         Concepts/Enclave-types.md: Concepts/Privacy-Manager/Enclave-types.md
         HowTo/Configure/Transaction-Manager.md: HowTo/Configure/Tessera.md
+        HowTo/Configure/Data-Recovery.md: HowTo/Use/Data-Recovery.md

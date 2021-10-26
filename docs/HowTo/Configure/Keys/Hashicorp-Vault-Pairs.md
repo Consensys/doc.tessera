@@ -8,7 +8,7 @@ You can configure [key pairs](Overview.md) by storing them as secrets in a Hashi
 You can provide additional configuration items if the Vault is configured to use [TLS], and if the AppRole
 authentication method is used at a non-default path.
 
-!!! example "Configuration file with a HashiCorp Vault key pair"
+!!! example "HashiCorp Vault key pair configuration"
 
     ```json
     "keys": {

@@ -2,36 +2,45 @@
 description: Configure Tessera to support GoQuorum multiple private states feature
 ---
 
-# Multiple private states
+# Configure multiple private states
 
-In order to enable support for *multiple private states* feature in GoQuorum, this configuration flag has to be switched on in Tessera.
+You can enable support for multiple GoQuorum private states by setting
+[`enableMultiplePrivateStates`](../../Reference/SampleConfiguration.md#features) in the [configuration file](Tessera.md)
+to `true`.
 
-```json
-"features" : {
-    "enableMultiplePrivateStates" : "true"
-}
-```
+!!! example "Enable multiple private states configuration"
 
-# Resident groups
+    ```json
+    "features" : {
+        "enableMultiplePrivateStates" : "true"
+    }
+    ```
 
-When the feature flag is enabled, all keys configured will need to belong to a resident group.
+## Resident groups
 
-Tessera will load resident group configuration, perform the necessary validations during application startup, and persist relevant data to its database.
+When multiple private states is enabled, all keys configured must belong to a resident group.
+Specify `residentGroups` in the configuration file as shown in the following example.
 
-```json
- "residentGroups": [
-  {
-    "name": "PS1",
-    "members": ["publicKey1", "publicKey2"],
-    "description": "Private state 1"
-  },
-  {
-    "name": "PS2",
-    "members": ["publicKey3", "publicKey4"],
-    "description": "Private State 2"
-  }
- ]
-```
+!!! example "Resident group configuration"
 
-!!! info
-    Tessera will not start with `enableMultiplePrivateStates` but invalid resident group configuration
+    ```json
+     "residentGroups": [
+      {
+        "name": "PS1",
+        "members": ["publicKey1", "publicKey2"],
+        "description": "Private state 1"
+      },
+      {
+        "name": "PS2",
+        "members": ["publicKey3", "publicKey4"],
+        "description": "Private State 2"
+      }
+     ]
+    ```
+
+Tessera loads the resident group configuration, performs the necessary validations during application startup, and
+persists relevant data to its database.
+
+!!! important
+
+    Tessera won't start with `enableMultiplePrivateStates` set to `true` AND an invalid resident group configuration.

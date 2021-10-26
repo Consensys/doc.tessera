@@ -17,6 +17,8 @@ You can also configure:
 - The [Tessera API servers](TesseraAPI.md).
 - [Peer discovery](Peer-discovery.md).
 - [TLS](TLS.md).
+- An [external database](Database.md).
+- Support for [multiple private states](Multiple-private-state.md).
 
 You can [override configuration options](Override-config.md) using the command line.
 

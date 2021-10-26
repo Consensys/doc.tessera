@@ -15,7 +15,7 @@ You can configure inline [key pairs](Overview.md) in the [configuration file](..
 In unprotected inline key pair configuration, provide key pair data in plain text.
 Provide the plain text private key in a `config` JSON object.
 
-!!! example "Configuration file with an unprotected inline key pair"
+!!! example "Unprotected inline key pair configuration"
 
     ```json
     "keys": {
@@ -39,7 +39,7 @@ In protected inline key pair configuration, provide the public key in plain text
 The private key must be [password-protected using Argon2](Secure-Keys.md).
 Provide the corresponding encrypted data in a `config` JSON object.
 
-!!! example "Configuration file with a protected inline key pair"
+!!! example "Protected inline key pair configuration"
 
     ```json
     "keys": {

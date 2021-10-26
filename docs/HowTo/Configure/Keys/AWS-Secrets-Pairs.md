@@ -15,7 +15,7 @@ Provide the secret IDs for both keys with an optional endpoint.
     [The AWS SDK documentation](https://docs.aws.amazon.com/sdk-for-java/v2/developer-guide/credentials.html)
     provides an explanation of using credentials.
 
-!!! example "Configuration file with an AWS Secrets Manager key pair"
+!!! example "AWS Secrets Manager key pair configuration"
 
     ```json
     "keys": {

@@ -10,7 +10,7 @@ You can use existing key pairs or use Tessera to generate new key pairs.
 You can use multiple keys at the same time in Tessera.
 You can configure access to the keys in the Tessera [configuration file](../Tessera.md).
 
-!!! Example "Configuration file"
+!!! Example "Keys configuration"
 
     ```json
     "keys": {

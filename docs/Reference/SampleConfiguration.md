@@ -190,115 +190,117 @@ Use the `serverConfigs` property to configure the following servers:
 
 Each server can also be configured to:
 
-* Secure communication using [TLS]
-* Store API metrics in an [InfluxDB]
+* Secure communication using [TLS].
+* Store API metrics in an [InfluxDB].
 
 #### `ENCLAVE`
 
 Defines an optional [remote enclave](../Concepts/Privacy-Manager/Enclave-types.md#remote-http-enclave).
 Leave out if using a [local enclave](../Concepts/Privacy-Manager/Enclave-types.md#local-enclave).
 
-| Field                    | Required | Description                                                                              |
-|--------------------------|--:- :----|------------------------------------------------------------------------------------------|
-| `app`                    | Required | Type of server being configured. Set to `ENCLAVE`.                                       |
-| `serverAddress`          | Required | [Server address](../HowTo/Configure/TesseraAPI.md).                                      |
-| `bindingAddress`         | Optional | Specify a bind to an internal IP while advertising an external IP using `serverAddress`. |
-| `communicationType`      | Required | Type of server communication. Only `REST` is currently supported.                        |
-| `influxConfig`           | Optional | [Configure the server to use InfluxDB](#influxconfig).                                   |
-| `sslConfig   `           | Optional | [Secure communication with TLS](#sslconfig).                                             |
+| Field               | Required | Description                                                                              |
+|---------------------|--:- :----|------------------------------------------------------------------------------------------|
+| `app`               | Required | Type of server being configured. Set to `ENCLAVE`.                                       |
+| `serverAddress`     | Required | [Server address](../HowTo/Configure/TesseraAPI.md).                                      |
+| `bindingAddress`    | Optional | Specify a bind to an internal IP while advertising an external IP using `serverAddress`. |
+| `communicationType` | Required | Type of server communication. Only `REST` is currently supported.                        |
+| `influxConfig`      | Optional | [Configure the server to use InfluxDB](#influxconfig).                                   |
+| `sslConfig   `      | Optional | [Secure communication with TLS](#sslconfig).                                             |
 
 #### `P2P`
 
-The P2P (peer-to-peer) server is used to perform discovery and send and receive encrypted payloads.
+The peer-to-peer (P2P) [server](../HowTo/Configure/TesseraAPI.md) is used to perform discovery and send and receive
+encrypted payloads.
 
-| Field                    | Required | Description                                                                              |
-|--------------------------|--:- :----|------------------------------------------------------------------------------------------|
-| `app`                    | Required | Type of server being configured. Set to `P2P`.                                           |
-| `serverAddress`          | Required | [Server address](../HowTo/Configure/TesseraAPI.md).                                      |
-| `bindingAddress`         | Optional | Specify a bind to an internal IP while advertising an external IP using `serverAddress`. |
-| `communicationType`      | Required | Type of server communication. Only `REST` is currently supported.                        |
-| `influxConfig`           | Optional | [Configure the server to use InfluxDB](#influxconfig).                                |
-| `sslConfig   `           | Optional | [Secure communication with TLS](#sslconfig).                                             |
+| Field               | Required | Description                                                                              |
+|---------------------|--:- :----|------------------------------------------------------------------------------------------|
+| `app`               | Required | Type of server being configured. Set to `P2P`.                                           |
+| `serverAddress`     | Required | [Server address](../HowTo/Configure/TesseraAPI.md).                                      |
+| `bindingAddress`    | Optional | Specify a bind to an internal IP while advertising an external IP using `serverAddress`. |
+| `communicationType` | Required | Type of server communication. Only `REST` is currently supported.                        |
+| `influxConfig`      | Optional | [Configure the server to use InfluxDB](#influxconfig).                                   |
+| `sslConfig   `      | Optional | [Secure communication with TLS](#sslconfig).                                             |
 
 #### `Q2T`
 
-The Q2T (Quorum-to-Tessera) server is used to check if the Tessera node is running, and send and
-receive private transactions.
+The Quorum-to-Tessera (Q2T) [server](../HowTo/Configure/TesseraAPI.md) is used to check if the Tessera node is running,
+and to send and receive private transactions.
 
-| Field                    | Required | Description                                                                              |
-|--------------------------|--:- :----|------------------------------------------------------------------------------------------|
-| `app`                    | Required | Type of server being configured. Set to `Q2T`.                                           |
-| `serverAddress`          | Required | [Server address](../HowTo/Configure/TesseraAPI.md).                                      |
-| `bindingAddress`         | Optional | Specify a bind to an internal IP while advertising an external IP using `serverAddress`. |
-| `communicationType`      | Required | Type of server communication. Only `REST` is currently supported.                        |
-| `influxConfig`           | Optional | [Configure the server to use InfluxDB](#influxconfig).                                   |
-| `sslConfig   `           | Optional | [Secure communication with TLS](#sslconfig).                                             |
+| Field               | Required | Description                                                                              |
+|---------------------|--:- :----|------------------------------------------------------------------------------------------|
+| `app`               | Required | Type of server being configured. Set to `Q2T`.                                           |
+| `serverAddress`     | Required | [Server address](../HowTo/Configure/TesseraAPI.md).                                      |
+| `bindingAddress`    | Optional | Specify a bind to an internal IP while advertising an external IP using `serverAddress`. |
+| `communicationType` | Required | Type of server communication. Only `REST` is currently supported.                        |
+| `influxConfig`      | Optional | [Configure the server to use InfluxDB](#influxconfig).                                   |
+| `sslConfig   `      | Optional | [Secure communication with TLS](#sslconfig).                                             |
 
 #### `ThirdParty`
 
-Tessera uses the server to store encrypted payloads for external applications.
+Tessera uses the `ThirdParty` [server](../HowTo/Configure/TesseraAPI.md) to store encrypted payloads for external applications.
 
-| Field                    | Required | Description                                                                              |
-|--------------------------|--:- :----|------------------------------------------------------------------------------------------|
-| `app`                    | Required | Type of server being configured. Set to `ThirdParty`.                                    |
-| `serverAddress`          | Required | [Server address](../HowTo/Configure/TesseraAPI.md).                                      |
-| `bindingAddress`         | Optional | Specify a bind to an internal IP while advertising an external IP using `serverAddress`. |
-| `communicationType`      | Required | Type of server communication. Only `REST` is currently supported.                        |
-| `cors`                   | Optional | [Configure CORS](#cors) to control access to resources outside the domain.               |
-| `influxConfig`           | Optional | [Configure the server to use InfluxDB](#influxconfig).                                   |
-| `sslConfig   `           | Optional | [Secure communication with TLS](#sslconfig).                                             |
+| Field               | Required | Description                                                                              |
+|---------------------|--:- :----|------------------------------------------------------------------------------------------|
+| `app`               | Required | Type of server being configured. Set to `ThirdParty`.                                    |
+| `serverAddress`     | Required | [Server address](../HowTo/Configure/TesseraAPI.md).                                      |
+| `bindingAddress`    | Optional | Specify a bind to an internal IP while advertising an external IP using `serverAddress`. |
+| `communicationType` | Required | Type of server communication. Only `REST` is currently supported.                        |
+| `cors`              | Optional | [Configure CORS](#cors) to control access to resources outside the domain.               |
+| `influxConfig`      | Optional | [Configure the server to use InfluxDB](#influxconfig).                                   |
+| `sslConfig   `      | Optional | [Secure communication with TLS](#sslconfig).                                             |
 
 #### `influxConfig`
 
-Configure InfuxDB settings to record metrics.
+Configure an InfuxDB [server](../HowTo/Configure/TesseraAPI.md) to record metrics.
 
-| Field                    | Required | Description                                                                                |
-|--------------------------|--:- :----|--------------------------------------------------------------------------------------------|
-| `serverAddress`          | Required | InfluxDB server address.                                                                   |
-| `dbName`                 | Required | InfluxDB database name.                                                                    |
-| `pushIntervalInSecs`     | Required | How frequently Tessera pushes metrics to the database.                                     |
-| `sslConfig   `           | Optional | [Configure one-way TLS]; meaning clients can validate the identity of the InfluxDB server. |
+| Field                | Required | Description                                                                                           |
+|----------------------|--:- :----|-------------------------------------------------------------------------------------------------------|
+| `serverAddress`      | Required | InfluxDB server address.                                                                              |
+| `dbName`             | Required | InfluxDB database name.                                                                               |
+| `pushIntervalInSecs` | Required | How often, in seconds, Tessera pushes metrics to the database.                                        |
+| `sslConfig`          | Optional | [Configure one-way TLS]. If TLS is enabled, clients can validate the identity of the InfluxDB server. |
 
 #### `sslConfig`
 
-| Field                    | Required | Description                                                                                  |
-|--------------------------|--:- :----|----------------------------------------------------------------------------------------------|
-| `tls`                    | Required | Authentication mode. Options are `STRICT` or `OFF`. If set to `OFF`, then TLS is disabled.   |
-| `generateKeyStoreIfNotExisted` | Optional | Tessera checks whether files exist in the `serverKeyStore` and `clientKeyStore` paths. If the files do not exist, new keystores are generated in the `serverKeyStore` and `clientKeyStore` paths.                                           |
-| `serverKeyStore`         | Optional | Path to server keystore.                                                                     |
-| `serverKeyStorePassword` | Optional | [Password] required for `serverKeyStore`.                                                    |
-| `serverTlsKeyPath`       | Optional | File containing the private key for the server TLS certificate.                              |
-| `serverTlsCertificatePath` | Optional | File containing the server TLS certificate.                                                |
-| `serverTrustStore`         | Optional | Path to the server truststore.                                                             |
-| `serverTrustStorePassword` | Optional | [Password] for the server truststore.                                                      |
-| `serverTrustCertificates`  | Optional | Array of truststore certificates if `serverTrustStore` is undefined.                       |
-| `serverTrustMode`        | Required | [Trust Mode] for the server, options are `TOFU`, `WHITELIST`, `CA`, `CA_OR_TOFU`, and `NONE`. |
-| `clientKeyStore`         | Optional | Path to client [keystore].                                                                   |
-| `clientKeyStorePassword` | Optional | [Password] for the client keystore.                                                          |
-| `clientTlsKeyPath`       | Optional | Path to client TLS key.                                                                      |
-| `clientTlsCertificatePath` | Optional | Path to client TLS certificate.                                                            |
-| `clientTrustStore`         | Optional | Path to client truststore.                                                                 |
-| `clientTrustStorePassword` | Optional | [Password] for the client truststore.                                                      |
-| `clientTrustCertificates`  | Optional | Array of truststore certificates if `clientTrustStore` is undefined.                       |
-| `clientTrustMode`        | Required | [Trust Mode] for the client, options are `TOFU`, `WHITELIST`, `CA`, `CA_OR_TOFU`, and `NONE`. |
-| `knownClientsFile`         | Optional | Known clients file for the server. This contains the fingerprints of public keys of other nodes that are allowed to connect to this node.  |
-| `knownServersFile`         | Optional | Known servers file for the client. This contains the fingerprints of public keys of other nodes that this node has encountered. |
-| `environmentVariablePrefix`| Optional | Prefix to uniquely identify environment variables for this server SSL configuration.       |
+| Field                          | Required | Description                                                                                   |
+|--------------------------------|--:- :----|-----------------------------------------------------------------------------------------------|
+| `tls`                          | Required | Setting to `STRICT` [enables TLS](../HowTo/Configure/TLS.md). Setting to `OFF` disables TLS.  |
+| `generateKeyStoreIfNotExisted` | Optional | Tessera checks whether files exist in the `serverKeyStore` and `clientKeyStore` paths. If the files don't exist, new key stores are generated in the `serverKeyStore` and `clientKeyStore` paths. |
+| `serverKeyStore`               | Optional | Path to server key store.                                                                     |
+| `serverKeyStorePassword`       | Optional | [Password] required for `serverKeyStore`.                                                     |
+| `serverTlsKeyPath`             | Optional | File containing the private key for the server TLS certificate.                               |
+| `serverTlsCertificatePath`     | Optional | File containing the server TLS certificate.                                                   |
+| `serverTrustStore`             | Optional | Path to the server truststore.                                                                |
+| `serverTrustStorePassword`     | Optional | [Password] for the server trust store.                                                        |
+| `serverTrustCertificates`      | Optional | Array of trust store certificates if `serverTrustStore` is undefined.                         |
+| `serverTrustMode`              | Required | [Trust mode] for the server, options are `TOFU`, `WHITELIST`, `CA`, `CA_OR_TOFU`, and `NONE`. |
+| `clientKeyStore`               | Optional | Path to client [key store].                                                                   |
+| `clientKeyStorePassword`       | Optional | [Password] for the client key store.                                                          |
+| `clientTlsKeyPath`             | Optional | Path to client TLS key.                                                                       |
+| `clientTlsCertificatePath`     | Optional | Path to client TLS certificate.                                                               |
+| `clientTrustStore`             | Optional | Path to client trust store.                                                                   |
+| `clientTrustStorePassword`     | Optional | [Password] for the client trust store.                                                        |
+| `clientTrustCertificates`      | Optional | Array of trust store certificates if `clientTrustStore` is undefined.                         |
+| `clientTrustMode`              | Required | [Trust mode] for the client, options are `TOFU`, `WHITELIST`, `CA`, `CA_OR_TOFU`, and `NONE`. |
+| `knownClientsFile`             | Optional | Known clients file for the server. This contains the fingerprints of public keys of other nodes that are allowed to connect to this node. |
+| `knownServersFile`             | Optional | Known servers file for the client. This contains the fingerprints of public keys of other nodes that this node has encountered. |
+| `environmentVariablePrefix`    | Optional | Prefix to uniquely identify environment variables for this server SSL configuration.          |
 
 #### `cors`
 
-Configure cross-origin resource sharing (CORS) to control access to resources outside the domain.
+Configure [cross-origin resource sharing (CORS)](../HowTo/Configure/TesseraAPI.md#configure-cors) to control access to
+resources outside the domain.
 
 !!! important
 
-    Only supported with the [`ThirdParty`](#thirdparty) server type.
+    CORS is only supported with the [`ThirdParty`](#thirdparty) server type.
 
-| Field                    | Required | Description                                                        |
-|--------------------------|--:- :----|--------------------------------------------------------------------|
-| `allowedMethods`         | Optional | List of methods to allow. Options are `GET`, `POST`, `PUT`, `DELETE`, `OPTIONS`, and `HEAD`. If omitted, then all methods are allowed.  |
-| `allowedOrigins`         | Optional | List of comma-separated origin domain URLs for CORS validation. Each entry in the list can contain the “*” (wildcard) character to match any sequence of characters. Example: `*localhost` would match `http://localhost` or `https://localhost`. |
-| `allowedHeaders`         | Optional | List of allowed headers. If omitted, the request `Access-Control-Request-Headers` are copied into the response as `Access-Control-Allow-Headers`.     |
-| `allowCredentials`       | Optional | The value for the Access-Control-Allow-Credentials response header. Defaults to `true`.     |
+| Field              | Required | Description                                                        |
+|--------------------|--:- :----|--------------------------------------------------------------------|
+| `allowedMethods`   | Optional | List of methods to allow. Options are `GET`, `POST`, `PUT`, `DELETE`, `OPTIONS`, and `HEAD`. If not included, all methods are allowed. |
+| `allowedOrigins`   | Optional | List of comma-separated origin domain URLs for CORS validation. Each entry in the list can contain the “*” (wildcard) character to match any sequence of characters. For example, `*localhost` matches `http://localhost` or `https://localhost`. |
+| `allowedHeaders`   | Optional | List of allowed headers. If not included, the request `Access-Control-Request-Headers` are copied into the response as `Access-Control-Allow-Headers`. |
+| `allowCredentials` | Optional | The value for the Access-Control-Allow-Credentials response header. The default is `true`. |
 
 ### `peer`
 
@@ -368,11 +370,11 @@ Path to the Unix socket file.
 
 Enables additional security and privacy features.
 
-| Field                       | Required | Description                                                                              |
-|-----------------------------|--:- :----|------------------------------------------------------------------------------------------|
-| `enableRemoteKeyValidation` | Optional | [Checks that a remote node owns the public keys being advertised]. Defaults to `false`   |
-| `enablePrivacyEnhancements` | Optional | Enable Party Protection (PP) and Private State Validation (PSV). Defaults to `false`.    |
-| `enableMultiplePrivateStates` | Optional | Enable Multiple Private States feature. Defaults to `false`.                           |
+| Field                         | Required | Description                                                                                |
+|-------------------------------|--:- :----|--------------------------------------------------------------------------------------------|
+| `enableRemoteKeyValidation`   | Optional | [Checks that a remote node owns the public keys being advertised]. The default is `false`. |
+| `enablePrivacyEnhancements`   | Optional | Enable [privacy enhancements](https://docs.goquorum.consensys.net/en/stable/Concepts/Privacy/PrivacyEnhancements/). The default is `false`. |
+| `enableMultiplePrivateStates` | Optional | Enable [multiple private states](../HowTo/Configure/Multiple-private-state.md). The default is `false`. |
 
 ### `encryptor`
 
@@ -389,7 +391,7 @@ If `type` is set to `EC`, the following `properties` fields can also be configur
 | Field             | Default             | Description                                                                                                                                                              |
 |:------------------|:--------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `ellipticCurve`   | `secp256r1`         | The elliptic curve to use. See [SunEC provider] for other options. Depending on the JCE provider you are using there may be additional curves available.                 |
-| `symmetricCipher` | `AES/GCM/NoPadding` | The symmetric cipher to use for encrypting data (GCM IS MANDATORY as an initialisation vector is supplied during encryption).                                            |
+| `symmetricCipher` | `AES/GCM/NoPadding` | The symmetric cipher to use for encrypting data (GCM IS MANDATORY as an initialization vector is supplied during encryption).                                            |
 | `nonceLength`     | `24`                | The nonce length (used as the initialization vector - IV - for symmetric encryption).                                                                                    |
 | `sharedKeyLength` | `32`                | The key length used for symmetric encryption (keep in mind the key derivation operation always produces 32 byte keys and that the encryption algorithm must support it). |
 
@@ -402,8 +404,8 @@ If `type` is set to `EC`, the following `properties` fields can also be configur
 [TLS]: ../HowTo/Configure/TLS.md
 [Configure one-way TLS]: ../HowTo/Use/Monitoring.md#influxdb-tls-configuration
 [Password]: ../HowTo/Configure/TLS.md#passwords
-[Trust Mode]: ../HowTo/Configure/TLS.md#trust-modes
-[keystore]: ../HowTo/Configure/TLS.md#keystores
+[Trust mode]: ../HowTo/Configure/TLS.md#trust-modes
+[key store]: ../HowTo/Configure/TLS.md#key-stores
 [List of Tessera node URLs]: ../HowTo/Configure/Peer-discovery.md#specify-peers
 [Path to the password file]: ../HowTo/Configure/Keys/Secure-Keys.md
 [AWS Secrets Manager]: ../HowTo/Configure/Keys/AWS-Secrets-Pairs.md

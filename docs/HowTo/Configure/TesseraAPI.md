@@ -8,11 +8,13 @@ You can configure the [servers for the Tessera API](../../Concepts/TesseraAPI.md
 
 Specify the servers to be started as a list in [`serverConfigs`](../../Reference/SampleConfiguration.md#serverconfigs).
 
-```json
-"serverConfigs": [
-   <server settings>
-]
-```
+!!! example "Server configuration"
+
+    ```json
+    "serverConfigs": [
+       <server settings>
+    ]
+    ```
 
 ## Server addresses
 
@@ -60,7 +62,7 @@ You can also [configure CORS](#configure-cors) for the `ThirdParty` server type.
     {
         "app": "<app type>",
         "enabled": <boolean>,
-        "serverAddress":"https://[host]:[port]/[path]",
+        "serverAddress": "https://[host]:[port]/[path]",
         "communicationType" : "REST",
         "sslConfig": {
             <SSL settings>
@@ -117,10 +119,10 @@ You can also [configure CORS](#configure-cors) for the `ThirdParty` server type.
 
     ```json
     {
-        "app": "<app type",
-        "enabled": <boolean,
-        "serverAddress":"unix://[path]",
-        "communicationType" : "REST"
+        "app": "<app type>",
+        "enabled": <boolean>,
+        "serverAddress": "unix://[path]",
+        "communicationType": "REST"
     }
     ```
 
@@ -139,19 +141,21 @@ You can also [configure CORS](#configure-cors) for the `ThirdParty` server type.
 
 The `ThirdParty` server type supports [configuring CORS] to control access to resources.
 
-```json
-{
-    "app":"ThirdParty",
-    "enabled": true,
-    "serverAddress": "http://localhost:9081",
-    "communicationType" : "REST",
-    "cors" : {
-        "allowedMethods" : ["GET", "POST", "PUT", "DELETE", "OPTIONS", "HEAD"],
-        "allowedOrigins" : ["http://localhost:63342"],
-        "allowedHeaders" : ["content-type"],
-        "allowCredentials" : true
+!!! example "`ThirdParty` CORS configuration"
+
+    ```json
+    {
+        "app":"ThirdParty",
+        "enabled": true,
+        "serverAddress": "http://localhost:9081",
+        "communicationType" : "REST",
+        "cors" : {
+            "allowedMethods" : ["GET", "POST", "PUT", "DELETE", "OPTIONS", "HEAD"],
+            "allowedOrigins" : ["http://localhost:63342"],
+            "allowedHeaders" : ["content-type"],
+            "allowCredentials" : true
+        }
     }
-}
-```
+    ```
 
 [configuring CORS]: ../../Reference/SampleConfiguration.md#cors

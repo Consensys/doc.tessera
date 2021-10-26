@@ -15,7 +15,7 @@ If the value is set to `OFF`, the rest of the `sslConfig` items aren't considere
 
 ## Configuration items
 
-!!! example "Configuration file using TLS"
+!!! example "TLS/SSL configuration"
 
     ```json
     {
@@ -65,7 +65,7 @@ These can be defined in multiple ways:
     - `serverTlsKeyPath`, `serverTlsCertificatePath`, `serverTrustCertificates`
     - `clientTlsKeyPath`, `clientTlsCertificatePath`, `clientTrustCertificates`
 
-    !!! example "Configuration file using `.pem` format files"
+    !!! example "TLS/SSL configuration using `.pem` format files"
 
         ```json
         "sslConfig" : {
@@ -153,7 +153,7 @@ When connecting for the first time, the host and its certificate are added to `k
 `knownServersFile` (for client).
 These files are generated if they don't already exist, using the values specified in `knownClientsFile` and `knownServersFile`.
 
-!!! example "Configuration file using `TOFU` trust mode"
+!!! example "`TOFU` trust mode configuration"
 
     ```json
     "sslConfig" : {
@@ -179,7 +179,7 @@ This trust mode doesn't add new entries to the `knownClients` or `knownServers` 
 
 With this trust mode, the whitelist files (`knownClientsFile` and `knownServersFile`) must be provided.
 
-!!! example "Configuration file using `WHITELIST` trust mode"
+!!! example "`WHITELIST` trust mode configuration"
 
     ```json
     "sslConfig" : {
@@ -201,7 +201,7 @@ With this trust mode, the whitelist files (`knownClientsFile` and `knownServersF
 In `CA` trust mode, only nodes with a valid certificate and chain of trust are allowed to connect.
 For this trust mode, trust stores must be provided and must contain a list of trust certificates.
 
-!!! example "Configuration file using `CA` trust mode"
+!!! example "`CA` trust mode configuration"
 
     ```json
     "sslConfig" : {

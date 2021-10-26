@@ -4,7 +4,8 @@ description: Configuring peer discovery
 
 # Configure peer discovery
 
-Configure peer discovery in the [Tessera configuration file](Tessera.md). Options for peer discovery are:
+You can configure peer discovery in the Tessera [configuration file](Tessera.md).
+Configuration options for peer discovery are:
 
 * [`disablePeerDiscovery`](#disable-peer-discovery)
 * [`peer`](#specify-peers)
@@ -13,9 +14,9 @@ Configure peer discovery in the [Tessera configuration file](Tessera.md). Option
 
 ## Disable peer discovery
 
-If peer discovery is disabled, communication is limited to peers listed in the configuration file.
+You can disable peer discovery by setting `disablePeerDiscovery` in the configuration file to `true`.
+If peer discovery is disabled, communication is limited to [specified peers](#specify-peers).
 Communication from nodes not listed as a peer is ignored.
-Disable peer discovery to limit Tessera to communicating with known set of peers.
 Peer discovery is enabled by default.
 
 !!! example "Disable peer discovery"
@@ -32,9 +33,10 @@ Peer discovery is enabled by default.
 
 ## Specify peers
 
-Specify the list of Tessera node URLs used by Tessera to [discover other nodes](../../Concepts/p2p-discovery.md).
+You can specify a list of Tessera node URLs used by Tessera to [discover other nodes](../../Concepts/p2p-discovery.md).
+Specify the peer list using [`peer`](../../Reference/SampleConfiguration.md#peer) in the configuration file.
 
-!!! example
+!!! example "Peer list"
 
     ```json
     "peer": [
@@ -51,15 +53,16 @@ Specify the list of Tessera node URLs used by Tessera to [discover other nodes](
     ```
 
 !!! tip
+
     Include multiple peers in the peer list in case any of them are offline or unreachable.
 
 ## Enable whitelist
 
-The Tessera whitelist restricts connections for Tessera in the same way as the [`permissioned-nodes.json`
-file does for GoQuorum](https://docs.goquorum.consensys.net/en/stable/Concepts/Permissioning/BasicNetworkPermissions/).
+The Tessera whitelist restricts connections for Tessera in the same way the [`permissioned-nodes.json`
+file does for GoQuorum](https://docs.goquorum.consensys.net/en/stable/Concepts/PermissionsOverview/#basic-network-permissioning).
 
-Set to true to specify only URLs listed in the [`peer` list](#specify-peers) can connect or submit
-transactions.
+Set [`useWhitelist`](../../Reference/SampleConfiguration.md#usewhitelist) in the configuration file to `true` to indicate
+that only [specified peers](#specify-peers) can connect or submit transactions.
 
 !!! example "Enable whitelist"
 
@@ -69,13 +72,10 @@ transactions.
 
 ### Enable remote key validation
 
-!!! important
-
-    We recommend enabling remote key validation to prevent malicious attacks. The default configuration
-    is false because this is a breaking change for Tessera versions before v0.10.0.
-
-Remote key validation checks a remote node owns the public keys being advertised. To validate the
-remote keys before adding a node to the peer list, enable remote key validation.
+Remote key validation checks that a remote node owns the public keys being advertised.
+Enable remote key validation by setting [`enableRemoteKeyValidation`](../../Reference/SampleConfiguration.md#features)
+in the configuration file to `true`.
+Remote key validation is disabled by default.
 
 !!! example "Enable remote key validation"
 
@@ -84,3 +84,8 @@ remote keys before adding a node to the peer list, enable remote key validation.
        "enableRemoteKeyValidation": true
      }
     ```
+
+!!! important
+
+    We recommend enabling remote key validation to prevent malicious attacks.
+    The default configuration is false because this is a breaking change for Tessera versions before v0.10.0.

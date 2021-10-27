@@ -41,5 +41,3 @@ command line:
 
 During the recovery process, Tessera won’t accept any new enhanced-privacy transactions but will
 continue to accept 'standard' private transactions.
-
-You can find a step-by-step example and use case for data recovery on the [GoQuorum contract state extension example](https://docs.goquorum.consensys.net/en/stable/Concepts/Privacy/ContractExtension/).

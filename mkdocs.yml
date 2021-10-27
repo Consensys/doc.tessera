@@ -60,6 +60,7 @@ nav:
       - Docker images: HowTo/Get-started/Docker-Images.md
       - Build from source: HowTo/Get-started/Build-From-Source.md
       - Start Tessera: HowTo/Get-started/Start-Tessera.md
+      - Use GoQuorum with Tessera: HowTo/Get-started/Use-GoQuorum-with-Tessera.md
     - Generate keys:
       - Generate keys with Tessera: HowTo/Generate-Keys/Generate-Keys.md
       - File-based keys: HowTo/Generate-Keys/File-Stored-Keys.md

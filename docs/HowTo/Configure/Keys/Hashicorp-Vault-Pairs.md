@@ -38,7 +38,7 @@ authentication method is used at a non-default path.
 This example configuration retrieves version `1` of the secret `engine/secret` from its corresponding values for
 `privateKey` and `publicKey`.
 
-If no `hashicorpVaultSecretVersion` is provided, the latest version for the secret is retrieved.
+If no `hashicorpVaultSecretVersion` is provided, the latest version of the secret is retrieved.
 
 Tessera requires TLS certificates and keys to be stored in the `.jks` Java keystore format.
 If the `.jks` files are password protected, the following environment variables must be set:

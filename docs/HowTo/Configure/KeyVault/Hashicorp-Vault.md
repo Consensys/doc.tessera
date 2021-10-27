@@ -46,17 +46,17 @@ You can [configure this value](../Keys/Hashicorp-Vault-Pairs.md).
 
 ### Policies
 
-To be able to carry out all possible interactions with a Vault, Tessera requires the following policy capabilities:
+Tessera requires the following policy capabilities to be able to carry out all possible interactions with a Vault:
 `["create", "update", "read"]`.
-You can configure a subset of these capabilities if not all functionality is required.
+You can configure a subset of these capabilities if some functionality is not required.
 
 ### Secret engines
 
 Tessera can read and write keys to the [Key/Value version 2](https://www.vaultproject.io/docs/secrets/kv/kv-v2.html)
 secrets engine.
 
-The secrets engine supports multiple versions of secrets, but only a limited number of versions are retained.
-This number can be changed as part of the Vault configuration process.
+The secrets engine supports storing multiple versions of secrets.
+The number of versions stored can be configured as part of the Vault configuration process.
 
 ## Enabling Tessera to use the vault
 

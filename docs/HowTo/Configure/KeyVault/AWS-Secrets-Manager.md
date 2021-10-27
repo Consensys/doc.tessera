@@ -12,9 +12,9 @@ need to store the keys locally.
 The [AWS Secrets Manager documentation](https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html) provides
 the information you need to get started.
 
-## Creating the AWS Secrets Manager
+## Accessing the AWS Secrets Manager
 
-You can use AWS Secrets Manager once you set up your AWS profile.
+You need an AWS profile to use AWS Secrets Manager.
 
 ## Enabling Tessera to use the AWS Secrets Manager
 

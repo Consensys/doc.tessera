@@ -16,7 +16,7 @@ You can [configure a local enclave](../../HowTo/Configure/Enclave.md#local-encla
 ## Remote HTTP enclave
 
 The remote HTTP enclave serves RESTful endpoints over HTTP and runs as a separate process to the [transaction manager](Transaction-manager.md).
-This provides a clear separation between the enclave and transaction manager.
+This provides greater separation between the enclave and transaction manager.
 
 For additional security, the remote HTTP enclave can be deployed in a secure environment separate from the transaction manager.
 

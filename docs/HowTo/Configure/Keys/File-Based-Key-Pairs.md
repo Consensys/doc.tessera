@@ -4,8 +4,8 @@ description: Configure file-based key pairs.
 
 # File-based key pairs
 
-To configure file-based [key pairs](Overview.md), store the key pair in files, and provide the location of the files in
-the [configuration file](../../../Reference/SampleConfiguration.md#keydata).
+To configure file-based [key pairs](Overview.md), provide the location of the files in the
+[configuration file](../../../Reference/SampleConfiguration.md#keydata).
 You can use Tessera to [generate file-based keys].
 
 !!! example "File-based key pair configuration"
@@ -55,9 +55,10 @@ The contents of the private key file must contain the private key in the [inline
 
     === "Unprotected"
 
-        !!! warning
+        !!! critical "Security warning"
 
             Inline unprotected keys are not secure because the private key is exposed.
+            Do not use inline unprotected key pairs in production environments.
 
         ```json
         {

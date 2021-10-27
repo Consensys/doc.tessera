@@ -26,7 +26,7 @@ It provides the credentials to authenticate your Tessera instance to use the key
 
 1. Log in to the Azure Portal.
 1. Select **Azure Active Directory** from the sidebar.
-1. Select **App registrations**, **New application registration** and complete the registration process.
+1. Select **App registrations**, select **New application registration**, and complete the registration process.
    Make note of the **Application ID**.
 1. Once registered, select **Settings**, select **Keys**, and create a new key with a name and expiration rule.
    Once you save the key, make note of the key value - this is the only opportunity to see this value!

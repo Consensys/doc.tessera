@@ -34,7 +34,7 @@ successfully completes).
 To trigger the recovery process, Tessera must be started in recovery mode on the command line:
 
 ```bash
-tessera -r or tessera --recover
+tessera --recover
 ```
 
  During the recovery process, Tessera doesn't accept any new [enhanced-privacy transactions](https://docs.goquorum.consensys.net/en/stable/Concepts/Privacy/PrivacyEnhancements/),

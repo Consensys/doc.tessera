@@ -8,9 +8,10 @@ You can configure inline [key pairs](Overview.md) in the [configuration file](..
 
 ## Unprotected
 
-!!! warning
+!!! critical "Security warning"
 
     Inline unprotected key pairs are not secure because the private key is exposed in the configuration file.
+    Do not use inline unprotected key pairs in production environments.
 
 In unprotected inline key pair configuration, provide key pair data in plain text.
 Provide the plain text private key in a `config` JSON object.
@@ -35,7 +36,7 @@ Provide the plain text private key in a `config` JSON object.
 
 ## Protected
 
-In protected inline key pair configuration, provide the public key in plain text.
+In protected inline key pair configuration, provide the public key in plaintext.
 The private key must be [password-protected using Argon2](Secure-Keys.md).
 Provide the corresponding encrypted data in a `config` JSON object.
 

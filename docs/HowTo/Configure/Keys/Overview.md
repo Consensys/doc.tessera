@@ -7,8 +7,8 @@ description: Configure access to public and private key pairs.
 Tessera uses private and public keys pairs to provide transaction privacy.
 You can use existing key pairs or use Tessera to generate new key pairs.
 
-You can use multiple keys at the same time in Tessera.
-You can configure access to the keys by specifying [`keys`](../../../Reference/SampleConfiguration.md#keys) in the
+You can configure Tessera to use one or more keys.
+Configure access to the keys by specifying [`keys`](../../../Reference/SampleConfiguration.md#keys) in the
 Tessera [configuration file](../Tessera.md).
 
 !!! Example "Keys configuration"
@@ -58,7 +58,7 @@ Tessera tries each key to find one that can decrypt the payload.
 ## Viewing the keys registered for a node
 
 You can use the `ThirdParty` API [`/keys`](https://consensys.github.io/tessera/#operation/getPublicKeys) endpoint to
-view the public keys of the key pairs currently used by your Tessera node.
+view the public keys of your Tessera node.
 
 !!! example "`/keys` request"
 
@@ -81,7 +81,7 @@ You must [configure the corresponding server](../TesseraAPI.md).
 ## Providing key passwords at runtime
 
 Tessera displays a CLI prompt if it has incomplete password data for its [locked keys](Secure-Keys.md).
-You can use this prompt to provide the required passwords for each key without having to provide them in the
+You can use this prompt to provide the required passwords for each key instead of providing them in the
 configuration file itself.
 
 !!! example "CLI password prompt"
@@ -98,7 +98,7 @@ configuration file itself.
 
 ## Update a configuration file with new keys
 
-Newly generated keys must be added to a Tessera configuration file, which is often easiest to do manually.
+If you generate new keys, you can update the Tessera configuration file manually.
 
 However, you can use the [`tessera keygen -configfile`](../../../Reference/CLI/CLI-Subcommands.md#configfile) option to
 automatically update a configuration file.

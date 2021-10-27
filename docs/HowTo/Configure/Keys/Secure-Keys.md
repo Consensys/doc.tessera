@@ -9,7 +9,7 @@ You can encrypt private keys with a password during key generation.
 After generating password-protected keys, you must add the password must to the [configuration file](../Tessera.md) to
 ensure it can be decrypted.
 
-You can add passwords can be inline using `"passwords":[]`, or store them in an external file referenced by `"passwordFile": "Path"`.
+You can add passwords inline using `"passwords":[]`, or store them in an external file referenced by `"passwordFile": "Path"`.
 
 !!! note
 

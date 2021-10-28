@@ -4,31 +4,34 @@ description: Configure access to public and private key pairs.
 
 # Overview
 
-Tessera uses private and public keys pairs to provide transaction privacy. You can use existing
-key pairs, and use Tessera to generate new key pairs for you.
+Tessera uses private and public keys pairs to provide transaction privacy.
+You can use existing key pairs or use Tessera to generate new key pairs.
 
-Multiple keys can be used at the same time in Tessera. Configure access to the keys in
-the [configuration file](../../../Reference/SampleConfiguration.md). For example:
+You can configure Tessera to use one or more keys.
+Configure access to the keys by specifying [`keys`](../../../Reference/SampleConfiguration.md#keys) in the
+Tessera [configuration file](../Tessera.md).
 
-```json
-"keys": {
-    "passwordFile": "Path",
-    "keyVaultConfigs": [
-        {
-            "keyVaultType": "Enumeration: AZURE, HASHICORP, AWS",
-            "properties": "Map[string]string"
-        }
-    ],
-    "keyData": [
-        {
-            // The data for a private/public key pair
-        }
-    ]
-}
-```
+!!! Example "Keys configuration"
 
-Configure the [`keyData`](../../../Reference/SampleConfiguration.md#keydata) object to access the
-key pair using any of the following methods:
+    ```json
+    "keys": {
+        "passwordFile": "Path",
+        "keyVaultConfigs": [
+            {
+                "keyVaultType": "Enumeration: AZURE, HASHICORP, AWS",
+                "properties": "Map[string]string"
+            }
+        ],
+        "keyData": [
+            {
+                // The data for a private/public key pair
+            }
+        ]
+    }
+    ```
+
+Configure the [`keyData`](../../../Reference/SampleConfiguration.md#keydata) object to access the key pair using any of
+the following methods:
 
 | Configuration method  | Description                                                                             |
 |:----------------------|:----------------------------------------------------------------------------------------|
@@ -39,49 +42,49 @@ key pair using any of the following methods:
 | [AWS Secrets Manager] | Provide the location of the keys in the [configured AWS Secrets Manager].               |
 | [HashiCorp Vault]     | Provide the location of the keys in the [configured HashiCorp Vault].                   |
 
-If using a vault to store your keys, then use the [`keyVaultConfigs`](../../../Reference/SampleConfiguration.md#keyvaultconfigs)
+If using a vault to store your keys, use the [`keyVaultConfigs`](../../../Reference/SampleConfiguration.md#keyvaultconfigs)
 object to configure the details to access the vault.
 
 ## Using multiple keys
 
-You can configure multiple key pairs for a Tessera node. In this case, any one of the public
-keys can be used to address a private transaction to that node. Tessera sequentially tries each key
-to find one that can decrypt the payload.
+You can configure multiple key pairs for a Tessera node.
+In this case, any one of the public keys can be used to address a private transaction to that node.
+Tessera tries each key to find one that can decrypt the payload.
 
-!!! Note
+!!! note
 
     Multiple key pairs can only be configured within the configuration file.
 
 ## Viewing the keys registered for a node
 
-The `ThirdParty` API [`/keys`](https://consensys.github.io/tessera/#operation/getPublicKeys)
-endpoint can be used to view the public keys of the key pairs currently in use by your Tessera node.
+You can use the `ThirdParty` API [`/keys`](https://consensys.github.io/tessera/#operation/getPublicKeys) endpoint to
+view the public keys of your Tessera node.
 
-For example:
+!!! example "`/keys` request"
 
-```json
-request: <thirdpartyhost>:<port>/keys
-{
-   "keys" : [
-      {
-         "key" : "oNspPPgszVUFw0qmGFfWwh1uxVUXgvBxleXORHj07g8="
-      },
-      {
-         "key" : "ABn6zhBth2qpdrJXp98IvjExV212ALl3j4U//nj4FAI="
-      }
-   ]
-}
-```
+    ```json
+    request: <thirdpartyhost>:<port>/keys
+    {
+       "keys" : [
+          {
+             "key" : "oNspPPgszVUFw0qmGFfWwh1uxVUXgvBxleXORHj07g8="
+          },
+          {
+             "key" : "ABn6zhBth2qpdrJXp98IvjExV212ALl3j4U//nj4FAI="
+          }
+       ]
+    }
+    ```
 
-The corresponding server must be [configured in the node's configuration file](../TesseraAPI.md).
+You must [configure the corresponding server](../TesseraAPI.md).
 
 ## Providing key passwords at runtime
 
-Tessera displays a CLI prompt if it has incomplete password data for its locked keys.
-This prompt can be used to provide the required passwords for each key without having to provide
-them in the configuration file itself.
+Tessera displays a CLI prompt if it has incomplete password data for its [locked keys](Secure-Keys.md).
+You can use this prompt to provide the required passwords for each key instead of providing them in the
+configuration file itself.
 
-!!! example
+!!! example "CLI password prompt"
 
     ```bash
     tessera -configfile path/to/config.json
@@ -95,22 +98,21 @@ them in the configuration file itself.
 
 ## Update a configuration file with new keys
 
-Newly generated keys must be added to a Tessera configuration file, which is often easiest to do
-manually.
+If you generate new keys, you can update the Tessera configuration file manually.
 
-However, the [`tessera keygen -configfile`](../../../Reference/CLI/CLI-Subcommands.md#configfile)
-option can be used to automatically update a configuration file. This is particularly useful for
-scripting. For example:
+However, you can use the [`tessera keygen -configfile`](../../../Reference/CLI/CLI-Subcommands.md#configfile) option to
+automatically update a configuration file.
+This is particularly useful for scripting.
+For example:
 
 ```bash
 tessera -keygen -filename key1 -configfile /path/to/config.json --configout /path/to/new.json --pwdout /path/to/new.pwds
 ```
 
-The command prompts for a password and generates the `key1` pair. The Tessera
-configuration `/path/to/config.json` is updated and saved to `/path/to/new.json`.
+The command prompts for a password and generates the `key1` pair.
+The Tessera configuration `/path/to/config.json` is updated and saved to `/path/to/new.json`.
 
-New passwords are appended to the existing password file defined in `/path/to/config.json` and
-written to `/path/to/new.pwds`.
+New passwords are appended to the existing password file defined in `/path/to/config.json` and written to `/path/to/new.pwds`.
 
 If the [`--configout`](../../../Reference/CLI/CLI-Subcommands.md#configfile) and
 [`--pwdout`](../../../Reference/CLI/CLI-Subcommands.md#pwdout) options are not provided, the updated

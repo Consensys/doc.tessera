@@ -4,12 +4,13 @@ description: Monitor Tessera
 
 # Monitor Tessera
 
-Tessera can be used with InfluxDB and Prometheus time-series databases to record API usage metrics.
+Tessera can be used with InfluxDB or Prometheus time-series databases to record API usage metrics.
 The data recorded can be visualized by using an existing dashboard tool such as Grafana.
 
-In addition, Tessera logs can be searched, analyzed, and monitored using Splunk.
+In addition, Tessera logs can be searched, analyzed, and monitored using Splunk or Elastic Stack (ELK).
 You can set up Splunk such that the logs for multiple Tessera nodes in a network are accessible from a single
 centralized Splunk instance.
+
 
 ## API metrics
 
@@ -175,19 +176,8 @@ A summary of the steps to store Tessera metrics in a Prometheus database are as 
 1. Install Prometheus.
 1. Create a `prometheus.yml` configuration file to provide Prometheus with the necessary information to pull metrics
    from Tessera.
-   A simple Prometheus configuration for use with the [7nodes example network](../../../../Getting Started/Quorum-Examples) is:
-
-    ```yaml
-    global:
-      scrape_interval:     15s
-      evaluation_interval: 15s
-
-    scrape_configs:
-      - job_name: tessera-7nodes
-        static_configs:
-          - targets: ['localhost:9001', 'localhost:9002', 'localhost:9003', 'localhost:9004', 'localhost:9005', 'localhost:9006', 'localhost:9007']
-    ```
-
+   You can use [an example Prometheus configuration](https://github.com/ConsenSys/quorum-dev-quickstart/blob/master/files/goquorum/config/prometheus/prometheus.yml)
+   with the [Quorum Developer Quickstart](../../Tutorials/Quorum-Dev-Quickstart.md).
 1. Start Tessera.
    As Tessera always exposes the `metrics` endpoint, no additional configuration of Tessera is required.
 1. Start Prometheus:
@@ -204,7 +194,9 @@ A summary of the steps to store Tessera metrics in a Prometheus database are as 
 You can import a pre-built [GoQuorum Grafana dashboard](https://grafana.com/grafana/dashboards/14360) to visualize
 your recorded GoQuorum network data.
 
-## Monitoring a Tessera network with Splunk
+## Monitoring Tessera
+
+### Using Splunk
 
 You can use Splunk to search, analyze, and monitor the logs of Tessera nodes.
 
@@ -258,3 +250,8 @@ The general steps to consolidate the logs for a Tessera network in Splunk are:
     1. Set up Splunk *Universal Forwarders* (lightweight Splunk clients) on each Tessera host to forward log data for
        its node to the *Receiver*.
     1. Set up the Splunk *Receiver* to listen and receive logging data from the *Universal Forwarders*.
+
+### Using Elastic Stack
+
+You can use Elastic Stack (ELK) to manage logs in Tessera.
+Follow the [Quorum Developer Quickstart](../../Tutorials/Quorum-Dev-Quickstart.md) to use Tessera with ELK.

@@ -11,7 +11,6 @@ In addition, Tessera logs can be searched, analyzed, and monitored using Splunk 
 You can set up Splunk such that the logs for multiple Tessera nodes in a network are accessible from a single
 centralized Splunk instance.
 
-
 ## API metrics
 
 Tessera can record the following usage metrics for each endpoint of its API:

@@ -17,7 +17,7 @@ Tessera can record the following usage metrics for each endpoint of its API:
 
 * Average response time
 * Maximum response time
-* Minimum Response Time
+* Minimum response time
 * Request count
 * Requests per second
 
@@ -35,7 +35,7 @@ creation of dashboards to visualize the data being captured from Tessera.
 
 ### Using InfluxDB
 
-See the [InfluxDB documentation](https://docs.influxdata.com/influxdb) for details on how to set up an InfluxDB database
+The [InfluxDB documentation](https://docs.influxdata.com/influxdb) provides details on how to set up an InfluxDB database
 ready for use with Tessera.
 A summary of the steps is as follows:
 
@@ -71,10 +71,9 @@ A summary of the steps is as follows:
 
     You can call the InfluxDB HTTP API directly as an alternative to using the `influx` CLI.
 
-You can configure each Tessera server type (for example, `P2P`, `Q2T`, `ADMIN`, `THIRDPARTY`, `ENCLAVE`) to store API
-metrics in an InfluxDB.
+You can optionally configure each Tessera server type (for example, `P2P`, `Q2T`, `ADMIN`, `THIRDPARTY`, `ENCLAVE`) to
+store API metrics in an InfluxDB.
 You can configure these servers to store metrics to the same database or separate ones.
-Not all servers need to be configured to store metrics.
 
 To configure a server to use an InfluxDB, add `influxConfig` to the server configuration.
 For example:
@@ -154,7 +153,7 @@ To configure Tessera as the client in one-way TLS:
 }
 ```
 
-where `truststore.jks` is a Java KeyStore format file containing the trusted certificates for the Tessera client (for
+where `truststore.jks` is a Java keystore format file containing the trusted certificates for the Tessera client (for
 example, the certificate of the CA used to create the InfluxDB certificate).
 
 If securing the key store with a password, you must provide this password.
@@ -167,8 +166,8 @@ This isn't used so can simply be set as the trust store.
 
 ### Using Prometheus
 
-The [Prometheus documentation](https://prometheus.io/docs/introduction/overview/) provides all the information you need
-to get Prometheus setup and ready to integrate with Tessera.
+The [Prometheus documentation](https://prometheus.io/docs/introduction/overview/) provides information to set up
+Prometheus to integrate with Tessera.
 The [Prometheus First Steps](https://prometheus.io/docs/introduction/first_steps/) is a good starting point.
 A summary of the steps to store Tessera metrics in a Prometheus database are as follows:
 
@@ -178,7 +177,7 @@ A summary of the steps to store Tessera metrics in a Prometheus database are as 
    You can use [an example Prometheus configuration](https://github.com/ConsenSys/quorum-dev-quickstart/blob/master/files/goquorum/config/prometheus/prometheus.yml)
    with the [Quorum Developer Quickstart](../../Tutorials/Quorum-Dev-Quickstart.md).
 1. Start Tessera.
-   As Tessera always exposes the `metrics` endpoint, no additional configuration of Tessera is required.
+   Tessera always exposes the `metrics` endpoint, so no additional configuration of Tessera is required.
 1. Start Prometheus:
 
     ```bash
@@ -199,7 +198,7 @@ your recorded GoQuorum network data.
 
 You can use Splunk to search, analyze, and monitor the logs of Tessera nodes.
 
-Consolidating the logs from multiple Tessera nodes in a network requires setting up Splunk and Splunk Universal Forwarders.
+To consolidate the logs from multiple Tessera nodes, set up Splunk and Splunk Universal Forwarders.
 The following pages from the Splunk documentation are a good starting point for understanding how to achieve this:
 
 * [Consolidate data from multiple hosts](http://docs.splunk.com/Documentation/Forwarder/7.1.2/Forwarder/Consolidatedatafrommultiplehosts)

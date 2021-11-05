@@ -13,11 +13,11 @@ database.
 
 The tool migrates both Tessera's raw transactions and regular transactions.
 
-!!! warning
+!!! important
 
-    Ensure to backup the primary database because the tool overwrites transactions with updated
-    payloads, and does not recover gracefully if errors occur during the migration; the
-    secondary database is only read from.
+    We recommend backing up the primary database because the migration tool overwrites transactions with updated
+    payloads and may not recover if errors occur during the migration.
+    The secondary database is read only.
 
 ## Usage
 

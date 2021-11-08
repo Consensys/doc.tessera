@@ -66,6 +66,7 @@ nav:
       - HashiCorp Vault: HowTo/Generate-Keys/Hashicorp-Vault.md
       - Azure Key Vault: HowTo/Generate-Keys/Azure-Key-Vault.md
       - AWS Secrets Manager: HowTo/Generate-Keys/AWS-Secrets-Manager.md
+    - Generate certificates: HowTo/Generate-certificates.md
     - Configure:
       - Configuration file: HowTo/Configure/Tessera.md
       - Transaction manager: HowTo/Configure/Transaction-manager.md

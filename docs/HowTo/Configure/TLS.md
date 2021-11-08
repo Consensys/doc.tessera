@@ -47,7 +47,7 @@ If the value is set to `"OFF"`, the rest of the SSL configuration will not be co
 }
 ```
 
-When SSL is enabled, each node will need to have certificates and keys defined for both client-side and server-side.
+When SSL is enabled, each node will need to have [certificates](../Generate-certificates.md) and [keys](../Generate-Keys/Generate-Keys.md) defined for both client-side and server-side.
 These can be defined in multiple ways:
 
 1. Secured & unsecured `.jks` (Java keystore) format files

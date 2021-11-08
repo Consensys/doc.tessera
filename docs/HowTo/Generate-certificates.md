@@ -21,13 +21,13 @@ To use a public DNS as CN:
 
 1. Generate a key file called `tessera_ca.key`:
 
-    ```
+    ```bash
     openssl genrsa -out tessera_ca.key 2048
     ```
 
 2. Generate a certificate authority [(CA)](Configure/TLS.md#ca) certificate called `tessera_ca.pem` that uses `tessera_ca.key`:
 
-    ```
+    ```bash
     openssl req -x509 -new -nodes -key tessera_ca.key -sha256 -days 1024 -out tessera_ca.pem
     ```
 
@@ -37,13 +37,13 @@ We recommend each node has its own certificate. To generate the certificate:
 
 1. Generate a key file called `tessera_cer.key`:
 
-    ```
+    ```bash
     openssl genrsa -out tessera_cer.key 2048
     ```
 
 2. Generate a certificate signing request (CSR) called `tessera_cer.csr`:
 
-    ```
+    ```bash
     openssl req -new -key tessera_cer.key -out tessera_cer.csr
     ```
 
@@ -56,7 +56,7 @@ We recommend each node has its own certificate. To generate the certificate:
 
 4. Generate a certificate called `tessera_cer.pem` signed by the CA certificate:
 
-    ```
+    ```bash
     openssl x509 -req -in tessera_cer.csr -CA tessera_ca.pem -CAkey tessera_ca.key -CAcreateserial -out tessera_cer.pem -days 500 -sha256
     ```
 
@@ -70,7 +70,7 @@ To use a public IP address as CN:
 
 2. In your copy of the `openssl.cnf` file, find the `[req]` section, and add:
 
-    ```ini
+    ```bash
     req_extensions = v3_req
 
     [ v3_req ]
@@ -97,19 +97,19 @@ To use a public IP address as CN:
 
 1. Run the following command. Substitute your values for all variables.
 
-    ```
+    ```bash
     openssl req -new -key tessera_cer.key -out tessera_cer.csr -config <PATH-TO>/openssl.cnf
     ```
 
 2. Test whether the certificate was generated with the expected subject alternative names:
 
-    ```
+    ```bash
     openssl req -text -noout -in tessera_cer.csr
     ```
 
     !!! Example "Example of command output"
 
-        ```
+        ```bash
         [...]
         Requested Extensions:
             X509v3 Subject Alternative Name:
@@ -124,19 +124,19 @@ To use a public IP address as CN:
 
 1. Run the following command. Substitute your values for all variables.
 
-    ```
+    ```bash
     openssl x509 -req -in tessera_cer.csr -CA tessera_ca.pem -CAkey tessera_ca.key -CAcreateserial -out tessera_cer.pem -days 500 -sha256 -extfile <PATH-TO>/openssl.cnf -extensions v3_req
     ```
 
 2. Test whether the generated certificate contains the subject alternative names:
 
-    ```
+    ```bash
     openssl x509 -in tessera_cer.pem -text -noout
     ```
 
     !!! Example "Example of command output"
 
-         ```
+         ```bash
          [...]
          X509v3 extensions:
              X509v3 Subject Alternative Name:

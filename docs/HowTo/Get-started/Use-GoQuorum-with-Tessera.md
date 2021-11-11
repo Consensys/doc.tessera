@@ -17,7 +17,7 @@ to create a private network with GoQuorum using Tessera.
 Refer to the GoQuorum [send a private transaction tutorial](https://docs.goquorum.consensys.net/en/stable/Tutorials/Send-private-transaction/)
  to send a private transactions with GoQuorum using Tessera.
 
-!!! Important
+!!! Note
 
-    All Tessera nodes listed in [`privateFor`](https://docs.goquorum.consensys.net/en/stable/Concepts/Privacy/PrivateAndPublic/#private-transactions)
-    must be running when the private transaction is sent. Otherwise, the transaction doesn't propagate and an error is returned.
+    All Tessera nodes included in a private transaction must be running when the private transaction is sent.
+    Otherwise, the transaction doesn't propagate and an error is returned.

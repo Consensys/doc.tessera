@@ -1,11 +1,16 @@
-# Sample configuration for Tessera as bootstrap node
+# Bootstrap node configuration file
 
-To start Tessera as a bootstrap node, use:
+To start Tessera as a bootstrap node:
 
-- `bootstrapNode` is added to start Tessera as bootstrap node only with no Quorum connection.
-- `CUSTOM` encryptor type added to integrate third party encryptor implementation.
+- Set [`bootstrapNode`](SampleConfiguration.md#bootstrapnode) to `true`.
+- Use the `CUSTOM` [encryptor type](SampleConfiguration.md#encryptor) to integrate a third party encryptor implementation.
 
-**Sample:**
+!!! info
+
+    Tessera bootstrap nodes function the same way [bootnodes](https://besu.hyperledger.org/en/stable/HowTo/Find-and-Connect/Bootnodes/)
+    do for Hyperledger Besu.
+
+## Example configuration file
 
 ```json
 {

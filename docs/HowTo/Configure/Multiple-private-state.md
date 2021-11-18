@@ -4,11 +4,11 @@ description: Configure Tessera to support GoQuorum multiple private states featu
 
 # Configure multiple private states
 
-You can enable support for multiple GoQuorum private states by setting
-[`enableMultiplePrivateStates`](../../Reference/SampleConfiguration.md#features) in the Tessera [configuration file](Tessera.md)
-to `true`.
+You can enable support for [GoQuorum multiple private states (MPS)](https://docs.goquorum.consensys.net/en/latest/Concepts/Multitenancy/#multiple-private-states)
+by setting [`enableMultiplePrivateStates`](../../Reference/SampleConfiguration.md#features) in the Tessera
+[configuration file](Tessera.md) to `true`.
 
-!!! example "Enable multiple private states configuration"
+!!! example "Enable MPS configuration"
 
     ```json
     "features" : {
@@ -18,7 +18,7 @@ to `true`.
 
 ## Resident groups
 
-When multiple private states is enabled, all keys configured must belong to a resident group.
+When MPS is enabled, all keys configured must belong to a resident group.
 Specify `residentGroups` in the configuration file as shown in the following example.
 
 !!! example "Resident group configuration"
@@ -38,7 +38,7 @@ Specify `residentGroups` in the configuration file as shown in the following exa
      ]
     ```
 
-Tessera loads the resident group configuration, performs the necessary validations during application startup, and
+Tessera loads the resident group configuration, performs the necessary validation during application startup, and
 persists relevant data to its database.
 
 !!! important

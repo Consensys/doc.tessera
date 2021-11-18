@@ -4,20 +4,18 @@ description: Generating certificates
 
 # Generating certificates
 
-You can generate certificates for use with [TLS communications](Configure/TLS.md) using a third-party tool like OpenSSL or
+You can generate certificates to use with [TLS](Configure/TLS.md) using a third-party tool such as OpenSSL or
 Keytool.
 
-## Generating certificates using OpenSSL
-
-These procedures explain how to use [OpenSSL](https://www.openssl.org/source/) to generate certificates
+This guide explains how to use [OpenSSL](https://www.openssl.org/source/) to generate certificates
 when the Common Name (CN) is either the [public DNS](#public-dns-as-cn) or an [IP address](#ip-address-as-cn).
 Before you begin, ensure OpenSSL is installed.
 
-### Public DNS as CN
+## Public DNS as CN
 
-To use a public DNS as CN:
+Follow these steps to use a public DNS as CN.
 
-#### Generating a CA certificate
+### Generating a CA certificate
 
 1. Generate a key file called `tessera_ca.key`:
 
@@ -25,13 +23,13 @@ To use a public DNS as CN:
     openssl genrsa -out tessera_ca.key 2048
     ```
 
-2. Generate a certificate authority [(CA)](Configure/TLS.md#ca) certificate called `tessera_ca.pem` that uses `tessera_ca.key`:
+2. Generate a certificate authority (CA) certificate called `tessera_ca.pem` that uses `tessera_ca.key`:
 
     ```bash
     openssl req -x509 -new -nodes -key tessera_ca.key -sha256 -days 1024 -out tessera_ca.pem
     ```
 
-#### Generating a new certificate for a node
+### Generating a new certificate for a node
 
 We recommend each node has its own certificate. To generate the certificate:
 
@@ -60,11 +58,11 @@ We recommend each node has its own certificate. To generate the certificate:
     openssl x509 -req -in tessera_cer.csr -CA tessera_ca.pem -CAkey tessera_ca.key -CAcreateserial -out tessera_cer.pem -days 500 -sha256
     ```
 
-### IP address as CN
+## IP address as CN
 
-To use a public IP address as CN:
+Follow these steps to use a public IP address as CN.
 
-#### Updating the `openssl.cnf` file
+### Updating the `openssl.cnf` file
 
 1. Find the `openssl.cnf` file, and create a copy of it.
 
@@ -85,15 +83,15 @@ To use a public IP address as CN:
     IP.2 = <PRIVATE-IP-ADDRESS>
     ```
 
-3. For each DNS you want to use as an alternate name, specify a DNS._n_ entry.
+3. For each DNS you want to use as an alternate name, specify a `DNS.n` entry.
 
-4. For each IP address you want as an alternate IP address, specify an IP._n_ entry.
+4. For each IP address you want as an alternate IP address, specify an `IP.n` entry.
 
     !!! note
 
-        When running on `localhost`, make sure to include `127.0.0.1` as a listed IP address.
+        When running on `localhost`, include `127.0.0.1` as a listed IP address.
 
-#### Generating a new CSR for a node
+### Generating a new CSR for a node
 
 1. Run the following command. Substitute your values for all variables.
 
@@ -103,11 +101,13 @@ To use a public IP address as CN:
 
 2. Test whether the certificate was generated with the expected subject alternative names:
 
-    ```bash
-    openssl req -text -noout -in tessera_cer.csr
-    ```
+    === "Command"
+    
+        ```bash
+        openssl req -text -noout -in tessera_cer.csr
+        ```
 
-    !!! Example "Example of command output"
+    === "Output example"
 
         ```bash
         [...]
@@ -120,7 +120,7 @@ To use a public IP address as CN:
         [...]
         ```
 
-#### Generating a new certificate
+### Generating a new certificate
 
 1. Run the following command. Substitute your values for all variables.
 
@@ -130,11 +130,13 @@ To use a public IP address as CN:
 
 2. Test whether the generated certificate contains the subject alternative names:
 
-    ```bash
-    openssl x509 -in tessera_cer.pem -text -noout
-    ```
+    === "Command"
+    
+        ```bash
+        openssl x509 -in tessera_cer.pem -text -noout
+        ```
 
-    !!! Example "Example of command output"
+    === "Output example"
 
          ```bash
          [...]

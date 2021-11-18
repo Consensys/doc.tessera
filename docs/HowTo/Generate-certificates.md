@@ -102,7 +102,7 @@ Follow these steps to use a public IP address as CN.
 2. Test whether the certificate was generated with the expected subject alternative names:
 
     === "Command"
-    
+
         ```bash
         openssl req -text -noout -in tessera_cer.csr
         ```
@@ -131,7 +131,7 @@ Follow these steps to use a public IP address as CN.
 2. Test whether the generated certificate contains the subject alternative names:
 
     === "Command"
-    
+
         ```bash
         openssl x509 -in tessera_cer.pem -text -noout
         ```

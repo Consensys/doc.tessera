@@ -6,7 +6,7 @@ description: Overview of Tessera transaction manager
 
 Tessera's transaction manager:
 
-- Creates a peer to peer network with other transaction managers.
+- Creates a peer-to-peer network with other transaction managers.
 - Delegates key management and payload encryption/decryption to the [enclave](Enclave.md).
 - Stores and retrieves saved data from the database.
 - Distributes private transaction payloads for privacy-enabled Ethereum clients.

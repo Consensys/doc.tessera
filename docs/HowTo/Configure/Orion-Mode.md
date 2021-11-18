@@ -2,30 +2,33 @@
 description: Configure Tessera to use the Besu in a non-GoQuorum privacy mode.
 ---
 
-# Hyperledger Besu support
+# Configure Hyperledger Besu support
 
-Tessera provides out-of-the-box support for Hyperledger Besu; however, additional configuration
-is required if **not** running Besu in GoQuorum privacy mode.
+Tessera provides out-of-the-box support for [Hyperledger Besu](https://besu.hyperledger.org/en/stable/HowTo/Use-Privacy/Privacy/).
+However, additional configuration is required if you are **not** running
+[Besu in GoQuorum privacy mode](https://besu.hyperledger.org/en/stable/HowTo/Use-Privacy/Use-GoQuorum-compatible-privacy/).
 
-Enable `orion` mode in the configuration file if GoQuorum privacy mode is not enabled in Besu.
+If GoQuorum privacy mode is not enabled in Besu, set [`mode`](../../Reference/SampleConfiguration.md#mode) in the
+Tessera [configuration file](Tessera.md) to `orion`.
 
-```json
-"mode": "orion",
-```
+!!! example "Orion mode configuration"
 
-The configuration can also be enabled using command line overrides:
+    ```json
+    "mode": "orion",
+    ```
 
-```shell
+The configuration can also be enabled using [command line overrides](Override-config.md):
+
+```bash
 tessera --configfile config.json -o mode="orion"
 ```
 
-Enabling `orion` mode changes Tessera's behaviour in the following ways:
+If you enable `orion` mode, Tessera:
 
-* Will attempt to retrieve privacy group and its associated members for transactions sent with `privacyGroupId`.
+* Attempts to retrieve the [privacy group](../../Concepts/Privacy-Groups.md) and its associated members for transactions
+  sent with `privacyGroupId`.
 * Creates a legacy privacy group for transactions sent with `privateFor` containing a list of recipient keys.
-* Will use SHA-512/256 to generate 32 byte hash of encrypted payload to be returned to Besu.
-* Adds support for `/receive` `POST` requests using `application/json` media type.
-* Responses to `/receive` requests will include the `senderKey` (for Besu sender authentication), and the transaction’s associated `privacyGroupId`.
-
-<!--links-->
-[Besu-extended privacy]: https://besu.hyperledger.org/en/stable/HowTo/Use-Privacy/Privacy/
+* Uses SHA-512/256 to generate 32-byte hashes of encrypted payloads to be returned to Besu.
+* Adds support for `/receive` `POST` requests using the `application/json` media type.
+* Includes the `senderKey` (for Besu sender authentication) and the transaction's associated `privacyGroupId` in
+  responses to `/receive` requests.

@@ -93,6 +93,6 @@ Creates the specified file containing the process ID (PID) of the Tessera instan
     --recover
     ```
 
-Runs Tessera in [data recovery mode](../../HowTo/Configure/Data-Recovery.md).
+Runs Tessera in [data recovery mode](../../HowTo/Use/Data-Recovery.md).
 
 Short syntax for this option is `-r`.

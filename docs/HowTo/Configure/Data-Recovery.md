@@ -39,5 +39,5 @@ command line:
     tessera -r or tessera --recover
 ```
 
- During the recovery process, Tessera won’t accept any new enhanced-privacy transactions but will
- continue to accept 'standard' private transactions.
+During the recovery process, Tessera won’t accept any new enhanced-privacy transactions but will
+continue to accept standard private transactions.

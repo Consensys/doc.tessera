@@ -4,19 +4,19 @@ description: Overview of Tessera enclave
 
 # Enclave
 
-!!! info
-    An enclave is a secure processing environment that acts as a black box for processing commands and data.
-
-    Enclaves come in various forms, both in hardware and software.
-
-    An enclave protects the information that exists inside it from malicious attack.
+An enclave is a secure processing environment that acts as a black box for processing commands and data.
+An enclave protects the information that exists inside it from malicious attacks.
 
 Tessera's enclave handles:
 
-* Encryption and decryption operations required by the transaction manager.
+* Encryption and decryption operations required by the [transaction manager](Transaction-manager.md).
 * Key management.
 
-Separating enclave responsibilities from the transaction manager prevents sensitive data from leaking into areas of program memory that don't require access. This reduces the potential impact of malicious attacks.
+Tessera supports two [enclave types](Enclave-types.md).
+
+Separating enclave responsibilities from the transaction manager prevents sensitive data from leaking into areas of
+the codebase that don't require access.
+This reduces the exposed areas for malicious attacks.
 
 ## Enclave responsibilities
 

@@ -13,9 +13,9 @@ By placing the instances behind a load balancer, downtime can be limited during 
 ## Servers
 
 Tessera exposes multiple interfaces for connectivity which can be configured in the `serverConfigs` in the
-[configuration file](../../Reference/SampleConfiguration.md). In order to enable High availability for the node, some of
-those interfaces need to be set to use the load balancer's address for their `serverAddress`, but will also use their own
-URL or IP for the `bindingAddress`, as shown below
+[configuration file](../../Reference/SampleConfiguration.md).
+To enable High availability for the node, set the interfaces to use the load balancer's address for their `serverAddress`,
+and their own URL or IP for the `bindingAddress`, as shown in the following example.
 
 ```bash
 
@@ -121,7 +121,8 @@ traffic among upstream servers.
 
 ## Database
 
-The last piece to configure in High Availability is the [database](./Database.md) and you set the
-[`jdbc`](../../Reference/SampleConfiguration.md#jdbc) endpoint in the same configuration file. We strongly recommend
-using a SQL database that is also configured for HA independently; and if in cloud consider using AWS RDS or Azure
-Postgresql or equivalent.
+The last piece to configure in High Availability is the [database](./Database.md).
+Set the [`jdbc`](../../Reference/SampleConfiguration.md#jdbc) endpoint in the same configuration file.
+We strongly recommend using an SQL database also configured for HA independently.
+If using a cloud-based database, consider using [AWS RDS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Welcome.html),
+[Azure Postgresql](https://docs.microsoft.com/en-us/azure/postgresql/), or equivalent.

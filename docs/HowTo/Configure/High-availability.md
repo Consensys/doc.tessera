@@ -54,8 +54,7 @@ and its own URL or IP for the `bindingAddress`, as shown in the following exampl
         }
     ],
     ...
-
-```
+    ```
 
 ## Load balancer configuration
 

@@ -91,7 +91,7 @@ nav:
       - Cryptographic elliptic curves: HowTo/Configure/Cryptographic-elliptic-curves.md
       - Hyperledger Besu support: HowTo/Configure/Orion-Mode.md
       - Override configuration file: HowTo/Configure/Override-config.md
-      - High Availability: HowTo/Configure/High-availability.md
+      - High availability: HowTo/Configure/High-availability.md
     - Use:
       - Monitoring: HowTo/Use/Monitoring.md
       - Logging: HowTo/Use/Logging.md

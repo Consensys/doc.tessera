@@ -6,7 +6,7 @@ description: Tessera deployment for high availability
 
 Tessera supports deploying more than one instance sharing the same database.
 
-By placing the instances behind a load balancer, downtime can be limited during maintenance operations.
+By placing the instances behind a load balancer, downtime can be limited during maintenance operations, achieving high availability (HA).
 
 ![Tessera-HA](../../images/tessera/Tessera-HA.png)
 
@@ -14,10 +14,12 @@ By placing the instances behind a load balancer, downtime can be limited during 
 
 Tessera exposes multiple interfaces for connectivity which can be configured in the `serverConfigs` in the
 [configuration file](../../Reference/SampleConfiguration.md).
-To enable High availability for the node, set the interfaces to use the load balancer's address for their `serverAddress`,
-and their own URL or IP for the `bindingAddress`, as shown in the following example.
+To enable high availability for the node, set each interface to use the load balancer's address for its `serverAddress`,
+and its own URL or IP for the `bindingAddress`, as shown in the following example.
 
-```bash
+!!! example "Server configuration"
+
+    ```bash
 
     "serverConfigs":[
         {
@@ -112,16 +114,14 @@ previous diagram) with the same set of keys and advertise the load balancer addr
      }
     ```
 
-The configuration defines two upstreams: `tessera_tp_9080` and `tessera_q2t_9101`.
+The configuration defines two upstreams, `tessera_tp_9080` and `tessera_q2t_9101`, both of which define [health checks](https://docs.nginx.com/nginx/admin-guide/load-balancer/http-health-check/), `max_fails=3 fail_timeout=5s`.
 
-Both upstreams define health checks: `max_fails=3 fail_timeout=5s`
-
-The [health checks](https://docs.nginx.com/nginx/admin-guide/load-balancer/http-health-check/) help Nginx balance
+The health checks help Nginx balance
 traffic among upstream servers.
 
 ## Database
 
-The last piece to configure in High Availability is the [database](./Database.md).
+The last piece to configure in high availability is the [database](./Database.md).
 Set the [`jdbc`](../../Reference/SampleConfiguration.md#jdbc) endpoint in the same configuration file.
 We strongly recommend using an SQL database also configured for HA independently.
 If using a cloud-based database, consider using [AWS RDS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Welcome.html),

@@ -273,4 +273,7 @@ of the root cause is logged as part of the message.
 The level of logging is controlled by the Logback configuration file. The default file packaged with Tessera can be seen [here](https://github.com/ConsenSys/tessera/blob/master/tessera-dist/src/main/resources/logback.xml).
 
 To specify a different logging configuration, pass a customised Logback file on the command line using:
-`-Dlogback.configurationFile=/path/to/logback.xml`
+
+```bash
+JAVA_OPTS="-Dlogback.configurationFile=/path/to/logback.xml" tessera --configfile config.json
+````

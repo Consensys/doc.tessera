@@ -32,6 +32,12 @@ Build Tessera with the Gradle wrapper `gradlew`, omitting tests as follows:
 ./gradlew build -x test
 ```
 
+If you get errors about code coverage, you can exclude those tasks:
+
+```bash
+./gradlew build -x test -x :cli:spotlessGroovyGradle -x :config:jacocoTestCoverageVerification -x spotlessJava -x jacocoTestCoverageVerification -x spotlessGroovyGradle -x jacocoTestCoverageVerification -x javadoc
+```
+
 Verify the installation with the `help` command:
 
 ```bash

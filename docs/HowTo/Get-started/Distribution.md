@@ -38,9 +38,9 @@ tessera help
 
 Additional functionality can be added to a distribution by adding `.jar` files to the `/lib` directory.
 
-### Adding Tessera artefacts
+### Adding Tessera artifacts
 
-Download and unpack the artefact:
+Download and unpack the artifact:
 
 ```shell
 $ tar xvf aws-key-vault-[version].tar
@@ -51,7 +51,7 @@ aws-key-vault-[version].tar
     ...
 ```
 
-Copy the contents of the artefact's `/lib` into the distribution `/lib` (make sure to resolve any version conflicts/duplicated `.jar` files introduced during the copy):
+Copy the contents of the artifact's `/lib` into the distribution `/lib` (make sure to resolve any version conflicts/duplicated `.jar` files introduced during the copy):
 
 ```shell
  cp -a aws-key-vault-[version]/lib/. tessera-[version]/lib/

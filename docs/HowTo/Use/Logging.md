@@ -64,7 +64,7 @@ Below is a non-exhaustive list of error messages and suggested actions. Braces '
 </tr>
 <tr>
     <td><code>unable to initialize encryption façade {error details}</code></td>
-    <td>Unable to initialise elliptical curve encryption. Logged error message will give further details<br>
+    <td>Unable to initialize elliptical curve encryption. Logged error message will give further details<br>
         <b>Action:</b> <em>check configuration properties</em>
     </td>
 </tr>
@@ -136,11 +136,11 @@ of the root cause is logged as part of the message.
 </tr>
 <tr>
     <td><code>Public key {publicKey} not found when searching for private key</code></td>
-    <td>The key in a transaction is not recognised, example: it is not the public key of a known participant node.</td>
+    <td>The key in a transaction is not recognized, example: it is not the public key of a known participant node.</td>
 </tr>
 <tr>
     <td><code>Recipient not found for key: {public key}</code></td>
-    <td>An unrecognised participant is specified in a transaction.<br>No action needed.</td>
+    <td>An unrecognized participant is specified in a transaction.<br>No action needed.</td>
 </tr>
 <tr>
     <td><code>Unable to unmarshal payload</code></td>
@@ -154,7 +154,7 @@ of the root cause is logged as part of the message.
 </tr>
 <tr>
     <td><code>Ignoring unknown/unmatched json element: {element tag name}</code></td>
-    <td>An unrecognised element has been found in the configuration file.<br>
+    <td>An unrecognized element has been found in the configuration file.<br>
         <b>Action:</b> <em>remove or correct the configuration file entry</em>
     </td>
 </tr>
@@ -232,7 +232,7 @@ of the root cause is logged as part of the message.
     <td>A remote node refused <code>partyinfo</code> request. Can occur if:
         <ul>
             <li>remote node is not running</li>
-            <li>remote node doesn't recognise this node's public key</li>
+            <li>remote node doesn't recognize this node's public key</li>
             <li>remote node doesn't have this node's IP registered against a key</li>
             <li>etc</li>
         </ul>
@@ -272,7 +272,7 @@ of the root cause is logged as part of the message.
 
 The level of logging is controlled by the Logback configuration file. The default file packaged with Tessera can be seen [here](https://github.com/ConsenSys/tessera/blob/master/tessera-dist/src/main/resources/logback.xml).
 
-To specify a different logging configuration, pass a customised Logback file on the command line:
+To specify a different logging configuration, pass a customized Logback file on the command line:
 
 ```bash
 JAVA_OPTS="-Dlogback.configurationFile=/path/to/logback.xml" tessera --configfile config.json

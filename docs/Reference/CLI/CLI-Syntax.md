@@ -14,7 +14,7 @@ To start a Tessera node run:
 tessera [OPTIONS] [COMMAND] [COMMAND OPTIONS]
 ```
 
-### `configfile`
+### `configfile`, `config-file`
 
 === "Syntax"
 
@@ -64,7 +64,7 @@ Shows the help message and exits.
     --override jdbc.username=admin
     ```
 
-Overrides a value in the configuration file specified using [`--configfile`](#configfile).
+Overrides a value in the configuration file specified using [`--configfile`](#configfile-config-file).
 This option can be specified multiple times.
 
 Short syntax for this option is `-o <STRING=STRING>`.

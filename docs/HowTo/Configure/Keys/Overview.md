@@ -100,7 +100,7 @@ configuration file itself.
 
 If you generate new keys, you can update the Tessera configuration file manually.
 
-However, you can use the [`tessera keygen -configfile`](../../../Reference/CLI/CLI-Subcommands.md#configfile) option to
+However, you can use the [`tessera keygen -configfile`](../../../Reference/CLI/CLI-Subcommands.md#configfile-config-file) option to
 automatically update a configuration file.
 This is particularly useful for scripting.
 For example:
@@ -114,7 +114,7 @@ The Tessera configuration `/path/to/config.json` is updated and saved to `/path/
 
 New passwords are appended to the existing password file defined in `/path/to/config.json` and written to `/path/to/new.pwds`.
 
-If the [`--configout`](../../../Reference/CLI/CLI-Subcommands.md#configfile) and
+If the [`--configout`](../../../Reference/CLI/CLI-Subcommands.md#configout) and
 [`--pwdout`](../../../Reference/CLI/CLI-Subcommands.md#pwdout) options are not provided, the updated
 JSON configuration prints to the terminal.
 

@@ -27,7 +27,7 @@ JSON file containing settings to override the [default Argon2 configuration].
 
 Legacy syntax for this option is `-keygenconfig <FILE>`.
 
-### `configfile`
+### `configfile`, `config-file`
 
 === "Syntax"
 
@@ -63,7 +63,7 @@ file prints to the terminal.
     ```
 
 Path to save the updated configuration file to.
-To use this option, you must supply the [`--configfile`](#configfile) option.
+To use this option, you must supply the [`--configfile`](#configfile-config-file) option.
 
 Legacy syntax for this option is `-output <FILE>`.
 
@@ -198,7 +198,7 @@ Legacy syntax for this option is `-filename <FILE>[,<FILE>...]`.
     ```
 
 Path to save updated password list to.
-To use this option, you must supply the [`--configout`](#configout) and [`--configfile`](#configfile) options.
+To use this option, you must supply the [`--configout`](#configout) and [`--configfile`](#configfile-config-file) options.
 
 ### `vault.hashicorp.approlepath`
 
@@ -318,7 +318,7 @@ Legacy syntax for this option is `-keygenvaulturl <STRING>`.
 
 Legacy syntax for this subcommand is `-updatepassword [COMMAND OPTIONS]`.
 
-### `configfile`
+### `configfile`, `config-file`
 
 === "Syntax"
 

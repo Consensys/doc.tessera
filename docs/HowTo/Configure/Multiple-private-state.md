@@ -4,9 +4,11 @@ description: Configure Tessera to support GoQuorum multiple private states featu
 
 # Configure multiple private states
 
-You can enable support for [GoQuorum multiple private states (MPS)](https://docs.goquorum.consensys.net/en/latest/Concepts/Multitenancy/#multiple-private-states)
-by setting [`enableMultiplePrivateStates`](../../Reference/SampleConfiguration.md#features) in the Tessera
-[configuration file](Tessera.md) to `true`.
+Using [multi-tenancy](../../Concepts/Multitenancy.md) requires enabling support for
+[GoQuorum multiple private states (MPS)](https://docs.goquorum.consensys.net/en/latest/Concepts/Multitenancy/#multiple-private-states).
+
+You can do this by setting [`enableMultiplePrivateStates`](../../Reference/SampleConfiguration.md#features) in the
+Tessera [configuration file](Tessera.md) to `true`.
 
 !!! example "Enable MPS configuration"
 

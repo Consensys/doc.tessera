@@ -31,15 +31,14 @@ To use GoQuorum multi-tenancy via MPS:
     - Tessera version `21.4.0` or later installed.
     - GoQuorum version `21.4.2` or later installed.
 
-    If running an earlier GoQuorum or Tessera version, upgrade your existing nodes to enable MPS and multi-tenancy using
-    the [GoQuorum MPS migration guide](https://consensys.net/docs/goquorum/en/stable/configure-and-manage/manage/multi-tenancy/migration/).
-    As described in the guide, this includes running the [Tessera multi-tenancy migration tool](../HowTo/Migrate/Migration-Multitenancy.md)
-    to upgrade Tessera to support multi-tenancy.
+    If running an earlier GoQuorum or Tessera version, [upgrade your existing nodes to enable MPS and multi-tenancy](https://consensys.net/docs/goquorum/en/stable/configure-and-manage/manage/multi-tenancy/migration/).
+    This includes running the [Tessera multi-tenancy migration tool](../HowTo/Migrate/Migration-Multitenancy.md) to
+    upgrade Tessera to support multi-tenancy.
 
-2. Configure multi-tenancy via MPS according to the [GoQuorum multi-tenancy guide](https://consensys.net/docs/goquorum/en/stable/configure-and-manage/manage/multi-tenancy/multi-tenancy/).
-   As described in the guide, this includes [configuring MPS in Tessera](../HowTo/Configure/Multiple-private-state.md).
+2. [Configure multi-tenancy via MPS](https://consensys.net/docs/goquorum/en/stable/configure-and-manage/manage/multi-tenancy/multi-tenancy/).
+   This includes [configuring MPS in Tessera](../HowTo/Configure/Multiple-private-state.md).
 
-3. You can also follow the multi-tenancy guide to add a new tenant to a multi-tenant node.
+3. You can also [add a new tenant to a multi-tenant node](https://consensys.net/docs/goquorum/en/stable/configure-and-manage/manage/multi-tenancy/multi-tenancy/).
 
 ## Using Besu multi-tenancy
 

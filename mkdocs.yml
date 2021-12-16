@@ -110,7 +110,8 @@ nav:
         - Enclave: Concepts/Privacy-Manager/Enclave.md
         - Enclave types: Concepts/Privacy-Manager/Enclave-types.md
     - Peer discovery: Concepts/p2p-discovery.md
-    - Privacy Groups: Concepts/Privacy-Groups.md
+    - Privacy groups: Concepts/Privacy-Groups.md
+    - Multi-tenancy: Concepts/Multitenancy.md
     - Tessera API: Concepts/TesseraAPI.md
   - Reference:
     - Command line:

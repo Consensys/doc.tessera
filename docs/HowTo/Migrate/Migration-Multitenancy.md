@@ -5,8 +5,8 @@ description: Migrate two Tessera nodes into a single multi-tenancy node
 
 # Multi-tenancy migration
 
-Use the multi-tenancy migration tool to merge the databases of two existing nodes to operate under
-a single Tessera instance.
+Use the [multi-tenancy](../../Concepts/Multitenancy.md) migration tool to merge the databases of two existing nodes to
+operate under a single Tessera instance.
 This is a prerequisite to [using GoQuorum multi-tenancy](https://docs.goquorum.consensys.net/en/latest/HowTo/Use/Multitenancy/Multitenancy/).
 
 The resulting database stores the transactions as though they were all sent to the primary node's

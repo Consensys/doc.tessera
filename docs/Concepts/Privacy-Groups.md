@@ -10,11 +10,11 @@ such as managing privacy group data and handling transactions intended for a pri
 
 Behavior may differ depending on which [`mode`](../HowTo/Configure/Orion-Mode.md) Tessera is running on.
 
-There are three types of privacy group:
+The types of privacy group are:
 
-- [Legacy](#legacy)
-- [Pantheon](#pantheon)
-- [Resident](#resident)
+- [Legacy privacy group](#legacy).
+- [Pantheon privacy group](#pantheon).
+- [Resident privacy group](#resident).
 
 A unique `privacyGroupId` is used to identify individual privacy groups.
 For private transactions sent to a privacy group, the corresponding `privacyGroupId` is stored alongside the transaction.
@@ -78,9 +78,9 @@ A resident group contains a list of member keys that are locally managed, and th
 
 Key differences between a resident group and other types of privacy group include:
 
-* A resident group can only contain local keys, not remote keys.
-* The name of the resident group is the group identifier.
-* Resident groups can be configured in the Tessera configuration file.
+- A resident group can only contain local keys, not remote keys.
+- The name of the resident group is the group identifier.
+- Resident groups can be configured in the Tessera configuration file.
 
 ## API versioning
 

@@ -20,7 +20,8 @@ To do this, set [`enableMultiplePrivateStates`](../../Reference/SampleConfigurat
 
 ## Resident groups
 
-When MPS is enabled, all keys configured must belong to a resident group.
+When MPS is enabled, all keys configured must belong to a [resident privacy group](../../Concepts/Privacy-Groups.md#resident),
+or resident group.
 Specify `residentGroups` in the configuration file as shown in the following example.
 
 !!! example "Resident group configuration"
@@ -40,8 +41,12 @@ Specify `residentGroups` in the configuration file as shown in the following exa
      ]
     ```
 
-Tessera loads the resident group configuration, performs the necessary validation during application startup, and
-persists relevant data to its database.
+Tessera loads the resident group configuration, performs the following validations during startup (when
+`enableMultiplePrivateStates` is set to `true`), and persists relevant data to its database:
+
+* All members of resident groups must be locally managed by the node.
+* A member can't be configured to belong to more than one resident group at any time (all history considered).
+* All keys configured must belong to a resident group and no key can be left out.
 
 !!! important
 

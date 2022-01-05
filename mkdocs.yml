@@ -166,7 +166,7 @@ plugins:
         HowTo/Generate-keys.md: index.md
         HowTo/Configure/Keys.md: HowTo/Configure/Keys/Overview.md
         Tutorials/Migration-Multitenancy.md: HowTo/Migrate/Migration-Multitenancy.md
-        HowTo/Get-started/DistributionJar.md: HowTo/Get-started/Distribution.md
+        HowTo/Get-started/DistributionJar.md: HowTo/Get-started/Install/Distribution.md
         HowTo/Use/Add-peer.md: Concepts/p2p-discovery.md
         Concepts/Privacy-manager.md: Concepts/Privacy-Manager/Privacy-manager.md
         Concepts/Transaction-manager.md: Concepts/Privacy-Manager/Transaction-manager.md
@@ -174,7 +174,7 @@ plugins:
         Concepts/Enclave-types.md: Concepts/Privacy-Manager/Enclave-types.md
         HowTo/Configure/Transaction-Manager.md: HowTo/Configure/Tessera.md
         HowTo/Configure/Data-Recovery.md: HowTo/Use/Data-Recovery.md
-        HowTo/Get-started/Dependencies.md: HowTo/Get-Started/Install/Distribution.md
+        HowTo/Get-started/Dependencies.md: HowTo/Get-started/Install/Distribution.md
         HowTo/Get-started/Docker-Images.md: HowTo/Get-started/Install/Docker-Images.md
         HowTo/Get-started/Distribution.md: HowTo/Get-started/Install/Distribution.md
         HowTo/Get-started/Build-From-Source.md: HowTo/Get-started/Install/Build-From-Source.md

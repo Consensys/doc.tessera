@@ -7,10 +7,10 @@ description: Configuring peer discovery
 You can configure peer discovery in the Tessera [configuration file](Tessera.md).
 Configuration options for peer discovery are:
 
-* [`disablePeerDiscovery`](#disable-peer-discovery)
-* [`peer`](#specify-peers)
-* [`useWhiteList`](#enable-whitelist)
-* [`enableRemoteKeyValidation`](#enable-remote-key-validation)
+* [`disablePeerDiscovery`](#disable-peer-discovery).
+* [`peer`](#specify-peers).
+* [`useWhiteList`](#enable-allowlist).
+* [`enableRemoteKeyValidation`](#enable-remote-key-validation).
 
 ## Disable peer discovery
 
@@ -56,15 +56,15 @@ Specify the peer list using [`peer`](../../Reference/SampleConfiguration.md#peer
 
     Include multiple peers in the peer list in case any of them are offline or unreachable.
 
-## Enable whitelist
+## Enable allowlist
 
-The Tessera whitelist restricts connections for Tessera in the same way the [`permissioned-nodes.json`
+The Tessera allowlist (whitelist) restricts connections for Tessera in the same way the [`permissioned-nodes.json`
 file does for GoQuorum](https://docs.goquorum.consensys.net/en/stable/Concepts/PermissionsOverview/#basic-network-permissioning).
 
 Set [`useWhitelist`](../../Reference/SampleConfiguration.md#usewhitelist) in the configuration file to `true` to indicate
 that only [specified peers](#specify-peers) can connect or submit transactions.
 
-!!! example "Enable whitelist configuration"
+!!! example "Enable allowlist configuration"
 
     ```json
     "useWhiteList": true,

@@ -4,11 +4,11 @@ description: Overriding configuration file settings on the command line
 
 # Override configuration file settings on the command line
 
-You can use the [`-o, --override`](../../Reference/CLI/CLI-Syntax.md#override) command line option to define overrides
-as key/value pairs.
+You can use the [`-o, --override`](../../Reference/CLI/CLI-Syntax.md#override) command line option to override
+[configuration file](Tessera.md) settings with key/value pairs.
 The key is the JSON path of the field to be overwritten.
 
-For example, in the following [configuration file](Tessera.md):
+For example, in the following configuration file:
 
 ```json
 {

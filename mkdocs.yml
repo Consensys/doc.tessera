@@ -174,7 +174,7 @@ plugins:
         Concepts/Enclave-types.md: Concepts/Privacy-Manager/Enclave-types.md
         HowTo/Configure/Transaction-Manager.md: HowTo/Configure/Tessera.md
         HowTo/Configure/Data-Recovery.md: HowTo/Use/Data-Recovery.md
-        HowTo/Get-started/Dependencies.md: HowTo/Get-Started/Distribution.md
+        HowTo/Get-started/Dependencies.md: HowTo/Get-Started/Install/Distribution.md
         HowTo/Get-started/Docker-Images.md: HowTo/Get-started/Install/Docker-Images.md
         HowTo/Get-started/Distribution.md: HowTo/Get-started/Install/Distribution.md
         HowTo/Get-started/Build-From-Source.md: HowTo/Get-started/Install/Build-From-Source.md

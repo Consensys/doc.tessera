@@ -2,9 +2,12 @@
 description: Configure HashiCorp Vault key pairs.
 ---
 
-### HashiCorp Vault key pairs
+# HashiCorp Vault key pairs
 
-You can configure [key pairs](Overview.md) by storing them as secrets in a HashiCorp Vault.
+To configure Tessera to use HashiCorp Vault [key pairs](Overview.md), provide the Vault information in the
+[configuration file](../../../Reference/SampleConfiguration.md#keys).
+You can use Tessera to [generate HashiCorp Vault keys](../../Generate-Keys/Hashicorp-Vault.md).
+
 You can provide additional configuration items if the Vault is configured to use [TLS], and if the AppRole
 authentication method is used at a non-default path.
 

@@ -62,11 +62,11 @@ nav:
       - Start Tessera: HowTo/Get-started/Start-Tessera.md
       - Use GoQuorum or Besu with Tessera: HowTo/Get-started/Use-GoQuorum-with-Tessera.md
     - Generate keys:
-      - Generate keys with Tessera: HowTo/Generate-Keys/Generate-Keys.md
+      - Overview: HowTo/Generate-Keys/Generate-Keys.md
       - File-based keys: HowTo/Generate-Keys/File-Stored-Keys.md
-      - HashiCorp Vault: HowTo/Generate-Keys/Hashicorp-Vault.md
-      - Azure Key Vault: HowTo/Generate-Keys/Azure-Key-Vault.md
-      - AWS Secrets Manager: HowTo/Generate-Keys/AWS-Secrets-Manager.md
+      - HashiCorp Vault keys: HowTo/Generate-Keys/Hashicorp-Vault.md
+      - Azure Key Vault keys: HowTo/Generate-Keys/Azure-Key-Vault.md
+      - AWS Secrets Manager keys: HowTo/Generate-Keys/AWS-Secrets-Manager.md
     - Generate certificates: HowTo/Generate-certificates.md
     - Configure:
       - Overview: HowTo/Configure/Tessera.md

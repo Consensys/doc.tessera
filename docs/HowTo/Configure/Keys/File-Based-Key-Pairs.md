@@ -4,7 +4,7 @@ description: Configure file-based key pairs.
 
 # File-based key pairs
 
-To configure file-based [key pairs](Overview.md), provide the location of the files in the
+To configure Tessera to use file-based [key pairs](Overview.md), provide the location of the files in the
 [configuration file](../../../Reference/SampleConfiguration.md#keydata).
 You can use Tessera to [generate file-based keys].
 

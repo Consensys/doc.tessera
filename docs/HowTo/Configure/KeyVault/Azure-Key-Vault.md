@@ -12,13 +12,13 @@ store the keys locally.
 The [Microsoft Azure documentation](https://docs.microsoft.com/en-us/azure/key-vault) provides the information you need
 to get started.
 
-## Creating the vault
+## Create the vault
 
 You can create the Key Vault using either the
 [Azure Portal](https://docs.microsoft.com/en-us/azure/key-vault/general/quick-create-portal) or the
 [Azure CLI](https://docs.microsoft.com/en-us/azure/key-vault/general/quick-create-cli).
 
-## Configuring the vault to work with Tessera
+## Configure the vault to work with Tessera
 
 Azure uses an Active Directory system to grant access to services.
 It creates an application that you must authorize to use the vault.
@@ -39,7 +39,7 @@ To authorize the newly registered app to use the Key Vault:
 1. Search for and select the newly registered application as the **Principal**.
 1. Enable the **Get** and **Set** secret permissions.
 
-## Enabling Tessera to use the vault
+## Enable Tessera to use the vault
 
 ### Environment variables
 

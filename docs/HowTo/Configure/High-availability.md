@@ -12,8 +12,9 @@ By placing the instances behind a load balancer, downtime can be limited during 
 
 ## Servers
 
-Tessera exposes multiple interfaces for connectivity which can be configured in the `serverConfigs` in the
-[configuration file](../../Reference/SampleConfiguration.md).
+Tessera exposes multiple interfaces for connectivity which can be configured in the
+[`serverConfigs`](../../Reference/SampleConfiguration.md#serverconfigs) in the
+[configuration file](Tessera.md).
 To enable high availability for the node, set each interface to use the load balancer's address for its `serverAddress`,
 and its own URL or IP for the `bindingAddress`, as shown in the following example.
 

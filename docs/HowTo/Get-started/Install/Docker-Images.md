@@ -2,7 +2,7 @@
 description: Use Tessera Docker images
 ---
 
-# Docker images
+# Run Tessera from a Docker image
 
 Tessera provides Docker images to run a Tessera node in a Docker container.
 Use a Docker image to run a single Tessera node without installing Tessera.
@@ -19,7 +19,7 @@ Pull an image:
 docker pull quorumengineering/tessera:latest # pull latest release version
 ```
 
-Verify image:
+Verify the image:
 
 ```bash
 docker run quorumengineering/tessera:latest help

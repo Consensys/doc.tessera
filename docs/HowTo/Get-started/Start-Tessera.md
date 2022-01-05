@@ -2,38 +2,37 @@
 description: Get started with Tessera and send a payload
 ---
 
-# Getting started
+# Start Tessera
 
 ## Prerequisites
 
-1. Install necessary [dependencies](Dependencies.md)
+[Tessera installed](Install/Distribution.md)
 
-1. Install [Tessera](Distribution.md)
-
-## Starting Tessera and sending a payload
+## Start Tessera and send a payload
 
 The following example starts the [transaction manager and local enclave].
 
 ### 1. Generate keys
 
-Generate a key pair in files called `myKey.pub` and `myKey.key`.
+Generate a key pair in files called `myKey.pub` and `myKey.key`:
 
-!!! bash
-    ```
-    tessera -keygen -filename myKey
-    ```
+```bash
+tessera -keygen -filename myKey
+```
 
-When prompted to enter a password, press enter to generate an unlocked key.
+When prompted to enter a password, press Enter to generate an unlocked key.
 
-!!! caution
-    We are using unlocked keys for educational purposes only. Ensure private keys are secured appropriately
-    in production environments.
+!!! warning
+
+    This example uses unlocked keys for educational purposes only.
+    Secure private keys appropriately in production environments.
 
 ### 2. Create a configuration file
 
-Create a file called `config.json` and add the following properties.
+Create a file called `config.json` and add the following properties:
 
 !!! example "Tessera configuration file"
+
     ```json
     {
        "useWhiteList": false,
@@ -91,6 +90,7 @@ tessera -configfile config.json
 ```
 
 !!! tip
+
     If the command line help is displayed, enable debugging and try again.
 
     ```bash

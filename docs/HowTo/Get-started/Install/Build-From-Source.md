@@ -6,23 +6,22 @@ description: Build Tessera from source
 
 ## Prerequisites
 
-- [Java JDK](https://www.oracle.com/java/technologies/javase-downloads.html)
+- [Java JDK](https://www.oracle.com/java/technologies/javase-downloads.html) version 11 or higher.
+- [libsodium](https://libsodium.gitbook.io/doc/) is required if using [kalium](https://github.com/abstractj/kalium)
+  instead of the default [jnacl](https://github.com/neilalexander/jnacl) NaCl implementation.
+  See the [libsodium installation docs](https://libsodium.gitbook.io/doc/) or install using [brew](https://brew.sh/) (macOS only):
 
-!!! important
+    ```bash
+    brew install libsodium
+    ```
 
-    Tessera version 0.10.3 or later requires Java version 11, and Tessera version 0.10.2 or earlier requires Java version 8 or 11.
-
-- [libsodium](https://download.libsodium.org/doc/installation/)
-
-## Clone the Tessera repository
+## Build Tessera
 
 Clone the `ConsenSys/tessera` repository:
 
-``` bash
+```bash
 git clone https://github.com/ConsenSys/tessera.git
 ```
-
-### Build Tessera
 
 After cloning, go to the `tessera` directory.
 

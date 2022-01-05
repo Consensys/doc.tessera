@@ -55,12 +55,12 @@ theme:
 nav:
   - How to:
     - Get started with Tessera:
-      - Dependencies: HowTo/Get-started/Dependencies.md
-      - Install distribution: HowTo/Get-started/Distribution.md
-      - Docker images: HowTo/Get-started/Docker-Images.md
-      - Build from source: HowTo/Get-started/Build-From-Source.md
+      - Install Tessera:
+        - Run Tessera from Docker image: HowTo/Get-started/Install/Docker-Images.md
+        - Install binary distribution: HowTo/Get-started/Install/Distribution.md
+        - Build from source: HowTo/Get-started/Install/Build-From-Source.md
       - Start Tessera: HowTo/Get-started/Start-Tessera.md
-      - Use GoQuorum with Tessera: HowTo/Get-started/Use-GoQuorum-with-Tessera.md
+      - Use GoQuorum or Besu with Tessera: HowTo/Get-started/Use-GoQuorum-with-Tessera.md
     - Generate keys:
       - Generate keys with Tessera: HowTo/Generate-Keys/Generate-Keys.md
       - File-based keys: HowTo/Generate-Keys/File-Stored-Keys.md
@@ -174,3 +174,7 @@ plugins:
         Concepts/Enclave-types.md: Concepts/Privacy-Manager/Enclave-types.md
         HowTo/Configure/Transaction-Manager.md: HowTo/Configure/Tessera.md
         HowTo/Configure/Data-Recovery.md: HowTo/Use/Data-Recovery.md
+        HowTo/Get-started/Dependencies.md: HowTo/Get-Started/Distribution.md
+        HowTo/Get-started/Docker-Images.md: HowTo/Get-started/Install/Docker-Images.md
+        HowTo/Get-started/Distribution.md: HowTo/Get-started/Install/Distribution.md
+        HowTo/Get-started/Build-From-Source.md: HowTo/Get-started/Install/Build-From-Source.md

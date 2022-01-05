@@ -4,8 +4,11 @@ description: Configure Azure Key Vault key pairs.
 
 # Azure Key Vault key pairs
 
-You can configure [key pairs](Overview.md) by storing them as secrets in an Azure Key Vault.
-This requires providing the vault URL and the secret IDs for both keys.
+To configure Tessera to use Azure Key Vault [key pairs](Overview.md), provide the vault information in the
+[configuration file](../../../Reference/SampleConfiguration.md#keys).
+You can use Tessera to [generate Azure Key Vault keys](../../Generate-Keys/Azure-Key-Vault.md).
+
+Provide the vault URL and the secret IDs for both keys.
 
 !!! example "Azure Key Vault key pair configuration"
 

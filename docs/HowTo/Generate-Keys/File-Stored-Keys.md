@@ -8,7 +8,11 @@ You can generate a private and public key pair and store it in files.
 
 The following command generates a key pair in the `new.pub` and `new.key` files.
 Provide the passwords at the interactive prompt that displays. Alternatively, leave the password
-empty to create an unencrypted private key file.
+empty to create an unencrypted (unlocked) private key file.
+
+!!! critical "Security warning"
+
+    Don't use unlocked private key files in production environments, as the private keys are exposed.
 
 ```bash
 tessera -keygen -filename new
@@ -22,27 +26,29 @@ tessera -keygen -filename /path/to/key1,/path/to/key2
 
 !!! tip
 
-    The following can be used to automatically generate an unencrypted (unlocked) private key file:
+    You can use the following command to automatically generate an unlocked private key file.
 
     ```bash
     tessera -keygen -filename new < /dev/null
     ```
 
-## Updating password protected private keys
+You can [configure Tessera to use file-based keys](../Configure/Keys/File-Based-Key-Pairs.md).
 
-The password of a private key stored in a file can be updated using the
-[`--keys.keyData.privateKeyPath`](../../Reference/CLI/CLI-Subcommands.md#keyskeydataprivatekeypath) CLI option.
+## Update password protected private keys
 
-Running any of the following commands allow you to set a new password.
+You can update the password of a file-based private key using the
+[`--keys.keyData.privateKeyPath`](../../Reference/CLI/CLI-Subcommands.md#keyskeydataprivatekeypath) command line option.
 
-* Add a password to an unlocked key
+Run any of the following commands to set a new password:
+
+- Add a password to an unlocked key:
 
     ```bash
     tessera -updatepassword --keys.keyData.privateKeyPath /path/to/.key
     ```
 
-* Change the password of a locked key. This requires providing the current password for the
-    key (either inline or as a file):
+- Change the password of a locked key.
+  This requires providing the current password for the key (either inline or as a file):
 
     === "Inline"
 
@@ -56,11 +62,9 @@ Running any of the following commands allow you to set a new password.
         tessera -updatepassword --keys.keyData.privateKeyPath /path/to/.key --keys.passwordFile /path/to/pwds
         ```
 
-* Use different Argon2 options from the defaults when updating the password
+- Use different Argon2 options from the defaults when updating the password.
+  You only need to provide options if you wish to override their defaults:
 
     ```bash
     tessera --keys.keyData.privateKeyPath <path to keyfile> --keys.keyData.config.data.aopts.algorithm <algorithm> --keys.keyData.config.data.aopts.iterations <iterations> --keys.keyData.config.data.aopts.memory <memory> --keys.keyData.config.data.aopts.parallelism <parallelism>
     ```
-
-    All options have been overridden here but only the options you wish to alter from their defaults
-    need to be provided.

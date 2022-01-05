@@ -4,7 +4,10 @@ description: Configure AWS Secrets Manager key pairs.
 
 # AWS Secrets Manager key pairs
 
-You can configure [key pairs](Overview.md) by storing them as secrets in AWS Secrets Manager.
+To configure Tessera to use AWS Secrets Manager [key pairs](Overview.md), provide the vault information in the
+[configuration file](../../../Reference/SampleConfiguration.md#keys).
+You can use Tessera to [generate AWS Secrets Manager keys](../../Generate-Keys/AWS-Secrets-Manager.md).
+
 Provide the secret IDs for both keys with an optional endpoint.
 
 !!! note
@@ -13,7 +16,7 @@ Provide the secret IDs for both keys with an optional endpoint.
     using the environment variable `AWS_REGION` or the `~/.aws/config` file.
 
     [The AWS SDK documentation](https://docs.aws.amazon.com/sdk-for-java/v2/developer-guide/credentials.html)
-    provides an explanation of using credentials.
+    explains using credentials.
 
 !!! example "AWS Secrets Manager key pair configuration"
 

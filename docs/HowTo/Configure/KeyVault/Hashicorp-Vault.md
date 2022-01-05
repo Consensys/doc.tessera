@@ -2,7 +2,7 @@
 description: Configuring HashiCorp Vault for storing private keys
 ---
 
-# Configuring use of HashiCorp Vault
+# Configure HashiCorp Vault
 
 You can configure a HashiCorp Vault to use with Tessera.
 
@@ -13,7 +13,7 @@ The [HashiCorp Vault documentation](https://learn.hashicorp.com/vault/) provides
 need to get started.
 The following section goes over some additional considerations when running Tessera with Vault.
 
-## Configuring the vault
+## Configure the vault
 
 ### TLS
 
@@ -58,7 +58,7 @@ secrets engine.
 The secrets engine supports storing multiple versions of secrets.
 The number of versions stored can be configured as part of the Vault configuration process.
 
-## Enabling Tessera to use the vault
+## Enable Tessera to use the vault
 
 ### Environment variables
 

@@ -2,7 +2,7 @@
 description: Configuring AWS Secrets Manager for storing private keys
 ---
 
-# Configuring AWS Secrets Manager
+# Configure AWS Secrets Manager
 
 You can configure an AWS Secrets Manager to use with Tessera.
 
@@ -12,11 +12,11 @@ need to store the keys locally.
 The [AWS Secrets Manager documentation](https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html) provides
 the information you need to get started.
 
-## Accessing the AWS Secrets Manager
+## Access the AWS Secrets Manager
 
 You need an AWS profile to use AWS Secrets Manager.
 
-## Enabling Tessera to use the AWS Secrets Manager
+## Enable Tessera to use the AWS Secrets Manager
 
 You can [provide AWS Secrets Manager configuration credentials](https://docs.aws.amazon.com/sdk-for-java/v2/developer-guide/credentials.html)
 in many ways.

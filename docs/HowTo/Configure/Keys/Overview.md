@@ -5,7 +5,7 @@ description: Configure access to public and private key pairs.
 # Overview
 
 Tessera uses private and public keys pairs to provide transaction privacy.
-You can use existing key pairs or use Tessera to generate new key pairs.
+You can use existing key pairs or [use Tessera to generate new key pairs](../../Generate-Keys).
 
 You can configure Tessera to use one or more keys.
 Configure access to the keys by specifying [`keys`](../../../Reference/SampleConfiguration.md#keys) in the
@@ -45,7 +45,7 @@ the following methods:
 If using a vault to store your keys, use the [`keyVaultConfigs`](../../../Reference/SampleConfiguration.md#keyvaultconfigs)
 object to configure the details to access the vault.
 
-## Using multiple keys
+## Use multiple keys
 
 You can configure multiple key pairs for a Tessera node.
 In this case, any one of the public keys can be used to address a private transaction to that node.
@@ -55,7 +55,7 @@ Tessera tries each key to find one that can decrypt the payload.
 
     Multiple key pairs can only be configured within the configuration file.
 
-## Viewing the keys registered for a node
+## View the keys registered for a node
 
 You can use the `ThirdParty` API [`/keys`](https://consensys.github.io/tessera/#operation/getPublicKeys) endpoint to
 view the public keys of your Tessera node.
@@ -78,7 +78,7 @@ view the public keys of your Tessera node.
 
 You must [configure the corresponding server](../TesseraAPI.md).
 
-## Providing key passwords at runtime
+## Provide key passwords at runtime
 
 Tessera displays a CLI prompt if it has incomplete password data for its [locked keys](Secure-Keys.md).
 You can use this prompt to provide the required passwords for each key instead of providing them in the
@@ -98,7 +98,7 @@ configuration file itself.
 
 ## Update a configuration file with new keys
 
-If you generate new keys, you can update the Tessera configuration file manually.
+If you [generate new keys](../../Generate-Keys), you can update the Tessera configuration file manually.
 
 However, you can use the [`tessera keygen -configfile`](../../../Reference/CLI/CLI-Subcommands.md#configfile-config-file) option to
 automatically update a configuration file.

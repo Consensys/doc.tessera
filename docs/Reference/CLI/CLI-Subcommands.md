@@ -4,6 +4,14 @@ description: Tessera command line interface subcommands
 
 # Subcommands
 
+This reference describes the syntax of the Tessera command line interface (CLI) subcommands.
+
+To start a Tessera node using subcommands, run:
+
+```bash
+tessera [OPTIONS] [SUBCOMMAND] [SUBCOMMAND OPTIONS]
+```
+
 ## `keygen`
 
 Use the `keygen` subcommand to [generate one or more key pairs] to store in files or a supported

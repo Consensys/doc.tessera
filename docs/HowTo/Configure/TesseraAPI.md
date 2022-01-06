@@ -4,7 +4,7 @@ description: Configure servers for Tessera API
 
 # Configure servers for Tessera API
 
-You can configure the [servers for the Tessera API](../../Concepts/TesseraAPI.md) in the Tessera [configuration file](Tessera.md).
+You can configure the [servers for the Tessera API](../../Reference/TesseraAPI.md) in the Tessera [configuration file](Tessera.md).
 
 Specify the servers to be started as a list in [`serverConfigs`](../../Reference/SampleConfiguration.md#serverconfigs).
 

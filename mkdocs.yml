@@ -112,14 +112,13 @@ nav:
     - Peer discovery: Concepts/p2p-discovery.md
     - Privacy groups: Concepts/Privacy-Groups.md
     - Multi-tenancy: Concepts/Multitenancy.md
-    - Tessera API: Concepts/TesseraAPI.md
   - Reference:
     - Command line:
       - Options: Reference/CLI/CLI-Syntax.md
       - Subcommands: Reference/CLI/CLI-Subcommands.md
     - Configuration file: Reference/SampleConfiguration.md
     - Bootstrap node configuration file: Reference/BootstrapSampleConfiguration.md
-    - REST API Methods: Reference/REST-API.md
+    - Tessera API: Reference/TesseraAPI.md
 
 markdown_extensions:
   - toc:
@@ -178,3 +177,5 @@ plugins:
         HowTo/Get-started/Docker-Images.md: HowTo/Get-started/Install/Docker-Images.md
         HowTo/Get-started/Distribution.md: HowTo/Get-started/Install/Distribution.md
         HowTo/Get-started/Build-From-Source.md: HowTo/Get-started/Install/Build-From-Source.md
+        Reference/REST-API.md: Reference/TesseraAPI.md
+        Concepts/TesseraAPI.md: Reference/TesseraAPI.md

@@ -4,15 +4,15 @@ Description: Tessera command line options.
 
 # Tessera command line
 
-This reference describes the syntax of the Tessera Command Line Interface (CLI) options.
-
-## Options
+This reference describes the syntax of the Tessera command line interface (CLI) options.
 
 To start a Tessera node run:
 
 ```bash
 tessera [OPTIONS] [COMMAND] [COMMAND OPTIONS]
 ```
+
+## Options
 
 ### `configfile`, `config-file`
 

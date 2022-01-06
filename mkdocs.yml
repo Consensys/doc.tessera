@@ -177,4 +177,4 @@ plugins:
         HowTo/Get-started/Docker-Images.md: HowTo/Get-started/Install/Docker-Images.md
         HowTo/Get-started/Distribution.md: HowTo/Get-started/Install/Distribution.md
         HowTo/Get-started/Build-From-Source.md: HowTo/Get-started/Install/Build-From-Source.md
-        Reference/REST-API: Concepts/TesseraAPI.md
+        Reference/REST-API.md: Concepts/TesseraAPI.md

@@ -9,7 +9,7 @@ This reference describes the syntax of the Tessera command line interface (CLI) 
 To start a Tessera node run:
 
 ```bash
-tessera [OPTIONS] [COMMAND] [COMMAND OPTIONS]
+tessera [OPTIONS] [SUBCOMMAND] [SUBCOMMAND OPTIONS]
 ```
 
 ## Options

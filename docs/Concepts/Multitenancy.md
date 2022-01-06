@@ -22,7 +22,7 @@ The public state remains publicly available to all tenants, and private states a
 For more information about GoQuorum multi-tenancy via MPS, see the [GoQuorum multi-tenancy documentation](https://consensys.net/docs/goquorum/en/stable/concepts/multi-tenancy/).
 For more information about Besu multi-tenancy, see the [Besu multi-tenancy documentation](https://besu.hyperledger.org/en/stable/Concepts/Privacy/Multi-Tenancy/).
 
-## Using GoQuorum multi-tenancy
+## Use GoQuorum multi-tenancy
 
 To use GoQuorum multi-tenancy via MPS:
 
@@ -40,7 +40,7 @@ To use GoQuorum multi-tenancy via MPS:
 
 3. You can also [add a new tenant to a multi-tenant node](https://consensys.net/docs/goquorum/en/stable/configure-and-manage/manage/multi-tenancy/multi-tenancy/).
 
-## Using Besu multi-tenancy
+## Use Besu multi-tenancy
 
 To use Besu multi-tenancy, you must [create a privacy-enabled network](https://besu.hyperledger.org/en/stable/Tutorials/Privacy/Configuring-Privacy/).
 

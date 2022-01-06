@@ -12,7 +12,7 @@ normal recipients may only have partial state of the contract.
 Define mandatory recipients if you need governing or central nodes to have full private state for any contracts
 deployed in the network.
 
-## Using mandatory recipients
+## Use mandatory recipients
 
 To enable mandatory recipients, set the `enablePrivacyEnhancements` parameter in the
 [Tessera configuration file](../../Reference/SampleConfiguration.md) to `true`.

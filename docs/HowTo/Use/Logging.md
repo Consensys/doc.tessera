@@ -4,18 +4,36 @@ description: Tessera logging
 
 # Tessera Logging
 
-Messages are written to the logs using these rules for the log level:
+Tessera uses the Logback logging framework.
+See the [Logback documentation](https://logback.qos.ch/manual/configuration.html) for detailed information on
+configuring Logback.
 
-* `ERROR`: system failures or situations that require some action to ensure correct operation of the system.
-* `WARN`: notifications that don't require immediate action or that are indications that a transaction failed.
-* `INFO`: information message to allow investigation of issues or to provide reassurance that the system is operating correctly.
-* `DEBUG`: more verbose logging to assist with investigation of issues
+You can [monitor Tessera logs using Splunk or Elastic Stack (ELK)](Monitoring.md#monitor-logs).
 
-The log level is written out in uppercase as part of the log message, this can be used for alert monitoring.
+## Log level
+
+Messages are written to the Tessera logs according to the following log levels:
+
+* `ERROR` - System failures or situations that require some action to ensure correct operation of the system
+* `WARN` - Notifications that don't require immediate action or that are indications that a transaction failed
+* `INFO` - Information message to allow investigation of issues or to provide reassurance that the system is operating correctly
+* `DEBUG` - More verbose logging to assist with investigation of issues
+
+The log level is written out in uppercase as part of the log message.
+You can use this for alert monitoring.
+
+The log level is specified by the Logback configuration file.
+See the [default configuration file packaged with Tessera](https://github.com/ConsenSys/tessera/blob/master/tessera-dist/src/main/resources/logback.xml).
+To specify a different log level or logging configuration, pass a customized Logback configuration file on the command line:
+
+```bash
+JAVA_OPTS="-Dlogback.configurationFile=/path/to/logback.xml" tessera --configfile config.json
+```
 
 ## Errors
 
-Below is a non-exhaustive list of error messages and suggested actions. Braces '{}' indicate where further detail of the root cause is logged as part of the message.
+The following is a non-exhaustive list of error messages and suggested actions.
+Braces '{}' indicate where further detail of the root cause is logged as part of the message.
 
 <table>
 <tr>
@@ -126,8 +144,8 @@ Below is a non-exhaustive list of error messages and suggested actions. Braces '
 
 ## Warnings
 
-Below is a list of warning messages and possible causes. Braces '{}' indicate where further detail
-of the root cause is logged as part of the message.
+The following is a list of warning messages and possible causes.
+Braces '{}' indicate where further detail of the root cause is logged as part of the message.
 
 <table>
 <tr>
@@ -267,13 +285,3 @@ of the root cause is logged as part of the message.
 
 !!! Note
     Some messages will be rearranged to correct logging levels in our next release.
-
-## To change the default log level
-
-The level of logging is controlled by the Logback configuration file. The default file packaged with Tessera can be seen [here](https://github.com/ConsenSys/tessera/blob/master/tessera-dist/src/main/resources/logback.xml).
-
-To specify a different logging configuration, pass a customized Logback file on the command line:
-
-```bash
-JAVA_OPTS="-Dlogback.configurationFile=/path/to/logback.xml" tessera --configfile config.json
-````

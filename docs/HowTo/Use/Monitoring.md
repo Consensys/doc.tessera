@@ -84,7 +84,6 @@ For example:
 "serverConfigs": [
     {
         "app":"Q2T",
-        "enabled": true,
         "serverAddress":"unix:/path/to/tm.ipc",
         "influxConfig": {
             "serverAddress": "https://localhost:8086",  // InfluxDB server address
@@ -103,7 +102,6 @@ For example:
     },
     {
         "app":"P2P",
-        "enabled": true,
         "serverAddress":"http://localhost:9001",
         "influxConfig": {
             "serverAddress": "http://localhost:8087",

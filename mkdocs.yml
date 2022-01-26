@@ -39,7 +39,7 @@ extra:
   inverted_logo: 'images/inverted_logo.svg'
 
 # Software Repository
-repo_name: Consensys/tessera
+repo_name: ConsenSys/tessera
 repo_url: https://github.com/ConsenSys/tessera.git
 
 theme:

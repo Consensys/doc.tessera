@@ -16,6 +16,6 @@ This repository only contains the sources for [Tessera documentation website hos
 This repository uses a Git submodule. Please refer to the [common tools wiki] for explanation about
 how to build and contribute to this documentation.
 
-[Tessera]: https://github.com/Consensys/tessera
-[common tools wiki]: https://github.com/consensys/doc.common/wiki
+[Tessera]: https://github.com/ConsenSys/tessera
+[common tools wiki]: https://github.com/ConsenSys/doc.common/wiki
 [Tessera documentation website hosted by ReadTheDocs.com]: https://docs.tessera.consensys.net

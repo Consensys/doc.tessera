@@ -4,13 +4,14 @@ description: P2P Tessera Node Discovery
 
 # Node discovery
 
-Tessera peer discovery works in a similar way to peer discovery in 
-[Hyperledger Besu](https://besu.hyperledger.org/en/stable/HowTo/Find-and-Connect/Managing-Peers/#manage-peers) 
-and [GoQuorum](https://consensys.net/docs/goquorum/en/stable/configure-and-manage/configure/bootnodes/). 
-Tessera nodes share their list of peer URLs, and the public keys of those peers. In this way, nodes joining 
+Tessera peer discovery works in a similar way to peer discovery in
+[Hyperledger Besu](https://besu.hyperledger.org/en/stable/HowTo/Find-and-Connect/Managing-Peers/#manage-peers)
+and [GoQuorum](https://consensys.net/docs/goquorum/en/stable/configure-and-manage/configure/bootnodes/).
+Tessera nodes share their list of peer URLs, and the public keys of those peers. In this way, nodes joining
 the network can discover other nodes in the network, and the public keys of other participants.
 
-Nodes in the network do not all need to have the same list of [configured peers](../HowTo/Configure/Peer-discovery.md#specify-peers). You can think of this list as the starting point for discovering other nodes, similar to bootnodes in [Hyperledger Besu](https://besu.hyperledger.org/en/stable/HowTo/Find-and-Connect/Bootnodes/) or [GoQuorum](https://consensys.net/docs/goquorum/en/stable/configure-and-manage/configure/bootnodes/).
+Nodes in the network do not all need to have the same list of [configured peers](../HowTo/Configure/Peer-discovery.md#specify-peers). 
+You can think of this list as the starting point for discovering other nodes, similar to bootnodes in [Hyperledger Besu](https://besu.hyperledger.org/en/stable/HowTo/Find-and-Connect/Bootnodes/) or [GoQuorum](https://consensys.net/docs/goquorum/en/stable/configure-and-manage/configure/bootnodes/).
 
 The [`partyinfo` API method](https://consensys.github.io/doc.tessera/#operation/getPartyInfo) returns nodes
 with which Tessera has a current active connection.

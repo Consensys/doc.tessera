@@ -18,17 +18,19 @@ with which Tessera has a current active connection.
 [Configure peer discovery](../HowTo/Configure/Peer-discovery.md) in the Tessera configuration file.
 
 ## Under the hood
+
 Tessera maintains two node lists, `PartyStore` and `NetworkStore`. `NetworkStore` lists nodes with
 which an active connection has been established. `PartyStore` lists URLs from the [`peer` entry in the Tessera configuration file](../HowTo/Configure/Peer-discovery.md#specify-peers)
 and URLs discovered from remote nodes. If Tessera can't communicate with a node, the peer is
 removed from both the `PartyStore` and `NetworkStore` lists.
 
 If all peers are removed from the `PartyStore` and `NetworkStore` lists, the `PartyStore` list is repopulated
-from the [`peer` entry in the Tessera configuration file](../HowTo/Configure/Peer-discovery.md#specify-peers). 
+from the [`peer` entry in the Tessera configuration file](../HowTo/Configure/Peer-discovery.md#specify-peers).
 
 A dropped remote peer is added to the `NetworkStore` list only after establishing direct communication with
 the peer. That is, discovering a dropped remote peer is not enough for a node to be added to the active peer list.
 
 ## Multi-tenancy
+
 Adding a new key to a multi-tenant Tessera node (and restarting that node) results in the new key being propagated 
 to other nodes in the network via peer discovery.

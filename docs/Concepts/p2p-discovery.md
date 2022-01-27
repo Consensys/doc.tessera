@@ -10,7 +10,7 @@ and [GoQuorum](https://consensys.net/docs/goquorum/en/stable/configure-and-manag
 Tessera nodes share their list of peer URLs, and the public keys of those peers. In this way, nodes joining
 the network can discover other nodes in the network, and the public keys of other participants.
 
-Nodes in the network do not all need to have the same list of [configured peers](../HowTo/Configure/Peer-discovery.md#specify-peers). 
+Nodes in the network do not all need to have the same list of [configured peers](../HowTo/Configure/Peer-discovery.md#specify-peers).
 You can think of this list as the starting point for discovering other nodes, similar to bootnodes in [Hyperledger Besu](https://besu.hyperledger.org/en/stable/HowTo/Find-and-Connect/Bootnodes/) or [GoQuorum](https://consensys.net/docs/goquorum/en/stable/configure-and-manage/configure/bootnodes/).
 
 The [`partyinfo` API method](https://consensys.github.io/doc.tessera/#operation/getPartyInfo) returns nodes
@@ -33,5 +33,5 @@ the peer. That is, discovering a dropped remote peer is not enough for a node to
 
 ## Multi-tenancy
 
-Adding a new key to a multi-tenant Tessera node (and restarting that node) results in the new key being propagated 
+Adding a new key to a multi-tenant Tessera node (and restarting that node) results in the new key being propagated
 to other nodes in the network via peer discovery.

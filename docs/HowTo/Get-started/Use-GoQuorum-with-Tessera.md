@@ -8,7 +8,7 @@ You can use Tessera as the private transaction manager for [GoQuorum](https://co
 [Hyperledger Besu](https://besu.hyperledger.org/en/stable/).
 Get started with the following tutorials:
 
-- [Create a privacy-enabled GoQuorum network](https://consensys.net/docs/goquorum//en/stable/tutorials/create-privacy-enabled-network/).
+- [Create a privacy-enabled GoQuorum network](https://consensys.net/docs/goquorum/en/stable/tutorials/create-privacy-enabled-network/).
 - [Send a private transaction on GoQuorum](https://consensys.net/docs/goquorum/en/stable/tutorials/send-private-transaction/).
 - [Create a privacy-enabled Besu network](https://besu.hyperledger.org/en/stable/Tutorials/Privacy/Configuring-Privacy/).
 - [Configure a multi-tenant Besu network](https://besu.hyperledger.org/en/stable/Tutorials/Privacy/Configuring-Multi-Tenancy/).

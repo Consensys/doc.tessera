@@ -45,17 +45,14 @@ Create a file called `config.json` and add the following properties:
        "serverConfigs":[
            {
                "app":"ThirdParty",
-               "enabled": true,
                "serverAddress": "http://localhost:9081"
            },
            {
                "app":"Q2T",
-               "enabled": true,
                "serverAddress": "unix:/tmp/test.ipc"
            },
            {
                "app":"P2P",
-               "enabled": true,
                "serverAddress":"http://localhost:9001",
                "sslConfig": {
                    "tls": "OFF"

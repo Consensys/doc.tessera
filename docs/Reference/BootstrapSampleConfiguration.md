@@ -25,27 +25,23 @@ To start Tessera as a bootstrap node:
     {
       "app": "ENCLAVE",
       // Defines us using a remote enclave, leave out if using built-in enclave
-      "enabled": true,
       "serverAddress": "http://localhost:9081",
       //Where to find the remote enclave
       "communicationType": "REST"
     },
     {
       "app": "ThirdParty",
-      "enabled": true,
       "serverAddress": "http://localhost:9081",
       "bindingAddress": "String - url with port e.g. http://127.0.0.1:9081",
       "communicationType": "REST"
     },
     {
       "app": "Q2T",
-      "enabled": true,
       "serverAddress": "unix:/tmp/tm.ipc",
       "communicationType": "REST"
     },
     {
       "app": "P2P",
-      "enabled": true,
       "serverAddress": "http://localhost:9001",
       "bindingAddress": "String - url with port e.g. http://127.0.0.1:9001",
       "sslConfig": {

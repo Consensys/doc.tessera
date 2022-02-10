@@ -31,6 +31,15 @@ from the [`peer` entry in the Tessera configuration file](../HowTo/Configure/Pee
 A dropped remote peer is added to the `NetworkStore` list only after establishing direct communication with
 the peer. That is, discovering a dropped remote peer is not enough for a node to be added to the active peer list.
 
+## Recommended configuration
+
+We recommend that all nodes have multiple other nodes configured as peers. This is necessary for peers to find
+each other, especially when nodes are restarted.
+
+Example: If node A fails to connect to node B (eg node B hasn't started up yet), A removes B from its list.
+Then when B start up, it's B's responsibility to search for A and initiate the peer connection. Further, if
+B has no peers configured then it won't search for any peers on startup. 
+
 ## Multi-tenancy
 
 Adding a new key to a multi-tenant Tessera node (and restarting that node) results in the new key being propagated

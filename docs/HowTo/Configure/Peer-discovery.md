@@ -4,7 +4,7 @@ description: Configuring peer discovery
 
 # Configure peer discovery
 
-You can configure peer discovery in the Tessera [configuration file](Tessera.md).
+You can configure [peer discovery](../../Concepts/p2p-discovery.md) in the Tessera [configuration file](Tessera.md).
 Configuration options for peer discovery are:
 
 * [`disablePeerDiscovery`](#disable-peer-discovery).
@@ -54,12 +54,13 @@ Specify the peer list using [`peer`](../../Reference/SampleConfiguration.md#peer
 
 !!! tip
 
-    Include multiple peers in the peer list in case any of them are offline or unreachable.
+    When your node starts up, these are the peers it will search for. Include multiple peers in the peer list
+    in case any of them are offline or unreachable.
 
 ## Enable allowlist
 
 The Tessera allowlist (whitelist) restricts connections for Tessera in the same way the [`permissioned-nodes.json`
-file does for GoQuorum](https://docs.goquorum.consensys.net/en/stable/Concepts/PermissionsOverview/#basic-network-permissioning).
+file does for GoQuorum](https://consensys.net/docs/goquorum/en/stable/configure-and-manage/configure/permissioning/basic-permissions/).
 
 Set [`useWhitelist`](../../Reference/SampleConfiguration.md#usewhitelist) in the configuration file to `true` to indicate
 that only [specified peers](#specify-peers) can connect or submit transactions.
@@ -70,7 +71,7 @@ that only [specified peers](#specify-peers) can connect or submit transactions.
     "useWhiteList": true,
     ```
 
-### Enable remote key validation
+## Enable remote key validation
 
 Remote key validation checks that a remote node owns the public keys being advertised.
 Enable remote key validation by setting [`enableRemoteKeyValidation`](../../Reference/SampleConfiguration.md#features)

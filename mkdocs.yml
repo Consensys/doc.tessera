@@ -22,7 +22,7 @@ extra:
   logo_is_text: true
   latest_version_warning:
     url_contains: /latest/
-    text: 'You are reading GoQuorum development version documentation and
+    text: 'You are reading Tessera development version documentation and
     some displayed features may not be available in the stable release.
     You can switch to stable version using the version box at screen bottom.'
   support:
@@ -39,7 +39,7 @@ extra:
   inverted_logo: 'images/inverted_logo.svg'
 
 # Software Repository
-repo_name: Consensys/tessera
+repo_name: ConsenSys/tessera
 repo_url: https://github.com/ConsenSys/tessera.git
 
 theme:
@@ -112,14 +112,13 @@ nav:
     - Peer discovery: Concepts/p2p-discovery.md
     - Privacy groups: Concepts/Privacy-Groups.md
     - Multi-tenancy: Concepts/Multitenancy.md
-    - Tessera API: Concepts/TesseraAPI.md
   - Reference:
     - Command line:
       - Options: Reference/CLI/CLI-Syntax.md
       - Subcommands: Reference/CLI/CLI-Subcommands.md
     - Configuration file: Reference/SampleConfiguration.md
     - Bootstrap node configuration file: Reference/BootstrapSampleConfiguration.md
-    - REST API Methods: Reference/REST-API.md
+    - Tessera API: Reference/TesseraAPI.md
 
 markdown_extensions:
   - toc:
@@ -178,3 +177,5 @@ plugins:
         HowTo/Get-started/Docker-Images.md: HowTo/Get-started/Install/Docker-Images.md
         HowTo/Get-started/Distribution.md: HowTo/Get-started/Install/Distribution.md
         HowTo/Get-started/Build-From-Source.md: HowTo/Get-started/Install/Build-From-Source.md
+        Reference/REST-API.md: Reference/TesseraAPI.md
+        Concepts/TesseraAPI.md: Reference/TesseraAPI.md

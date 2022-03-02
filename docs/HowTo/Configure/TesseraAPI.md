@@ -4,7 +4,7 @@ description: Configure servers for Tessera API
 
 # Configure servers for Tessera API
 
-You can configure the [servers for the Tessera API](../../Concepts/TesseraAPI.md) in the Tessera [configuration file](Tessera.md).
+You can configure the [servers for the Tessera API](../../Reference/TesseraAPI.md) in the Tessera [configuration file](Tessera.md).
 
 Specify the servers to be started as a list in [`serverConfigs`](../../Reference/SampleConfiguration.md#serverconfigs).
 
@@ -37,7 +37,6 @@ You can also [configure CORS](#configure-cors) for the `ThirdParty` server type.
     ```json
     {
         "app": "<app type>",
-        "enabled": <boolean>,
         "serverAddress":"http://[host]:[port]/[path]",
         "communicationType" : "REST"
     }
@@ -48,7 +47,6 @@ You can also [configure CORS](#configure-cors) for the `ThirdParty` server type.
     ```json
     {
         "app": "ThirdParty",
-        "enabled": true,
         "serverAddress": "http://localhost:9081",
         "communicationType": "REST"
     }
@@ -61,7 +59,6 @@ You can also [configure CORS](#configure-cors) for the `ThirdParty` server type.
     ```json
     {
         "app": "<app type>",
-        "enabled": <boolean>,
         "serverAddress": "https://[host]:[port]/[path]",
         "communicationType" : "REST",
         "sslConfig": {
@@ -75,7 +72,6 @@ You can also [configure CORS](#configure-cors) for the `ThirdParty` server type.
     ```json
     {
         "app": "P2P",
-          "enabled": true,
           "serverAddress": "http://localhost:9001",
           "sslConfig": {
             "tls": "enum STRICT,OFF",
@@ -120,7 +116,6 @@ You can also [configure CORS](#configure-cors) for the `ThirdParty` server type.
     ```json
     {
         "app": "<app type>",
-        "enabled": <boolean>,
         "serverAddress": "unix://[path]",
         "communicationType": "REST"
     }
@@ -131,7 +126,6 @@ You can also [configure CORS](#configure-cors) for the `ThirdParty` server type.
     ```json
     {
         "app": "Q2T",
-        "enabled": true,
         "serverAddress": "unix:/tmp/tm.ipc",
         "communicationType": "REST"
     }
@@ -146,7 +140,6 @@ The `ThirdParty` server type supports [configuring CORS] to control access to re
     ```json
     {
         "app":"ThirdParty",
-        "enabled": true,
         "serverAddress": "http://localhost:9081",
         "communicationType" : "REST",
         "cors" : {

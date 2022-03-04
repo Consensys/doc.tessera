@@ -19,7 +19,7 @@ Make sure that:
 
 Add "fixes #{your issue number}" to close the issue automatically when the PR is merged.
 
-If your PR doesn't completely fix the issue, add "see #{your issue number}" to link to the issue
+If your PR doesn't entirely fix the issue, add "see #{your issue number}" to link to the issue
 without automatically closing it. -->
 
 ## Impacted parts

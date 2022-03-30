@@ -101,6 +101,7 @@ nav:
     - Migrate:
       - Migrate from Orion: HowTo/Migrate/MigrateFromOrion.md
       - Multi-tenancy migration: HowTo/Migrate/Migration-Multitenancy.md
+      - Upgrade the database: HowTo/Migrate/Upgrade.md
   - Tutorials:
       - Quorum Developer Quickstart: Tutorials/Quorum-Dev-Quickstart.md
   - Concepts:

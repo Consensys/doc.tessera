@@ -87,6 +87,17 @@ You can define these in multiple ways, and in the following order of precedence:
         }
         ```
 
+## Server configuration
+
+When configuring the TLS, use either the client configuration options or server configuration options depending on your [server configuration](../../Reference/SampleConfiguration.md#serverconfigs).
+
+| Server configuration  | TLS Configuration |
+|-----------------------|-------------------|
+| [`P2P`](../../Reference/SampleConfiguration.md#p2p)                | Server and client |
+| [`ThirdParty`](../../Reference/SampleConfiguration.md#thirdparty)  | Server only       |
+| [`Q2T`](../../Reference/SampleConfiguration.md#q2t)                | Server only       |
+| [`ENCLAVE`](../../Reference/SampleConfiguration.md#enclave) | Client only       |
+
 ## Keystores
 
 ### Passwords

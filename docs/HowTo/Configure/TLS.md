@@ -96,7 +96,7 @@ When configuring the TLS, use either the client configuration options or server 
 | [`P2P`](../../Reference/SampleConfiguration.md#p2p)                | Server and client |
 | [`ThirdParty`](../../Reference/SampleConfiguration.md#thirdparty)  | Server only       |
 | [`Q2T`](../../Reference/SampleConfiguration.md#q2t)                | Server only       |
-| [`ENCLAVE`](../../Reference/SampleConfiguration.md#enclave) | Client only       |
+| [`ENCLAVE`](../../Reference/SampleConfiguration.md#enclave)        | Server and client |
 
 ## Keystores
 

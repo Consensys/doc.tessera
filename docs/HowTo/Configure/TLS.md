@@ -18,7 +18,9 @@ If the value is set to `"OFF"`, the rest of the SSL configuration is ignored.
     {
       "sslConfig": {
         "tls": "[Authentication mode : OFF,STRICT]",
+        "sslConfigType": "[Possible values: SERVER_ONLY, CLIENT_ONLY, SERVER_AND_CLIENT]",
 
+        // server options
         "serverTrustMode": "[Possible values: CA, TOFU, WHITELIST, CA_OR_TOFU, NONE]",
         "serverKeyStore": "[Path to server keystore]",
         "serverKeyStorePassword": "[Password required for server KeyStore]",
@@ -30,6 +32,7 @@ If the value is set to `"OFF"`, the rest of the SSL configuration is ignored.
           "[Array of truststore certificates if no truststore is defined.]"
         ],
 
+        // client options
         "clientTrustMode": "[Possible values: CA, TOFU, WHITELIST, CA_OR_TOFU, NONE]",
         "clientKeyStore": "[Path to client keystore. The keystore that is used when communicating to other nodes.]",
         "clientKeyStorePassword": "[Password required for client KeyStore]",
@@ -63,7 +66,7 @@ You can define these in multiple ways, and in the following order of precedence:
     * `serverKeyStore`, `serverKeyStorePassword`, `serverTrustStore`, `serverTrustStorePassword`
     * `clientKeyStore`, `clientKeyStorePassword`, `clientTrustStore`, `clientTrustStorePassword`
 
-1. `.pem` format certificate and key files.
+2. `.pem` format certificate and key files.
 
     * `serverTlsKeyPath`, `serverTlsCertificatePath`, `serverTrustCertificates`
     * `clientTlsKeyPath`, `clientTlsCertificatePath`, `clientTrustCertificates`
@@ -74,6 +77,7 @@ You can define these in multiple ways, and in the following order of precedence:
         "sslConfig" : {
           "tls" : "STRICT",
           "generateKeyStoreIfNotExisted" : "false",
+          "sslConfigType" : "SERVER_AND_CLIENT",
           "serverTlsKeyPath" : "server-key.pem",
           "serverTlsCertificatePath" : "server-cert.pem",
           "serverTrustCertificates" : ["server-trust.pem"]
@@ -87,16 +91,17 @@ You can define these in multiple ways, and in the following order of precedence:
         }
         ```
 
-## Server configuration
+## Configuration type
 
-When configuring the TLS, use either the client configuration options or server configuration options depending on your [server configuration](../../Reference/SampleConfiguration.md#serverconfigs).
+When configuring TLS, use either the client configuration options or server configuration options depending on your [server configuration](../../Reference/SampleConfiguration.md#serverconfigs).
+You can also define [`sslConfigType`](../../Reference/SampleConfiguration.md#sslconfig) to limit TLS to only the appropriate options.
 
-| Server configuration  | TLS Configuration |
-|-----------------------|-------------------|
-| [`P2P`](../../Reference/SampleConfiguration.md#p2p)                | Server and client |
-| [`ThirdParty`](../../Reference/SampleConfiguration.md#thirdparty)  | Server only       |
-| [`Q2T`](../../Reference/SampleConfiguration.md#q2t)                | Server only       |
-| [`ENCLAVE`](../../Reference/SampleConfiguration.md#enclave)        | Server and client |
+| Server configuration  | TLS Configuration | `sslConfigType` value |
+|-----------------------|-------------------|-----------------------|
+| [`P2P`](../../Reference/SampleConfiguration.md#p2p)                | Server and client   | `SERVER_AND_CLIENT` |
+| [`ThirdParty`](../../Reference/SampleConfiguration.md#thirdparty)  | Server options only | `SERVER_ONLY`       |
+| [`Q2T`](../../Reference/SampleConfiguration.md#q2t)                | Server options only | `SERVER_ONLY`       |
+| [`ENCLAVE`](../../Reference/SampleConfiguration.md#enclave)        | Server and client   | `SERVER_AND_CLIENT` |
 
 ## Keystores
 
@@ -167,6 +172,7 @@ These files are generated if they don't already exist, using the values specifie
     "sslConfig" : {
         "tls" : "STRICT",
         "generateKeyStoreIfNotExisted" : "true",
+        "sslConfigType" : "SERVER_AND_CLIENT",
         "serverKeyStore" : "server-keystore",
         "serverKeyStorePassword" : "tessera",
         "serverTrustMode" : "TOFU",
@@ -192,6 +198,7 @@ With this trust mode, you must provide the allowlist (whitelist) files (`knownCl
     "sslConfig" : {
         "tls" : "STRICT",
         "generateKeyStoreIfNotExisted" : "true",
+        "sslConfigType" : "SERVER_AND_CLIENT",
         "serverKeyStore" : "server-keystore",
         "serverKeyStorePassword" : "tessera",
         "serverTrustMode" : "WHITELIST",
@@ -214,6 +221,7 @@ For this trust mode, you must provide trust stores that contain a list of trust 
     "sslConfig" : {
         "tls" : "STRICT",
         "generateKeyStoreIfNotExisted" : "false", //You can't generate trust stores when using CA
+        "sslConfigType" : "SERVER_AND_CLIENT",
         "serverKeyStore" : "server-keystore",
         "serverKeyStorePassword" : "tessera",
         "serverTrustStore" : "server-truststore",

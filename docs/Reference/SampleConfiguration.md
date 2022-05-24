@@ -51,6 +51,7 @@ Configuration items can be [overridden from the command line].
       "sslConfig": {
         "tls": "enum STRICT,OFF",
         "generateKeyStoreIfNotExisted": "boolean",
+        "sslConfigType": "Enumeration: SERVER_ONLY, CLIENT_ONLY, SERVER_AND_CLIENT",
         "serverKeyStore": "Path",
         "serverTlsKeyPath": "Path",
         "serverTlsCertificatePath": "Path",
@@ -264,6 +265,7 @@ Configure an InfuxDB [server](../HowTo/Configure/TesseraAPI.md) to record metric
 |--------------------------------|--:- :----|-----------------------------------------------------------------------------------------------|
 | `tls`                          | Required | Setting to `STRICT` [enables TLS](../HowTo/Configure/TLS.md). Setting to `OFF` disables TLS.  |
 | `generateKeyStoreIfNotExisted` | Optional | Tessera checks whether files exist in the `serverKeyStore` and `clientKeyStore` paths. If the files don't exist, new key stores are generated in the `serverKeyStore` and `clientKeyStore` paths. |
+| `sslConfigType`                | Optional | [TLS configuration type] based on server configuration, options are `SERVER_ONLY`, `CLIENT_ONLY`, `SERVER_AND_CLIENT` |
 | `serverKeyStore`               | Optional | Path to server key store.                                                                     |
 | `serverKeyStorePassword`       | Optional | [Password] required for `serverKeyStore`.                                                     |
 | `serverTlsKeyPath`             | Optional | File containing the private key for the server TLS certificate.                               |
@@ -414,3 +416,4 @@ If `type` is set to `EC`, the following `properties` fields can also be configur
 [Enables privacy enhancement features]: ../HowTo/Configure/Tessera.md#privacy-enhancements-flag
 [SunEC provider]: https://docs.oracle.com/javase/8/docs/technotes/guides/security/SunProviders.html#SunEC
 [Configure Tessera to use alternative curves and symmetric ciphers]: ../HowTo/Configure/Cryptographic-elliptic-curves.md
+[TLS configuration type]: ../HowTo/Configure/TLS.md#configuration-type

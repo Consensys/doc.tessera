@@ -77,7 +77,7 @@ The following artifacts can be added to a distribution to provide additional fun
 
 - [Azure](https://github.com/ConsenSys/tessera/tree/tessera-22.1.1/key-vault/azure-key-vault): Adds support for key pairs stored in Azure Key Vault.
 - [AWS](https://github.com/ConsenSys/tessera/tree/tessera-22.1.1/key-vault/aws-key-vault): Adds support for key pairs stored in AWS Secret Store.
-- [Hashicorp](https://github.com/ConsenSys/tessera/tree/tessera-22.1.1/key-vault/hashicorp-key-vault): Adds support for key pairs stored in Hashicorp Vault.
+- [Hashicorp](https://github.com/ConsenSys/tessera/tree/tessera-22.1.1/key-vault/hashicorp-key-vault): Adds support for key pairs stored in HashiCorp Vault.
 
 ##### Encryptors
 

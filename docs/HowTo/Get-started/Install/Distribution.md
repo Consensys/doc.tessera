@@ -75,13 +75,13 @@ The following artifacts can be added to a distribution to provide additional fun
 
 ##### Key Vaults
 
-- [Azure](https://github.com/ConsenSys/tessera/tree/tessera-22.1.1/key-vault/azure-key-vault): Adds support for key pairs stored in Azure Key Vault.
-- [AWS](https://github.com/ConsenSys/tessera/tree/tessera-22.1.1/key-vault/aws-key-vault): Adds support for key pairs stored in AWS Secret Store.
-- [HashiCorp](https://github.com/ConsenSys/tessera/tree/tessera-22.1.1/key-vault/hashicorp-key-vault): Adds support for key pairs stored in HashiCorp Vault.
+- [Azure](https://github.com/ConsenSys/tessera/tree/master/key-vault/azure-key-vault): Adds support for key pairs stored in Azure Key Vault.
+- [AWS](https://github.com/ConsenSys/tessera/tree/master/key-vault/aws-key-vault): Adds support for key pairs stored in AWS Secret Store.
+- [HashiCorp](https://github.com/ConsenSys/tessera/tree/master/key-vault/hashicorp-key-vault): Adds support for key pairs stored in HashiCorp Vault.
 
 ##### Encryptors
 
-- [jnacl](https://github.com/ConsenSys/tessera/tree/tessera-22.1.1/encryption/encryption-jnacl): (already included in Tessera and remote enclave server distributions)
+- [jnacl](https://github.com/ConsenSys/tessera/tree/master/encryption/encryption-jnacl): (already included in Tessera and remote enclave server distributions)
   Adds support for NaCl key pairs using the [jnacl](https://github.com/neilalexander/jnacl) library.
-- [Elliptical Curve](https://github.com/ConsenSys/tessera/tree/tessera-22.1.1/encryption/encryption-ec): Adds support for elliptic curve key pairs.
-- [kalium](https://github.com/ConsenSys/tessera/tree/tessera-22.1.1/encryption/encryption-kalium): Adds support for NaCl key pairs using the [kalium](https://github.com/abstractj/kalium) library.
+- [Elliptical Curve](https://github.com/ConsenSys/tessera/tree/master/encryption/encryption-ec): Adds support for elliptic curve key pairs.
+- [kalium](https://github.com/ConsenSys/tessera/tree/master/encryption/encryption-kalium): Adds support for NaCl key pairs using the [kalium](https://github.com/abstractj/kalium) library.

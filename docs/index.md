@@ -12,6 +12,24 @@ written in Java. The primary application of Tessera is as the privacy manager fo
 Ethereum clients such as [GoQuorum](https://docs.goquorum.consensys.net) and
 [Hyperledger Besu](https://besu.hyperledger.org/en/stable/).
 
+## What can you do with Tessera?
+
+Tessera:
+
+* Generates and maintains private/public key pairs.
+
+* Self-manages and discovers all nodes in the network.
+
+* Provides an API for communicating between Tessera nodes and an API for communicating with
+  privacy-enabled Ethereum clients.
+
+* Provides two-way SSL using TLS certificates and various trust models like trust on first use (TOFU),
+  whitelist, and certificate authority.
+
+* Supports IP whitelist.
+
+* Connects to any SQL DB which supports the JDBC client.
+
 ## Is Tessera part of ConsenSys Quorum?
 
 Yes. [ConsenSys Quorum](https://consensys.net/quorum/developers) is the complete open source blockchain
@@ -23,14 +41,3 @@ Get started with the [Quorum Developer Quickstart](Tutorials/Quorum-Dev-Quicksta
 to rapidly generate local Quorum blockchain networks.
 
 Learn about [use cases for Enterprise Ethereum](https://consensys.net/blockchain-use-cases/case-studies/).
-
-## What can you do with Tessera?
-
-Tessera:
-
-* Generates and maintains private/public key pairs.
-
-* Self manages and discovers all nodes in the network.
-
-* Provides an API for communicating between Tessera nodes and an API for communicating with
-    privacy-enabled Ethereum clients.

@@ -20,7 +20,7 @@ Tessera:
 
 * [Self-manages](Concepts/Privacy-Manager/Privacy-manager.md) and [discovers](Concepts/p2p-discovery.md) all nodes in the network.
 
-* Provides [an API](Reference/TesseraAPI.md) for communicating between Tessera nodes and an API for communicating with
+* Provides [an API](Reference/TesseraAPI.md) for communicating between Tessera nodes and with
   privacy-enabled Ethereum clients.
 
 * Provides two-way SSL using [TLS certificates](HowTo/Configure/TLS.md) and various trust models such as [trust on first use (TOFU)](HowTo/Configure/TLS.md#tofu-trust-on-first-use),

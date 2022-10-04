@@ -19,7 +19,7 @@ copyright: Tessera is licensed under Apache 2.0 License /
 
 #extra project info and template customisation
 extra:
-  logo_is_text: true
+  logo_is_text: false
   latest_version_warning:
     url_contains: /latest/
     text: 'You are reading Tessera development version documentation and

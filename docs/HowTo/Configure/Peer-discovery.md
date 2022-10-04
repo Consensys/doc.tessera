@@ -28,8 +28,8 @@ Peer discovery is enabled by default.
 !!! important
 
     Disabling peer discovery does not stop incoming transactions from nodes that are not in the peer list.
-    To stop transactions being received from nodes that are not in the peer list, [enable the whitelist
-    option](#enable-whitelist).
+    To stop transactions being received from nodes that are not in the peer list, [enable the allowlist
+    option](#enable-allowlist).
 
 ## Specify peers
 

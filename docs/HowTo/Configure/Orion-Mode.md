@@ -1,14 +1,12 @@
 ---
-description: Configure Tessera to use the Besu in a non-GoQuorum privacy mode.
+description: Configure Tessera to use Besu.
 ---
 
 # Configure Hyperledger Besu support
 
-Tessera provides out-of-the-box support for [Hyperledger Besu](https://besu.hyperledger.org/en/stable/HowTo/Use-Privacy/Privacy/).
-However, additional configuration is required if you are **not** running
-[Besu in GoQuorum privacy mode](https://besu.hyperledger.org/en/stable/HowTo/Use-Privacy/Use-GoQuorum-compatible-privacy/).
+Tessera provides support for [Hyperledger Besu](https://besu.hyperledger.org/en/stable/HowTo/Use-Privacy/Privacy/).
 
-If GoQuorum privacy mode is not enabled in Besu, set [`mode`](../../Reference/SampleConfiguration.md#mode) in the
+To enable Besu support in Tessera, set [`mode`](../../Reference/SampleConfiguration.md#mode) in the
 Tessera [configuration file](Tessera.md) to `orion`.
 
 !!! example "Orion mode configuration"

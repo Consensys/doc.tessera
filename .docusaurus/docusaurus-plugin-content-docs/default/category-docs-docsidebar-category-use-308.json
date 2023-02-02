@@ -1,0 +1,16 @@
+{
+  "title": "Use",
+  "description": "use",
+  "slug": "/category/use",
+  "permalink": "/docs/category/use",
+  "navigation": {
+    "previous": {
+      "title": "High availability",
+      "permalink": "/docs/HowTo/Configure/High-availability"
+    },
+    "next": {
+      "title": "Monitoring",
+      "permalink": "/docs/HowTo/Use/Monitoring"
+    }
+  }
+}

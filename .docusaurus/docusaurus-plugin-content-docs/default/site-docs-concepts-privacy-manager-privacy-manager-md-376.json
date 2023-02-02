@@ -1,0 +1,32 @@
+{
+  "unversionedId": "Concepts/Privacy-Manager/Privacy-manager",
+  "id": "Concepts/Privacy-Manager/Privacy-manager",
+  "title": "Overview",
+  "description": "Overview of Tessera privacy manager",
+  "source": "@site/docs/Concepts/Privacy-Manager/Privacy-manager.md",
+  "sourceDirName": "Concepts/Privacy-Manager",
+  "slug": "/Concepts/Privacy-Manager/",
+  "permalink": "/docs/Concepts/Privacy-Manager/",
+  "draft": false,
+  "editUrl": "https://github.com/ConsenSys/doc.tessera/tree/main/docs/Concepts/Privacy-Manager/Privacy-manager.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "Overview",
+    "description": "Overview of Tessera privacy manager",
+    "sidebar_position": 1
+  },
+  "sidebar": "docSidebar",
+  "previous": {
+    "title": "Privacy Manager",
+    "permalink": "/docs/category/privacy-manager"
+  },
+  "next": {
+    "title": "Transaction manager",
+    "permalink": "/docs/Concepts/Privacy-Manager/Transaction-manager"
+  }
+}

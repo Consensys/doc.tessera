@@ -1,0 +1,32 @@
+{
+  "unversionedId": "HowTo/Configure/Database",
+  "id": "HowTo/Configure/Database",
+  "title": "Database",
+  "description": "Database configuration",
+  "source": "@site/docs/HowTo/Configure/Database.md",
+  "sourceDirName": "HowTo/Configure",
+  "slug": "/HowTo/Configure/Database",
+  "permalink": "/docs/HowTo/Configure/Database",
+  "draft": false,
+  "editUrl": "https://github.com/ConsenSys/doc.tessera/tree/main/docs/HowTo/Configure/Database.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "sidebarPosition": 8,
+  "frontMatter": {
+    "title": "Database",
+    "description": "Database configuration",
+    "sidebar_position": 8
+  },
+  "sidebar": "docSidebar",
+  "previous": {
+    "title": "TLS",
+    "permalink": "/docs/HowTo/Configure/TLS"
+  },
+  "next": {
+    "title": "Multiple private states",
+    "permalink": "/docs/HowTo/Configure/Multiple-private-state"
+  }
+}

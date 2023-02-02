@@ -1,0 +1,32 @@
+{
+  "unversionedId": "HowTo/Configure/Peer-discovery",
+  "id": "HowTo/Configure/Peer-discovery",
+  "title": "Peer discovery",
+  "description": "Configuring peer discovery",
+  "source": "@site/docs/HowTo/Configure/Peer-discovery.md",
+  "sourceDirName": "HowTo/Configure",
+  "slug": "/HowTo/Configure/Peer-discovery",
+  "permalink": "/docs/HowTo/Configure/Peer-discovery",
+  "draft": false,
+  "editUrl": "https://github.com/ConsenSys/doc.tessera/tree/main/docs/HowTo/Configure/Peer-discovery.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "sidebarPosition": 6,
+  "frontMatter": {
+    "title": "Peer discovery",
+    "description": "Configuring peer discovery",
+    "sidebar_position": 6
+  },
+  "sidebar": "docSidebar",
+  "previous": {
+    "title": "Servers",
+    "permalink": "/docs/HowTo/Configure/TesseraAPI"
+  },
+  "next": {
+    "title": "TLS",
+    "permalink": "/docs/HowTo/Configure/TLS"
+  }
+}

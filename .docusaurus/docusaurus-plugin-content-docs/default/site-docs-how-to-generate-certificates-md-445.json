@@ -1,0 +1,32 @@
+{
+  "unversionedId": "HowTo/Generate-certificates",
+  "id": "HowTo/Generate-certificates",
+  "title": "Generating certificates",
+  "description": "Generating certificates",
+  "source": "@site/docs/HowTo/Generate-certificates.md",
+  "sourceDirName": "HowTo",
+  "slug": "/HowTo/Generate-certificates",
+  "permalink": "/docs/HowTo/Generate-certificates",
+  "draft": false,
+  "editUrl": "https://github.com/ConsenSys/doc.tessera/tree/main/docs/HowTo/Generate-certificates.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "title": "Generating certificates",
+    "description": "Generating certificates",
+    "sidebar_position": 3
+  },
+  "sidebar": "docSidebar",
+  "previous": {
+    "title": "AWS Secrets Manager keys",
+    "permalink": "/docs/HowTo/Generate-Keys/AWS-Secrets-Manager"
+  },
+  "next": {
+    "title": "Configure",
+    "permalink": "/docs/category/configure"
+  }
+}

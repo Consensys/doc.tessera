@@ -1,0 +1,32 @@
+{
+  "unversionedId": "HowTo/Use/Mandatory-Recipients",
+  "id": "HowTo/Use/Mandatory-Recipients",
+  "title": "Mandatory Recipients",
+  "description": "How to use mandatory recipients",
+  "source": "@site/docs/HowTo/Use/Mandatory-Recipients.md",
+  "sourceDirName": "HowTo/Use",
+  "slug": "/HowTo/Use/Mandatory-Recipients",
+  "permalink": "/docs/HowTo/Use/Mandatory-Recipients",
+  "draft": false,
+  "editUrl": "https://github.com/ConsenSys/doc.tessera/tree/main/docs/HowTo/Use/Mandatory-Recipients.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "title": "Mandatory Recipients",
+    "description": "How to use mandatory recipients",
+    "sidebar_position": 3
+  },
+  "sidebar": "docSidebar",
+  "previous": {
+    "title": "Logging",
+    "permalink": "/docs/HowTo/Use/Logging"
+  },
+  "next": {
+    "title": "Data recovery",
+    "permalink": "/docs/HowTo/Use/Data-Recovery"
+  }
+}

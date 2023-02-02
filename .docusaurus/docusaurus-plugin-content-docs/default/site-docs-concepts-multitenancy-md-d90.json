@@ -1,0 +1,32 @@
+{
+  "unversionedId": "Concepts/Multitenancy",
+  "id": "Concepts/Multitenancy",
+  "title": "Multi-tenancy",
+  "description": "Tessera and GoQuorum multi-tenancy",
+  "source": "@site/docs/Concepts/Multitenancy.md",
+  "sourceDirName": "Concepts",
+  "slug": "/Concepts/Multitenancy",
+  "permalink": "/docs/Concepts/Multitenancy",
+  "draft": false,
+  "editUrl": "https://github.com/ConsenSys/doc.tessera/tree/main/docs/Concepts/Multitenancy.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "title": "Multi-tenancy",
+    "description": "Tessera and GoQuorum multi-tenancy",
+    "sidebar_position": 4
+  },
+  "sidebar": "docSidebar",
+  "previous": {
+    "title": "Privacy groups",
+    "permalink": "/docs/Concepts/Privacy-Groups"
+  },
+  "next": {
+    "title": "How To",
+    "permalink": "/docs/category/how-to"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "unversionedId": "HowTo/Get-started/Install/Distribution",
+  "id": "HowTo/Get-started/Install/Distribution",
+  "title": "Install Tessera",
+  "description": "Install Tessera",
+  "source": "@site/docs/HowTo/Get-started/Install/Distribution.md",
+  "sourceDirName": "HowTo/Get-started/Install",
+  "slug": "/HowTo/Get-started/Install/Distribution",
+  "permalink": "/docs/HowTo/Get-started/Install/Distribution",
+  "draft": false,
+  "editUrl": "https://github.com/ConsenSys/doc.tessera/tree/main/docs/HowTo/Get-started/Install/Distribution.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "Install Tessera",
+    "description": "Install Tessera",
+    "sidebar_position": 2
+  },
+  "sidebar": "docSidebar",
+  "previous": {
+    "title": "Use Tessera Docker images",
+    "permalink": "/docs/HowTo/Get-started/Install/Docker-Images"
+  },
+  "next": {
+    "title": "Build from source",
+    "permalink": "/docs/HowTo/Get-started/Install/Build-From-Source"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "title": "Concepts",
+  "description": "concepts",
+  "slug": "/category/concepts-2",
+  "permalink": "/docs/category/concepts-2",
+  "navigation": {
+    "previous": {
+      "title": "Use GoQuorum or Besu with Tessera",
+      "permalink": "/docs/HowTo/Get-started/Use-GoQuorum-with-Tessera"
+    },
+    "next": {
+      "title": "Configure cryptographic elliptic curves",
+      "permalink": "/docs/HowTo/Configure/Cryptographic-elliptic-curves"
+    }
+  }
+}

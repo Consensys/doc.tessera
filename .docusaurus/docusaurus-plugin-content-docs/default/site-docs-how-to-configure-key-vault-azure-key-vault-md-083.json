@@ -1,0 +1,29 @@
+{
+  "unversionedId": "HowTo/Configure/KeyVault/Azure-Key-Vault",
+  "id": "HowTo/Configure/KeyVault/Azure-Key-Vault",
+  "title": "Configure Azure Key Vault",
+  "description": "Configuring Azure Key Vault for storing private keys",
+  "source": "@site/docs/HowTo/Configure/KeyVault/Azure-Key-Vault.md",
+  "sourceDirName": "HowTo/Configure/KeyVault",
+  "slug": "/HowTo/Configure/KeyVault/Azure-Key-Vault",
+  "permalink": "/docs/HowTo/Configure/KeyVault/Azure-Key-Vault",
+  "draft": false,
+  "editUrl": "https://github.com/ConsenSys/doc.tessera/tree/main/docs/HowTo/Configure/KeyVault/Azure-Key-Vault.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "description": "Configuring Azure Key Vault for storing private keys"
+  },
+  "sidebar": "docSidebar",
+  "previous": {
+    "title": "Configure AWS Secrets Manager",
+    "permalink": "/docs/HowTo/Configure/KeyVault/AWS-Secrets-Manager"
+  },
+  "next": {
+    "title": "Configure HashiCorp Vault",
+    "permalink": "/docs/HowTo/Configure/KeyVault/Hashicorp-Vault"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "title": "Get Started",
+  "description": "get started",
+  "slug": "/category/get-started",
+  "permalink": "/docs/category/get-started",
+  "navigation": {
+    "previous": {
+      "title": "How To",
+      "permalink": "/docs/category/how-to"
+    },
+    "next": {
+      "title": "Install",
+      "permalink": "/docs/category/install"
+    }
+  }
+}

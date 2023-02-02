@@ -1,0 +1,32 @@
+{
+  "unversionedId": "HowTo/Configure/Multiple-private-state",
+  "id": "HowTo/Configure/Multiple-private-state",
+  "title": "Multiple private states",
+  "description": "Configure Tessera to support GoQuorum multiple private states feature",
+  "source": "@site/docs/HowTo/Configure/Multiple-private-state.md",
+  "sourceDirName": "HowTo/Configure",
+  "slug": "/HowTo/Configure/Multiple-private-state",
+  "permalink": "/docs/HowTo/Configure/Multiple-private-state",
+  "draft": false,
+  "editUrl": "https://github.com/ConsenSys/doc.tessera/tree/main/docs/HowTo/Configure/Multiple-private-state.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "sidebarPosition": 9,
+  "frontMatter": {
+    "title": "Multiple private states",
+    "description": "Configure Tessera to support GoQuorum multiple private states feature",
+    "sidebar_position": 9
+  },
+  "sidebar": "docSidebar",
+  "previous": {
+    "title": "Database",
+    "permalink": "/docs/HowTo/Configure/Database"
+  },
+  "next": {
+    "title": "Cryptographic elliptic curves",
+    "permalink": "/docs/HowTo/Configure/Cryptographic-elliptic-curves"
+  }
+}

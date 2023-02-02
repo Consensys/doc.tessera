@@ -1,0 +1,32 @@
+{
+  "unversionedId": "HowTo/Configure/Enclave",
+  "id": "HowTo/Configure/Enclave",
+  "title": "Enclave",
+  "description": "Configuring Tessera enclave",
+  "source": "@site/docs/HowTo/Configure/Enclave.md",
+  "sourceDirName": "HowTo/Configure",
+  "slug": "/HowTo/Configure/Enclave",
+  "permalink": "/docs/HowTo/Configure/Enclave",
+  "draft": false,
+  "editUrl": "https://github.com/ConsenSys/doc.tessera/tree/main/docs/HowTo/Configure/Enclave.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "title": "Enclave",
+    "description": "Configuring Tessera enclave",
+    "sidebar_position": 3
+  },
+  "sidebar": "docSidebar",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/docs/HowTo/Configure/Tessera"
+  },
+  "next": {
+    "title": "Keys",
+    "permalink": "/docs/category/keys"
+  }
+}

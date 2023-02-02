@@ -1,0 +1,16 @@
+{
+  "title": "Get Started",
+  "description": "get started",
+  "slug": "/category/get-started-1",
+  "permalink": "/docs/category/get-started-1",
+  "navigation": {
+    "previous": {
+      "title": "Get Started",
+      "permalink": "/docs/category/get-started"
+    },
+    "next": {
+      "title": "Build from source",
+      "permalink": "/docs/HowTo/Get-started/Install/Build-From-Source"
+    }
+  }
+}

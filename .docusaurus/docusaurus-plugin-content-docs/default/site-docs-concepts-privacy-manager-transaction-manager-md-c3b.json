@@ -1,0 +1,32 @@
+{
+  "unversionedId": "Concepts/Privacy-Manager/Transaction-manager",
+  "id": "Concepts/Privacy-Manager/Transaction-manager",
+  "title": "Transaction manager",
+  "description": "Overview of Tessera transaction manager",
+  "source": "@site/docs/Concepts/Privacy-Manager/Transaction-manager.md",
+  "sourceDirName": "Concepts/Privacy-Manager",
+  "slug": "/Concepts/Privacy-Manager/Transaction-manager",
+  "permalink": "/docs/Concepts/Privacy-Manager/Transaction-manager",
+  "draft": false,
+  "editUrl": "https://github.com/ConsenSys/doc.tessera/tree/main/docs/Concepts/Privacy-Manager/Transaction-manager.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "Transaction manager",
+    "description": "Overview of Tessera transaction manager",
+    "sidebar_position": 2
+  },
+  "sidebar": "docSidebar",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/docs/Concepts/Privacy-Manager/"
+  },
+  "next": {
+    "title": "Enclave",
+    "permalink": "/docs/Concepts/Privacy-Manager/Enclave"
+  }
+}

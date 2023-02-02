@@ -1,0 +1,790 @@
+{
+  "pluginId": "default",
+  "version": "current",
+  "label": "Next",
+  "banner": null,
+  "badge": false,
+  "noIndex": false,
+  "className": "docs-version-current",
+  "isLast": true,
+  "docsSidebars": {
+    "docSidebar": [
+      {
+        "type": "link",
+        "label": "Overview",
+        "href": "/docs/",
+        "docId": "index"
+      },
+      {
+        "type": "category",
+        "label": "Concepts",
+        "items": [
+          {
+            "type": "category",
+            "label": "Privacy Manager",
+            "collapsible": true,
+            "collapsed": true,
+            "items": [
+              {
+                "type": "link",
+                "label": "Overview",
+                "href": "/docs/Concepts/Privacy-Manager/",
+                "docId": "Concepts/Privacy-Manager/Privacy-manager"
+              },
+              {
+                "type": "link",
+                "label": "Transaction manager",
+                "href": "/docs/Concepts/Privacy-Manager/Transaction-manager",
+                "docId": "Concepts/Privacy-Manager/Transaction-manager"
+              },
+              {
+                "type": "link",
+                "label": "Enclave",
+                "href": "/docs/Concepts/Privacy-Manager/Enclave",
+                "docId": "Concepts/Privacy-Manager/Enclave"
+              },
+              {
+                "type": "link",
+                "label": "Enclave types",
+                "href": "/docs/Concepts/Privacy-Manager/Enclave-types",
+                "docId": "Concepts/Privacy-Manager/Enclave-types"
+              }
+            ],
+            "href": "/docs/category/privacy-manager"
+          },
+          {
+            "type": "link",
+            "label": "Peer discovery",
+            "href": "/docs/Concepts/p2p-discovery",
+            "docId": "Concepts/p2p-discovery"
+          },
+          {
+            "type": "link",
+            "label": "Privacy groups",
+            "href": "/docs/Concepts/Privacy-Groups",
+            "docId": "Concepts/Privacy-Groups"
+          },
+          {
+            "type": "link",
+            "label": "Multi-tenancy",
+            "href": "/docs/Concepts/Multitenancy",
+            "docId": "Concepts/Multitenancy"
+          }
+        ],
+        "collapsed": true,
+        "collapsible": true,
+        "href": "/docs/category/concepts"
+      },
+      {
+        "type": "category",
+        "label": "How To",
+        "items": [
+          {
+            "type": "category",
+            "label": "Get Started",
+            "collapsible": true,
+            "collapsed": true,
+            "items": [
+              {
+                "type": "category",
+                "label": "Install",
+                "collapsible": true,
+                "collapsed": true,
+                "items": [
+                  {
+                    "type": "link",
+                    "label": "Use Tessera Docker images",
+                    "href": "/docs/HowTo/Get-started/Install/Docker-Images",
+                    "docId": "HowTo/Get-started/Install/Docker-Images"
+                  },
+                  {
+                    "type": "link",
+                    "label": "Install Tessera",
+                    "href": "/docs/HowTo/Get-started/Install/Distribution",
+                    "docId": "HowTo/Get-started/Install/Distribution"
+                  },
+                  {
+                    "type": "link",
+                    "label": "Build from source",
+                    "href": "/docs/HowTo/Get-started/Install/Build-From-Source",
+                    "docId": "HowTo/Get-started/Install/Build-From-Source"
+                  }
+                ],
+                "href": "/docs/category/install"
+              },
+              {
+                "type": "link",
+                "label": "Start Tessera",
+                "href": "/docs/HowTo/Get-started/Start-Tessera",
+                "docId": "HowTo/Get-started/Start-Tessera"
+              },
+              {
+                "type": "link",
+                "label": "Use GoQuorum or Besu with Tessera",
+                "href": "/docs/HowTo/Get-started/Use-GoQuorum-with-Tessera",
+                "docId": "HowTo/Get-started/Use-GoQuorum-with-Tessera"
+              }
+            ],
+            "href": "/docs/category/get-started"
+          },
+          {
+            "type": "category",
+            "label": "Generate keys",
+            "collapsible": true,
+            "collapsed": true,
+            "items": [
+              {
+                "type": "link",
+                "label": "Overview",
+                "href": "/docs/HowTo/Generate-Keys/",
+                "docId": "HowTo/Generate-Keys/Generate-Keys"
+              },
+              {
+                "type": "link",
+                "label": "File based keys",
+                "href": "/docs/HowTo/Generate-Keys/File-Stored-Keys",
+                "docId": "HowTo/Generate-Keys/File-Stored-Keys"
+              },
+              {
+                "type": "link",
+                "label": "Hashicorp Vault keys",
+                "href": "/docs/HowTo/Generate-Keys/Hashicorp-Vault",
+                "docId": "HowTo/Generate-Keys/Hashicorp-Vault"
+              },
+              {
+                "type": "link",
+                "label": "Azure Key Vault keys",
+                "href": "/docs/HowTo/Generate-Keys/Azure-Key-Vault",
+                "docId": "HowTo/Generate-Keys/Azure-Key-Vault"
+              },
+              {
+                "type": "link",
+                "label": "AWS Secrets Manager keys",
+                "href": "/docs/HowTo/Generate-Keys/AWS-Secrets-Manager",
+                "docId": "HowTo/Generate-Keys/AWS-Secrets-Manager"
+              }
+            ],
+            "href": "/docs/category/generate-keys"
+          },
+          {
+            "type": "link",
+            "label": "Generating certificates",
+            "href": "/docs/HowTo/Generate-certificates",
+            "docId": "HowTo/Generate-certificates"
+          },
+          {
+            "type": "category",
+            "label": "Configure",
+            "collapsible": true,
+            "collapsed": true,
+            "items": [
+              {
+                "type": "link",
+                "label": "Overview",
+                "href": "/docs/HowTo/Configure/Tessera",
+                "docId": "HowTo/Configure/Tessera"
+              },
+              {
+                "type": "link",
+                "label": "Enclave",
+                "href": "/docs/HowTo/Configure/Enclave",
+                "docId": "HowTo/Configure/Enclave"
+              },
+              {
+                "type": "category",
+                "label": "Keys",
+                "collapsible": true,
+                "collapsed": true,
+                "items": [
+                  {
+                    "type": "link",
+                    "label": "Overview",
+                    "href": "/docs/HowTo/Configure/Keys/Overview",
+                    "docId": "HowTo/Configure/Keys/Overview"
+                  },
+                  {
+                    "type": "link",
+                    "label": "Direct keys",
+                    "href": "/docs/HowTo/Configure/Keys/Direct-Key-Pairs",
+                    "docId": "HowTo/Configure/Keys/Direct-Key-Pairs"
+                  },
+                  {
+                    "type": "link",
+                    "label": "Inline keys",
+                    "href": "/docs/HowTo/Configure/Keys/Inline-Key-Pairs",
+                    "docId": "HowTo/Configure/Keys/Inline-Key-Pairs"
+                  },
+                  {
+                    "type": "link",
+                    "label": "File-based keys",
+                    "href": "/docs/HowTo/Configure/Keys/File-Based-Key-Pairs",
+                    "docId": "HowTo/Configure/Keys/File-Based-Key-Pairs"
+                  },
+                  {
+                    "type": "link",
+                    "label": "Azure Key Vault keys",
+                    "href": "/docs/HowTo/Configure/Keys/Azure-Key-Vault-Pairs",
+                    "docId": "HowTo/Configure/Keys/Azure-Key-Vault-Pairs"
+                  },
+                  {
+                    "type": "link",
+                    "label": "AWS Secrets Manager keys",
+                    "href": "/docs/HowTo/Configure/Keys/AWS-Secrets-Pairs",
+                    "docId": "HowTo/Configure/Keys/AWS-Secrets-Pairs"
+                  },
+                  {
+                    "type": "link",
+                    "label": "HashiCorp Vault keys",
+                    "href": "/docs/HowTo/Configure/Keys/Hashicorp-Vault-Pairs",
+                    "docId": "HowTo/Configure/Keys/Hashicorp-Vault-Pairs"
+                  },
+                  {
+                    "type": "link",
+                    "label": "Secure keys",
+                    "href": "/docs/HowTo/Configure/Keys/Secure-Keys",
+                    "docId": "HowTo/Configure/Keys/Secure-Keys"
+                  }
+                ],
+                "href": "/docs/category/keys"
+              },
+              {
+                "type": "category",
+                "label": "KeyVault",
+                "collapsible": true,
+                "collapsed": true,
+                "items": [
+                  {
+                    "type": "link",
+                    "label": "Configure AWS Secrets Manager",
+                    "href": "/docs/HowTo/Configure/KeyVault/AWS-Secrets-Manager",
+                    "docId": "HowTo/Configure/KeyVault/AWS-Secrets-Manager"
+                  },
+                  {
+                    "type": "link",
+                    "label": "Configure Azure Key Vault",
+                    "href": "/docs/HowTo/Configure/KeyVault/Azure-Key-Vault",
+                    "docId": "HowTo/Configure/KeyVault/Azure-Key-Vault"
+                  },
+                  {
+                    "type": "link",
+                    "label": "Configure HashiCorp Vault",
+                    "href": "/docs/HowTo/Configure/KeyVault/Hashicorp-Vault",
+                    "docId": "HowTo/Configure/KeyVault/Hashicorp-Vault"
+                  }
+                ],
+                "href": "/docs/category/keyvault"
+              },
+              {
+                "type": "link",
+                "label": "Servers",
+                "href": "/docs/HowTo/Configure/TesseraAPI",
+                "docId": "HowTo/Configure/TesseraAPI"
+              },
+              {
+                "type": "link",
+                "label": "Peer discovery",
+                "href": "/docs/HowTo/Configure/Peer-discovery",
+                "docId": "HowTo/Configure/Peer-discovery"
+              },
+              {
+                "type": "link",
+                "label": "TLS",
+                "href": "/docs/HowTo/Configure/TLS",
+                "docId": "HowTo/Configure/TLS"
+              },
+              {
+                "type": "link",
+                "label": "Database",
+                "href": "/docs/HowTo/Configure/Database",
+                "docId": "HowTo/Configure/Database"
+              },
+              {
+                "type": "link",
+                "label": "Multiple private states",
+                "href": "/docs/HowTo/Configure/Multiple-private-state",
+                "docId": "HowTo/Configure/Multiple-private-state"
+              },
+              {
+                "type": "link",
+                "label": "Cryptographic elliptic curves",
+                "href": "/docs/HowTo/Configure/Cryptographic-elliptic-curves",
+                "docId": "HowTo/Configure/Cryptographic-elliptic-curves"
+              },
+              {
+                "type": "link",
+                "label": "Hyperledger Besu Support",
+                "href": "/docs/HowTo/Configure/Orion-Mode",
+                "docId": "HowTo/Configure/Orion-Mode"
+              },
+              {
+                "type": "link",
+                "label": "Overriding configuration file",
+                "href": "/docs/HowTo/Configure/Override-config",
+                "docId": "HowTo/Configure/Override-config"
+              },
+              {
+                "type": "link",
+                "label": "High availability",
+                "href": "/docs/HowTo/Configure/High-availability",
+                "docId": "HowTo/Configure/High-availability"
+              }
+            ],
+            "href": "/docs/category/configure"
+          },
+          {
+            "type": "category",
+            "label": "Use",
+            "collapsible": true,
+            "collapsed": true,
+            "items": [
+              {
+                "type": "link",
+                "label": "Monitoring",
+                "href": "/docs/HowTo/Use/Monitoring",
+                "docId": "HowTo/Use/Monitoring"
+              },
+              {
+                "type": "link",
+                "label": "Logging",
+                "href": "/docs/HowTo/Use/Logging",
+                "docId": "HowTo/Use/Logging"
+              },
+              {
+                "type": "link",
+                "label": "Mandatory Recipients",
+                "href": "/docs/HowTo/Use/Mandatory-Recipients",
+                "docId": "HowTo/Use/Mandatory-Recipients"
+              },
+              {
+                "type": "link",
+                "label": "Data recovery",
+                "href": "/docs/HowTo/Use/Data-Recovery",
+                "docId": "HowTo/Use/Data-Recovery"
+              }
+            ],
+            "href": "/docs/category/use"
+          },
+          {
+            "type": "category",
+            "label": "Migrate",
+            "collapsible": true,
+            "collapsed": true,
+            "items": [
+              {
+                "type": "link",
+                "label": "Migrating from Orion to Tessera",
+                "href": "/docs/HowTo/Migrate/MigrateFromOrion",
+                "docId": "HowTo/Migrate/MigrateFromOrion"
+              },
+              {
+                "type": "link",
+                "label": "Tessera Multi-tenancy Migration",
+                "href": "/docs/HowTo/Migrate/Migration-Multitenancy",
+                "docId": "HowTo/Migrate/Migration-Multitenancy"
+              },
+              {
+                "type": "link",
+                "label": "Upgrading the database",
+                "href": "/docs/HowTo/Migrate/Upgrade",
+                "docId": "HowTo/Migrate/Upgrade"
+              }
+            ],
+            "href": "/docs/category/migrate"
+          }
+        ],
+        "collapsed": true,
+        "collapsible": true,
+        "href": "/docs/category/how-to"
+      },
+      {
+        "type": "category",
+        "label": "Tutorials",
+        "items": [
+          {
+            "type": "link",
+            "label": "Quorum Developer Quickstart",
+            "href": "/docs/Tutorials/Quorum-Dev-Quickstart",
+            "docId": "Tutorials/Quorum-Dev-Quickstart"
+          }
+        ],
+        "collapsed": true,
+        "collapsible": true,
+        "href": "/docs/category/tutorials"
+      },
+      {
+        "type": "category",
+        "label": "Reference",
+        "items": [
+          {
+            "type": "category",
+            "label": "Command Line",
+            "collapsible": true,
+            "collapsed": true,
+            "items": [
+              {
+                "type": "link",
+                "label": "Options",
+                "href": "/docs/Reference/CLI/CLI-Syntax",
+                "docId": "Reference/CLI/CLI-Syntax"
+              },
+              {
+                "type": "link",
+                "label": "Subcommands",
+                "href": "/docs/Reference/CLI/CLI-Subcommands",
+                "docId": "Reference/CLI/CLI-Subcommands"
+              }
+            ],
+            "href": "/docs/category/command-line"
+          },
+          {
+            "type": "link",
+            "label": "Configuration file",
+            "href": "/docs/Reference/SampleConfiguration",
+            "docId": "Reference/SampleConfiguration"
+          },
+          {
+            "type": "link",
+            "label": "Bootstrap node configuration",
+            "href": "/docs/Reference/BootstrapSampleConfiguration",
+            "docId": "Reference/BootstrapSampleConfiguration"
+          },
+          {
+            "type": "link",
+            "label": "Tessera API",
+            "href": "/docs/Reference/TesseraAPI",
+            "docId": "Reference/TesseraAPI"
+          }
+        ],
+        "collapsed": true,
+        "collapsible": true,
+        "href": "/docs/category/reference"
+      }
+    ]
+  },
+  "docs": {
+    "Concepts/Multitenancy": {
+      "id": "Concepts/Multitenancy",
+      "title": "Multi-tenancy",
+      "description": "Tessera and GoQuorum multi-tenancy",
+      "sidebar": "docSidebar"
+    },
+    "Concepts/p2p-discovery": {
+      "id": "Concepts/p2p-discovery",
+      "title": "Peer discovery",
+      "description": "P2P Tessera Node Discovery",
+      "sidebar": "docSidebar"
+    },
+    "Concepts/Privacy-Groups": {
+      "id": "Concepts/Privacy-Groups",
+      "title": "Privacy groups",
+      "description": "Tessera privacy groups",
+      "sidebar": "docSidebar"
+    },
+    "Concepts/Privacy-Manager/Enclave": {
+      "id": "Concepts/Privacy-Manager/Enclave",
+      "title": "Enclave",
+      "description": "Overview of Tessera enclave",
+      "sidebar": "docSidebar"
+    },
+    "Concepts/Privacy-Manager/Enclave-types": {
+      "id": "Concepts/Privacy-Manager/Enclave-types",
+      "title": "Enclave types",
+      "description": "Enclave types",
+      "sidebar": "docSidebar"
+    },
+    "Concepts/Privacy-Manager/Privacy-manager": {
+      "id": "Concepts/Privacy-Manager/Privacy-manager",
+      "title": "Overview",
+      "description": "Overview of Tessera privacy manager",
+      "sidebar": "docSidebar"
+    },
+    "Concepts/Privacy-Manager/Transaction-manager": {
+      "id": "Concepts/Privacy-Manager/Transaction-manager",
+      "title": "Transaction manager",
+      "description": "Overview of Tessera transaction manager",
+      "sidebar": "docSidebar"
+    },
+    "HowTo/Configure/Cryptographic-elliptic-curves": {
+      "id": "HowTo/Configure/Cryptographic-elliptic-curves",
+      "title": "Cryptographic elliptic curves",
+      "description": "Configure an alternative cryptographic elliptic curves",
+      "sidebar": "docSidebar"
+    },
+    "HowTo/Configure/Database": {
+      "id": "HowTo/Configure/Database",
+      "title": "Database",
+      "description": "Database configuration",
+      "sidebar": "docSidebar"
+    },
+    "HowTo/Configure/Enclave": {
+      "id": "HowTo/Configure/Enclave",
+      "title": "Enclave",
+      "description": "Configuring Tessera enclave",
+      "sidebar": "docSidebar"
+    },
+    "HowTo/Configure/High-availability": {
+      "id": "HowTo/Configure/High-availability",
+      "title": "High availability",
+      "description": "Tessera deployment for high availability",
+      "sidebar": "docSidebar"
+    },
+    "HowTo/Configure/Keys/AWS-Secrets-Pairs": {
+      "id": "HowTo/Configure/Keys/AWS-Secrets-Pairs",
+      "title": "AWS Secrets Manager keys",
+      "description": "Configure AWS Secrets Manager key pairs.",
+      "sidebar": "docSidebar"
+    },
+    "HowTo/Configure/Keys/Azure-Key-Vault-Pairs": {
+      "id": "HowTo/Configure/Keys/Azure-Key-Vault-Pairs",
+      "title": "Azure Key Vault keys",
+      "description": "Configure Azure Key Vault key pairs.",
+      "sidebar": "docSidebar"
+    },
+    "HowTo/Configure/Keys/Direct-Key-Pairs": {
+      "id": "HowTo/Configure/Keys/Direct-Key-Pairs",
+      "title": "Direct keys",
+      "description": "Configure direct key pairs.",
+      "sidebar": "docSidebar"
+    },
+    "HowTo/Configure/Keys/File-Based-Key-Pairs": {
+      "id": "HowTo/Configure/Keys/File-Based-Key-Pairs",
+      "title": "File-based keys",
+      "description": "Configure file-based key pairs.",
+      "sidebar": "docSidebar"
+    },
+    "HowTo/Configure/Keys/Hashicorp-Vault-Pairs": {
+      "id": "HowTo/Configure/Keys/Hashicorp-Vault-Pairs",
+      "title": "HashiCorp Vault keys",
+      "description": "Configure HashiCorp Vault key pairs.",
+      "sidebar": "docSidebar"
+    },
+    "HowTo/Configure/Keys/Inline-Key-Pairs": {
+      "id": "HowTo/Configure/Keys/Inline-Key-Pairs",
+      "title": "Inline keys",
+      "description": "Configure inline key pairs.",
+      "sidebar": "docSidebar"
+    },
+    "HowTo/Configure/Keys/Overview": {
+      "id": "HowTo/Configure/Keys/Overview",
+      "title": "Overview",
+      "description": "Configure access to public and private key pairs.",
+      "sidebar": "docSidebar"
+    },
+    "HowTo/Configure/Keys/Secure-Keys": {
+      "id": "HowTo/Configure/Keys/Secure-Keys",
+      "title": "Secure keys",
+      "description": "Secure private keys using Argon2",
+      "sidebar": "docSidebar"
+    },
+    "HowTo/Configure/KeyVault/AWS-Secrets-Manager": {
+      "id": "HowTo/Configure/KeyVault/AWS-Secrets-Manager",
+      "title": "Configure AWS Secrets Manager",
+      "description": "Configuring AWS Secrets Manager for storing private keys",
+      "sidebar": "docSidebar"
+    },
+    "HowTo/Configure/KeyVault/Azure-Key-Vault": {
+      "id": "HowTo/Configure/KeyVault/Azure-Key-Vault",
+      "title": "Configure Azure Key Vault",
+      "description": "Configuring Azure Key Vault for storing private keys",
+      "sidebar": "docSidebar"
+    },
+    "HowTo/Configure/KeyVault/Hashicorp-Vault": {
+      "id": "HowTo/Configure/KeyVault/Hashicorp-Vault",
+      "title": "Configure HashiCorp Vault",
+      "description": "Configuring HashiCorp Vault for storing private keys",
+      "sidebar": "docSidebar"
+    },
+    "HowTo/Configure/Multiple-private-state": {
+      "id": "HowTo/Configure/Multiple-private-state",
+      "title": "Multiple private states",
+      "description": "Configure Tessera to support GoQuorum multiple private states feature",
+      "sidebar": "docSidebar"
+    },
+    "HowTo/Configure/Orion-Mode": {
+      "id": "HowTo/Configure/Orion-Mode",
+      "title": "Hyperledger Besu Support",
+      "description": "Configure Tessera to use Besu.",
+      "sidebar": "docSidebar"
+    },
+    "HowTo/Configure/Override-config": {
+      "id": "HowTo/Configure/Override-config",
+      "title": "Overriding configuration file",
+      "description": "Overriding configuration file settings on the command line",
+      "sidebar": "docSidebar"
+    },
+    "HowTo/Configure/Peer-discovery": {
+      "id": "HowTo/Configure/Peer-discovery",
+      "title": "Peer discovery",
+      "description": "Configuring peer discovery",
+      "sidebar": "docSidebar"
+    },
+    "HowTo/Configure/Tessera": {
+      "id": "HowTo/Configure/Tessera",
+      "title": "Overview",
+      "description": "Configure Tessera",
+      "sidebar": "docSidebar"
+    },
+    "HowTo/Configure/TesseraAPI": {
+      "id": "HowTo/Configure/TesseraAPI",
+      "title": "Servers",
+      "description": "Configure servers for Tessera API",
+      "sidebar": "docSidebar"
+    },
+    "HowTo/Configure/TLS": {
+      "id": "HowTo/Configure/TLS",
+      "title": "TLS",
+      "description": "Configuring TLS",
+      "sidebar": "docSidebar"
+    },
+    "HowTo/Generate-certificates": {
+      "id": "HowTo/Generate-certificates",
+      "title": "Generating certificates",
+      "description": "Generating certificates",
+      "sidebar": "docSidebar"
+    },
+    "HowTo/Generate-Keys/AWS-Secrets-Manager": {
+      "id": "HowTo/Generate-Keys/AWS-Secrets-Manager",
+      "title": "AWS Secrets Manager keys",
+      "description": "How to generate keys and store them in AWS Secrets Manager",
+      "sidebar": "docSidebar"
+    },
+    "HowTo/Generate-Keys/Azure-Key-Vault": {
+      "id": "HowTo/Generate-Keys/Azure-Key-Vault",
+      "title": "Azure Key Vault keys",
+      "description": "How to generate keys and store them in Azure Key Vault",
+      "sidebar": "docSidebar"
+    },
+    "HowTo/Generate-Keys/File-Stored-Keys": {
+      "id": "HowTo/Generate-Keys/File-Stored-Keys",
+      "title": "File based keys",
+      "description": "How to generate file-stored keys",
+      "sidebar": "docSidebar"
+    },
+    "HowTo/Generate-Keys/Generate-Keys": {
+      "id": "HowTo/Generate-Keys/Generate-Keys",
+      "title": "Overview",
+      "description": "How to generate keys.",
+      "sidebar": "docSidebar"
+    },
+    "HowTo/Generate-Keys/Hashicorp-Vault": {
+      "id": "HowTo/Generate-Keys/Hashicorp-Vault",
+      "title": "Hashicorp Vault keys",
+      "description": "How to generate keys and store them in HashiCorp Vault",
+      "sidebar": "docSidebar"
+    },
+    "HowTo/Get-started/Install/Build-From-Source": {
+      "id": "HowTo/Get-started/Install/Build-From-Source",
+      "title": "Build from source",
+      "description": "Build Tessera from source",
+      "sidebar": "docSidebar"
+    },
+    "HowTo/Get-started/Install/Distribution": {
+      "id": "HowTo/Get-started/Install/Distribution",
+      "title": "Install Tessera",
+      "description": "Install Tessera",
+      "sidebar": "docSidebar"
+    },
+    "HowTo/Get-started/Install/Docker-Images": {
+      "id": "HowTo/Get-started/Install/Docker-Images",
+      "title": "Use Tessera Docker images",
+      "description": "Use Tessera Docker images",
+      "sidebar": "docSidebar"
+    },
+    "HowTo/Get-started/Start-Tessera": {
+      "id": "HowTo/Get-started/Start-Tessera",
+      "title": "Start Tessera",
+      "description": "Get started with Tessera and send a payload",
+      "sidebar": "docSidebar"
+    },
+    "HowTo/Get-started/Use-GoQuorum-with-Tessera": {
+      "id": "HowTo/Get-started/Use-GoQuorum-with-Tessera",
+      "title": "Use GoQuorum or Besu with Tessera",
+      "description": "Use GoQuorum with Tessera to create private networks and send private transactions",
+      "sidebar": "docSidebar"
+    },
+    "HowTo/Migrate/MigrateFromOrion": {
+      "id": "HowTo/Migrate/MigrateFromOrion",
+      "title": "Migrating from Orion to Tessera",
+      "description": "Migrate your Orion configuration and data to Tessera.",
+      "sidebar": "docSidebar"
+    },
+    "HowTo/Migrate/Migration-Multitenancy": {
+      "id": "HowTo/Migrate/Migration-Multitenancy",
+      "title": "Tessera Multi-tenancy Migration",
+      "description": "Migrate two Tessera nodes into a single multi-tenancy node",
+      "sidebar": "docSidebar"
+    },
+    "HowTo/Migrate/Upgrade": {
+      "id": "HowTo/Migrate/Upgrade",
+      "title": "Upgrading the database",
+      "description": "Upgrading the database",
+      "sidebar": "docSidebar"
+    },
+    "HowTo/Use/Data-Recovery": {
+      "id": "HowTo/Use/Data-Recovery",
+      "title": "Data recovery",
+      "description": "How to recover data",
+      "sidebar": "docSidebar"
+    },
+    "HowTo/Use/Logging": {
+      "id": "HowTo/Use/Logging",
+      "title": "Logging",
+      "description": "Tessera logging",
+      "sidebar": "docSidebar"
+    },
+    "HowTo/Use/Mandatory-Recipients": {
+      "id": "HowTo/Use/Mandatory-Recipients",
+      "title": "Mandatory Recipients",
+      "description": "How to use mandatory recipients",
+      "sidebar": "docSidebar"
+    },
+    "HowTo/Use/Monitoring": {
+      "id": "HowTo/Use/Monitoring",
+      "title": "Monitoring",
+      "description": "Monitor Tessera",
+      "sidebar": "docSidebar"
+    },
+    "index": {
+      "id": "index",
+      "title": "Tessera Private Transaction Manager",
+      "description": "Tessera is an open-source private transaction manager developed under the Apache 2.0 license and written in Java.",
+      "sidebar": "docSidebar"
+    },
+    "Reference/BootstrapSampleConfiguration": {
+      "id": "Reference/BootstrapSampleConfiguration",
+      "title": "Bootstrap node configuration",
+      "description": "Bootstrap node configuration file",
+      "sidebar": "docSidebar"
+    },
+    "Reference/CLI/CLI-Subcommands": {
+      "id": "Reference/CLI/CLI-Subcommands",
+      "title": "Subcommands",
+      "description": "Tessera command line interface subcommands",
+      "sidebar": "docSidebar"
+    },
+    "Reference/CLI/CLI-Syntax": {
+      "id": "Reference/CLI/CLI-Syntax",
+      "title": "Options",
+      "description": "Tessera command line options.",
+      "sidebar": "docSidebar"
+    },
+    "Reference/SampleConfiguration": {
+      "id": "Reference/SampleConfiguration",
+      "title": "Configuration file",
+      "description": "Sample configuration file",
+      "sidebar": "docSidebar"
+    },
+    "Reference/TesseraAPI": {
+      "id": "Reference/TesseraAPI",
+      "title": "Tessera API",
+      "description": "Tessera API",
+      "sidebar": "docSidebar"
+    },
+    "Tutorials/Quorum-Dev-Quickstart": {
+      "id": "Tutorials/Quorum-Dev-Quickstart",
+      "title": "Quorum Developer Quickstart",
+      "description": "Rapidly generate local Quorum blockchain networks.",
+      "sidebar": "docSidebar"
+    }
+  }
+}

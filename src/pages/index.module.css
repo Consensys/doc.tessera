@@ -1,0 +1,31 @@
+/**
+ * CSS files with the .module.css suffix will be treated as CSS modules
+ * and scoped locally.
+ */
+
+ @media screen and (max-width: 996px) {
+  .heroBanner {
+    padding: 2rem;
+  }
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.introductionBlock {
+  background: linear-gradient(56.02deg, #2c56dd 49.2%, #30daad 95.07%), #2c56dd;
+  padding: 6rem;
+  text-align: center;
+  width: 100%;
+}
+
+.forceColor {
+  color: var(--ifm-color-content-inverse);
+}
+
+html[data-theme="dark"] .forceColor {
+  color: var(--ifm-font-color-secondary);
+}

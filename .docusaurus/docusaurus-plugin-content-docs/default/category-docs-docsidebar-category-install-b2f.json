@@ -1,0 +1,16 @@
+{
+  "title": "Install",
+  "description": "install",
+  "slug": "/category/install",
+  "permalink": "/docs/category/install",
+  "navigation": {
+    "previous": {
+      "title": "Get Started",
+      "permalink": "/docs/category/get-started"
+    },
+    "next": {
+      "title": "Use Tessera Docker images",
+      "permalink": "/docs/HowTo/Get-started/Install/Docker-Images"
+    }
+  }
+}

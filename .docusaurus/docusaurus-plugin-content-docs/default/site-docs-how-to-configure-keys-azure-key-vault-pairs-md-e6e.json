@@ -1,0 +1,32 @@
+{
+  "unversionedId": "HowTo/Configure/Keys/Azure-Key-Vault-Pairs",
+  "id": "HowTo/Configure/Keys/Azure-Key-Vault-Pairs",
+  "title": "Azure Key Vault keys",
+  "description": "Configure Azure Key Vault key pairs.",
+  "source": "@site/docs/HowTo/Configure/Keys/Azure-Key-Vault-Pairs.md",
+  "sourceDirName": "HowTo/Configure/Keys",
+  "slug": "/HowTo/Configure/Keys/Azure-Key-Vault-Pairs",
+  "permalink": "/docs/HowTo/Configure/Keys/Azure-Key-Vault-Pairs",
+  "draft": false,
+  "editUrl": "https://github.com/ConsenSys/doc.tessera/tree/main/docs/HowTo/Configure/Keys/Azure-Key-Vault-Pairs.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "sidebarPosition": 5,
+  "frontMatter": {
+    "title": "Azure Key Vault keys",
+    "description": "Configure Azure Key Vault key pairs.",
+    "sidebar_position": 5
+  },
+  "sidebar": "docSidebar",
+  "previous": {
+    "title": "File-based keys",
+    "permalink": "/docs/HowTo/Configure/Keys/File-Based-Key-Pairs"
+  },
+  "next": {
+    "title": "AWS Secrets Manager keys",
+    "permalink": "/docs/HowTo/Configure/Keys/AWS-Secrets-Pairs"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "unversionedId": "HowTo/Configure/Keys/Hashicorp-Vault-Pairs",
+  "id": "HowTo/Configure/Keys/Hashicorp-Vault-Pairs",
+  "title": "HashiCorp Vault keys",
+  "description": "Configure HashiCorp Vault key pairs.",
+  "source": "@site/docs/HowTo/Configure/Keys/Hashicorp-Vault-Pairs.md",
+  "sourceDirName": "HowTo/Configure/Keys",
+  "slug": "/HowTo/Configure/Keys/Hashicorp-Vault-Pairs",
+  "permalink": "/docs/HowTo/Configure/Keys/Hashicorp-Vault-Pairs",
+  "draft": false,
+  "editUrl": "https://github.com/ConsenSys/doc.tessera/tree/main/docs/HowTo/Configure/Keys/Hashicorp-Vault-Pairs.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "sidebarPosition": 7,
+  "frontMatter": {
+    "title": "HashiCorp Vault keys",
+    "description": "Configure HashiCorp Vault key pairs.",
+    "sidebar_position": 7
+  },
+  "sidebar": "docSidebar",
+  "previous": {
+    "title": "AWS Secrets Manager keys",
+    "permalink": "/docs/HowTo/Configure/Keys/AWS-Secrets-Pairs"
+  },
+  "next": {
+    "title": "Secure keys",
+    "permalink": "/docs/HowTo/Configure/Keys/Secure-Keys"
+  }
+}

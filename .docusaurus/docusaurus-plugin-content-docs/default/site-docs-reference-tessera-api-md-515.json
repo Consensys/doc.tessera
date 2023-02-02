@@ -1,0 +1,28 @@
+{
+  "unversionedId": "Reference/TesseraAPI",
+  "id": "Reference/TesseraAPI",
+  "title": "Tessera API",
+  "description": "Tessera API",
+  "source": "@site/docs/Reference/TesseraAPI.md",
+  "sourceDirName": "Reference",
+  "slug": "/Reference/TesseraAPI",
+  "permalink": "/docs/Reference/TesseraAPI",
+  "draft": false,
+  "editUrl": "https://github.com/ConsenSys/doc.tessera/tree/main/docs/Reference/TesseraAPI.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "title": "Tessera API",
+    "description": "Tessera API",
+    "sidebar_position": 3
+  },
+  "sidebar": "docSidebar",
+  "previous": {
+    "title": "Bootstrap node configuration",
+    "permalink": "/docs/Reference/BootstrapSampleConfiguration"
+  }
+}

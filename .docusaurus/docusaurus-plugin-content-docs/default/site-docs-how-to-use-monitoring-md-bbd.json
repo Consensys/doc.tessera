@@ -1,0 +1,32 @@
+{
+  "unversionedId": "HowTo/Use/Monitoring",
+  "id": "HowTo/Use/Monitoring",
+  "title": "Monitoring",
+  "description": "Monitor Tessera",
+  "source": "@site/docs/HowTo/Use/Monitoring.md",
+  "sourceDirName": "HowTo/Use",
+  "slug": "/HowTo/Use/Monitoring",
+  "permalink": "/docs/HowTo/Use/Monitoring",
+  "draft": false,
+  "editUrl": "https://github.com/ConsenSys/doc.tessera/tree/main/docs/HowTo/Use/Monitoring.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "Monitoring",
+    "description": "Monitor Tessera",
+    "sidebar_position": 1
+  },
+  "sidebar": "docSidebar",
+  "previous": {
+    "title": "Use",
+    "permalink": "/docs/category/use"
+  },
+  "next": {
+    "title": "Logging",
+    "permalink": "/docs/HowTo/Use/Logging"
+  }
+}

@@ -1,0 +1,3767 @@
+{
+  "docusaurus-plugin-content-docs": {
+    "default": {
+      "loadedVersions": [
+        {
+          "versionName": "current",
+          "label": "Next",
+          "banner": null,
+          "badge": false,
+          "noIndex": false,
+          "className": "docs-version-current",
+          "path": "/docs",
+          "tagsPath": "/docs/tags",
+          "editUrl": "https://github.com/ConsenSys/doc.tessera/tree/main/docs",
+          "editUrlLocalized": "https://github.com/ConsenSys/doc.tessera/tree/main/i18n/en/docusaurus-plugin-content-docs/current",
+          "isLast": true,
+          "routePriority": -1,
+          "sidebarFilePath": "/home/jfernandes/workspace/docs/doc.tessera/sidebars.js",
+          "contentPath": "/home/jfernandes/workspace/docs/doc.tessera/docs",
+          "contentPathLocalized": "/home/jfernandes/workspace/docs/doc.tessera/i18n/en/docusaurus-plugin-content-docs/current",
+          "docs": [
+            {
+              "unversionedId": "Concepts/Multitenancy",
+              "id": "Concepts/Multitenancy",
+              "title": "Multi-tenancy",
+              "description": "Tessera and GoQuorum multi-tenancy",
+              "source": "@site/docs/Concepts/Multitenancy.md",
+              "sourceDirName": "Concepts",
+              "slug": "/Concepts/Multitenancy",
+              "permalink": "/docs/Concepts/Multitenancy",
+              "draft": false,
+              "editUrl": "https://github.com/ConsenSys/doc.tessera/tree/main/docs/Concepts/Multitenancy.md",
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "sidebarPosition": 4,
+              "frontMatter": {
+                "title": "Multi-tenancy",
+                "description": "Tessera and GoQuorum multi-tenancy",
+                "sidebar_position": 4
+              },
+              "sidebar": "docSidebar",
+              "previous": {
+                "title": "Privacy groups",
+                "permalink": "/docs/Concepts/Privacy-Groups"
+              },
+              "next": {
+                "title": "How To",
+                "permalink": "/docs/category/how-to"
+              }
+            },
+            {
+              "unversionedId": "Concepts/p2p-discovery",
+              "id": "Concepts/p2p-discovery",
+              "title": "Peer discovery",
+              "description": "P2P Tessera Node Discovery",
+              "source": "@site/docs/Concepts/p2p-discovery.md",
+              "sourceDirName": "Concepts",
+              "slug": "/Concepts/p2p-discovery",
+              "permalink": "/docs/Concepts/p2p-discovery",
+              "draft": false,
+              "editUrl": "https://github.com/ConsenSys/doc.tessera/tree/main/docs/Concepts/p2p-discovery.md",
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "sidebarPosition": 2,
+              "frontMatter": {
+                "title": "Peer discovery",
+                "description": "P2P Tessera Node Discovery",
+                "sidebar_position": 2
+              },
+              "sidebar": "docSidebar",
+              "previous": {
+                "title": "Enclave types",
+                "permalink": "/docs/Concepts/Privacy-Manager/Enclave-types"
+              },
+              "next": {
+                "title": "Privacy groups",
+                "permalink": "/docs/Concepts/Privacy-Groups"
+              }
+            },
+            {
+              "unversionedId": "Concepts/Privacy-Groups",
+              "id": "Concepts/Privacy-Groups",
+              "title": "Privacy groups",
+              "description": "Tessera privacy groups",
+              "source": "@site/docs/Concepts/Privacy-Groups.md",
+              "sourceDirName": "Concepts",
+              "slug": "/Concepts/Privacy-Groups",
+              "permalink": "/docs/Concepts/Privacy-Groups",
+              "draft": false,
+              "editUrl": "https://github.com/ConsenSys/doc.tessera/tree/main/docs/Concepts/Privacy-Groups.md",
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "sidebarPosition": 3,
+              "frontMatter": {
+                "title": "Privacy groups",
+                "description": "Tessera privacy groups",
+                "sidebar_position": 3
+              },
+              "sidebar": "docSidebar",
+              "previous": {
+                "title": "Peer discovery",
+                "permalink": "/docs/Concepts/p2p-discovery"
+              },
+              "next": {
+                "title": "Multi-tenancy",
+                "permalink": "/docs/Concepts/Multitenancy"
+              }
+            },
+            {
+              "unversionedId": "Concepts/Privacy-Manager/Enclave",
+              "id": "Concepts/Privacy-Manager/Enclave",
+              "title": "Enclave",
+              "description": "Overview of Tessera enclave",
+              "source": "@site/docs/Concepts/Privacy-Manager/Enclave.md",
+              "sourceDirName": "Concepts/Privacy-Manager",
+              "slug": "/Concepts/Privacy-Manager/Enclave",
+              "permalink": "/docs/Concepts/Privacy-Manager/Enclave",
+              "draft": false,
+              "editUrl": "https://github.com/ConsenSys/doc.tessera/tree/main/docs/Concepts/Privacy-Manager/Enclave.md",
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "sidebarPosition": 3,
+              "frontMatter": {
+                "title": "Enclave",
+                "description": "Overview of Tessera enclave",
+                "sidebar_position": 3
+              },
+              "sidebar": "docSidebar",
+              "previous": {
+                "title": "Transaction manager",
+                "permalink": "/docs/Concepts/Privacy-Manager/Transaction-manager"
+              },
+              "next": {
+                "title": "Enclave types",
+                "permalink": "/docs/Concepts/Privacy-Manager/Enclave-types"
+              }
+            },
+            {
+              "unversionedId": "Concepts/Privacy-Manager/Enclave-types",
+              "id": "Concepts/Privacy-Manager/Enclave-types",
+              "title": "Enclave types",
+              "description": "Enclave types",
+              "source": "@site/docs/Concepts/Privacy-Manager/Enclave-types.md",
+              "sourceDirName": "Concepts/Privacy-Manager",
+              "slug": "/Concepts/Privacy-Manager/Enclave-types",
+              "permalink": "/docs/Concepts/Privacy-Manager/Enclave-types",
+              "draft": false,
+              "editUrl": "https://github.com/ConsenSys/doc.tessera/tree/main/docs/Concepts/Privacy-Manager/Enclave-types.md",
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "sidebarPosition": 4,
+              "frontMatter": {
+                "title": "Enclave types",
+                "description": "Enclave types",
+                "sidebar_position": 4
+              },
+              "sidebar": "docSidebar",
+              "previous": {
+                "title": "Enclave",
+                "permalink": "/docs/Concepts/Privacy-Manager/Enclave"
+              },
+              "next": {
+                "title": "Peer discovery",
+                "permalink": "/docs/Concepts/p2p-discovery"
+              }
+            },
+            {
+              "unversionedId": "Concepts/Privacy-Manager/Privacy-manager",
+              "id": "Concepts/Privacy-Manager/Privacy-manager",
+              "title": "Overview",
+              "description": "Overview of Tessera privacy manager",
+              "source": "@site/docs/Concepts/Privacy-Manager/Privacy-manager.md",
+              "sourceDirName": "Concepts/Privacy-Manager",
+              "slug": "/Concepts/Privacy-Manager/",
+              "permalink": "/docs/Concepts/Privacy-Manager/",
+              "draft": false,
+              "editUrl": "https://github.com/ConsenSys/doc.tessera/tree/main/docs/Concepts/Privacy-Manager/Privacy-manager.md",
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "sidebarPosition": 1,
+              "frontMatter": {
+                "title": "Overview",
+                "description": "Overview of Tessera privacy manager",
+                "sidebar_position": 1
+              },
+              "sidebar": "docSidebar",
+              "previous": {
+                "title": "Privacy Manager",
+                "permalink": "/docs/category/privacy-manager"
+              },
+              "next": {
+                "title": "Transaction manager",
+                "permalink": "/docs/Concepts/Privacy-Manager/Transaction-manager"
+              }
+            },
+            {
+              "unversionedId": "Concepts/Privacy-Manager/Transaction-manager",
+              "id": "Concepts/Privacy-Manager/Transaction-manager",
+              "title": "Transaction manager",
+              "description": "Overview of Tessera transaction manager",
+              "source": "@site/docs/Concepts/Privacy-Manager/Transaction-manager.md",
+              "sourceDirName": "Concepts/Privacy-Manager",
+              "slug": "/Concepts/Privacy-Manager/Transaction-manager",
+              "permalink": "/docs/Concepts/Privacy-Manager/Transaction-manager",
+              "draft": false,
+              "editUrl": "https://github.com/ConsenSys/doc.tessera/tree/main/docs/Concepts/Privacy-Manager/Transaction-manager.md",
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "sidebarPosition": 2,
+              "frontMatter": {
+                "title": "Transaction manager",
+                "description": "Overview of Tessera transaction manager",
+                "sidebar_position": 2
+              },
+              "sidebar": "docSidebar",
+              "previous": {
+                "title": "Overview",
+                "permalink": "/docs/Concepts/Privacy-Manager/"
+              },
+              "next": {
+                "title": "Enclave",
+                "permalink": "/docs/Concepts/Privacy-Manager/Enclave"
+              }
+            },
+            {
+              "unversionedId": "HowTo/Configure/Cryptographic-elliptic-curves",
+              "id": "HowTo/Configure/Cryptographic-elliptic-curves",
+              "title": "Cryptographic elliptic curves",
+              "description": "Configure an alternative cryptographic elliptic curves",
+              "source": "@site/docs/HowTo/Configure/Cryptographic-elliptic-curves.md",
+              "sourceDirName": "HowTo/Configure",
+              "slug": "/HowTo/Configure/Cryptographic-elliptic-curves",
+              "permalink": "/docs/HowTo/Configure/Cryptographic-elliptic-curves",
+              "draft": false,
+              "editUrl": "https://github.com/ConsenSys/doc.tessera/tree/main/docs/HowTo/Configure/Cryptographic-elliptic-curves.md",
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "sidebarPosition": 10,
+              "frontMatter": {
+                "title": "Cryptographic elliptic curves",
+                "description": "Configure an alternative cryptographic elliptic curves",
+                "sidebar_position": 10
+              },
+              "sidebar": "docSidebar",
+              "previous": {
+                "title": "Multiple private states",
+                "permalink": "/docs/HowTo/Configure/Multiple-private-state"
+              },
+              "next": {
+                "title": "Hyperledger Besu Support",
+                "permalink": "/docs/HowTo/Configure/Orion-Mode"
+              }
+            },
+            {
+              "unversionedId": "HowTo/Configure/Database",
+              "id": "HowTo/Configure/Database",
+              "title": "Database",
+              "description": "Database configuration",
+              "source": "@site/docs/HowTo/Configure/Database.md",
+              "sourceDirName": "HowTo/Configure",
+              "slug": "/HowTo/Configure/Database",
+              "permalink": "/docs/HowTo/Configure/Database",
+              "draft": false,
+              "editUrl": "https://github.com/ConsenSys/doc.tessera/tree/main/docs/HowTo/Configure/Database.md",
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "sidebarPosition": 8,
+              "frontMatter": {
+                "title": "Database",
+                "description": "Database configuration",
+                "sidebar_position": 8
+              },
+              "sidebar": "docSidebar",
+              "previous": {
+                "title": "TLS",
+                "permalink": "/docs/HowTo/Configure/TLS"
+              },
+              "next": {
+                "title": "Multiple private states",
+                "permalink": "/docs/HowTo/Configure/Multiple-private-state"
+              }
+            },
+            {
+              "unversionedId": "HowTo/Configure/Enclave",
+              "id": "HowTo/Configure/Enclave",
+              "title": "Enclave",
+              "description": "Configuring Tessera enclave",
+              "source": "@site/docs/HowTo/Configure/Enclave.md",
+              "sourceDirName": "HowTo/Configure",
+              "slug": "/HowTo/Configure/Enclave",
+              "permalink": "/docs/HowTo/Configure/Enclave",
+              "draft": false,
+              "editUrl": "https://github.com/ConsenSys/doc.tessera/tree/main/docs/HowTo/Configure/Enclave.md",
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "sidebarPosition": 3,
+              "frontMatter": {
+                "title": "Enclave",
+                "description": "Configuring Tessera enclave",
+                "sidebar_position": 3
+              },
+              "sidebar": "docSidebar",
+              "previous": {
+                "title": "Overview",
+                "permalink": "/docs/HowTo/Configure/Tessera"
+              },
+              "next": {
+                "title": "Keys",
+                "permalink": "/docs/category/keys"
+              }
+            },
+            {
+              "unversionedId": "HowTo/Configure/High-availability",
+              "id": "HowTo/Configure/High-availability",
+              "title": "High availability",
+              "description": "Tessera deployment for high availability",
+              "source": "@site/docs/HowTo/Configure/High-availability.md",
+              "sourceDirName": "HowTo/Configure",
+              "slug": "/HowTo/Configure/High-availability",
+              "permalink": "/docs/HowTo/Configure/High-availability",
+              "draft": false,
+              "editUrl": "https://github.com/ConsenSys/doc.tessera/tree/main/docs/HowTo/Configure/High-availability.md",
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "sidebarPosition": 12,
+              "frontMatter": {
+                "title": "High availability",
+                "description": "Tessera deployment for high availability",
+                "sidebar_position": 12
+              },
+              "sidebar": "docSidebar",
+              "previous": {
+                "title": "Overriding configuration file",
+                "permalink": "/docs/HowTo/Configure/Override-config"
+              },
+              "next": {
+                "title": "Use",
+                "permalink": "/docs/category/use"
+              }
+            },
+            {
+              "unversionedId": "HowTo/Configure/Keys/AWS-Secrets-Pairs",
+              "id": "HowTo/Configure/Keys/AWS-Secrets-Pairs",
+              "title": "AWS Secrets Manager keys",
+              "description": "Configure AWS Secrets Manager key pairs.",
+              "source": "@site/docs/HowTo/Configure/Keys/AWS-Secrets-Pairs.md",
+              "sourceDirName": "HowTo/Configure/Keys",
+              "slug": "/HowTo/Configure/Keys/AWS-Secrets-Pairs",
+              "permalink": "/docs/HowTo/Configure/Keys/AWS-Secrets-Pairs",
+              "draft": false,
+              "editUrl": "https://github.com/ConsenSys/doc.tessera/tree/main/docs/HowTo/Configure/Keys/AWS-Secrets-Pairs.md",
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "sidebarPosition": 6,
+              "frontMatter": {
+                "title": "AWS Secrets Manager keys",
+                "description": "Configure AWS Secrets Manager key pairs.",
+                "sidebar_position": 6
+              },
+              "sidebar": "docSidebar",
+              "previous": {
+                "title": "Azure Key Vault keys",
+                "permalink": "/docs/HowTo/Configure/Keys/Azure-Key-Vault-Pairs"
+              },
+              "next": {
+                "title": "HashiCorp Vault keys",
+                "permalink": "/docs/HowTo/Configure/Keys/Hashicorp-Vault-Pairs"
+              }
+            },
+            {
+              "unversionedId": "HowTo/Configure/Keys/Azure-Key-Vault-Pairs",
+              "id": "HowTo/Configure/Keys/Azure-Key-Vault-Pairs",
+              "title": "Azure Key Vault keys",
+              "description": "Configure Azure Key Vault key pairs.",
+              "source": "@site/docs/HowTo/Configure/Keys/Azure-Key-Vault-Pairs.md",
+              "sourceDirName": "HowTo/Configure/Keys",
+              "slug": "/HowTo/Configure/Keys/Azure-Key-Vault-Pairs",
+              "permalink": "/docs/HowTo/Configure/Keys/Azure-Key-Vault-Pairs",
+              "draft": false,
+              "editUrl": "https://github.com/ConsenSys/doc.tessera/tree/main/docs/HowTo/Configure/Keys/Azure-Key-Vault-Pairs.md",
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "sidebarPosition": 5,
+              "frontMatter": {
+                "title": "Azure Key Vault keys",
+                "description": "Configure Azure Key Vault key pairs.",
+                "sidebar_position": 5
+              },
+              "sidebar": "docSidebar",
+              "previous": {
+                "title": "File-based keys",
+                "permalink": "/docs/HowTo/Configure/Keys/File-Based-Key-Pairs"
+              },
+              "next": {
+                "title": "AWS Secrets Manager keys",
+                "permalink": "/docs/HowTo/Configure/Keys/AWS-Secrets-Pairs"
+              }
+            },
+            {
+              "unversionedId": "HowTo/Configure/Keys/Direct-Key-Pairs",
+              "id": "HowTo/Configure/Keys/Direct-Key-Pairs",
+              "title": "Direct keys",
+              "description": "Configure direct key pairs.",
+              "source": "@site/docs/HowTo/Configure/Keys/Direct-Key-Pairs.md",
+              "sourceDirName": "HowTo/Configure/Keys",
+              "slug": "/HowTo/Configure/Keys/Direct-Key-Pairs",
+              "permalink": "/docs/HowTo/Configure/Keys/Direct-Key-Pairs",
+              "draft": false,
+              "editUrl": "https://github.com/ConsenSys/doc.tessera/tree/main/docs/HowTo/Configure/Keys/Direct-Key-Pairs.md",
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "sidebarPosition": 2,
+              "frontMatter": {
+                "title": "Direct keys",
+                "description": "Configure direct key pairs.",
+                "sidebar_position": 2
+              },
+              "sidebar": "docSidebar",
+              "previous": {
+                "title": "Overview",
+                "permalink": "/docs/HowTo/Configure/Keys/Overview"
+              },
+              "next": {
+                "title": "Inline keys",
+                "permalink": "/docs/HowTo/Configure/Keys/Inline-Key-Pairs"
+              }
+            },
+            {
+              "unversionedId": "HowTo/Configure/Keys/File-Based-Key-Pairs",
+              "id": "HowTo/Configure/Keys/File-Based-Key-Pairs",
+              "title": "File-based keys",
+              "description": "Configure file-based key pairs.",
+              "source": "@site/docs/HowTo/Configure/Keys/File-Based-Key-Pairs.md",
+              "sourceDirName": "HowTo/Configure/Keys",
+              "slug": "/HowTo/Configure/Keys/File-Based-Key-Pairs",
+              "permalink": "/docs/HowTo/Configure/Keys/File-Based-Key-Pairs",
+              "draft": false,
+              "editUrl": "https://github.com/ConsenSys/doc.tessera/tree/main/docs/HowTo/Configure/Keys/File-Based-Key-Pairs.md",
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "sidebarPosition": 4,
+              "frontMatter": {
+                "title": "File-based keys",
+                "description": "Configure file-based key pairs.",
+                "sidebar_position": 4
+              },
+              "sidebar": "docSidebar",
+              "previous": {
+                "title": "Inline keys",
+                "permalink": "/docs/HowTo/Configure/Keys/Inline-Key-Pairs"
+              },
+              "next": {
+                "title": "Azure Key Vault keys",
+                "permalink": "/docs/HowTo/Configure/Keys/Azure-Key-Vault-Pairs"
+              }
+            },
+            {
+              "unversionedId": "HowTo/Configure/Keys/Hashicorp-Vault-Pairs",
+              "id": "HowTo/Configure/Keys/Hashicorp-Vault-Pairs",
+              "title": "HashiCorp Vault keys",
+              "description": "Configure HashiCorp Vault key pairs.",
+              "source": "@site/docs/HowTo/Configure/Keys/Hashicorp-Vault-Pairs.md",
+              "sourceDirName": "HowTo/Configure/Keys",
+              "slug": "/HowTo/Configure/Keys/Hashicorp-Vault-Pairs",
+              "permalink": "/docs/HowTo/Configure/Keys/Hashicorp-Vault-Pairs",
+              "draft": false,
+              "editUrl": "https://github.com/ConsenSys/doc.tessera/tree/main/docs/HowTo/Configure/Keys/Hashicorp-Vault-Pairs.md",
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "sidebarPosition": 7,
+              "frontMatter": {
+                "title": "HashiCorp Vault keys",
+                "description": "Configure HashiCorp Vault key pairs.",
+                "sidebar_position": 7
+              },
+              "sidebar": "docSidebar",
+              "previous": {
+                "title": "AWS Secrets Manager keys",
+                "permalink": "/docs/HowTo/Configure/Keys/AWS-Secrets-Pairs"
+              },
+              "next": {
+                "title": "Secure keys",
+                "permalink": "/docs/HowTo/Configure/Keys/Secure-Keys"
+              }
+            },
+            {
+              "unversionedId": "HowTo/Configure/Keys/Inline-Key-Pairs",
+              "id": "HowTo/Configure/Keys/Inline-Key-Pairs",
+              "title": "Inline keys",
+              "description": "Configure inline key pairs.",
+              "source": "@site/docs/HowTo/Configure/Keys/Inline-Key-Pairs.md",
+              "sourceDirName": "HowTo/Configure/Keys",
+              "slug": "/HowTo/Configure/Keys/Inline-Key-Pairs",
+              "permalink": "/docs/HowTo/Configure/Keys/Inline-Key-Pairs",
+              "draft": false,
+              "editUrl": "https://github.com/ConsenSys/doc.tessera/tree/main/docs/HowTo/Configure/Keys/Inline-Key-Pairs.md",
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "sidebarPosition": 2,
+              "frontMatter": {
+                "title": "Inline keys",
+                "description": "Configure inline key pairs.",
+                "sidebar_position": 2
+              },
+              "sidebar": "docSidebar",
+              "previous": {
+                "title": "Direct keys",
+                "permalink": "/docs/HowTo/Configure/Keys/Direct-Key-Pairs"
+              },
+              "next": {
+                "title": "File-based keys",
+                "permalink": "/docs/HowTo/Configure/Keys/File-Based-Key-Pairs"
+              }
+            },
+            {
+              "unversionedId": "HowTo/Configure/Keys/Overview",
+              "id": "HowTo/Configure/Keys/Overview",
+              "title": "Overview",
+              "description": "Configure access to public and private key pairs.",
+              "source": "@site/docs/HowTo/Configure/Keys/Overview.md",
+              "sourceDirName": "HowTo/Configure/Keys",
+              "slug": "/HowTo/Configure/Keys/Overview",
+              "permalink": "/docs/HowTo/Configure/Keys/Overview",
+              "draft": false,
+              "editUrl": "https://github.com/ConsenSys/doc.tessera/tree/main/docs/HowTo/Configure/Keys/Overview.md",
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "sidebarPosition": 1,
+              "frontMatter": {
+                "title": "Overview",
+                "description": "Configure access to public and private key pairs.",
+                "sidebar_position": 1
+              },
+              "sidebar": "docSidebar",
+              "previous": {
+                "title": "Keys",
+                "permalink": "/docs/category/keys"
+              },
+              "next": {
+                "title": "Direct keys",
+                "permalink": "/docs/HowTo/Configure/Keys/Direct-Key-Pairs"
+              }
+            },
+            {
+              "unversionedId": "HowTo/Configure/Keys/Secure-Keys",
+              "id": "HowTo/Configure/Keys/Secure-Keys",
+              "title": "Secure keys",
+              "description": "Secure private keys using Argon2",
+              "source": "@site/docs/HowTo/Configure/Keys/Secure-Keys.md",
+              "sourceDirName": "HowTo/Configure/Keys",
+              "slug": "/HowTo/Configure/Keys/Secure-Keys",
+              "permalink": "/docs/HowTo/Configure/Keys/Secure-Keys",
+              "draft": false,
+              "editUrl": "https://github.com/ConsenSys/doc.tessera/tree/main/docs/HowTo/Configure/Keys/Secure-Keys.md",
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "sidebarPosition": 10,
+              "frontMatter": {
+                "title": "Secure keys",
+                "description": "Secure private keys using Argon2",
+                "sidebar_position": 10
+              },
+              "sidebar": "docSidebar",
+              "previous": {
+                "title": "HashiCorp Vault keys",
+                "permalink": "/docs/HowTo/Configure/Keys/Hashicorp-Vault-Pairs"
+              },
+              "next": {
+                "title": "KeyVault",
+                "permalink": "/docs/category/keyvault"
+              }
+            },
+            {
+              "unversionedId": "HowTo/Configure/KeyVault/AWS-Secrets-Manager",
+              "id": "HowTo/Configure/KeyVault/AWS-Secrets-Manager",
+              "title": "Configure AWS Secrets Manager",
+              "description": "Configuring AWS Secrets Manager for storing private keys",
+              "source": "@site/docs/HowTo/Configure/KeyVault/AWS-Secrets-Manager.md",
+              "sourceDirName": "HowTo/Configure/KeyVault",
+              "slug": "/HowTo/Configure/KeyVault/AWS-Secrets-Manager",
+              "permalink": "/docs/HowTo/Configure/KeyVault/AWS-Secrets-Manager",
+              "draft": false,
+              "editUrl": "https://github.com/ConsenSys/doc.tessera/tree/main/docs/HowTo/Configure/KeyVault/AWS-Secrets-Manager.md",
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "description": "Configuring AWS Secrets Manager for storing private keys"
+              },
+              "sidebar": "docSidebar",
+              "previous": {
+                "title": "KeyVault",
+                "permalink": "/docs/category/keyvault"
+              },
+              "next": {
+                "title": "Configure Azure Key Vault",
+                "permalink": "/docs/HowTo/Configure/KeyVault/Azure-Key-Vault"
+              }
+            },
+            {
+              "unversionedId": "HowTo/Configure/KeyVault/Azure-Key-Vault",
+              "id": "HowTo/Configure/KeyVault/Azure-Key-Vault",
+              "title": "Configure Azure Key Vault",
+              "description": "Configuring Azure Key Vault for storing private keys",
+              "source": "@site/docs/HowTo/Configure/KeyVault/Azure-Key-Vault.md",
+              "sourceDirName": "HowTo/Configure/KeyVault",
+              "slug": "/HowTo/Configure/KeyVault/Azure-Key-Vault",
+              "permalink": "/docs/HowTo/Configure/KeyVault/Azure-Key-Vault",
+              "draft": false,
+              "editUrl": "https://github.com/ConsenSys/doc.tessera/tree/main/docs/HowTo/Configure/KeyVault/Azure-Key-Vault.md",
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "description": "Configuring Azure Key Vault for storing private keys"
+              },
+              "sidebar": "docSidebar",
+              "previous": {
+                "title": "Configure AWS Secrets Manager",
+                "permalink": "/docs/HowTo/Configure/KeyVault/AWS-Secrets-Manager"
+              },
+              "next": {
+                "title": "Configure HashiCorp Vault",
+                "permalink": "/docs/HowTo/Configure/KeyVault/Hashicorp-Vault"
+              }
+            },
+            {
+              "unversionedId": "HowTo/Configure/KeyVault/Hashicorp-Vault",
+              "id": "HowTo/Configure/KeyVault/Hashicorp-Vault",
+              "title": "Configure HashiCorp Vault",
+              "description": "Configuring HashiCorp Vault for storing private keys",
+              "source": "@site/docs/HowTo/Configure/KeyVault/Hashicorp-Vault.md",
+              "sourceDirName": "HowTo/Configure/KeyVault",
+              "slug": "/HowTo/Configure/KeyVault/Hashicorp-Vault",
+              "permalink": "/docs/HowTo/Configure/KeyVault/Hashicorp-Vault",
+              "draft": false,
+              "editUrl": "https://github.com/ConsenSys/doc.tessera/tree/main/docs/HowTo/Configure/KeyVault/Hashicorp-Vault.md",
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "description": "Configuring HashiCorp Vault for storing private keys"
+              },
+              "sidebar": "docSidebar",
+              "previous": {
+                "title": "Configure Azure Key Vault",
+                "permalink": "/docs/HowTo/Configure/KeyVault/Azure-Key-Vault"
+              },
+              "next": {
+                "title": "Servers",
+                "permalink": "/docs/HowTo/Configure/TesseraAPI"
+              }
+            },
+            {
+              "unversionedId": "HowTo/Configure/Multiple-private-state",
+              "id": "HowTo/Configure/Multiple-private-state",
+              "title": "Multiple private states",
+              "description": "Configure Tessera to support GoQuorum multiple private states feature",
+              "source": "@site/docs/HowTo/Configure/Multiple-private-state.md",
+              "sourceDirName": "HowTo/Configure",
+              "slug": "/HowTo/Configure/Multiple-private-state",
+              "permalink": "/docs/HowTo/Configure/Multiple-private-state",
+              "draft": false,
+              "editUrl": "https://github.com/ConsenSys/doc.tessera/tree/main/docs/HowTo/Configure/Multiple-private-state.md",
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "sidebarPosition": 9,
+              "frontMatter": {
+                "title": "Multiple private states",
+                "description": "Configure Tessera to support GoQuorum multiple private states feature",
+                "sidebar_position": 9
+              },
+              "sidebar": "docSidebar",
+              "previous": {
+                "title": "Database",
+                "permalink": "/docs/HowTo/Configure/Database"
+              },
+              "next": {
+                "title": "Cryptographic elliptic curves",
+                "permalink": "/docs/HowTo/Configure/Cryptographic-elliptic-curves"
+              }
+            },
+            {
+              "unversionedId": "HowTo/Configure/Orion-Mode",
+              "id": "HowTo/Configure/Orion-Mode",
+              "title": "Hyperledger Besu Support",
+              "description": "Configure Tessera to use Besu.",
+              "source": "@site/docs/HowTo/Configure/Orion-Mode.md",
+              "sourceDirName": "HowTo/Configure",
+              "slug": "/HowTo/Configure/Orion-Mode",
+              "permalink": "/docs/HowTo/Configure/Orion-Mode",
+              "draft": false,
+              "editUrl": "https://github.com/ConsenSys/doc.tessera/tree/main/docs/HowTo/Configure/Orion-Mode.md",
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "sidebarPosition": 11,
+              "frontMatter": {
+                "title": "Hyperledger Besu Support",
+                "description": "Configure Tessera to use Besu.",
+                "sidebar_position": 11
+              },
+              "sidebar": "docSidebar",
+              "previous": {
+                "title": "Cryptographic elliptic curves",
+                "permalink": "/docs/HowTo/Configure/Cryptographic-elliptic-curves"
+              },
+              "next": {
+                "title": "Overriding configuration file",
+                "permalink": "/docs/HowTo/Configure/Override-config"
+              }
+            },
+            {
+              "unversionedId": "HowTo/Configure/Override-config",
+              "id": "HowTo/Configure/Override-config",
+              "title": "Overriding configuration file",
+              "description": "Overriding configuration file settings on the command line",
+              "source": "@site/docs/HowTo/Configure/Override-config.md",
+              "sourceDirName": "HowTo/Configure",
+              "slug": "/HowTo/Configure/Override-config",
+              "permalink": "/docs/HowTo/Configure/Override-config",
+              "draft": false,
+              "editUrl": "https://github.com/ConsenSys/doc.tessera/tree/main/docs/HowTo/Configure/Override-config.md",
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "sidebarPosition": 11,
+              "frontMatter": {
+                "title": "Overriding configuration file",
+                "description": "Overriding configuration file settings on the command line",
+                "sidebar_position": 11
+              },
+              "sidebar": "docSidebar",
+              "previous": {
+                "title": "Hyperledger Besu Support",
+                "permalink": "/docs/HowTo/Configure/Orion-Mode"
+              },
+              "next": {
+                "title": "High availability",
+                "permalink": "/docs/HowTo/Configure/High-availability"
+              }
+            },
+            {
+              "unversionedId": "HowTo/Configure/Peer-discovery",
+              "id": "HowTo/Configure/Peer-discovery",
+              "title": "Peer discovery",
+              "description": "Configuring peer discovery",
+              "source": "@site/docs/HowTo/Configure/Peer-discovery.md",
+              "sourceDirName": "HowTo/Configure",
+              "slug": "/HowTo/Configure/Peer-discovery",
+              "permalink": "/docs/HowTo/Configure/Peer-discovery",
+              "draft": false,
+              "editUrl": "https://github.com/ConsenSys/doc.tessera/tree/main/docs/HowTo/Configure/Peer-discovery.md",
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "sidebarPosition": 6,
+              "frontMatter": {
+                "title": "Peer discovery",
+                "description": "Configuring peer discovery",
+                "sidebar_position": 6
+              },
+              "sidebar": "docSidebar",
+              "previous": {
+                "title": "Servers",
+                "permalink": "/docs/HowTo/Configure/TesseraAPI"
+              },
+              "next": {
+                "title": "TLS",
+                "permalink": "/docs/HowTo/Configure/TLS"
+              }
+            },
+            {
+              "unversionedId": "HowTo/Configure/Tessera",
+              "id": "HowTo/Configure/Tessera",
+              "title": "Overview",
+              "description": "Configure Tessera",
+              "source": "@site/docs/HowTo/Configure/Tessera.md",
+              "sourceDirName": "HowTo/Configure",
+              "slug": "/HowTo/Configure/Tessera",
+              "permalink": "/docs/HowTo/Configure/Tessera",
+              "draft": false,
+              "editUrl": "https://github.com/ConsenSys/doc.tessera/tree/main/docs/HowTo/Configure/Tessera.md",
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "sidebarPosition": 1,
+              "frontMatter": {
+                "title": "Overview",
+                "description": "Configure Tessera",
+                "sidebar_position": 1
+              },
+              "sidebar": "docSidebar",
+              "previous": {
+                "title": "Configure",
+                "permalink": "/docs/category/configure"
+              },
+              "next": {
+                "title": "Enclave",
+                "permalink": "/docs/HowTo/Configure/Enclave"
+              }
+            },
+            {
+              "unversionedId": "HowTo/Configure/TesseraAPI",
+              "id": "HowTo/Configure/TesseraAPI",
+              "title": "Servers",
+              "description": "Configure servers for Tessera API",
+              "source": "@site/docs/HowTo/Configure/TesseraAPI.md",
+              "sourceDirName": "HowTo/Configure",
+              "slug": "/HowTo/Configure/TesseraAPI",
+              "permalink": "/docs/HowTo/Configure/TesseraAPI",
+              "draft": false,
+              "editUrl": "https://github.com/ConsenSys/doc.tessera/tree/main/docs/HowTo/Configure/TesseraAPI.md",
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "sidebarPosition": 5,
+              "frontMatter": {
+                "title": "Servers",
+                "description": "Configure servers for Tessera API",
+                "sidebar_position": 5
+              },
+              "sidebar": "docSidebar",
+              "previous": {
+                "title": "Configure HashiCorp Vault",
+                "permalink": "/docs/HowTo/Configure/KeyVault/Hashicorp-Vault"
+              },
+              "next": {
+                "title": "Peer discovery",
+                "permalink": "/docs/HowTo/Configure/Peer-discovery"
+              }
+            },
+            {
+              "unversionedId": "HowTo/Configure/TLS",
+              "id": "HowTo/Configure/TLS",
+              "title": "TLS",
+              "description": "Configuring TLS",
+              "source": "@site/docs/HowTo/Configure/TLS.md",
+              "sourceDirName": "HowTo/Configure",
+              "slug": "/HowTo/Configure/TLS",
+              "permalink": "/docs/HowTo/Configure/TLS",
+              "draft": false,
+              "editUrl": "https://github.com/ConsenSys/doc.tessera/tree/main/docs/HowTo/Configure/TLS.md",
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "sidebarPosition": 7,
+              "frontMatter": {
+                "title": "TLS",
+                "description": "Configuring TLS",
+                "sidebar_position": 7
+              },
+              "sidebar": "docSidebar",
+              "previous": {
+                "title": "Peer discovery",
+                "permalink": "/docs/HowTo/Configure/Peer-discovery"
+              },
+              "next": {
+                "title": "Database",
+                "permalink": "/docs/HowTo/Configure/Database"
+              }
+            },
+            {
+              "unversionedId": "HowTo/Generate-certificates",
+              "id": "HowTo/Generate-certificates",
+              "title": "Generating certificates",
+              "description": "Generating certificates",
+              "source": "@site/docs/HowTo/Generate-certificates.md",
+              "sourceDirName": "HowTo",
+              "slug": "/HowTo/Generate-certificates",
+              "permalink": "/docs/HowTo/Generate-certificates",
+              "draft": false,
+              "editUrl": "https://github.com/ConsenSys/doc.tessera/tree/main/docs/HowTo/Generate-certificates.md",
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "sidebarPosition": 3,
+              "frontMatter": {
+                "title": "Generating certificates",
+                "description": "Generating certificates",
+                "sidebar_position": 3
+              },
+              "sidebar": "docSidebar",
+              "previous": {
+                "title": "AWS Secrets Manager keys",
+                "permalink": "/docs/HowTo/Generate-Keys/AWS-Secrets-Manager"
+              },
+              "next": {
+                "title": "Configure",
+                "permalink": "/docs/category/configure"
+              }
+            },
+            {
+              "unversionedId": "HowTo/Generate-Keys/AWS-Secrets-Manager",
+              "id": "HowTo/Generate-Keys/AWS-Secrets-Manager",
+              "title": "AWS Secrets Manager keys",
+              "description": "How to generate keys and store them in AWS Secrets Manager",
+              "source": "@site/docs/HowTo/Generate-Keys/AWS-Secrets-Manager.md",
+              "sourceDirName": "HowTo/Generate-Keys",
+              "slug": "/HowTo/Generate-Keys/AWS-Secrets-Manager",
+              "permalink": "/docs/HowTo/Generate-Keys/AWS-Secrets-Manager",
+              "draft": false,
+              "editUrl": "https://github.com/ConsenSys/doc.tessera/tree/main/docs/HowTo/Generate-Keys/AWS-Secrets-Manager.md",
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "sidebarPosition": 5,
+              "frontMatter": {
+                "title": "AWS Secrets Manager keys",
+                "description": "How to generate keys and store them in AWS Secrets Manager",
+                "sidebar_position": 5
+              },
+              "sidebar": "docSidebar",
+              "previous": {
+                "title": "Azure Key Vault keys",
+                "permalink": "/docs/HowTo/Generate-Keys/Azure-Key-Vault"
+              },
+              "next": {
+                "title": "Generating certificates",
+                "permalink": "/docs/HowTo/Generate-certificates"
+              }
+            },
+            {
+              "unversionedId": "HowTo/Generate-Keys/Azure-Key-Vault",
+              "id": "HowTo/Generate-Keys/Azure-Key-Vault",
+              "title": "Azure Key Vault keys",
+              "description": "How to generate keys and store them in Azure Key Vault",
+              "source": "@site/docs/HowTo/Generate-Keys/Azure-Key-Vault.md",
+              "sourceDirName": "HowTo/Generate-Keys",
+              "slug": "/HowTo/Generate-Keys/Azure-Key-Vault",
+              "permalink": "/docs/HowTo/Generate-Keys/Azure-Key-Vault",
+              "draft": false,
+              "editUrl": "https://github.com/ConsenSys/doc.tessera/tree/main/docs/HowTo/Generate-Keys/Azure-Key-Vault.md",
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "sidebarPosition": 4,
+              "frontMatter": {
+                "title": "Azure Key Vault keys",
+                "description": "How to generate keys and store them in Azure Key Vault",
+                "sidebar_position": 4
+              },
+              "sidebar": "docSidebar",
+              "previous": {
+                "title": "Hashicorp Vault keys",
+                "permalink": "/docs/HowTo/Generate-Keys/Hashicorp-Vault"
+              },
+              "next": {
+                "title": "AWS Secrets Manager keys",
+                "permalink": "/docs/HowTo/Generate-Keys/AWS-Secrets-Manager"
+              }
+            },
+            {
+              "unversionedId": "HowTo/Generate-Keys/File-Stored-Keys",
+              "id": "HowTo/Generate-Keys/File-Stored-Keys",
+              "title": "File based keys",
+              "description": "How to generate file-stored keys",
+              "source": "@site/docs/HowTo/Generate-Keys/File-Stored-Keys.md",
+              "sourceDirName": "HowTo/Generate-Keys",
+              "slug": "/HowTo/Generate-Keys/File-Stored-Keys",
+              "permalink": "/docs/HowTo/Generate-Keys/File-Stored-Keys",
+              "draft": false,
+              "editUrl": "https://github.com/ConsenSys/doc.tessera/tree/main/docs/HowTo/Generate-Keys/File-Stored-Keys.md",
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "sidebarPosition": 2,
+              "frontMatter": {
+                "title": "File based keys",
+                "description": "How to generate file-stored keys",
+                "sidebar_position": 2
+              },
+              "sidebar": "docSidebar",
+              "previous": {
+                "title": "Overview",
+                "permalink": "/docs/HowTo/Generate-Keys/"
+              },
+              "next": {
+                "title": "Hashicorp Vault keys",
+                "permalink": "/docs/HowTo/Generate-Keys/Hashicorp-Vault"
+              }
+            },
+            {
+              "unversionedId": "HowTo/Generate-Keys/Generate-Keys",
+              "id": "HowTo/Generate-Keys/Generate-Keys",
+              "title": "Overview",
+              "description": "How to generate keys.",
+              "source": "@site/docs/HowTo/Generate-Keys/Generate-Keys.md",
+              "sourceDirName": "HowTo/Generate-Keys",
+              "slug": "/HowTo/Generate-Keys/",
+              "permalink": "/docs/HowTo/Generate-Keys/",
+              "draft": false,
+              "editUrl": "https://github.com/ConsenSys/doc.tessera/tree/main/docs/HowTo/Generate-Keys/Generate-Keys.md",
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "sidebarPosition": 1,
+              "frontMatter": {
+                "title": "Overview",
+                "description": "How to generate keys.",
+                "sidebar_position": 1
+              },
+              "sidebar": "docSidebar",
+              "previous": {
+                "title": "Generate keys",
+                "permalink": "/docs/category/generate-keys"
+              },
+              "next": {
+                "title": "File based keys",
+                "permalink": "/docs/HowTo/Generate-Keys/File-Stored-Keys"
+              }
+            },
+            {
+              "unversionedId": "HowTo/Generate-Keys/Hashicorp-Vault",
+              "id": "HowTo/Generate-Keys/Hashicorp-Vault",
+              "title": "Hashicorp Vault keys",
+              "description": "How to generate keys and store them in HashiCorp Vault",
+              "source": "@site/docs/HowTo/Generate-Keys/Hashicorp-Vault.md",
+              "sourceDirName": "HowTo/Generate-Keys",
+              "slug": "/HowTo/Generate-Keys/Hashicorp-Vault",
+              "permalink": "/docs/HowTo/Generate-Keys/Hashicorp-Vault",
+              "draft": false,
+              "editUrl": "https://github.com/ConsenSys/doc.tessera/tree/main/docs/HowTo/Generate-Keys/Hashicorp-Vault.md",
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "sidebarPosition": 3,
+              "frontMatter": {
+                "title": "Hashicorp Vault keys",
+                "description": "How to generate keys and store them in HashiCorp Vault",
+                "sidebar_position": 3
+              },
+              "sidebar": "docSidebar",
+              "previous": {
+                "title": "File based keys",
+                "permalink": "/docs/HowTo/Generate-Keys/File-Stored-Keys"
+              },
+              "next": {
+                "title": "Azure Key Vault keys",
+                "permalink": "/docs/HowTo/Generate-Keys/Azure-Key-Vault"
+              }
+            },
+            {
+              "unversionedId": "HowTo/Get-started/Install/Build-From-Source",
+              "id": "HowTo/Get-started/Install/Build-From-Source",
+              "title": "Build from source",
+              "description": "Build Tessera from source",
+              "source": "@site/docs/HowTo/Get-started/Install/Build-From-Source.md",
+              "sourceDirName": "HowTo/Get-started/Install",
+              "slug": "/HowTo/Get-started/Install/Build-From-Source",
+              "permalink": "/docs/HowTo/Get-started/Install/Build-From-Source",
+              "draft": false,
+              "editUrl": "https://github.com/ConsenSys/doc.tessera/tree/main/docs/HowTo/Get-started/Install/Build-From-Source.md",
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "description": "Build Tessera from source"
+              },
+              "sidebar": "docSidebar",
+              "previous": {
+                "title": "Install Tessera",
+                "permalink": "/docs/HowTo/Get-started/Install/Distribution"
+              },
+              "next": {
+                "title": "Start Tessera",
+                "permalink": "/docs/HowTo/Get-started/Start-Tessera"
+              }
+            },
+            {
+              "unversionedId": "HowTo/Get-started/Install/Distribution",
+              "id": "HowTo/Get-started/Install/Distribution",
+              "title": "Install Tessera",
+              "description": "Install Tessera",
+              "source": "@site/docs/HowTo/Get-started/Install/Distribution.md",
+              "sourceDirName": "HowTo/Get-started/Install",
+              "slug": "/HowTo/Get-started/Install/Distribution",
+              "permalink": "/docs/HowTo/Get-started/Install/Distribution",
+              "draft": false,
+              "editUrl": "https://github.com/ConsenSys/doc.tessera/tree/main/docs/HowTo/Get-started/Install/Distribution.md",
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "sidebarPosition": 2,
+              "frontMatter": {
+                "title": "Install Tessera",
+                "description": "Install Tessera",
+                "sidebar_position": 2
+              },
+              "sidebar": "docSidebar",
+              "previous": {
+                "title": "Use Tessera Docker images",
+                "permalink": "/docs/HowTo/Get-started/Install/Docker-Images"
+              },
+              "next": {
+                "title": "Build from source",
+                "permalink": "/docs/HowTo/Get-started/Install/Build-From-Source"
+              }
+            },
+            {
+              "unversionedId": "HowTo/Get-started/Install/Docker-Images",
+              "id": "HowTo/Get-started/Install/Docker-Images",
+              "title": "Use Tessera Docker images",
+              "description": "Use Tessera Docker images",
+              "source": "@site/docs/HowTo/Get-started/Install/Docker-Images.md",
+              "sourceDirName": "HowTo/Get-started/Install",
+              "slug": "/HowTo/Get-started/Install/Docker-Images",
+              "permalink": "/docs/HowTo/Get-started/Install/Docker-Images",
+              "draft": false,
+              "editUrl": "https://github.com/ConsenSys/doc.tessera/tree/main/docs/HowTo/Get-started/Install/Docker-Images.md",
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "sidebarPosition": 1,
+              "frontMatter": {
+                "title": "Use Tessera Docker images",
+                "description": "Use Tessera Docker images",
+                "sidebar_position": 1
+              },
+              "sidebar": "docSidebar",
+              "previous": {
+                "title": "Install",
+                "permalink": "/docs/category/install"
+              },
+              "next": {
+                "title": "Install Tessera",
+                "permalink": "/docs/HowTo/Get-started/Install/Distribution"
+              }
+            },
+            {
+              "unversionedId": "HowTo/Get-started/Start-Tessera",
+              "id": "HowTo/Get-started/Start-Tessera",
+              "title": "Start Tessera",
+              "description": "Get started with Tessera and send a payload",
+              "source": "@site/docs/HowTo/Get-started/Start-Tessera.md",
+              "sourceDirName": "HowTo/Get-started",
+              "slug": "/HowTo/Get-started/Start-Tessera",
+              "permalink": "/docs/HowTo/Get-started/Start-Tessera",
+              "draft": false,
+              "editUrl": "https://github.com/ConsenSys/doc.tessera/tree/main/docs/HowTo/Get-started/Start-Tessera.md",
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "sidebarPosition": 2,
+              "frontMatter": {
+                "title": "Start Tessera",
+                "description": "Get started with Tessera and send a payload",
+                "sidebar_position": 2
+              },
+              "sidebar": "docSidebar",
+              "previous": {
+                "title": "Build from source",
+                "permalink": "/docs/HowTo/Get-started/Install/Build-From-Source"
+              },
+              "next": {
+                "title": "Use GoQuorum or Besu with Tessera",
+                "permalink": "/docs/HowTo/Get-started/Use-GoQuorum-with-Tessera"
+              }
+            },
+            {
+              "unversionedId": "HowTo/Get-started/Use-GoQuorum-with-Tessera",
+              "id": "HowTo/Get-started/Use-GoQuorum-with-Tessera",
+              "title": "Use GoQuorum or Besu with Tessera",
+              "description": "Use GoQuorum with Tessera to create private networks and send private transactions",
+              "source": "@site/docs/HowTo/Get-started/Use-GoQuorum-with-Tessera.md",
+              "sourceDirName": "HowTo/Get-started",
+              "slug": "/HowTo/Get-started/Use-GoQuorum-with-Tessera",
+              "permalink": "/docs/HowTo/Get-started/Use-GoQuorum-with-Tessera",
+              "draft": false,
+              "editUrl": "https://github.com/ConsenSys/doc.tessera/tree/main/docs/HowTo/Get-started/Use-GoQuorum-with-Tessera.md",
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "sidebarPosition": 3,
+              "frontMatter": {
+                "title": "Use GoQuorum or Besu with Tessera",
+                "description": "Use GoQuorum with Tessera to create private networks and send private transactions",
+                "sidebar_position": 3
+              },
+              "sidebar": "docSidebar",
+              "previous": {
+                "title": "Start Tessera",
+                "permalink": "/docs/HowTo/Get-started/Start-Tessera"
+              },
+              "next": {
+                "title": "Generate keys",
+                "permalink": "/docs/category/generate-keys"
+              }
+            },
+            {
+              "unversionedId": "HowTo/Migrate/MigrateFromOrion",
+              "id": "HowTo/Migrate/MigrateFromOrion",
+              "title": "Migrating from Orion to Tessera",
+              "description": "Migrate your Orion configuration and data to Tessera.",
+              "source": "@site/docs/HowTo/Migrate/MigrateFromOrion.md",
+              "sourceDirName": "HowTo/Migrate",
+              "slug": "/HowTo/Migrate/MigrateFromOrion",
+              "permalink": "/docs/HowTo/Migrate/MigrateFromOrion",
+              "draft": false,
+              "editUrl": "https://github.com/ConsenSys/doc.tessera/tree/main/docs/HowTo/Migrate/MigrateFromOrion.md",
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "sidebarPosition": 1,
+              "frontMatter": {
+                "title": "Migrating from Orion to Tessera",
+                "description": "Migrate your Orion configuration and data to Tessera.",
+                "sidebar_position": 1
+              },
+              "sidebar": "docSidebar",
+              "previous": {
+                "title": "Migrate",
+                "permalink": "/docs/category/migrate"
+              },
+              "next": {
+                "title": "Tessera Multi-tenancy Migration",
+                "permalink": "/docs/HowTo/Migrate/Migration-Multitenancy"
+              }
+            },
+            {
+              "unversionedId": "HowTo/Migrate/Migration-Multitenancy",
+              "id": "HowTo/Migrate/Migration-Multitenancy",
+              "title": "Tessera Multi-tenancy Migration",
+              "description": "Migrate two Tessera nodes into a single multi-tenancy node",
+              "source": "@site/docs/HowTo/Migrate/Migration-Multitenancy.md",
+              "sourceDirName": "HowTo/Migrate",
+              "slug": "/HowTo/Migrate/Migration-Multitenancy",
+              "permalink": "/docs/HowTo/Migrate/Migration-Multitenancy",
+              "draft": false,
+              "editUrl": "https://github.com/ConsenSys/doc.tessera/tree/main/docs/HowTo/Migrate/Migration-Multitenancy.md",
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "sidebarPosition": 2,
+              "frontMatter": {
+                "title": "Tessera Multi-tenancy Migration",
+                "description": "Migrate two Tessera nodes into a single multi-tenancy node",
+                "sidebar_position": 2
+              },
+              "sidebar": "docSidebar",
+              "previous": {
+                "title": "Migrating from Orion to Tessera",
+                "permalink": "/docs/HowTo/Migrate/MigrateFromOrion"
+              },
+              "next": {
+                "title": "Upgrading the database",
+                "permalink": "/docs/HowTo/Migrate/Upgrade"
+              }
+            },
+            {
+              "unversionedId": "HowTo/Migrate/Upgrade",
+              "id": "HowTo/Migrate/Upgrade",
+              "title": "Upgrading the database",
+              "description": "Upgrading the database",
+              "source": "@site/docs/HowTo/Migrate/Upgrade.md",
+              "sourceDirName": "HowTo/Migrate",
+              "slug": "/HowTo/Migrate/Upgrade",
+              "permalink": "/docs/HowTo/Migrate/Upgrade",
+              "draft": false,
+              "editUrl": "https://github.com/ConsenSys/doc.tessera/tree/main/docs/HowTo/Migrate/Upgrade.md",
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "sidebarPosition": 3,
+              "frontMatter": {
+                "title": "Upgrading the database",
+                "description": "Upgrading the database",
+                "sidebar_position": 3
+              },
+              "sidebar": "docSidebar",
+              "previous": {
+                "title": "Tessera Multi-tenancy Migration",
+                "permalink": "/docs/HowTo/Migrate/Migration-Multitenancy"
+              },
+              "next": {
+                "title": "Tutorials",
+                "permalink": "/docs/category/tutorials"
+              }
+            },
+            {
+              "unversionedId": "HowTo/Use/Data-Recovery",
+              "id": "HowTo/Use/Data-Recovery",
+              "title": "Data recovery",
+              "description": "How to recover data",
+              "source": "@site/docs/HowTo/Use/Data-Recovery.md",
+              "sourceDirName": "HowTo/Use",
+              "slug": "/HowTo/Use/Data-Recovery",
+              "permalink": "/docs/HowTo/Use/Data-Recovery",
+              "draft": false,
+              "editUrl": "https://github.com/ConsenSys/doc.tessera/tree/main/docs/HowTo/Use/Data-Recovery.md",
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "sidebarPosition": 4,
+              "frontMatter": {
+                "title": "Data recovery",
+                "description": "How to recover data",
+                "sidebar_position": 4
+              },
+              "sidebar": "docSidebar",
+              "previous": {
+                "title": "Mandatory Recipients",
+                "permalink": "/docs/HowTo/Use/Mandatory-Recipients"
+              },
+              "next": {
+                "title": "Migrate",
+                "permalink": "/docs/category/migrate"
+              }
+            },
+            {
+              "unversionedId": "HowTo/Use/Logging",
+              "id": "HowTo/Use/Logging",
+              "title": "Logging",
+              "description": "Tessera logging",
+              "source": "@site/docs/HowTo/Use/Logging.md",
+              "sourceDirName": "HowTo/Use",
+              "slug": "/HowTo/Use/Logging",
+              "permalink": "/docs/HowTo/Use/Logging",
+              "draft": false,
+              "editUrl": "https://github.com/ConsenSys/doc.tessera/tree/main/docs/HowTo/Use/Logging.md",
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "sidebarPosition": 2,
+              "frontMatter": {
+                "title": "Logging",
+                "description": "Tessera logging",
+                "sidebar_position": 2
+              },
+              "sidebar": "docSidebar",
+              "previous": {
+                "title": "Monitoring",
+                "permalink": "/docs/HowTo/Use/Monitoring"
+              },
+              "next": {
+                "title": "Mandatory Recipients",
+                "permalink": "/docs/HowTo/Use/Mandatory-Recipients"
+              }
+            },
+            {
+              "unversionedId": "HowTo/Use/Mandatory-Recipients",
+              "id": "HowTo/Use/Mandatory-Recipients",
+              "title": "Mandatory Recipients",
+              "description": "How to use mandatory recipients",
+              "source": "@site/docs/HowTo/Use/Mandatory-Recipients.md",
+              "sourceDirName": "HowTo/Use",
+              "slug": "/HowTo/Use/Mandatory-Recipients",
+              "permalink": "/docs/HowTo/Use/Mandatory-Recipients",
+              "draft": false,
+              "editUrl": "https://github.com/ConsenSys/doc.tessera/tree/main/docs/HowTo/Use/Mandatory-Recipients.md",
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "sidebarPosition": 3,
+              "frontMatter": {
+                "title": "Mandatory Recipients",
+                "description": "How to use mandatory recipients",
+                "sidebar_position": 3
+              },
+              "sidebar": "docSidebar",
+              "previous": {
+                "title": "Logging",
+                "permalink": "/docs/HowTo/Use/Logging"
+              },
+              "next": {
+                "title": "Data recovery",
+                "permalink": "/docs/HowTo/Use/Data-Recovery"
+              }
+            },
+            {
+              "unversionedId": "HowTo/Use/Monitoring",
+              "id": "HowTo/Use/Monitoring",
+              "title": "Monitoring",
+              "description": "Monitor Tessera",
+              "source": "@site/docs/HowTo/Use/Monitoring.md",
+              "sourceDirName": "HowTo/Use",
+              "slug": "/HowTo/Use/Monitoring",
+              "permalink": "/docs/HowTo/Use/Monitoring",
+              "draft": false,
+              "editUrl": "https://github.com/ConsenSys/doc.tessera/tree/main/docs/HowTo/Use/Monitoring.md",
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "sidebarPosition": 1,
+              "frontMatter": {
+                "title": "Monitoring",
+                "description": "Monitor Tessera",
+                "sidebar_position": 1
+              },
+              "sidebar": "docSidebar",
+              "previous": {
+                "title": "Use",
+                "permalink": "/docs/category/use"
+              },
+              "next": {
+                "title": "Logging",
+                "permalink": "/docs/HowTo/Use/Logging"
+              }
+            },
+            {
+              "unversionedId": "index",
+              "id": "index",
+              "title": "Tessera Private Transaction Manager",
+              "description": "Tessera is an open-source private transaction manager developed under the Apache 2.0 license and written in Java.",
+              "source": "@site/docs/index.md",
+              "sourceDirName": ".",
+              "slug": "/",
+              "permalink": "/docs/",
+              "draft": false,
+              "editUrl": "https://github.com/ConsenSys/doc.tessera/tree/main/docs/index.md",
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "sidebarPosition": 1,
+              "frontMatter": {
+                "title": "Tessera Private Transaction Manager",
+                "description": "Tessera is an open-source private transaction manager developed under the Apache 2.0 license and written in Java.",
+                "sidebar_position": 1
+              },
+              "sidebar": "docSidebar",
+              "next": {
+                "title": "Concepts",
+                "permalink": "/docs/category/concepts"
+              }
+            },
+            {
+              "unversionedId": "Reference/BootstrapSampleConfiguration",
+              "id": "Reference/BootstrapSampleConfiguration",
+              "title": "Bootstrap node configuration",
+              "description": "Bootstrap node configuration file",
+              "source": "@site/docs/Reference/BootstrapSampleConfiguration.md",
+              "sourceDirName": "Reference",
+              "slug": "/Reference/BootstrapSampleConfiguration",
+              "permalink": "/docs/Reference/BootstrapSampleConfiguration",
+              "draft": false,
+              "editUrl": "https://github.com/ConsenSys/doc.tessera/tree/main/docs/Reference/BootstrapSampleConfiguration.md",
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "sidebarPosition": 3,
+              "frontMatter": {
+                "title": "Bootstrap node configuration",
+                "description": "Bootstrap node configuration file",
+                "sidebar_position": 3
+              },
+              "sidebar": "docSidebar",
+              "previous": {
+                "title": "Configuration file",
+                "permalink": "/docs/Reference/SampleConfiguration"
+              },
+              "next": {
+                "title": "Tessera API",
+                "permalink": "/docs/Reference/TesseraAPI"
+              }
+            },
+            {
+              "unversionedId": "Reference/CLI/CLI-Subcommands",
+              "id": "Reference/CLI/CLI-Subcommands",
+              "title": "Subcommands",
+              "description": "Tessera command line interface subcommands",
+              "source": "@site/docs/Reference/CLI/CLI-Subcommands.md",
+              "sourceDirName": "Reference/CLI",
+              "slug": "/Reference/CLI/CLI-Subcommands",
+              "permalink": "/docs/Reference/CLI/CLI-Subcommands",
+              "draft": false,
+              "editUrl": "https://github.com/ConsenSys/doc.tessera/tree/main/docs/Reference/CLI/CLI-Subcommands.md",
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "sidebarPosition": 2,
+              "frontMatter": {
+                "title": "Subcommands",
+                "description": "Tessera command line interface subcommands",
+                "sidebar_position": 2
+              },
+              "sidebar": "docSidebar",
+              "previous": {
+                "title": "Options",
+                "permalink": "/docs/Reference/CLI/CLI-Syntax"
+              },
+              "next": {
+                "title": "Configuration file",
+                "permalink": "/docs/Reference/SampleConfiguration"
+              }
+            },
+            {
+              "unversionedId": "Reference/CLI/CLI-Syntax",
+              "id": "Reference/CLI/CLI-Syntax",
+              "title": "Options",
+              "description": "Tessera command line options.",
+              "source": "@site/docs/Reference/CLI/CLI-Syntax.md",
+              "sourceDirName": "Reference/CLI",
+              "slug": "/Reference/CLI/CLI-Syntax",
+              "permalink": "/docs/Reference/CLI/CLI-Syntax",
+              "draft": false,
+              "editUrl": "https://github.com/ConsenSys/doc.tessera/tree/main/docs/Reference/CLI/CLI-Syntax.md",
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "sidebarPosition": 1,
+              "frontMatter": {
+                "title": "Options",
+                "description": "Tessera command line options.",
+                "sidebar_position": 1
+              },
+              "sidebar": "docSidebar",
+              "previous": {
+                "title": "Command Line",
+                "permalink": "/docs/category/command-line"
+              },
+              "next": {
+                "title": "Subcommands",
+                "permalink": "/docs/Reference/CLI/CLI-Subcommands"
+              }
+            },
+            {
+              "unversionedId": "Reference/SampleConfiguration",
+              "id": "Reference/SampleConfiguration",
+              "title": "Configuration file",
+              "description": "Sample configuration file",
+              "source": "@site/docs/Reference/SampleConfiguration.md",
+              "sourceDirName": "Reference",
+              "slug": "/Reference/SampleConfiguration",
+              "permalink": "/docs/Reference/SampleConfiguration",
+              "draft": false,
+              "editUrl": "https://github.com/ConsenSys/doc.tessera/tree/main/docs/Reference/SampleConfiguration.md",
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "sidebarPosition": 2,
+              "frontMatter": {
+                "title": "Configuration file",
+                "description": "Sample configuration file",
+                "sidebar_position": 2
+              },
+              "sidebar": "docSidebar",
+              "previous": {
+                "title": "Subcommands",
+                "permalink": "/docs/Reference/CLI/CLI-Subcommands"
+              },
+              "next": {
+                "title": "Bootstrap node configuration",
+                "permalink": "/docs/Reference/BootstrapSampleConfiguration"
+              }
+            },
+            {
+              "unversionedId": "Reference/TesseraAPI",
+              "id": "Reference/TesseraAPI",
+              "title": "Tessera API",
+              "description": "Tessera API",
+              "source": "@site/docs/Reference/TesseraAPI.md",
+              "sourceDirName": "Reference",
+              "slug": "/Reference/TesseraAPI",
+              "permalink": "/docs/Reference/TesseraAPI",
+              "draft": false,
+              "editUrl": "https://github.com/ConsenSys/doc.tessera/tree/main/docs/Reference/TesseraAPI.md",
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "sidebarPosition": 3,
+              "frontMatter": {
+                "title": "Tessera API",
+                "description": "Tessera API",
+                "sidebar_position": 3
+              },
+              "sidebar": "docSidebar",
+              "previous": {
+                "title": "Bootstrap node configuration",
+                "permalink": "/docs/Reference/BootstrapSampleConfiguration"
+              }
+            },
+            {
+              "unversionedId": "Tutorials/Quorum-Dev-Quickstart",
+              "id": "Tutorials/Quorum-Dev-Quickstart",
+              "title": "Quorum Developer Quickstart",
+              "description": "Rapidly generate local Quorum blockchain networks.",
+              "source": "@site/docs/Tutorials/Quorum-Dev-Quickstart.md",
+              "sourceDirName": "Tutorials",
+              "slug": "/Tutorials/Quorum-Dev-Quickstart",
+              "permalink": "/docs/Tutorials/Quorum-Dev-Quickstart",
+              "draft": false,
+              "editUrl": "https://github.com/ConsenSys/doc.tessera/tree/main/docs/Tutorials/Quorum-Dev-Quickstart.md",
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "sidebarPosition": 1,
+              "frontMatter": {
+                "title": "Quorum Developer Quickstart",
+                "description": "Rapidly generate local Quorum blockchain networks.",
+                "sidebar_position": 1
+              },
+              "sidebar": "docSidebar",
+              "previous": {
+                "title": "Tutorials",
+                "permalink": "/docs/category/tutorials"
+              },
+              "next": {
+                "title": "Reference",
+                "permalink": "/docs/category/reference"
+              }
+            }
+          ],
+          "drafts": [],
+          "sidebars": {
+            "docSidebar": [
+              {
+                "type": "doc",
+                "id": "index",
+                "label": "Overview",
+                "translatable": true
+              },
+              {
+                "type": "category",
+                "label": "Concepts",
+                "link": {
+                  "type": "generated-index",
+                  "slug": "/category/concepts",
+                  "permalink": "/docs/category/concepts"
+                },
+                "items": [
+                  {
+                    "type": "category",
+                    "label": "Privacy Manager",
+                    "collapsible": true,
+                    "collapsed": true,
+                    "items": [
+                      {
+                        "type": "doc",
+                        "id": "Concepts/Privacy-Manager/Privacy-manager"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "Concepts/Privacy-Manager/Transaction-manager"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "Concepts/Privacy-Manager/Enclave"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "Concepts/Privacy-Manager/Enclave-types"
+                      }
+                    ],
+                    "link": {
+                      "type": "generated-index",
+                      "description": "privacy manager",
+                      "slug": "/category/privacy-manager",
+                      "permalink": "/docs/category/privacy-manager"
+                    }
+                  },
+                  {
+                    "type": "doc",
+                    "id": "Concepts/p2p-discovery"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "Concepts/Privacy-Groups"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "Concepts/Multitenancy"
+                  }
+                ],
+                "collapsed": true,
+                "collapsible": true
+              },
+              {
+                "type": "category",
+                "label": "How To",
+                "link": {
+                  "type": "generated-index",
+                  "slug": "/category/how-to",
+                  "permalink": "/docs/category/how-to"
+                },
+                "items": [
+                  {
+                    "type": "category",
+                    "label": "Get Started",
+                    "collapsible": true,
+                    "collapsed": true,
+                    "items": [
+                      {
+                        "type": "category",
+                        "label": "Install",
+                        "collapsible": true,
+                        "collapsed": true,
+                        "items": [
+                          {
+                            "type": "doc",
+                            "id": "HowTo/Get-started/Install/Docker-Images"
+                          },
+                          {
+                            "type": "doc",
+                            "id": "HowTo/Get-started/Install/Distribution"
+                          },
+                          {
+                            "type": "doc",
+                            "id": "HowTo/Get-started/Install/Build-From-Source"
+                          }
+                        ],
+                        "link": {
+                          "type": "generated-index",
+                          "description": "install",
+                          "slug": "/category/install",
+                          "permalink": "/docs/category/install"
+                        }
+                      },
+                      {
+                        "type": "doc",
+                        "id": "HowTo/Get-started/Start-Tessera"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "HowTo/Get-started/Use-GoQuorum-with-Tessera"
+                      }
+                    ],
+                    "link": {
+                      "type": "generated-index",
+                      "description": "get started",
+                      "slug": "/category/get-started",
+                      "permalink": "/docs/category/get-started"
+                    }
+                  },
+                  {
+                    "type": "category",
+                    "label": "Generate keys",
+                    "collapsible": true,
+                    "collapsed": true,
+                    "items": [
+                      {
+                        "type": "doc",
+                        "id": "HowTo/Generate-Keys/Generate-Keys"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "HowTo/Generate-Keys/File-Stored-Keys"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "HowTo/Generate-Keys/Hashicorp-Vault"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "HowTo/Generate-Keys/Azure-Key-Vault"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "HowTo/Generate-Keys/AWS-Secrets-Manager"
+                      }
+                    ],
+                    "link": {
+                      "type": "generated-index",
+                      "description": "generate keys",
+                      "slug": "/category/generate-keys",
+                      "permalink": "/docs/category/generate-keys"
+                    }
+                  },
+                  {
+                    "type": "doc",
+                    "id": "HowTo/Generate-certificates"
+                  },
+                  {
+                    "type": "category",
+                    "label": "Configure",
+                    "collapsible": true,
+                    "collapsed": true,
+                    "items": [
+                      {
+                        "type": "doc",
+                        "id": "HowTo/Configure/Tessera"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "HowTo/Configure/Enclave"
+                      },
+                      {
+                        "type": "category",
+                        "label": "Keys",
+                        "collapsible": true,
+                        "collapsed": true,
+                        "items": [
+                          {
+                            "type": "doc",
+                            "id": "HowTo/Configure/Keys/Overview"
+                          },
+                          {
+                            "type": "doc",
+                            "id": "HowTo/Configure/Keys/Direct-Key-Pairs"
+                          },
+                          {
+                            "type": "doc",
+                            "id": "HowTo/Configure/Keys/Inline-Key-Pairs"
+                          },
+                          {
+                            "type": "doc",
+                            "id": "HowTo/Configure/Keys/File-Based-Key-Pairs"
+                          },
+                          {
+                            "type": "doc",
+                            "id": "HowTo/Configure/Keys/Azure-Key-Vault-Pairs"
+                          },
+                          {
+                            "type": "doc",
+                            "id": "HowTo/Configure/Keys/AWS-Secrets-Pairs"
+                          },
+                          {
+                            "type": "doc",
+                            "id": "HowTo/Configure/Keys/Hashicorp-Vault-Pairs"
+                          },
+                          {
+                            "type": "doc",
+                            "id": "HowTo/Configure/Keys/Secure-Keys"
+                          }
+                        ],
+                        "link": {
+                          "type": "generated-index",
+                          "description": "keys",
+                          "slug": "/category/keys",
+                          "permalink": "/docs/category/keys"
+                        }
+                      },
+                      {
+                        "type": "category",
+                        "label": "KeyVault",
+                        "collapsible": true,
+                        "collapsed": true,
+                        "items": [
+                          {
+                            "type": "doc",
+                            "id": "HowTo/Configure/KeyVault/AWS-Secrets-Manager"
+                          },
+                          {
+                            "type": "doc",
+                            "id": "HowTo/Configure/KeyVault/Azure-Key-Vault"
+                          },
+                          {
+                            "type": "doc",
+                            "id": "HowTo/Configure/KeyVault/Hashicorp-Vault"
+                          }
+                        ],
+                        "link": {
+                          "type": "generated-index",
+                          "description": "KeyVault",
+                          "slug": "/category/keyvault",
+                          "permalink": "/docs/category/keyvault"
+                        }
+                      },
+                      {
+                        "type": "doc",
+                        "id": "HowTo/Configure/TesseraAPI"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "HowTo/Configure/Peer-discovery"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "HowTo/Configure/TLS"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "HowTo/Configure/Database"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "HowTo/Configure/Multiple-private-state"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "HowTo/Configure/Cryptographic-elliptic-curves"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "HowTo/Configure/Orion-Mode"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "HowTo/Configure/Override-config"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "HowTo/Configure/High-availability"
+                      }
+                    ],
+                    "link": {
+                      "type": "generated-index",
+                      "description": "configure",
+                      "slug": "/category/configure",
+                      "permalink": "/docs/category/configure"
+                    }
+                  },
+                  {
+                    "type": "category",
+                    "label": "Use",
+                    "collapsible": true,
+                    "collapsed": true,
+                    "items": [
+                      {
+                        "type": "doc",
+                        "id": "HowTo/Use/Monitoring"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "HowTo/Use/Logging"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "HowTo/Use/Mandatory-Recipients"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "HowTo/Use/Data-Recovery"
+                      }
+                    ],
+                    "link": {
+                      "type": "generated-index",
+                      "description": "use",
+                      "slug": "/category/use",
+                      "permalink": "/docs/category/use"
+                    }
+                  },
+                  {
+                    "type": "category",
+                    "label": "Migrate",
+                    "collapsible": true,
+                    "collapsed": true,
+                    "items": [
+                      {
+                        "type": "doc",
+                        "id": "HowTo/Migrate/MigrateFromOrion"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "HowTo/Migrate/Migration-Multitenancy"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "HowTo/Migrate/Upgrade"
+                      }
+                    ],
+                    "link": {
+                      "type": "generated-index",
+                      "description": "migrate",
+                      "slug": "/category/migrate",
+                      "permalink": "/docs/category/migrate"
+                    }
+                  }
+                ],
+                "collapsed": true,
+                "collapsible": true
+              },
+              {
+                "type": "category",
+                "label": "Tutorials",
+                "link": {
+                  "type": "generated-index",
+                  "slug": "/category/tutorials",
+                  "permalink": "/docs/category/tutorials"
+                },
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "Tutorials/Quorum-Dev-Quickstart"
+                  }
+                ],
+                "collapsed": true,
+                "collapsible": true
+              },
+              {
+                "type": "category",
+                "label": "Reference",
+                "link": {
+                  "type": "generated-index",
+                  "slug": "/category/reference",
+                  "permalink": "/docs/category/reference"
+                },
+                "items": [
+                  {
+                    "type": "category",
+                    "label": "Command Line",
+                    "collapsible": true,
+                    "collapsed": true,
+                    "items": [
+                      {
+                        "type": "doc",
+                        "id": "Reference/CLI/CLI-Syntax"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "Reference/CLI/CLI-Subcommands"
+                      }
+                    ],
+                    "link": {
+                      "type": "generated-index",
+                      "description": "command line",
+                      "slug": "/category/command-line",
+                      "permalink": "/docs/category/command-line"
+                    }
+                  },
+                  {
+                    "type": "doc",
+                    "id": "Reference/SampleConfiguration"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "Reference/BootstrapSampleConfiguration"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "Reference/TesseraAPI"
+                  }
+                ],
+                "collapsed": true,
+                "collapsible": true
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "docusaurus-plugin-content-blog": {
+    "default": {
+      "blogSidebarTitle": "Recent posts",
+      "blogPosts": [],
+      "blogListPaginated": [],
+      "blogTags": {},
+      "blogTagsListPath": "/blog/tags",
+      "blogTagsPaginated": []
+    }
+  },
+  "docusaurus-plugin-content-pages": {
+    "default": [
+      {
+        "type": "jsx",
+        "permalink": "/",
+        "source": "@site/src/pages/index.tsx"
+      },
+      {
+        "type": "mdx",
+        "permalink": "/markdown-page",
+        "source": "@site/src/pages/markdown-page.md",
+        "title": "Markdown page example",
+        "description": "You don't need React to write simple standalone pages.",
+        "frontMatter": {
+          "title": "Markdown page example"
+        }
+      }
+    ]
+  },
+  "docusaurus-plugin-debug": {},
+  "docusaurus-plugin-redoc": {
+    "using-remote-url": {
+      "converted": {
+        "openapi": "3.0.0",
+        "servers": [
+          {
+            "url": "//petstore.swagger.io/v2",
+            "description": "Default server"
+          },
+          {
+            "url": "//petstore.swagger.io/sandbox",
+            "description": "Sandbox server"
+          }
+        ],
+        "info": {
+          "description": "This is a sample server Petstore server.\nYou can find out more about Swagger at\n[http://swagger.io](http://swagger.io) or on [irc.freenode.net, #swagger](http://swagger.io/irc/).\nFor this sample, you can use the api key `special-key` to test the authorization filters.\n\n# Introduction\nThis API is documented in **OpenAPI format** and is based on\n[Petstore sample](http://petstore.swagger.io/) provided by [swagger.io](http://swagger.io) team.\nIt was **extended** to illustrate features of [generator-openapi-repo](https://github.com/Rebilly/generator-openapi-repo)\ntool and [ReDoc](https://github.com/Redocly/redoc) documentation. In addition to standard\nOpenAPI syntax we use a few [vendor extensions](https://github.com/Redocly/redoc/blob/master/docs/redoc-vendor-extensions.md).\n\n# OpenAPI Specification\nThis API is documented in **OpenAPI format** and is based on\n[Petstore sample](http://petstore.swagger.io/) provided by [swagger.io](http://swagger.io) team.\nIt was **extended** to illustrate features of [generator-openapi-repo](https://github.com/Rebilly/generator-openapi-repo)\ntool and [ReDoc](https://github.com/Redocly/redoc) documentation. In addition to standard\nOpenAPI syntax we use a few [vendor extensions](https://github.com/Redocly/redoc/blob/master/docs/redoc-vendor-extensions.md).\n\n# Cross-Origin Resource Sharing\nThis API features Cross-Origin Resource Sharing (CORS) implemented in compliance with  [W3C spec](https://www.w3.org/TR/cors/).\nAnd that allows cross-domain communication from the browser.\nAll responses have a wildcard same-origin which makes them completely public and accessible to everyone, including any code on any site.\n\n# Authentication\n\nPetstore offers two forms of authentication:\n  - API Key\n  - OAuth2\nOAuth2 - an open protocol to allow secure authorization in a simple\nand standard method from web, mobile and desktop applications.\n\n<SecurityDefinitions />\n",
+          "version": "1.0.0",
+          "title": "Swagger Petstore [Automatic Page From File]",
+          "termsOfService": "http://swagger.io/terms/",
+          "contact": {
+            "name": "API Support",
+            "email": "apiteam@swagger.io",
+            "url": "https://github.com/Redocly/redoc"
+          },
+          "x-logo": {
+            "url": "https://redocly.github.io/redoc/petstore-logo.png",
+            "altText": "Petstore logo"
+          },
+          "license": {
+            "name": "Apache 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+          }
+        },
+        "externalDocs": {
+          "description": "Find out how to create Github repo for your OpenAPI spec.",
+          "url": "https://github.com/Rebilly/generator-openapi-repo"
+        },
+        "tags": [
+          {
+            "name": "pet",
+            "description": "Everything about your Pets"
+          },
+          {
+            "name": "store",
+            "description": "Access to Petstore orders"
+          },
+          {
+            "name": "user",
+            "description": "Operations about user"
+          },
+          {
+            "name": "pet_model",
+            "x-displayName": "The Pet Model",
+            "description": "<SchemaDefinition schemaRef=\"#/components/schemas/Pet\" />\n"
+          },
+          {
+            "name": "store_model",
+            "x-displayName": "The Order Model",
+            "description": "<SchemaDefinition schemaRef=\"#/components/schemas/Order\" exampleRef=\"#/components/examples/Order\" showReadOnly={true} showWriteOnly={true} />\n"
+          }
+        ],
+        "x-tagGroups": [
+          {
+            "name": "General",
+            "tags": ["pet", "store"]
+          },
+          {
+            "name": "User Management",
+            "tags": ["user"]
+          },
+          {
+            "name": "Models",
+            "tags": ["pet_model", "store_model"]
+          }
+        ],
+        "paths": {
+          "/pet": {
+            "parameters": [
+              {
+                "name": "Accept-Language",
+                "in": "header",
+                "description": "The language you prefer for messages. Supported values are en-AU, en-CA, en-GB, en-US",
+                "example": "en-US",
+                "required": false,
+                "schema": {
+                  "type": "string",
+                  "default": "en-AU"
+                }
+              },
+              {
+                "name": "cookieParam",
+                "in": "cookie",
+                "description": "Some cookie",
+                "required": true,
+                "schema": {
+                  "type": "integer",
+                  "format": "int64"
+                }
+              }
+            ],
+            "post": {
+              "tags": ["pet"],
+              "summary": "Add a new pet to the store",
+              "description": "Add new pet to the store inventory.",
+              "operationId": "addPet",
+              "responses": {
+                "405": {
+                  "description": "Invalid input"
+                }
+              },
+              "security": [
+                {
+                  "petstore_auth": ["write:pets", "read:pets"]
+                }
+              ],
+              "x-codeSamples": [
+                {
+                  "lang": "C#",
+                  "source": "PetStore.v1.Pet pet = new PetStore.v1.Pet();\npet.setApiKey(\"your api key\");\npet.petType = PetStore.v1.Pet.TYPE_DOG;\npet.name = \"Rex\";\n// set other fields\nPetStoreResponse response = pet.create();\nif (response.statusCode == HttpStatusCode.Created)\n{\n  // Successfully created\n}\nelse\n{\n  // Something wrong -- check response for errors\n  Console.WriteLine(response.getRawResponse());\n}\n"
+                },
+                {
+                  "lang": "PHP",
+                  "source": "$form = new \\PetStore\\Entities\\Pet();\n$form->setPetType(\"Dog\");\n$form->setName(\"Rex\");\n// set other fields\ntry {\n    $pet = $client->pets()->create($form);\n} catch (UnprocessableEntityException $e) {\n    var_dump($e->getErrors());\n}\n"
+                }
+              ],
+              "requestBody": {
+                "$ref": "#/components/requestBodies/Pet"
+              }
+            },
+            "put": {
+              "tags": ["pet"],
+              "summary": "Update an existing pet",
+              "description": "",
+              "operationId": "updatePet",
+              "responses": {
+                "400": {
+                  "description": "Invalid ID supplied"
+                },
+                "404": {
+                  "description": "Pet not found"
+                },
+                "405": {
+                  "description": "Validation exception"
+                }
+              },
+              "security": [
+                {
+                  "petstore_auth": ["write:pets", "read:pets"]
+                }
+              ],
+              "x-codeSamples": [
+                {
+                  "lang": "PHP",
+                  "source": "$form = new \\PetStore\\Entities\\Pet();\n$form->setPetId(1);\n$form->setPetType(\"Dog\");\n$form->setName(\"Rex\");\n// set other fields\ntry {\n    $pet = $client->pets()->update($form);\n} catch (UnprocessableEntityException $e) {\n    var_dump($e->getErrors());\n}\n"
+                }
+              ],
+              "requestBody": {
+                "$ref": "#/components/requestBodies/Pet"
+              }
+            }
+          },
+          "/pet/{petId}": {
+            "get": {
+              "tags": ["pet"],
+              "summary": "Find pet by ID",
+              "description": "Returns a single pet",
+              "operationId": "getPetById",
+              "parameters": [
+                {
+                  "name": "petId",
+                  "in": "path",
+                  "description": "ID of pet to return",
+                  "required": true,
+                  "deprecated": true,
+                  "schema": {
+                    "type": "integer",
+                    "format": "int64"
+                  }
+                }
+              ],
+              "responses": {
+                "200": {
+                  "description": "successful operation",
+                  "content": {
+                    "application/json": {
+                      "schema": {
+                        "$ref": "#/components/schemas/Pet"
+                      }
+                    },
+                    "application/xml": {
+                      "schema": {
+                        "$ref": "#/components/schemas/Pet"
+                      }
+                    }
+                  }
+                },
+                "400": {
+                  "description": "Invalid ID supplied"
+                },
+                "404": {
+                  "description": "Pet not found"
+                }
+              },
+              "security": [
+                {
+                  "api_key": []
+                }
+              ]
+            },
+            "post": {
+              "tags": ["pet"],
+              "summary": "Updates a pet in the store with form data",
+              "description": "",
+              "operationId": "updatePetWithForm",
+              "parameters": [
+                {
+                  "name": "petId",
+                  "in": "path",
+                  "description": "ID of pet that needs to be updated",
+                  "required": true,
+                  "schema": {
+                    "type": "integer",
+                    "format": "int64"
+                  }
+                }
+              ],
+              "responses": {
+                "405": {
+                  "description": "Invalid input"
+                }
+              },
+              "security": [
+                {
+                  "petstore_auth": ["write:pets", "read:pets"]
+                }
+              ],
+              "requestBody": {
+                "content": {
+                  "application/x-www-form-urlencoded": {
+                    "schema": {
+                      "type": "object",
+                      "properties": {
+                        "name": {
+                          "description": "Updated name of the pet",
+                          "type": "string"
+                        },
+                        "status": {
+                          "description": "Updated status of the pet",
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "delete": {
+              "tags": ["pet"],
+              "summary": "Deletes a pet",
+              "description": "",
+              "operationId": "deletePet",
+              "parameters": [
+                {
+                  "name": "api_key",
+                  "in": "header",
+                  "required": false,
+                  "schema": {
+                    "type": "string"
+                  },
+                  "example": "Bearer <TOKEN>"
+                },
+                {
+                  "name": "petId",
+                  "in": "path",
+                  "description": "Pet id to delete",
+                  "required": true,
+                  "schema": {
+                    "type": "integer",
+                    "format": "int64"
+                  }
+                }
+              ],
+              "responses": {
+                "400": {
+                  "description": "Invalid pet value"
+                }
+              },
+              "security": [
+                {
+                  "petstore_auth": ["write:pets", "read:pets"]
+                }
+              ]
+            }
+          },
+          "/pet/{petId}/uploadImage": {
+            "post": {
+              "tags": ["pet"],
+              "summary": "uploads an image",
+              "description": "",
+              "operationId": "uploadFile",
+              "parameters": [
+                {
+                  "name": "petId",
+                  "in": "path",
+                  "description": "ID of pet to update",
+                  "required": true,
+                  "schema": {
+                    "type": "integer",
+                    "format": "int64"
+                  }
+                }
+              ],
+              "responses": {
+                "200": {
+                  "description": "successful operation",
+                  "content": {
+                    "application/json": {
+                      "schema": {
+                        "$ref": "#/components/schemas/ApiResponse"
+                      }
+                    }
+                  }
+                }
+              },
+              "security": [
+                {
+                  "petstore_auth": ["write:pets", "read:pets"]
+                }
+              ],
+              "requestBody": {
+                "content": {
+                  "application/octet-stream": {
+                    "schema": {
+                      "type": "string",
+                      "format": "binary"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "/pet/findByStatus": {
+            "get": {
+              "tags": ["pet"],
+              "summary": "Finds Pets by status",
+              "description": "Multiple status values can be provided with comma separated strings",
+              "operationId": "findPetsByStatus",
+              "parameters": [
+                {
+                  "name": "status",
+                  "in": "query",
+                  "description": "Status values that need to be considered for filter",
+                  "required": true,
+                  "style": "form",
+                  "schema": {
+                    "type": "array",
+                    "minItems": 1,
+                    "maxItems": 3,
+                    "items": {
+                      "type": "string",
+                      "enum": ["available", "pending", "sold"],
+                      "default": "available"
+                    }
+                  }
+                }
+              ],
+              "responses": {
+                "200": {
+                  "description": "successful operation",
+                  "content": {
+                    "application/json": {
+                      "schema": {
+                        "type": "array",
+                        "items": {
+                          "$ref": "#/components/schemas/Pet"
+                        }
+                      }
+                    },
+                    "application/xml": {
+                      "schema": {
+                        "type": "array",
+                        "items": {
+                          "$ref": "#/components/schemas/Pet"
+                        }
+                      }
+                    }
+                  }
+                },
+                "400": {
+                  "description": "Invalid status value"
+                }
+              },
+              "security": [
+                {
+                  "petstore_auth": ["write:pets", "read:pets"]
+                }
+              ]
+            }
+          },
+          "/pet/findByTags": {
+            "get": {
+              "tags": ["pet"],
+              "summary": "Finds Pets by tags",
+              "description": "Multiple tags can be provided with comma separated strings. Use tag1, tag2, tag3 for testing.",
+              "operationId": "findPetsByTags",
+              "deprecated": true,
+              "parameters": [
+                {
+                  "name": "tags",
+                  "in": "query",
+                  "description": "Tags to filter by",
+                  "required": true,
+                  "style": "form",
+                  "schema": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                }
+              ],
+              "responses": {
+                "200": {
+                  "description": "successful operation",
+                  "content": {
+                    "application/json": {
+                      "schema": {
+                        "type": "array",
+                        "items": {
+                          "$ref": "#/components/schemas/Pet"
+                        }
+                      }
+                    },
+                    "application/xml": {
+                      "schema": {
+                        "type": "array",
+                        "items": {
+                          "$ref": "#/components/schemas/Pet"
+                        }
+                      }
+                    }
+                  }
+                },
+                "400": {
+                  "description": "Invalid tag value"
+                }
+              },
+              "security": [
+                {
+                  "petstore_auth": ["write:pets", "read:pets"]
+                }
+              ]
+            }
+          },
+          "/store/inventory": {
+            "get": {
+              "tags": ["store"],
+              "summary": "Returns pet inventories by status",
+              "description": "Returns a map of status codes to quantities",
+              "operationId": "getInventory",
+              "responses": {
+                "200": {
+                  "description": "successful operation",
+                  "content": {
+                    "application/json": {
+                      "schema": {
+                        "type": "object",
+                        "additionalProperties": {
+                          "type": "integer",
+                          "format": "int32"
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "security": [
+                {
+                  "api_key": []
+                }
+              ]
+            }
+          },
+          "/store/order": {
+            "post": {
+              "tags": ["store"],
+              "summary": "Place an order for a pet",
+              "description": "",
+              "operationId": "placeOrder",
+              "responses": {
+                "200": {
+                  "description": "successful operation",
+                  "content": {
+                    "application/json": {
+                      "schema": {
+                        "$ref": "#/components/schemas/Order"
+                      }
+                    },
+                    "application/xml": {
+                      "schema": {
+                        "$ref": "#/components/schemas/Order"
+                      }
+                    }
+                  }
+                },
+                "400": {
+                  "description": "Invalid Order",
+                  "content": {
+                    "application/json": {
+                      "example": {
+                        "status": 400,
+                        "message": "Invalid Order"
+                      }
+                    }
+                  }
+                }
+              },
+              "requestBody": {
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "$ref": "#/components/schemas/Order"
+                    }
+                  }
+                },
+                "description": "order placed for purchasing the pet",
+                "required": true
+              }
+            }
+          },
+          "/store/order/{orderId}": {
+            "get": {
+              "tags": ["store"],
+              "summary": "Find purchase order by ID",
+              "description": "For valid response try integer IDs with value <= 5 or > 10. Other values will generated exceptions",
+              "operationId": "getOrderById",
+              "parameters": [
+                {
+                  "name": "orderId",
+                  "in": "path",
+                  "description": "ID of pet that needs to be fetched",
+                  "required": true,
+                  "schema": {
+                    "type": "integer",
+                    "format": "int64",
+                    "minimum": 1,
+                    "maximum": 5
+                  }
+                }
+              ],
+              "responses": {
+                "200": {
+                  "description": "successful operation",
+                  "content": {
+                    "application/json": {
+                      "schema": {
+                        "$ref": "#/components/schemas/Order"
+                      }
+                    },
+                    "application/xml": {
+                      "schema": {
+                        "$ref": "#/components/schemas/Order"
+                      }
+                    }
+                  }
+                },
+                "400": {
+                  "description": "Invalid ID supplied"
+                },
+                "404": {
+                  "description": "Order not found"
+                }
+              }
+            },
+            "delete": {
+              "tags": ["store"],
+              "summary": "Delete purchase order by ID",
+              "description": "For valid response try integer IDs with value < 1000. Anything above 1000 or nonintegers will generate API errors",
+              "operationId": "deleteOrder",
+              "parameters": [
+                {
+                  "name": "orderId",
+                  "in": "path",
+                  "description": "ID of the order that needs to be deleted",
+                  "required": true,
+                  "schema": {
+                    "type": "string",
+                    "minimum": 1
+                  }
+                }
+              ],
+              "responses": {
+                "400": {
+                  "description": "Invalid ID supplied"
+                },
+                "404": {
+                  "description": "Order not found"
+                }
+              }
+            }
+          },
+          "/store/subscribe": {
+            "post": {
+              "tags": ["store"],
+              "summary": "Subscribe to the Store events",
+              "description": "Add subscription for a store events",
+              "requestBody": {
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "type": "object",
+                      "properties": {
+                        "callbackUrl": {
+                          "type": "string",
+                          "format": "uri",
+                          "description": "This URL will be called by the server when the desired event will occur",
+                          "example": "https://myserver.com/send/callback/here"
+                        },
+                        "eventName": {
+                          "type": "string",
+                          "description": "Event name for the subscription",
+                          "enum": [
+                            "orderInProgress",
+                            "orderShipped",
+                            "orderDelivered"
+                          ],
+                          "example": "orderInProgress"
+                        }
+                      },
+                      "required": ["callbackUrl", "eventName"]
+                    }
+                  }
+                }
+              },
+              "responses": {
+                "201": {
+                  "description": "Subscription added",
+                  "content": {
+                    "application/json": {
+                      "schema": {
+                        "type": "object",
+                        "properties": {
+                          "subscriptionId": {
+                            "type": "string",
+                            "example": "AAA-123-BBB-456"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "callbacks": {
+                "orderInProgress": {
+                  "{$request.body#/callbackUrl}?event={$request.body#/eventName}": {
+                    "servers": [
+                      {
+                        "url": "//callback-url.path-level/v1",
+                        "description": "Path level server 1"
+                      },
+                      {
+                        "url": "//callback-url.path-level/v2",
+                        "description": "Path level server 2"
+                      }
+                    ],
+                    "post": {
+                      "summary": "Order in Progress (Summary)",
+                      "description": "A callback triggered every time an Order is updated status to \"inProgress\" (Description)",
+                      "externalDocs": {
+                        "description": "Find out more",
+                        "url": "https://more-details.com/demo"
+                      },
+                      "requestBody": {
+                        "content": {
+                          "application/json": {
+                            "schema": {
+                              "type": "object",
+                              "properties": {
+                                "orderId": {
+                                  "type": "string",
+                                  "example": "123"
+                                },
+                                "timestamp": {
+                                  "type": "string",
+                                  "format": "date-time",
+                                  "example": "2018-10-19T16:46:45Z"
+                                },
+                                "status": {
+                                  "type": "string",
+                                  "example": "inProgress"
+                                }
+                              }
+                            }
+                          },
+                          "application/xml": {
+                            "schema": {
+                              "type": "object",
+                              "properties": {
+                                "orderId": {
+                                  "type": "string",
+                                  "example": "123"
+                                }
+                              }
+                            },
+                            "example": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<root>\n  <orderId>123</orderId>\n  <status>inProgress</status>\n  <timestamp>2018-10-19T16:46:45Z</timestamp>\n</root>\n"
+                          }
+                        }
+                      },
+                      "responses": {
+                        "200": {
+                          "description": "Callback successfully processed and no retries will be performed",
+                          "content": {
+                            "application/json": {
+                              "schema": {
+                                "type": "object",
+                                "properties": {
+                                  "someProp": {
+                                    "type": "string",
+                                    "example": "123"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "299": {
+                          "description": "Response for cancelling subscription"
+                        },
+                        "500": {
+                          "description": "Callback processing failed and retries will be performed"
+                        }
+                      },
+                      "x-codeSamples": [
+                        {
+                          "lang": "C#",
+                          "source": "PetStore.v1.Pet pet = new PetStore.v1.Pet();\npet.setApiKey(\"your api key\");\npet.petType = PetStore.v1.Pet.TYPE_DOG;\npet.name = \"Rex\";\n// set other fields\nPetStoreResponse response = pet.create();\nif (response.statusCode == HttpStatusCode.Created)\n{\n  // Successfully created\n}\nelse\n{\n  // Something wrong -- check response for errors\n  Console.WriteLine(response.getRawResponse());\n}\n"
+                        },
+                        {
+                          "lang": "PHP",
+                          "source": "$form = new \\PetStore\\Entities\\Pet();\n$form->setPetType(\"Dog\");\n$form->setName(\"Rex\");\n// set other fields\ntry {\n    $pet = $client->pets()->create($form);\n} catch (UnprocessableEntityException $e) {\n    var_dump($e->getErrors());\n}\n"
+                        }
+                      ]
+                    },
+                    "put": {
+                      "description": "Order in Progress (Only Description)",
+                      "servers": [
+                        {
+                          "url": "//callback-url.operation-level/v1",
+                          "description": "Operation level server 1 (Operation override)"
+                        },
+                        {
+                          "url": "//callback-url.operation-level/v2",
+                          "description": "Operation level server 2 (Operation override)"
+                        }
+                      ],
+                      "requestBody": {
+                        "content": {
+                          "application/json": {
+                            "schema": {
+                              "type": "object",
+                              "properties": {
+                                "orderId": {
+                                  "type": "string",
+                                  "example": "123"
+                                },
+                                "timestamp": {
+                                  "type": "string",
+                                  "format": "date-time",
+                                  "example": "2018-10-19T16:46:45Z"
+                                },
+                                "status": {
+                                  "type": "string",
+                                  "example": "inProgress"
+                                }
+                              }
+                            }
+                          },
+                          "application/xml": {
+                            "schema": {
+                              "type": "object",
+                              "properties": {
+                                "orderId": {
+                                  "type": "string",
+                                  "example": "123"
+                                }
+                              }
+                            },
+                            "example": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<root>\n  <orderId>123</orderId>\n  <status>inProgress</status>\n  <timestamp>2018-10-19T16:46:45Z</timestamp>\n</root>\n"
+                          }
+                        }
+                      },
+                      "responses": {
+                        "200": {
+                          "description": "Callback successfully processed and no retries will be performed",
+                          "content": {
+                            "application/json": {
+                              "schema": {
+                                "type": "object",
+                                "properties": {
+                                  "someProp": {
+                                    "type": "string",
+                                    "example": "123"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "orderShipped": {
+                  "{$request.body#/callbackUrl}?event={$request.body#/eventName}": {
+                    "post": {
+                      "description": "Very long description\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor\nincididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis\nnostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu\nfugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in\nculpa qui officia deserunt mollit anim id est laborum.\n",
+                      "requestBody": {
+                        "content": {
+                          "application/json": {
+                            "schema": {
+                              "type": "object",
+                              "properties": {
+                                "orderId": {
+                                  "type": "string",
+                                  "example": "123"
+                                },
+                                "timestamp": {
+                                  "type": "string",
+                                  "format": "date-time",
+                                  "example": "2018-10-19T16:46:45Z"
+                                },
+                                "estimatedDeliveryDate": {
+                                  "type": "string",
+                                  "format": "date-time",
+                                  "example": "2018-11-11T16:00:00Z"
+                                }
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "responses": {
+                        "200": {
+                          "description": "Callback successfully processed and no retries will be performed"
+                        }
+                      }
+                    }
+                  }
+                },
+                "orderDelivered": {
+                  "http://notificationServer.com?url={$request.body#/callbackUrl}&event={$request.body#/eventName}": {
+                    "post": {
+                      "deprecated": true,
+                      "summary": "Order delivered",
+                      "description": "A callback triggered every time an Order is delivered to the recipient",
+                      "requestBody": {
+                        "content": {
+                          "application/json": {
+                            "schema": {
+                              "type": "object",
+                              "properties": {
+                                "orderId": {
+                                  "type": "string",
+                                  "example": "123"
+                                },
+                                "timestamp": {
+                                  "type": "string",
+                                  "format": "date-time",
+                                  "example": "2018-10-19T16:46:45Z"
+                                }
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "responses": {
+                        "200": {
+                          "description": "Callback successfully processed and no retries will be performed"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "/user": {
+            "post": {
+              "tags": ["user"],
+              "summary": "Create user",
+              "description": "This can only be done by the logged in user.",
+              "operationId": "createUser",
+              "responses": {
+                "default": {
+                  "description": "successful operation"
+                }
+              },
+              "requestBody": {
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "$ref": "#/components/schemas/User"
+                    }
+                  }
+                },
+                "description": "Created user object",
+                "required": true
+              }
+            }
+          },
+          "/user/{username}": {
+            "get": {
+              "tags": ["user"],
+              "summary": "Get user by user name",
+              "description": "",
+              "operationId": "getUserByName",
+              "parameters": [
+                {
+                  "name": "username",
+                  "in": "path",
+                  "description": "The name that needs to be fetched. Use user1 for testing. ",
+                  "required": true,
+                  "schema": {
+                    "type": "string"
+                  }
+                }
+              ],
+              "responses": {
+                "200": {
+                  "description": "successful operation",
+                  "content": {
+                    "application/json": {
+                      "schema": {
+                        "$ref": "#/components/schemas/User"
+                      }
+                    },
+                    "application/xml": {
+                      "schema": {
+                        "$ref": "#/components/schemas/User"
+                      }
+                    }
+                  }
+                },
+                "400": {
+                  "description": "Invalid username supplied"
+                },
+                "404": {
+                  "description": "User not found"
+                }
+              }
+            },
+            "put": {
+              "tags": ["user"],
+              "summary": "Updated user",
+              "description": "This can only be done by the logged in user.",
+              "operationId": "updateUser",
+              "parameters": [
+                {
+                  "name": "username",
+                  "in": "path",
+                  "description": "name that need to be deleted",
+                  "required": true,
+                  "schema": {
+                    "type": "string"
+                  }
+                }
+              ],
+              "responses": {
+                "400": {
+                  "description": "Invalid user supplied"
+                },
+                "404": {
+                  "description": "User not found"
+                }
+              },
+              "requestBody": {
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "$ref": "#/components/schemas/User"
+                    }
+                  }
+                },
+                "description": "Updated user object",
+                "required": true
+              }
+            },
+            "delete": {
+              "tags": ["user"],
+              "summary": "Delete user",
+              "description": "This can only be done by the logged in user.",
+              "operationId": "deleteUser",
+              "parameters": [
+                {
+                  "name": "username",
+                  "in": "path",
+                  "description": "The name that needs to be deleted",
+                  "required": true,
+                  "schema": {
+                    "type": "string"
+                  }
+                }
+              ],
+              "responses": {
+                "400": {
+                  "description": "Invalid username supplied"
+                },
+                "404": {
+                  "description": "User not found"
+                }
+              }
+            }
+          },
+          "/user/createWithArray": {
+            "post": {
+              "tags": ["user"],
+              "summary": "Creates list of users with given input array",
+              "description": "",
+              "operationId": "createUsersWithArrayInput",
+              "responses": {
+                "default": {
+                  "description": "successful operation"
+                }
+              },
+              "requestBody": {
+                "$ref": "#/components/requestBodies/UserArray"
+              }
+            }
+          },
+          "/user/createWithList": {
+            "post": {
+              "tags": ["user"],
+              "summary": "Creates list of users with given input array",
+              "description": "",
+              "operationId": "createUsersWithListInput",
+              "responses": {
+                "default": {
+                  "description": "successful operation"
+                }
+              },
+              "requestBody": {
+                "$ref": "#/components/requestBodies/UserArray"
+              }
+            }
+          },
+          "/user/login": {
+            "get": {
+              "tags": ["user"],
+              "summary": "Logs user into the system",
+              "description": "",
+              "operationId": "loginUser",
+              "parameters": [
+                {
+                  "name": "username",
+                  "in": "query",
+                  "description": "The user name for login",
+                  "required": true,
+                  "schema": {
+                    "type": "string"
+                  }
+                },
+                {
+                  "name": "password",
+                  "in": "query",
+                  "description": "The password for login in clear text",
+                  "required": true,
+                  "schema": {
+                    "type": "string"
+                  }
+                }
+              ],
+              "responses": {
+                "200": {
+                  "description": "successful operation",
+                  "headers": {
+                    "X-Rate-Limit": {
+                      "description": "calls per hour allowed by the user",
+                      "schema": {
+                        "type": "integer",
+                        "format": "int32"
+                      }
+                    },
+                    "X-Expires-After": {
+                      "description": "date in UTC when token expires",
+                      "schema": {
+                        "type": "string",
+                        "format": "date-time"
+                      }
+                    }
+                  },
+                  "content": {
+                    "application/json": {
+                      "schema": {
+                        "type": "string"
+                      },
+                      "examples": {
+                        "response": {
+                          "value": "OK"
+                        }
+                      }
+                    },
+                    "application/xml": {
+                      "schema": {
+                        "type": "string"
+                      },
+                      "examples": {
+                        "response": {
+                          "value": "<Message> OK </Message>"
+                        }
+                      }
+                    },
+                    "text/plain": {
+                      "examples": {
+                        "response": {
+                          "value": "OK"
+                        }
+                      }
+                    }
+                  }
+                },
+                "400": {
+                  "description": "Invalid username/password supplied"
+                }
+              }
+            }
+          },
+          "/user/logout": {
+            "get": {
+              "tags": ["user"],
+              "summary": "Logs out current logged in user session",
+              "description": "",
+              "operationId": "logoutUser",
+              "responses": {
+                "default": {
+                  "description": "successful operation"
+                }
+              }
+            }
+          }
+        },
+        "components": {
+          "schemas": {
+            "ApiResponse": {
+              "type": "object",
+              "properties": {
+                "code": {
+                  "type": "integer",
+                  "format": "int32"
+                },
+                "type": {
+                  "type": "string"
+                },
+                "message": {
+                  "type": "string"
+                }
+              }
+            },
+            "Cat": {
+              "description": "A representation of a cat",
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/Pet"
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "huntingSkill": {
+                      "type": "string",
+                      "description": "The measured skill for hunting",
+                      "default": "lazy",
+                      "example": "adventurous",
+                      "enum": ["clueless", "lazy", "adventurous", "aggressive"]
+                    }
+                  },
+                  "required": ["huntingSkill"]
+                }
+              ]
+            },
+            "Category": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "description": "Category ID",
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/Id"
+                    }
+                  ]
+                },
+                "name": {
+                  "description": "Category name",
+                  "type": "string",
+                  "minLength": 1
+                },
+                "sub": {
+                  "description": "Test Sub Category",
+                  "type": "object",
+                  "properties": {
+                    "prop1": {
+                      "type": "string",
+                      "description": "Dumb Property"
+                    }
+                  }
+                }
+              },
+              "xml": {
+                "name": "Category"
+              }
+            },
+            "Dog": {
+              "description": "A representation of a dog",
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/Pet"
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "packSize": {
+                      "type": "integer",
+                      "format": "int32",
+                      "description": "The size of the pack the dog is from",
+                      "default": 1,
+                      "minimum": 1
+                    }
+                  },
+                  "required": ["packSize"]
+                }
+              ]
+            },
+            "HoneyBee": {
+              "description": "A representation of a honey bee",
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/Pet"
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "honeyPerDay": {
+                      "type": "number",
+                      "description": "Average amount of honey produced per day in ounces",
+                      "example": 3.14,
+                      "multipleOf": 0.01
+                    }
+                  },
+                  "required": ["honeyPerDay"]
+                }
+              ]
+            },
+            "Id": {
+              "type": "integer",
+              "format": "int64",
+              "readOnly": true
+            },
+            "Order": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "description": "Order ID",
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/Id"
+                    }
+                  ]
+                },
+                "petId": {
+                  "description": "Pet ID",
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/Id"
+                    }
+                  ]
+                },
+                "quantity": {
+                  "type": "integer",
+                  "format": "int32",
+                  "minimum": 1,
+                  "default": 1
+                },
+                "shipDate": {
+                  "description": "Estimated ship date",
+                  "type": "string",
+                  "format": "date-time"
+                },
+                "status": {
+                  "type": "string",
+                  "description": "Order Status",
+                  "enum": ["placed", "approved", "delivered"]
+                },
+                "complete": {
+                  "description": "Indicates whenever order was completed or not",
+                  "type": "boolean",
+                  "default": false,
+                  "readOnly": true
+                },
+                "requestId": {
+                  "description": "Unique Request Id",
+                  "type": "string",
+                  "writeOnly": true
+                }
+              },
+              "xml": {
+                "name": "Order"
+              }
+            },
+            "Pet": {
+              "type": "object",
+              "required": ["name", "photoUrls"],
+              "discriminator": {
+                "propertyName": "petType",
+                "mapping": {
+                  "cat": "#/components/schemas/Cat",
+                  "dog": "#/components/schemas/Dog",
+                  "bee": "#/components/schemas/HoneyBee"
+                }
+              },
+              "properties": {
+                "id": {
+                  "externalDocs": {
+                    "description": "Find more info here",
+                    "url": "https://example.com"
+                  },
+                  "description": "Pet ID",
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/Id"
+                    }
+                  ]
+                },
+                "category": {
+                  "description": "Categories this pet belongs to",
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/Category"
+                    }
+                  ]
+                },
+                "name": {
+                  "description": "The name given to a pet",
+                  "type": "string",
+                  "example": "Guru"
+                },
+                "photoUrls": {
+                  "description": "The list of URL to a cute photos featuring pet",
+                  "type": "array",
+                  "maxItems": 20,
+                  "xml": {
+                    "name": "photoUrl",
+                    "wrapped": true
+                  },
+                  "items": {
+                    "type": "string",
+                    "format": "url"
+                  }
+                },
+                "friend": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/Pet"
+                    }
+                  ]
+                },
+                "tags": {
+                  "description": "Tags attached to the pet",
+                  "type": "array",
+                  "minItems": 1,
+                  "xml": {
+                    "name": "tag",
+                    "wrapped": true
+                  },
+                  "items": {
+                    "$ref": "#/components/schemas/Tag"
+                  }
+                },
+                "status": {
+                  "type": "string",
+                  "description": "Pet status in the store",
+                  "enum": ["available", "pending", "sold"]
+                },
+                "petType": {
+                  "description": "Type of a pet",
+                  "type": "string"
+                }
+              },
+              "xml": {
+                "name": "Pet"
+              }
+            },
+            "Tag": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "description": "Tag ID",
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/Id"
+                    }
+                  ]
+                },
+                "name": {
+                  "description": "Tag name",
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "xml": {
+                "name": "Tag"
+              }
+            },
+            "User": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "$ref": "#/components/schemas/Id"
+                },
+                "pet": {
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/Pet"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Tag"
+                    }
+                  ]
+                },
+                "username": {
+                  "description": "User supplied username",
+                  "type": "string",
+                  "minLength": 4,
+                  "example": "John78"
+                },
+                "firstName": {
+                  "description": "User first name",
+                  "type": "string",
+                  "minLength": 1,
+                  "example": "John"
+                },
+                "lastName": {
+                  "description": "User last name",
+                  "type": "string",
+                  "minLength": 1,
+                  "example": "Smith"
+                },
+                "email": {
+                  "description": "User email address",
+                  "type": "string",
+                  "format": "email",
+                  "example": "john.smith@example.com"
+                },
+                "password": {
+                  "type": "string",
+                  "description": "User password, MUST contain a mix of upper and lower case letters, as well as digits",
+                  "format": "password",
+                  "minLength": 8,
+                  "pattern": "/(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])/",
+                  "example": "drowssaP123"
+                },
+                "phone": {
+                  "description": "User phone number in international format",
+                  "type": "string",
+                  "pattern": "/^\\+(?:[0-9]-?){6,14}[0-9]$/",
+                  "example": "+1-202-555-0192"
+                },
+                "userStatus": {
+                  "description": "User status",
+                  "type": "integer",
+                  "format": "int32"
+                }
+              },
+              "xml": {
+                "name": "User"
+              }
+            }
+          },
+          "requestBodies": {
+            "Pet": {
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "allOf": [
+                      {
+                        "description": "My Pet",
+                        "title": "Pettie"
+                      },
+                      {
+                        "$ref": "#/components/schemas/Pet"
+                      }
+                    ]
+                  }
+                },
+                "application/xml": {
+                  "schema": {
+                    "type": "object",
+                    "properties": {
+                      "name": {
+                        "type": "string",
+                        "description": "hooray"
+                      }
+                    }
+                  }
+                }
+              },
+              "description": "Pet object that needs to be added to the store",
+              "required": true
+            },
+            "UserArray": {
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/components/schemas/User"
+                    }
+                  }
+                }
+              },
+              "description": "List of user object",
+              "required": true
+            }
+          },
+          "securitySchemes": {
+            "petstore_auth": {
+              "description": "Get access to data while protecting your account credentials.\nOAuth2 is also a safer and more secure way to give you access.\n",
+              "type": "oauth2",
+              "flows": {
+                "implicit": {
+                  "authorizationUrl": "http://petstore.swagger.io/api/oauth/dialog",
+                  "scopes": {
+                    "write:pets": "modify pets in your account",
+                    "read:pets": "read your pets"
+                  }
+                }
+              }
+            },
+            "api_key": {
+              "description": "For this sample, you can use the api key `special-key` to test the authorization filters.\n",
+              "type": "apiKey",
+              "name": "api_key",
+              "in": "header"
+            }
+          },
+          "examples": {
+            "Order": {
+              "value": {
+                "quantity": 1,
+                "shipDate": "2018-10-19T16:46:45Z",
+                "status": "placed",
+                "complete": false
+              }
+            }
+          }
+        },
+        "x-webhooks": {
+          "newPet": {
+            "post": {
+              "summary": "New pet",
+              "description": "Information about a new pet in the systems",
+              "operationId": "newPet",
+              "tags": ["pet"],
+              "requestBody": {
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "$ref": "#/components/schemas/Pet"
+                    }
+                  }
+                }
+              },
+              "responses": {
+                "200": {
+                  "description": "Return a 200 status to indicate that the data was received successfully"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "docusaurus-theme-classic": {},
+  "docusaurus-theme-search-algolia": {},
+  "docusaurus-theme-redoc": {},
+  "docusaurus-plugin-google-gtag": {},
+  "docusaurus-plugin-google-tag-manager": {},
+  "docusaurus-bootstrap-plugin": {},
+  "docusaurus-mdx-fallback-plugin": {}
+}

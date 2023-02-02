@@ -211,7 +211,7 @@ const config = {
             items: [
               {
                 label: "Discord",
-                href: "https://discord.com/channels/697535391594446898/725135157652226060",
+                href: "https://discord.com/channels/697535391594446898/905421497416433704",
               },
               {
                 label: "Issues",
@@ -281,14 +281,14 @@ const config = {
     [
       "@docusaurus/plugin-google-gtag",
       {
-        trackingID: "G-",
+        trackingID: "G-25JCVG51VN",
         anonymizeIP: true,
       },
     ],
     [
       "@docusaurus/plugin-google-tag-manager",
       {
-        containerId: "GTM-",
+        containerId: "GTM-52QM6SD",
       },
     ],
   ],

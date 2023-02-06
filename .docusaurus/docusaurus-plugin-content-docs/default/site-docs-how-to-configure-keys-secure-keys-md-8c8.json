@@ -1,0 +1,32 @@
+{
+  "unversionedId": "HowTo/Configure/Keys/Secure-Keys",
+  "id": "HowTo/Configure/Keys/Secure-Keys",
+  "title": "Secure keys",
+  "description": "Secure private keys using Argon2",
+  "source": "@site/docs/HowTo/Configure/Keys/Secure-Keys.md",
+  "sourceDirName": "HowTo/Configure/Keys",
+  "slug": "/HowTo/Configure/Keys/Secure-Keys",
+  "permalink": "/docs/HowTo/Configure/Keys/Secure-Keys",
+  "draft": false,
+  "editUrl": "https://github.com/ConsenSys/doc.tessera/tree/main/docs/HowTo/Configure/Keys/Secure-Keys.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "sidebarPosition": 10,
+  "frontMatter": {
+    "title": "Secure keys",
+    "description": "Secure private keys using Argon2",
+    "sidebar_position": 10
+  },
+  "sidebar": "docSidebar",
+  "previous": {
+    "title": "HashiCorp Vault keys",
+    "permalink": "/docs/HowTo/Configure/Keys/Hashicorp-Vault-Pairs"
+  },
+  "next": {
+    "title": "KeyVault",
+    "permalink": "/docs/category/keyvault"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "title": "Privacy Manager",
+  "description": "privacy manager",
+  "slug": "/category/privacy-manager",
+  "permalink": "/docs/category/privacy-manager",
+  "navigation": {
+    "previous": {
+      "title": "Concepts",
+      "permalink": "/docs/category/concepts"
+    },
+    "next": {
+      "title": "Overview",
+      "permalink": "/docs/Concepts/Privacy-Manager/"
+    }
+  }
+}

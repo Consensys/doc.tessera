@@ -1,0 +1,32 @@
+{
+  "unversionedId": "HowTo/Configure/Cryptographic-elliptic-curves",
+  "id": "HowTo/Configure/Cryptographic-elliptic-curves",
+  "title": "Cryptographic elliptic curves",
+  "description": "Configure an alternative cryptographic elliptic curves",
+  "source": "@site/docs/HowTo/Configure/Cryptographic-elliptic-curves.md",
+  "sourceDirName": "HowTo/Configure",
+  "slug": "/HowTo/Configure/Cryptographic-elliptic-curves",
+  "permalink": "/docs/HowTo/Configure/Cryptographic-elliptic-curves",
+  "draft": false,
+  "editUrl": "https://github.com/ConsenSys/doc.tessera/tree/main/docs/HowTo/Configure/Cryptographic-elliptic-curves.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "sidebarPosition": 10,
+  "frontMatter": {
+    "title": "Cryptographic elliptic curves",
+    "description": "Configure an alternative cryptographic elliptic curves",
+    "sidebar_position": 10
+  },
+  "sidebar": "docSidebar",
+  "previous": {
+    "title": "Multiple private states",
+    "permalink": "/docs/HowTo/Configure/Multiple-private-state"
+  },
+  "next": {
+    "title": "Hyperledger Besu Support",
+    "permalink": "/docs/HowTo/Configure/Orion-Mode"
+  }
+}

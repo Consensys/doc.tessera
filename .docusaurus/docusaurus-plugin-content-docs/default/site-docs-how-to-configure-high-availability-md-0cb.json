@@ -1,0 +1,32 @@
+{
+  "unversionedId": "HowTo/Configure/High-availability",
+  "id": "HowTo/Configure/High-availability",
+  "title": "High availability",
+  "description": "Tessera deployment for high availability",
+  "source": "@site/docs/HowTo/Configure/High-availability.md",
+  "sourceDirName": "HowTo/Configure",
+  "slug": "/HowTo/Configure/High-availability",
+  "permalink": "/docs/HowTo/Configure/High-availability",
+  "draft": false,
+  "editUrl": "https://github.com/ConsenSys/doc.tessera/tree/main/docs/HowTo/Configure/High-availability.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "sidebarPosition": 12,
+  "frontMatter": {
+    "title": "High availability",
+    "description": "Tessera deployment for high availability",
+    "sidebar_position": 12
+  },
+  "sidebar": "docSidebar",
+  "previous": {
+    "title": "Overriding configuration file",
+    "permalink": "/docs/HowTo/Configure/Override-config"
+  },
+  "next": {
+    "title": "Use",
+    "permalink": "/docs/category/use"
+  }
+}

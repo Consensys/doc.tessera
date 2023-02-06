@@ -1,0 +1,16 @@
+{
+  "title": "Keys",
+  "description": "keys",
+  "slug": "/category/keys",
+  "permalink": "/docs/category/keys",
+  "navigation": {
+    "previous": {
+      "title": "Enclave",
+      "permalink": "/docs/HowTo/Configure/Enclave"
+    },
+    "next": {
+      "title": "Overview",
+      "permalink": "/docs/HowTo/Configure/Keys/Overview"
+    }
+  }
+}

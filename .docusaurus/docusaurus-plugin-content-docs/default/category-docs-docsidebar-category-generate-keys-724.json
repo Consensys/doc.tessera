@@ -1,0 +1,16 @@
+{
+  "title": "Generate keys",
+  "description": "generate keys",
+  "slug": "/category/generate-keys",
+  "permalink": "/docs/category/generate-keys",
+  "navigation": {
+    "previous": {
+      "title": "Use GoQuorum or Besu with Tessera",
+      "permalink": "/docs/HowTo/Get-started/Use-GoQuorum-with-Tessera"
+    },
+    "next": {
+      "title": "Overview",
+      "permalink": "/docs/HowTo/Generate-Keys/"
+    }
+  }
+}

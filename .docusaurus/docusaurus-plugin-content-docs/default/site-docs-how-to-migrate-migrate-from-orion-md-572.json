@@ -1,0 +1,32 @@
+{
+  "unversionedId": "HowTo/Migrate/MigrateFromOrion",
+  "id": "HowTo/Migrate/MigrateFromOrion",
+  "title": "Migrating from Orion to Tessera",
+  "description": "Migrate your Orion configuration and data to Tessera.",
+  "source": "@site/docs/HowTo/Migrate/MigrateFromOrion.md",
+  "sourceDirName": "HowTo/Migrate",
+  "slug": "/HowTo/Migrate/MigrateFromOrion",
+  "permalink": "/docs/HowTo/Migrate/MigrateFromOrion",
+  "draft": false,
+  "editUrl": "https://github.com/ConsenSys/doc.tessera/tree/main/docs/HowTo/Migrate/MigrateFromOrion.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "Migrating from Orion to Tessera",
+    "description": "Migrate your Orion configuration and data to Tessera.",
+    "sidebar_position": 1
+  },
+  "sidebar": "docSidebar",
+  "previous": {
+    "title": "Migrate",
+    "permalink": "/docs/category/migrate"
+  },
+  "next": {
+    "title": "Tessera Multi-tenancy Migration",
+    "permalink": "/docs/HowTo/Migrate/Migration-Multitenancy"
+  }
+}

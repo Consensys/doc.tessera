@@ -1,0 +1,32 @@
+{
+  "unversionedId": "Concepts/Privacy-Groups",
+  "id": "Concepts/Privacy-Groups",
+  "title": "Privacy groups",
+  "description": "Tessera privacy groups",
+  "source": "@site/docs/Concepts/Privacy-Groups.md",
+  "sourceDirName": "Concepts",
+  "slug": "/Concepts/Privacy-Groups",
+  "permalink": "/docs/Concepts/Privacy-Groups",
+  "draft": false,
+  "editUrl": "https://github.com/ConsenSys/doc.tessera/tree/main/docs/Concepts/Privacy-Groups.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "title": "Privacy groups",
+    "description": "Tessera privacy groups",
+    "sidebar_position": 3
+  },
+  "sidebar": "docSidebar",
+  "previous": {
+    "title": "Peer discovery",
+    "permalink": "/docs/Concepts/p2p-discovery"
+  },
+  "next": {
+    "title": "Multi-tenancy",
+    "permalink": "/docs/Concepts/Multitenancy"
+  }
+}

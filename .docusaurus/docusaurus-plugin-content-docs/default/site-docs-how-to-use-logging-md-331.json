@@ -1,0 +1,32 @@
+{
+  "unversionedId": "HowTo/Use/Logging",
+  "id": "HowTo/Use/Logging",
+  "title": "Logging",
+  "description": "Tessera logging",
+  "source": "@site/docs/HowTo/Use/Logging.md",
+  "sourceDirName": "HowTo/Use",
+  "slug": "/HowTo/Use/Logging",
+  "permalink": "/docs/HowTo/Use/Logging",
+  "draft": false,
+  "editUrl": "https://github.com/ConsenSys/doc.tessera/tree/main/docs/HowTo/Use/Logging.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "Logging",
+    "description": "Tessera logging",
+    "sidebar_position": 2
+  },
+  "sidebar": "docSidebar",
+  "previous": {
+    "title": "Monitoring",
+    "permalink": "/docs/HowTo/Use/Monitoring"
+  },
+  "next": {
+    "title": "Mandatory Recipients",
+    "permalink": "/docs/HowTo/Use/Mandatory-Recipients"
+  }
+}

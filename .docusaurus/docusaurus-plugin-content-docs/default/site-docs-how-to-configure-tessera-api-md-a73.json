@@ -1,0 +1,32 @@
+{
+  "unversionedId": "HowTo/Configure/TesseraAPI",
+  "id": "HowTo/Configure/TesseraAPI",
+  "title": "Servers",
+  "description": "Configure servers for Tessera API",
+  "source": "@site/docs/HowTo/Configure/TesseraAPI.md",
+  "sourceDirName": "HowTo/Configure",
+  "slug": "/HowTo/Configure/TesseraAPI",
+  "permalink": "/docs/HowTo/Configure/TesseraAPI",
+  "draft": false,
+  "editUrl": "https://github.com/ConsenSys/doc.tessera/tree/main/docs/HowTo/Configure/TesseraAPI.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "sidebarPosition": 5,
+  "frontMatter": {
+    "title": "Servers",
+    "description": "Configure servers for Tessera API",
+    "sidebar_position": 5
+  },
+  "sidebar": "docSidebar",
+  "previous": {
+    "title": "Configure HashiCorp Vault",
+    "permalink": "/docs/HowTo/Configure/KeyVault/Hashicorp-Vault"
+  },
+  "next": {
+    "title": "Peer discovery",
+    "permalink": "/docs/HowTo/Configure/Peer-discovery"
+  }
+}

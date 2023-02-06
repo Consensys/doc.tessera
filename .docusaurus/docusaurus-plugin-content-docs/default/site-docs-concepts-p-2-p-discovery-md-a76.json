@@ -1,0 +1,32 @@
+{
+  "unversionedId": "Concepts/p2p-discovery",
+  "id": "Concepts/p2p-discovery",
+  "title": "Peer discovery",
+  "description": "P2P Tessera Node Discovery",
+  "source": "@site/docs/Concepts/p2p-discovery.md",
+  "sourceDirName": "Concepts",
+  "slug": "/Concepts/p2p-discovery",
+  "permalink": "/docs/Concepts/p2p-discovery",
+  "draft": false,
+  "editUrl": "https://github.com/ConsenSys/doc.tessera/tree/main/docs/Concepts/p2p-discovery.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "Peer discovery",
+    "description": "P2P Tessera Node Discovery",
+    "sidebar_position": 2
+  },
+  "sidebar": "docSidebar",
+  "previous": {
+    "title": "Enclave types",
+    "permalink": "/docs/Concepts/Privacy-Manager/Enclave-types"
+  },
+  "next": {
+    "title": "Privacy groups",
+    "permalink": "/docs/Concepts/Privacy-Groups"
+  }
+}

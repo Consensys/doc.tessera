@@ -1,0 +1,16 @@
+{
+  "title": "Command Line",
+  "description": "command line",
+  "slug": "/category/command-line",
+  "permalink": "/docs/category/command-line",
+  "navigation": {
+    "previous": {
+      "title": "Reference",
+      "permalink": "/docs/category/reference"
+    },
+    "next": {
+      "title": "Options",
+      "permalink": "/docs/Reference/CLI/CLI-Syntax"
+    }
+  }
+}

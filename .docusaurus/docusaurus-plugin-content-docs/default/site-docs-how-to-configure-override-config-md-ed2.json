@@ -1,0 +1,32 @@
+{
+  "unversionedId": "HowTo/Configure/Override-config",
+  "id": "HowTo/Configure/Override-config",
+  "title": "Overriding configuration file",
+  "description": "Overriding configuration file settings on the command line",
+  "source": "@site/docs/HowTo/Configure/Override-config.md",
+  "sourceDirName": "HowTo/Configure",
+  "slug": "/HowTo/Configure/Override-config",
+  "permalink": "/docs/HowTo/Configure/Override-config",
+  "draft": false,
+  "editUrl": "https://github.com/ConsenSys/doc.tessera/tree/main/docs/HowTo/Configure/Override-config.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "sidebarPosition": 11,
+  "frontMatter": {
+    "title": "Overriding configuration file",
+    "description": "Overriding configuration file settings on the command line",
+    "sidebar_position": 11
+  },
+  "sidebar": "docSidebar",
+  "previous": {
+    "title": "Hyperledger Besu Support",
+    "permalink": "/docs/HowTo/Configure/Orion-Mode"
+  },
+  "next": {
+    "title": "High availability",
+    "permalink": "/docs/HowTo/Configure/High-availability"
+  }
+}

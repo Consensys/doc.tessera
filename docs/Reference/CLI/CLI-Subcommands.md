@@ -1,5 +1,7 @@
 ---
+title: Subcommands
 description: Tessera command line interface subcommands
+sidebar_position: 2
 ---
 
 # Subcommands
@@ -14,22 +16,25 @@ tessera [OPTIONS] [SUBCOMMAND] [SUBCOMMAND OPTIONS]
 
 ## `keygen`
 
-Use the `keygen` subcommand to [generate one or more key pairs] to store in files or a supported
-key vault.
+Use the `keygen` subcommand to [generate one or more key pairs] to store in files or a supported key vault.
 
 ### `argonconfig`, `keygenconfig`
 
-=== "Syntax"
+<!--tabs-->
 
-    ```bash
-    tessera keygen --argonconfig <FILE>
-    ```
+# Syntax
 
-=== "Example"
+```bash
+tessera keygen --argonconfig <FILE>
+```
 
-    ```bash
-    tessera keygen --argonconfig /home/me/node1/argonoptions.json
-    ```
+# Example
+
+```bash
+tessera keygen --argonconfig /home/me/node1/argonoptions.json
+```
+
+<!--/tabs-->
 
 JSON file containing settings to override the [default Argon2 configuration].
 
@@ -37,209 +42,237 @@ Legacy syntax for this option is `-keygenconfig <FILE>`.
 
 ### `configfile`, `config-file`
 
-=== "Syntax"
+<!--tabs-->
 
-    ```bash
-    tessera keygen --configfile <FILE>
-    ```
+# Syntax
 
-=== "Example"
+```bash
+tessera keygen --configfile <FILE>
+```
 
-    ```bash
-    tessera keygen --configfile /home/me/me_node/tessera.conf
-    ```
+# Example
 
-Path to the node's [configuration file](../../HowTo/Configure/Tessera.md).
+```bash
+tessera keygen --configfile /home/me/me_node/tessera.conf
+```
 
-Provide this option when
-[updating a configuration file with new keys](../../HowTo/Configure/Keys/Overview.md#update-a-configuration-file-with-new-keys).
-If [`configout`](#configout) and [`pwdout`](#pwdout) are not provided, the updated configuration
-file prints to the terminal.
+<!--/tabs-->
+
+Path to the node [configuration file](../../HowTo/Configure/Tessera.md).
+
+Provide this option when [updating a configuration file with new keys](../../HowTo/Configure/Keys/Overview.md#update-a-configuration-file-with-new-keys). If [`configout`](#configout) and [`pwdout`](#pwdout) are not provided, the updated configuration file prints to the terminal.
 
 ### `configout`
 
-=== "Syntax"
+<!--tabs-->
 
-    ```bash
-    tessera keygen --configout <FILE>
-    ```
+# Syntax
 
-=== "Example"
+```bash
+tessera keygen --configout <FILE>
+```
 
-    ```bash
-    tessera keygen --configfile /home/me/me_node/tessera.conf --configout /home/me/me_node/update/tessera.conf
-    ```
+# Example
 
-Path to save the updated configuration file to.
-To use this option, you must supply the [`--configfile`](#configfile-config-file) option.
+```bash
+tessera keygen --configfile /home/me/me_node/tessera.conf --configout /home/me/me_node/update/tessera.conf
+```
+
+<!--/tabs-->
+
+Path to save the updated configuration file to. To use this option, you must supply the [`--configfile`](#configfile-config-file) option.
 
 Legacy syntax for this option is `-output <FILE>`.
 
 ### `debug`
 
-=== "Syntax"
-
-    ```bash
-    tessera keygen --debug
-    ```
+```bash
+tessera keygen --debug
+```
 
 Prints full exception stack traces to `stdout`.
 
 ### `encryptor.ellipticCurve`
 
-=== "Syntax"
+<!--tabs-->
 
-    ```bash
-    tessera keygen --encryptor.ellipticCurve <STRING>
-    ```
+# Syntax
 
-=== "Example"
+```bash
+tessera keygen --encryptor.ellipticCurve <STRING>
+```
 
-    ```bash
-    tessera keygen --encryptor.ellipticCurve secp384r1
-    ```
+# Example
 
-Elliptic curve to use for key generation.
-Defaults to `secp256r1`.
+```bash
+tessera keygen --encryptor.ellipticCurve secp384r1
+```
+
+<!--/tabs-->
+
+Elliptic curve to use for key generation. Defaults to `secp256r1`.
 
 ### `encryptor.nonceLength`
 
-=== "Syntax"
+<!--tabs-->
 
-    ```bash
-    tessera keygen --encryptor.nonceLength <INTEGER>
-    ```
+# Syntax
 
-=== "Example"
+```bash
+tessera keygen --encryptor.nonceLength <INTEGER>
+```
 
-    ```bash
-    tessera keygen --encryptor.nonceLength 38
-    ```
+# Example
 
-Nonce length to use as the initialization vector (IV) for symmetric encryption.
-Defaults to 24.
+```bash
+tessera keygen --encryptor.nonceLength 38
+```
+
+<!--/tabs-->
+
+Nonce length to use as the initialization vector (IV) for symmetric encryption. Defaults to 24.
 
 ### `encryptor.sharedKeyLength`
 
-=== "Syntax"
+<!--tabs-->
 
-    ```bash
-    tessera keygen --encryptor.sharedKeyLength <INTEGER>
-    ```
+# Syntax
 
-=== "Example"
+```bash
+tessera keygen --encryptor.sharedKeyLength <INTEGER>
+```
 
-    ```bash
-    tessera keygen --encryptor.sharedKeyLength 48
-    ```
+# Example
 
-Key length to use for symmetric encryption when generating keys.
-Defaults to 32.
+```bash
+tessera keygen --encryptor.sharedKeyLength 48
+```
+
+<!--/tabs-->
+
+Key length to use for symmetric encryption when generating keys. Defaults to 32.
 
 ### `encryptor.symmetricCipher`
 
-=== "Syntax"
+<!--tabs-->
 
-    ```bash
-    tessera keygen --encryptor.symmetricCipher <STRING>
-    ```
+# Syntax
 
-=== "Example"
+```bash
+tessera keygen --encryptor.symmetricCipher <STRING>
+```
 
-    ```bash
-    tessera keygen --encryptor.symmetricCipher AES/CTR/NoPadding
-    ```
+# Example
 
-Symmetric cipher to use for encrypting data.
-Defaults to `AES/GCM/NoPadding`.
+```bash
+tessera keygen --encryptor.symmetricCipher AES/CTR/NoPadding
+```
+
+<!--/tabs-->
+
+Symmetric cipher to use for encrypting data. Defaults to `AES/GCM/NoPadding`.
 
 ### `encryptor.type`
 
-=== "Syntax"
+<!--tabs-->
 
-    ```bash
-    tessera keygen --encryptor.type <STRING>
-    ```
+# Syntax
 
-=== "Example"
+```bash
+tessera keygen --encryptor.type <STRING>
+```
 
-    ```bash
-    tessera keygen --encryptor.type EC
-    ```
+# Example
 
-[Encryption type].
-Possible values are `EC`, `NACL`, and `CUSTOM`.
-Defaults to `NACL`
+```bash
+tessera keygen --encryptor.type EC
+```
+
+<!--/tabs-->
+
+[Encryption type]. Possible values are `EC`, `NACL`, and `CUSTOM`. Defaults to `NACL`
 
 ### `keyout`, `filename`
 
-=== "Syntax"
+<!--tabs-->
 
-    ```bash
-    tessera keygen --keyout <FILE>[,<FILE>...]
-    ```
+# Syntax
 
-=== "Example"
+```bash
+tessera keygen --keyout <FILE>[,<FILE>...]
+```
 
-    ```bash
-    tessera keygen --keyout /Users/me/keys/nodeKey1,/Users/me/keys/nodeKey2
-    ```
+# Example
 
-Comma-separated list of key files to generate.
-The number of arguments determines the number of key pairs to generate.
-Defaults to `null`.
+```bash
+tessera keygen --keyout /Users/me/keys/nodeKey1,/Users/me/keys/nodeKey2
+```
+
+<!--/tabs-->
+
+Comma-separated list of key files to generate. The number of arguments determines the number of key pairs to generate. Defaults to `null`.
 
 Legacy syntax for this option is `-filename <FILE>[,<FILE>...]`.
 
 ### `pwdout`
 
-=== "Syntax"
+<!--tabs-->
 
-    ```bash
-    tessera keygen --pwdout <FILE>
-    ```
+# Syntax
 
-=== "Example"
+```bash
+tessera keygen --pwdout <FILE>
+```
 
-    ```bash
-    tessera keygen --pwdout /home/me/me_node/passwordFile
-    ```
+# Example
 
-Path to save updated password list to.
-To use this option, you must supply the [`--configout`](#configout) and [`--configfile`](#configfile-config-file) options.
+```bash
+tessera keygen --pwdout /home/me/me_node/passwordFile
+```
+
+<!--/tabs-->
+
+Path to save updated password list to. To use this option, you must supply the [`--configout`](#configout) and [`--configfile`](#configfile-config-file) options.
 
 ### `vault.hashicorp.approlepath`
 
-=== "Syntax"
+<!--tabs-->
 
-    ```bash
-    tessera keygen --vault.hashicorp.approlepath <PATH>
-    ```
+# Syntax
 
-=== "Example"
+```bash
+tessera keygen --vault.hashicorp.approlepath <PATH>
+```
 
-    ```bash
-    tessera keygen --vault.hashicorp.approlepath auth/approle/login
-    ```
+# Example
 
-[AppRole] path for HashiCorp Vault authentication.
-Defaults to `approle`.
+```bash
+tessera keygen --vault.hashicorp.approlepath auth/approle/login
+```
+
+<!--/tabs-->
+
+[AppRole] path for HashiCorp Vault authentication. Defaults to `approle`.
 
 Legacy syntax for this option is `-keygenvaultapprole <PATH>`.
 
 ### `vault.hashicorp.secretenginepath`
 
-=== "Syntax"
+<!--tabs-->
 
-    ```bash
-    tessera keygen --vault.hashicorp.secretenginepath <PATH>
-    ```
+# Syntax
 
-=== "Example"
+```bash
+tessera keygen --vault.hashicorp.secretenginepath <PATH>
+```
 
-    ```bash
-    tessera keygen --vault.hashicorp.secretenginepath /engine/secret
-    ```
+# Example
+
+```bash
+tessera keygen --vault.hashicorp.secretenginepath /engine/secret
+```
+
+<!--/tabs-->
 
 Path to the v2 HashiCorp Vault secret engine.
 
@@ -247,17 +280,21 @@ Legacy syntax for this option is `-keygenvaultsecretengine <PATH>`.
 
 ### `vault.hashicorp.tlskeystore`
 
-=== "Syntax"
+<!--tabs-->
 
-    ```bash
-    tessera keygen --vault.hashicorp.tlskeystore <FILE>
-    ```
+# Syntax
 
-=== "Example"
+```bash
+tessera keygen --vault.hashicorp.tlskeystore <FILE>
+```
 
-    ```bash
-    tessera keygen --vault.hashicorp.tlskeystore /Users/me/auth/keystore.jks
-    ```
+# Example
+
+```bash
+tessera keygen --vault.hashicorp.tlskeystore /Users/me/auth/keystore.jks
+```
+
+<!--/tabs-->
 
 Path to JKS keystore for TLS communication with HashiCorp Vault.
 
@@ -265,17 +302,21 @@ Legacy syntax for this option is `-keygenvaultkeystore <FILE>`.
 
 ### `vault.hashicorp.tlstruststore`
 
-=== "Syntax"
+<!--tabs-->
 
-    ```bash
-    tessera keygen --vault.hashicorp.tlstruststore <FILE>
-    ```
+# Syntax
 
-=== "Example"
+```bash
+tessera keygen --vault.hashicorp.tlstruststore <FILE>
+```
 
-    ```bash
-    tessera keygen --vault.hashicorp.tlstruststore /Users/me/auth/truststore.jks
-    ```
+# Example
+
+```bash
+tessera keygen --vault.hashicorp.tlstruststore /Users/me/auth/truststore.jks
+```
+
+<!--/tabs-->
 
 Path to JKS truststore for TLS communication with HashiCorp Vault.
 
@@ -283,38 +324,45 @@ Legacy syntax for this option is `-keygenvaulttruststore <FILE>`.
 
 ### `vault.type`
 
-=== "Syntax"
+<!--tabs-->
 
-    ```bash
-    tessera keygen --vault.type <STRING>
-    ```
+# Syntax
 
-=== "Example"
+```bash
+tessera keygen --vault.type <STRING>
+```
 
-    ```bash
-    tessera keygen --vault.type HASHICORP
-    ```
+# Example
+
+```bash
+tessera keygen --vault.type HASHICORP
+```
+
+<!--/tabs-->
 
 Key vault provider in which to save the generated key.
 
-If not specified, keys are encrypted and stored on the local filesystem.
-Valid options are `AZURE`, `AWS`, and `HASHICORP`.
+If not specified, keys are encrypted and stored on the local filesystem. Valid options are `AZURE`, `AWS`, and `HASHICORP`.
 
 Legacy syntax for this option is `keygenvaulttype <STRING>`.
 
 ### `vault.url`
 
-=== "Syntax"
+<!--tabs-->
 
-    ```bash
-    tessera keygen --vault.url <STRING>
-    ```
+# Syntax
 
-=== "Example"
+```bash
+tessera keygen --vault.url <STRING>
+```
 
-    ```bash
-    tessera keygen --vault.url https://secretsmanager.us-west-2.amazonaws.com
-    ```
+# Example
+
+```bash
+tessera keygen --vault.url https://secretsmanager.us-west-2.amazonaws.com
+```
+
+<!--/tabs-->
 
 Key vault base URL.
 
@@ -328,247 +376,284 @@ Legacy syntax for this subcommand is `-updatepassword [COMMAND OPTIONS]`.
 
 ### `configfile`, `config-file`
 
-=== "Syntax"
+<!--tabs-->
 
-    ```bash
-    tessera keyupdate --configfile <FILE>
-    ```
+# Syntax
 
-=== "Example"
+```bash
+tessera keyupdate --configfile <FILE>
+```
 
-    ```bash
-    tessera keyupdate --configfile /home/me/me_node/tessera.conf
-    ```
+# Example
+
+```bash
+tessera keyupdate --configfile /home/me/me_node/tessera.conf
+```
+
+<!--/tabs-->
 
 Path to the node's [configuration file](../../HowTo/Configure/Tessera.md).
 
 ### `debug`
 
-=== "Syntax"
-
-    ```bash
-    tessera keyupdate --debug
-    ```
+```bash
+tessera keyupdate --debug
+```
 
 Prints full exception stack traces to `stdout`.
 
 ### `encryptor.ellipticCurve`
 
-=== "Syntax"
+<!--tabs-->
 
-    ```bash
-    tessera keyupdate --encryptor.ellipticCurve <STING>
-    ```
+# Syntax
 
-=== "Example"
+```bash
+tessera keyupdate --encryptor.ellipticCurve <STING>
+```
 
-    ```bash
-    tessera keyupdate --encryptor.ellipticCurve secp384r1
-    ```
+# Example
 
-Elliptic curve to use for the updated keys.
-Defaults to `secp256r1`.
+```bash
+tessera keyupdate --encryptor.ellipticCurve secp384r1
+```
+
+<!--/tabs-->
+
+Elliptic curve to use for the updated keys. Defaults to `secp256r1`.
 
 ### `encryptor.nonceLength`
 
-=== "Syntax"
+<!--tabs-->
 
-    ```bash
-    tessera keyupdate --encryptor.nonceLength <INTEGER>
-    ```
+# Syntax
 
-=== "Example"
+```bash
+tessera keyupdate --encryptor.nonceLength <INTEGER>
+```
 
-    ```bash
-    tessera keyupdate --encryptor.nonceLength 38
-    ```
+# Example
 
-Nonce length to use as the initialization vector (IV) for symmetric encryption.
-Defaults to 24.
+```bash
+tessera keyupdate --encryptor.nonceLength 38
+```
+
+<!--/tabs-->
+
+Nonce length to use as the initialization vector (IV) for symmetric encryption. Defaults to 24.
 
 ### `encryptor.sharedKeyLength`
 
-=== "Syntax"
+<!--tabs-->
 
-    ```bash
-    tessera keyupdate --encryptor.sharedKeyLength <INTEGER>
-    ```
+# Syntax
 
-=== "Example"
+```bash
+tessera keyupdate --encryptor.sharedKeyLength <INTEGER>
+```
 
-    ```bash
-    tessera keyupdate --encryptor.sharedKeyLength 48
-    ```
+# Example
 
-Key length to use for symmetric encryption when updating keys.
-Defaults to 32.
+```bash
+tessera keyupdate --encryptor.sharedKeyLength 48
+```
+
+<!--/tabs-->
+
+Key length to use for symmetric encryption when updating keys. Defaults to 32.
 
 ### `encryptor.symmetricCipher`
 
-=== "Syntax"
+<!--tabs-->
 
-    ```bash
-    tessera keyupdate --encryptor.symmetricCipher <STRING>
-    ```
+# Syntax
 
-=== "Example"
+```bash
+tessera keyupdate --encryptor.symmetricCipher <STRING>
+```
 
-    ```bash
-    tessera keyupdate --encryptor.symmetricCipher AES/CTR/NoPadding
-    ```
+# Example
 
-Symmetric cipher to use for encrypting data.
-Defaults to `AES/GCM/NoPadding`.
+```bash
+tessera keyupdate --encryptor.symmetricCipher AES/CTR/NoPadding
+```
+
+<!--/tabs-->
+
+Symmetric cipher to use for encrypting data. Defaults to `AES/GCM/NoPadding`.
 
 ### `encryptor.type`
 
-=== "Syntax"
+<!--tabs-->
 
-    ```bash
-    tessera keyupdate --encryptor.type <STRING>
-    ```
+# Syntax
 
-=== "Example"
+```bash
+tessera keyupdate --encryptor.type <STRING>
+```
 
-    ```bash
-    tessera keyupdate --encryptor.type EC
-    ```
+# Example
 
-[Encryption type].
-Possible values are `EC`, `NACL`, and `CUSTOM`.
-Defaults to `NACL`.
+```bash
+tessera keyupdate --encryptor.type EC
+```
+
+<!--/tabs-->
+
+[Encryption type]. Possible values are `EC`, `NACL`, and `CUSTOM`. Defaults to `NACL`.
 
 ### `keys.keyData.config.data.aopts.algorithm`
 
-=== "Syntax"
+<!--tabs-->
 
-    ```bash
-    tessera keyupdate --keys.keyData.config.data.aopts.algorithm <STRING>
-    ```
+# Syntax
 
-=== "Example"
+```bash
+tessera keyupdate --keys.keyData.config.data.aopts.algorithm <STRING>
+```
 
-    ```bash
-    tessera keyupdate --keys.keyData.config.data.aopts.algorithm id
-    ```
+# Example
 
-[Argon2] variant to use.
-Defaults to `i`.
+```bash
+tessera keyupdate --keys.keyData.config.data.aopts.algorithm id
+```
+
+<!--/tabs-->
+
+[Argon2] variant to use. Defaults to `i`.
 
 Valid options are `i`, `d`, and `id`.
 
 ### `keys.keyData.config.data.aopts.iterations`
 
-=== "Syntax"
+<!--tabs-->
 
-    ```bash
-    tessera keyupdate --keys.keyData.config.data.aopts.iterations <INTEGER>
-    ```
+# Syntax
 
-=== "Example"
+```bash
+tessera keyupdate --keys.keyData.config.data.aopts.iterations <INTEGER>
+```
 
-    ```bash
-    tessera keyupdate --keys.keyData.config.data.aopts.iterations 4
-    ```
+# Example
 
-Number of [Argon2] iterations to perform.
-Defaults to 10.
+```bash
+tessera keyupdate --keys.keyData.config.data.aopts.iterations 4
+```
+
+<!--/tabs-->
+
+Number of [Argon2] iterations to perform. Defaults to 10.
 
 ### `keys.keyData.config.data.aopts.memory`
 
-=== "Syntax"
+<!--tabs-->
 
-    ```bash
-    tessera keyupdate --keys.keyData.config.data.aopts.memory <INTEGER>
-    ```
+# Syntax
 
-=== "Example"
+```bash
+tessera keyupdate --keys.keyData.config.data.aopts.memory <INTEGER>
+```
 
-    ```bash
-    tessera keyupdate --keys.keyData.config.data.aopts.memory 1248480
-    ```
+# Example
 
-Sets the [Argon2] memory usage.
-Defaults to 1048576.
+```bash
+tessera keyupdate --keys.keyData.config.data.aopts.memory 1248480
+```
+
+<!--/tabs-->
+
+Sets the [Argon2] memory usage. Defaults to 1048576.
 
 ### `keys.keyData.config.data.aopts.parallelism`
 
-=== "Syntax"
+<!--tabs-->
 
-    ```bash
-    tessera keyupdate --keys.keyData.config.data.aopts.parallelism <INTEGER>
-    ```
+# Syntax
 
-=== "Example"
+```bash
+tessera keyupdate --keys.keyData.config.data.aopts.parallelism <INTEGER>
+```
 
-    ```bash
-    tessera keyupdate --keys.keyData.config.data.aopts.parallelism 6
-    ```
+# Example
 
-Sets the number of parallel [Argon2] threads.
-Defaults to 4.
+```bash
+tessera keyupdate --keys.keyData.config.data.aopts.parallelism 6
+```
+
+<!--/tabs-->
+
+Sets the number of parallel [Argon2] threads. Defaults to 4.
 
 ### `keys.keyData.privateKeyPath`
 
-=== "Syntax"
+<!--tabs-->
 
-    ```bash
-    tessera keyupdate --keys.keyData.privateKeyPath <PATH>
-    ```
+# Syntax
 
-=== "Example"
+```bash
+tessera keyupdate --keys.keyData.privateKeyPath <PATH>
+```
 
-    ```bash
-    tessera keyupdate --keys.keyData.privateKeyPath /Users/me/mynode/nodekey.key
-    ```
+# Example
 
-Path to the private key file to update.
-This option is required.
+```bash
+tessera keyupdate --keys.keyData.privateKeyPath /Users/me/mynode/nodekey.key
+```
+
+<!--/tabs-->
+
+Path to the private key file to update. This option is required.
 
 ### `keys.password`
 
-=== "Syntax"
+<!--tabs-->
 
-    ```bash
-    tessera keyupdate --keys.passwordFile <STRING>
-    ```
+# Syntax
 
-=== "Example"
+```bash
+tessera keyupdate --keys.passwordFile <STRING>
+```
 
-    ```bash
-    tessera keyupdate --keys.passwordFile changeme
-    ```
+# Example
+
+```bash
+tessera keyupdate --keys.passwordFile changeme
+```
+
+<!--/tabs-->
 
 Password to unlock the private key specified using [`keys.keyData.privateKeyPath`](#keys.keyData.privateKeyPath).
 
 ### `keys.passwordFile`
 
-=== "Syntax"
+<!--tabs-->
 
-    ```bash
-    tessera keyupdate --keys.passwordFile <FILE>
-    ```
+# Syntax
 
-=== "Example"
+```bash
+tessera keyupdate --keys.passwordFile <FILE>
+```
 
-    ```bash
-    tessera keyupdate --keys.passwordFile /Users/me/mynode/passwordFile
-    ```
+# Example
 
-File containing the password to unlock the private key specified using
-[`keys.keyData.privateKeyPath`](#keys.keyData.privateKeyPath).
+```bash
+tessera keyupdate --keys.passwordFile /Users/me/mynode/passwordFile
+```
+
+<!--/tabs-->
+
+File containing the password to unlock the private key specified using [`keys.keyData.privateKeyPath`](#keys.keyData.privateKeyPath).
 
 ## `version`
 
-=== "Syntax"
-
-    ```bash
-    tessera version
-    ```
+```bash
+tessera version
+```
 
 Prints version information and exits.
 
 <!-- links -->
+
 [default Argon2 configuration]: ../../HowTo/Configure/Keys/Secure-Keys.md
 [Encryption type]: ../../HowTo/Configure/Cryptographic-elliptic-curves.md
 [generate one or more key pairs]: ../../HowTo/Generate-Keys/Generate-Keys.md

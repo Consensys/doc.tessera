@@ -1,0 +1,32 @@
+{
+  "unversionedId": "HowTo/Generate-Keys/Generate-Keys",
+  "id": "HowTo/Generate-Keys/Generate-Keys",
+  "title": "Overview",
+  "description": "How to generate keys.",
+  "source": "@site/docs/HowTo/Generate-Keys/Generate-Keys.md",
+  "sourceDirName": "HowTo/Generate-Keys",
+  "slug": "/HowTo/Generate-Keys/",
+  "permalink": "/docs/HowTo/Generate-Keys/",
+  "draft": false,
+  "editUrl": "https://github.com/ConsenSys/doc.tessera/tree/main/docs/HowTo/Generate-Keys/Generate-Keys.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "Overview",
+    "description": "How to generate keys.",
+    "sidebar_position": 1
+  },
+  "sidebar": "docSidebar",
+  "previous": {
+    "title": "Generate keys",
+    "permalink": "/docs/category/generate-keys"
+  },
+  "next": {
+    "title": "File based keys",
+    "permalink": "/docs/HowTo/Generate-Keys/File-Stored-Keys"
+  }
+}

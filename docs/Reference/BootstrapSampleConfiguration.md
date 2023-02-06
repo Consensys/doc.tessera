@@ -1,3 +1,9 @@
+---
+title: Bootstrap node configuration
+description: Bootstrap node configuration file
+sidebar_position: 3
+---
+
 # Bootstrap node configuration file
 
 To start Tessera as a bootstrap node:
@@ -5,10 +11,11 @@ To start Tessera as a bootstrap node:
 - Set [`bootstrapNode`](SampleConfiguration.md#bootstrapnode) to `true`.
 - Use the `CUSTOM` [encryptor type](SampleConfiguration.md#encryptor) to integrate a third party encryptor implementation.
 
-!!! info
+:::info
 
-    Tessera bootstrap nodes function the same way [bootnodes](https://besu.hyperledger.org/en/stable/HowTo/Find-and-Connect/Bootnodes/)
-    do for Hyperledger Besu.
+Tessera bootstrap nodes function the same way [bootnodes](https://besu.hyperledger.org/en/stable/HowTo/Find-and-Connect/Bootnodes/) do for Hyperledger Besu.
+
+:::
 
 ## Example configuration file
 
@@ -52,9 +59,7 @@ To start Tessera as a bootstrap node:
         "serverTlsCertificatePath": "Path",
         "serverKeyStorePassword": "String",
         "serverTrustStore": "Path",
-        "serverTrustCertificates": [
-          "Path..."
-        ],
+        "serverTrustCertificates": ["Path..."],
         "serverTrustStorePassword": "String",
         "serverTrustMode": "Enumeration: CA, TOFU, WHITELIST, CA_OR_TOFU, NONE",
         "clientKeyStore": "Path",
@@ -62,9 +67,7 @@ To start Tessera as a bootstrap node:
         "clientTlsCertificatePath": "Path",
         "clientKeyStorePassword": "String",
         "clientTrustStore": "Path",
-        "clientTrustCertificates": [
-          "Path..."
-        ],
+        "clientTrustCertificates": ["Path..."],
         "clientTrustStorePassword": "String",
         "clientTrustMode": "Enumeration: CA, TOFU, WHITELIST, CA_OR_TOFU, NONE",
         "knownClientsFile": "Path",
@@ -120,17 +123,15 @@ To start Tessera as a bootstrap node:
       }
     ]
   },
-  "alwaysSendTo": [
-    "String..."
-  ],
+  "alwaysSendTo": ["String..."],
   "unixSocketFile": "Path",
   "features": {
     "enableRemoteKeyValidation": false
   },
   "encryptor": {
     "type": "Enumeration: NACL, EC, CUSTOM",
-    "properties":{
-      "symmetricCipher":"String (defaults to AES/GCM/NoPadding if type = EC)",
+    "properties": {
+      "symmetricCipher": "String (defaults to AES/GCM/NoPadding if type = EC)",
       "ellipticCurve": "String (defaults to secp256r1 if type = EC)",
       "nonceLength": "String (defaults to 24 if type = EC)",
       "sharedKeyLength": "String (defaults to 32 if type = EC)"

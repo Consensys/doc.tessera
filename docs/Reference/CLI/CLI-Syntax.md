@@ -1,5 +1,7 @@
 ---
-Description: Tessera command line options.
+title: Options
+description: Tessera command line options.
+sidebar_position: 1
 ---
 
 # Tessera command line
@@ -16,82 +18,87 @@ tessera [OPTIONS] [SUBCOMMAND] [SUBCOMMAND OPTIONS]
 
 ### `configfile`, `config-file`
 
-=== "Syntax"
+<!--tabs-->
 
-    ```bash
-    --configfile <FILE>
-    ```
+# Syntax
 
-=== "Example"
+```bash
+--configfile <FILE>
+```
 
-    ```bash
-    --configfile /home/me/me_node/tessera.conf
-    ```
+# Example
+
+```bash
+--configfile /home/me/me_node/tessera.conf
+```
+
+<!--/tabs-->
 
 Path to the node's [configuration file](../../HowTo/Configure/Tessera.md).
 
 ### `debug`
 
-=== "Syntax"
-
-    ```bash
-    --debug
-    ```
+```bash
+--debug
+```
 
 Prints full exception stack traces to `stdout`.
 
 ### `help`
 
-=== "Syntax"
-
-    ```bash
-    --help
-    ```
+```bash
+--help
+```
 
 Shows the help message and exits.
 
 ### `override`
 
-=== "Syntax"
+<!--tabs-->
 
-    ```bash
-    --override <STRING=STRING>
-    ```
+# Syntax
 
-=== "Example"
+```bash
+--override <STRING=STRING>
+```
 
-    ```bash
-    --override jdbc.username=admin
-    ```
+# Example
 
-Overrides a value in the configuration file specified using [`--configfile`](#configfile-config-file).
-This option can be specified multiple times.
+```bash
+--override jdbc.username=admin
+```
+
+<!--/tabs-->
+
+Overrides a value in the configuration file specified using [`--configfile`](#configfile-config-file). This option can be specified multiple times.
 
 Short syntax for this option is `-o <STRING=STRING>`.
 
 ### `pidfile`
 
-=== "Syntax"
+<!--tabs-->
 
-    ```bash
-    --pidfile <FILE>
-    ```
+# Syntax
 
-=== "Example"
+```bash
+--pidfile <FILE>
+```
 
-    ```bash
-    --pidfile node1PID
-    ```
+# Example
+
+```bash
+--pidfile node1PID
+```
+
+<!--/tabs-->
 
 Creates the specified file containing the process ID (PID) of the Tessera instance.
 
 ### `recover`
 
-=== "Syntax"
-
-    ```bash
-    --recover
-    ```
+```bash
+--recover
+```
 
 Runs Tessera in [data recovery mode](../../HowTo/Use/Data-Recovery.md).
 

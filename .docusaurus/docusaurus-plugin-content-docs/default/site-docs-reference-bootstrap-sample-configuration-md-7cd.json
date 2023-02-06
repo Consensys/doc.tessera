@@ -1,0 +1,32 @@
+{
+  "unversionedId": "Reference/BootstrapSampleConfiguration",
+  "id": "Reference/BootstrapSampleConfiguration",
+  "title": "Bootstrap node configuration",
+  "description": "Bootstrap node configuration file",
+  "source": "@site/docs/Reference/BootstrapSampleConfiguration.md",
+  "sourceDirName": "Reference",
+  "slug": "/Reference/BootstrapSampleConfiguration",
+  "permalink": "/docs/Reference/BootstrapSampleConfiguration",
+  "draft": false,
+  "editUrl": "https://github.com/ConsenSys/doc.tessera/tree/main/docs/Reference/BootstrapSampleConfiguration.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "title": "Bootstrap node configuration",
+    "description": "Bootstrap node configuration file",
+    "sidebar_position": 3
+  },
+  "sidebar": "docSidebar",
+  "previous": {
+    "title": "Configuration file",
+    "permalink": "/docs/Reference/SampleConfiguration"
+  },
+  "next": {
+    "title": "Tessera API",
+    "permalink": "/docs/Reference/TesseraAPI"
+  }
+}

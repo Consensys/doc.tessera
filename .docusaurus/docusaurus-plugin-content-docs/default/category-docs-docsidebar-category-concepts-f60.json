@@ -1,0 +1,15 @@
+{
+  "title": "Concepts",
+  "slug": "/category/concepts",
+  "permalink": "/docs/category/concepts",
+  "navigation": {
+    "previous": {
+      "title": "Tessera Private Transaction Manager",
+      "permalink": "/docs/"
+    },
+    "next": {
+      "title": "Privacy Manager",
+      "permalink": "/docs/category/privacy-manager"
+    }
+  }
+}

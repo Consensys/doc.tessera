@@ -1,0 +1,32 @@
+{
+  "unversionedId": "HowTo/Generate-Keys/File-Stored-Keys",
+  "id": "HowTo/Generate-Keys/File-Stored-Keys",
+  "title": "File based keys",
+  "description": "How to generate file-stored keys",
+  "source": "@site/docs/HowTo/Generate-Keys/File-Stored-Keys.md",
+  "sourceDirName": "HowTo/Generate-Keys",
+  "slug": "/HowTo/Generate-Keys/File-Stored-Keys",
+  "permalink": "/docs/HowTo/Generate-Keys/File-Stored-Keys",
+  "draft": false,
+  "editUrl": "https://github.com/ConsenSys/doc.tessera/tree/main/docs/HowTo/Generate-Keys/File-Stored-Keys.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "File based keys",
+    "description": "How to generate file-stored keys",
+    "sidebar_position": 2
+  },
+  "sidebar": "docSidebar",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/docs/HowTo/Generate-Keys/"
+  },
+  "next": {
+    "title": "Hashicorp Vault keys",
+    "permalink": "/docs/HowTo/Generate-Keys/Hashicorp-Vault"
+  }
+}

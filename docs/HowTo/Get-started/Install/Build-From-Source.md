@@ -7,13 +7,11 @@ description: Build Tessera from source
 ## Prerequisites
 
 - [Java JDK](https://www.oracle.com/java/technologies/javase-downloads.html) version 11 or higher.
-- [libsodium](https://libsodium.gitbook.io/doc/) is required if using [kalium](https://github.com/abstractj/kalium)
-  instead of the default [jnacl](https://github.com/neilalexander/jnacl) NaCl implementation.
-  See the [libsodium installation docs](https://libsodium.gitbook.io/doc/) or install using [brew](https://brew.sh/) (macOS only):
+- [libsodium](https://libsodium.gitbook.io/doc/) is required if using [kalium](https://github.com/abstractj/kalium) instead of the default [jnacl](https://github.com/neilalexander/jnacl) NaCl implementation. See the [libsodium installation docs](https://libsodium.gitbook.io/doc/) or install using [brew](https://brew.sh/) (macOS only):
 
-    ```bash
-    brew install libsodium
-    ```
+  ```bash
+  brew install libsodium
+  ```
 
 ## Build Tessera
 

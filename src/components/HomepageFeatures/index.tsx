@@ -21,31 +21,31 @@ type CardItem = {
 const CardList: CardItem[] = [
   {
     title: "🏁 Getting Started",
-    link: "/category/get-started-with-web3signer",
+    link: "/docs/category/get-started",
     description: (
       <>
-        Get started with Web3Signer by installing as binary, Docker, or
-        Kubernetes. Hit the ground running in less than 5 minutes!
+        Get started with Tessera by installing as binary, Docker, or Kubernetes.
+        Hit the ground running in less than 5 minutes!
       </>
     ),
     buttonName: "Go to installation",
     buttonType: "success",
   },
   {
-    title: "💭 Use Signing Keys",
-    link: "/HowTo/Use-Signing-Keys",
+    title: "💭 Use Tessera with Besu or GoQuorum",
+    link: "/docs/HowTo/Get-started/Use-GoQuorum-with-Tessera",
     description: (
       <>
-        Check out the various ways you can use signing keys such as raw files,
-        keystores, vaults or via a HSM (Hardware Security Modules).
+        Check out how to configure Tessera as the private transaction manager
+        for Hyperledger Besu or GoQuorum.
       </>
     ),
-    buttonName: "Use signing keys",
+    buttonName: "Use Tessera",
     buttonType: "secondary",
   },
   {
     title: "👨‍💻 Reference",
-    link: "/Reference/CLI/CLI-Subcommands",
+    link: "/docs/Reference/CLI/CLI-Subcommands",
     description: (
       <>
         Find command line arguments, API methods through JSON-RPC, and general

@@ -1,9 +1,6 @@
 const lightCodeTheme = require("prism-react-renderer/themes/github");
 const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
-const isDev = process.env.NODE_ENV === "development";
-const baseUrl = isDev ? "/" : "/doc.tessera";
-
 /**
  * @type {import('redocusaurus').PresetEntry}
  */
@@ -44,7 +41,7 @@ const config = {
   tagline:
     "An open-source private transaction manager developed under the Apache 2.0 license and written in Java. Tessera serves as a privact manager for privacy-enabled Ethereum clients like GoQuorum and Hyperledger Besu",
   url: "https://consensys.github.io",
-  baseUrl,
+  baseUrl: "/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "throw",
   favicon: "img/favicon.ico",

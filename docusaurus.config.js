@@ -188,19 +188,19 @@ const config = {
             items: [
               {
                 label: "How To",
-                to: "/docs/category/how-to",
+                to: "/category/how-to",
               },
               {
                 label: "Concepts",
-                to: "/docs/category/concepts",
+                to: "/category/concepts",
               },
               {
                 label: "Tutorials",
-                to: "/docs/category/tutorials",
+                to: "/category/tutorials",
               },
               {
                 label: "Reference",
-                to: "/docs/category/reference",
+                to: "/category/reference",
               },
             ],
           },

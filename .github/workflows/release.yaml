@@ -33,6 +33,3 @@ jobs:
         uses: ConsenSys/docs-gha/release@main
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-  deploy:
-    needs: release
-    uses: ./.github/workflows/pages-deploy.yaml

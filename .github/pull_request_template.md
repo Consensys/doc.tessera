@@ -41,5 +41,5 @@ For tool changes:
 
 Make sure that:
 
-- [ ] You've [fixed any issues](https://consensys.net/docs/doctools/en/latest/contribute/fix-cicd-errors/) raised by the tests.
+- [ ] You've fixed any issues raised by the tests.
 - [ ] You've previewed the build which is auto-deployed by Vercel below.

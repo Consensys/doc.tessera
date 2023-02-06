@@ -2,7 +2,6 @@
   "label": "Configure",
   "position": 4,
   "link": {
-    "type": "generated-index",
-    "description": "configure"
+    "type": "generated-index"
   }
 }

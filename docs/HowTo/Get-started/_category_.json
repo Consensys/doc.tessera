@@ -1,8 +1,7 @@
 {
-  "label": "Get Started",
+  "label": "Get started",
   "position": 1,
   "link": {
-    "type": "generated-index",
-    "description": "get started"
+    "type": "generated-index"
   }
 }

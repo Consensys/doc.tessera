@@ -69,7 +69,8 @@ const config = {
           sidebarPath: require.resolve("./sidebars.js"),
           // Set a base path separate from default /docs
           editUrl: "https://github.com/ConsenSys/doc.tessera/tree/main/",
-          routeBasePath: "/docs",
+          routeBasePath: "/",
+          path: "docs",
           // @ts-ignore
           // eslint-disable-next-line global-require
           remarkPlugins: [require("remark-docusaurus-tabs")],

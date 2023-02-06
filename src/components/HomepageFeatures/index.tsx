@@ -21,7 +21,7 @@ type CardItem = {
 const CardList: CardItem[] = [
   {
     title: "🏁 Getting Started",
-    link: "/docs/category/get-started",
+    link: "/category/get-started",
     description: (
       <>
         Get started with Tessera by installing as binary, Docker, or Kubernetes.
@@ -33,7 +33,7 @@ const CardList: CardItem[] = [
   },
   {
     title: "💭 Use Tessera with Besu or GoQuorum",
-    link: "/docs/HowTo/Get-started/Use-GoQuorum-with-Tessera",
+    link: "/HowTo/Get-started/Use-GoQuorum-with-Tessera",
     description: (
       <>
         Check out how to configure Tessera as the private transaction manager
@@ -45,7 +45,7 @@ const CardList: CardItem[] = [
   },
   {
     title: "👨‍💻 Reference",
-    link: "/docs/Reference/CLI/CLI-Subcommands",
+    link: "/Reference/CLI/CLI-Subcommands",
     description: (
       <>
         Find command line arguments, API methods through JSON-RPC, and general

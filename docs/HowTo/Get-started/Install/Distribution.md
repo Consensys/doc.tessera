@@ -1,5 +1,5 @@
 ---
-title: Install Tessera
+title: Install binary distribution
 description: Install Tessera
 sidebar_position: 2
 ---

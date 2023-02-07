@@ -1,5 +1,5 @@
 ---
-title: Generating certificates
+title: Generate certificates
 description: Generating certificates
 sidebar_position: 3
 ---

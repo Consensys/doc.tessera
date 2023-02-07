@@ -1,5 +1,5 @@
 ---
-title: Mandatory Recipients
+title: Mandatory recipients
 description: How to use mandatory recipients
 sidebar_position: 3
 ---

@@ -1,5 +1,5 @@
 ---
-title: Tessera Multi-tenancy Migration
+title: Multi-tenancy migration
 description: Migrate two Tessera nodes into a single multi-tenancy node
 sidebar_position: 2
 ---

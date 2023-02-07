@@ -1,5 +1,7 @@
 ---
+title: Build from source
 description: Build Tessera from source
+sidebar_position: 3
 ---
 
 # Build from source

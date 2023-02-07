@@ -1,5 +1,5 @@
 ---
-title: Upgrading the database
+title: Upgrade the database
 description: Upgrading the database
 sidebar_position: 3
 ---

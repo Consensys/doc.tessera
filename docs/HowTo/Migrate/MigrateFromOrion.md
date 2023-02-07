@@ -1,5 +1,5 @@
 ---
-title: Migrating from Orion to Tessera
+title: Migrate from Orion
 description: Migrate your Orion configuration and data to Tessera.
 sidebar_position: 1
 ---

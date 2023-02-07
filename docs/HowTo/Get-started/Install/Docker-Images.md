@@ -1,5 +1,5 @@
 ---
-title: Use Tessera Docker images
+title: Run Tessera from Docker image
 description: Use Tessera Docker images
 sidebar_position: 1
 ---

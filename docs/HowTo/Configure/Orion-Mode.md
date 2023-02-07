@@ -1,5 +1,5 @@
 ---
-title: Hyperledger Besu Support
+title: Hyperledger Besu support
 description: Configure Tessera to use Besu.
 sidebar_position: 11
 ---

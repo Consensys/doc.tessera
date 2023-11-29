@@ -6,7 +6,7 @@ const config = {
   title: "ConsenSys Tessera",
   tagline:
     "An open-source privacy transaction manager developed under the Apache 2.0 license and written in Java. Tessera serves as a privacy manager for privacy-enabled Ethereum clients like GoQuorum and Hyperledger Besu",
-  url: "https://docs.tessera.consensys.net",
+  url: "https://docs.tessera.consensys.io",
   baseUrl: "/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "throw",

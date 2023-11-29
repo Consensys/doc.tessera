@@ -4,6 +4,9 @@ description: Database configuration
 sidebar_position: 8
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # Database configuration
 
 You can configure the [`jdbc`](../../Reference/SampleConfiguration.md#jdbc) item in the Tessera [configuration file](Tessera.md) to connect to an external database. You can specify any valid JDBC URL. Refer to your provider's details to construct a valid JDBC URL.
@@ -46,32 +49,35 @@ Jasypt encryption is currently only available for the `jdbc.password` field.
 1. Download and unzip [Jasypt](https://github.com/jasypt/jasypt) and navigate to the `bin` directory.
 1. Encrypt the password using the following command:
 
-   <!--tabs-->
+<Tabs>
 
-   # Command
+<TabItem value="Command" label="Command" default>  
 
-   ```bash
-   ./encrypt.sh input=dbpassword password=quorum
-   ```
+```bash
+./encrypt.sh input=dbpassword password=quorum
+```
 
-   # Output
+</TabItem>
+<TabItem value="Output" label="Output">
 
-   ```bash
-   ----ENVIRONMENT-----------------
+    ```bash
+    ----ENVIRONMENT-----------------
 
-   Runtime: Oracle Corporation Java HotSpot(TM) 64-Bit Server VM 25.171-b11
+    Runtime: Oracle Corporation Java HotSpot(TM) 64-Bit Server VM 25.171-b11
 
-   ----ARGUMENTS-------------------
+    ----ARGUMENTS-------------------
 
-   input: dbpassword
-   password: quorum
+    input: dbpassword
+    password: quorum
 
-   ----OUTPUT----------------------
+    ----OUTPUT----------------------
 
-   rJ70hNidkrpkTwHoVn2sGSp3h3uBWxjb
-   ```
+    rJ70hNidkrpkTwHoVn2sGSp3h3uBWxjb
+    ```
 
-   <!--tabs-->
+
+</TabItem>
+</Tabs>
 
 1. Place the wrapped output, `ENC(rJ70hNidkrpkTwHoVn2sGSp3h3uBWxjb)`, in the configuration JSON file.
 

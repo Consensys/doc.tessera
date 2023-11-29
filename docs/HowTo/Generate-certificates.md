@@ -4,6 +4,9 @@ description: Generating certificates
 sidebar_position: 3
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # Generating certificates
 
 You can generate certificates to use with [TLS](Configure/TLS.md) using a third-party tool such as OpenSSL or Keytool.
@@ -103,15 +106,16 @@ Follow these steps to use a public IP address as CN.
 
 2. Test whether the certificate was generated with the expected subject alternative names:
 
-   <!--tabs-->
+  <Tabs>
 
-   # Command
+   <TabItem value="Command" label="Command" default>   
 
    ```bash
    openssl req -text -noout -in tessera_cer.csr
    ```
 
-   # Output example
+   </TabItem>
+   <TabItem value="Output example" label="Output example" default>
 
    ```bash
    [...]
@@ -123,8 +127,8 @@ Follow these steps to use a public IP address as CN.
    IP Address:<PRIVATE-IP-ADDRESS>
    [...]
    ```
-
-   <!--/tabs-->
+   </TabItem>
+  </Tabs>
 
 ### Generating a new certificate
 
@@ -136,15 +140,16 @@ Follow these steps to use a public IP address as CN.
 
 2. Test whether the generated certificate contains the subject alternative names:
 
-   <!--tabs-->
+   <Tabs>
 
-   # Command
+   <TabItem value="Command" label="Command" default>   
 
    ```bash
    openssl x509 -in tessera_cer.pem -text -noout
    ```
 
-   # Output example
+   </TabItem>
+   <TabItem value="Output example" label="Output example" default>
 
    ```bash
    [...]
@@ -157,4 +162,5 @@ Follow these steps to use a public IP address as CN.
    [...]
    ```
 
-   <!--\tabs-->
+   </TabItem>
+  </Tabs>

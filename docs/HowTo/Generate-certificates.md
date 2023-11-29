@@ -106,7 +106,7 @@ Follow these steps to use a public IP address as CN.
 
 2. Test whether the certificate was generated with the expected subject alternative names:
 
-  <Tabs>
+<Tabs>
 
    <TabItem value="Command" label="Command" default>   
 
@@ -128,7 +128,7 @@ Follow these steps to use a public IP address as CN.
    [...]
    ```
    </TabItem>
-  </Tabs>
+</Tabs>
 
 ### Generating a new certificate
 
@@ -140,7 +140,7 @@ Follow these steps to use a public IP address as CN.
 
 2. Test whether the generated certificate contains the subject alternative names:
 
-   <Tabs>
+<Tabs>
 
    <TabItem value="Command" label="Command" default>   
 
@@ -163,4 +163,4 @@ Follow these steps to use a public IP address as CN.
    ```
 
    </TabItem>
-  </Tabs>
+</Tabs>

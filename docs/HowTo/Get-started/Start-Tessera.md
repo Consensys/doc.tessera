@@ -4,6 +4,9 @@ description: Get started with Tessera and send a payload
 sidebar_position: 2
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # Start Tessera
 
 ## Prerequisites
@@ -101,20 +104,22 @@ tessera --debug -configfile config.json
 
 Use the `upcheck` method to confirm Tessera is up and running.
 
-<!--tabs-->
+<Tabs>
 
-# Request
+  <TabItem value="Request" label="Request" default>
 
 ```bash
 curl http://localhost:9081/upcheck
 ```
 
-# Result
+  </TabItem>
+  <TabItem value="Result" label="Result" >
 
 ```bash
 I'm up!
 ```
 
-<!--tabs-->
+  </TabItem>
+</Tabs>
 
 [transaction manager and local enclave]: ../../Concepts/Privacy-Manager/Privacy-manager.md

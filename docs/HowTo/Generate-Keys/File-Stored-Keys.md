@@ -4,6 +4,9 @@ description: How to generate file-stored keys
 sidebar_position: 2
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # Store keys in files
 
 You can generate a private and public key pair and store it in files.
@@ -52,21 +55,23 @@ tessera -updatepassword --keys.keyData.privateKeyPath /path/to/.key
 
 - Change the password of a locked key. This requires providing the current password for the key (either inline or as a file):
 
-<!--tabs-->
+<Tabs>
 
-# Inline
+  <TabItem value="Inline" label="Inline" default>
 
 ```bash
 tessera -updatepassword --keys.keyData.privateKeyPath /path/to/.key --keys.passwords <password>
 ```
 
-# File
+  </TabItem>
+  <TabItem value="File" label="File" >
 
 ```bash
 tessera -updatepassword --keys.keyData.privateKeyPath /path/to/.key --keys.passwordFile /path/to/pwds
 ```
 
-<!--/tabs-->
+  </TabItem>
+</Tabs>
 
 - Use different Argon2 options from the defaults when updating the password. You only need to provide options if you wish to override their defaults:
 

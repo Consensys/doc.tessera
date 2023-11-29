@@ -4,6 +4,9 @@ description: Tessera command line options.
 sidebar_position: 1
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # Tessera command line
 
 This reference describes the syntax of the Tessera command line interface (CLI) options.
@@ -18,21 +21,23 @@ tessera [OPTIONS] [SUBCOMMAND] [SUBCOMMAND OPTIONS]
 
 ### `configfile`, `config-file`
 
-<!--tabs-->
+<Tabs>
 
-# Syntax
+  <TabItem value="Syntax" label="Syntax" default>
 
 ```bash
 --configfile <FILE>
 ```
 
-# Example
+  </TabItem>
+  <TabItem value="Example" label="Example" >
 
 ```bash
 --configfile /home/me/me_node/tessera.conf
 ```
 
-<!--/tabs-->
+  </TabItem>
+</Tabs>
 
 Path to the node's [configuration file](../../HowTo/Configure/Tessera.md).
 
@@ -54,21 +59,23 @@ Shows the help message and exits.
 
 ### `override`
 
-<!--tabs-->
+<Tabs>
 
-# Syntax
+  <TabItem value="Syntax" label="Syntax" default>
 
 ```bash
 --override <STRING=STRING>
 ```
 
-# Example
+  </TabItem>
+  <TabItem value="Example" label="Example" >
 
 ```bash
 --override jdbc.username=admin
 ```
 
-<!--/tabs-->
+  </TabItem>
+</Tabs>
 
 Overrides a value in the configuration file specified using [`--configfile`](#configfile-config-file). This option can be specified multiple times.
 
@@ -76,21 +83,23 @@ Short syntax for this option is `-o <STRING=STRING>`.
 
 ### `pidfile`
 
-<!--tabs-->
+<Tabs>
 
-# Syntax
+  <TabItem value="Syntax" label="Syntax" default>
 
 ```bash
 --pidfile <FILE>
 ```
 
-# Example
+  </TabItem>
+  <TabItem value="Example" label="Example" >
 
 ```bash
 --pidfile node1PID
 ```
 
-<!--/tabs-->
+  </TabItem>
+</Tabs>
 
 Creates the specified file containing the process ID (PID) of the Tessera instance.
 

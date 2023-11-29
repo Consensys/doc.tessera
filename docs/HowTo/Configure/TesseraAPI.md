@@ -4,6 +4,9 @@ description: Configure servers for Tessera API
 sidebar_position: 5
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # Configure servers for Tessera API
 
 You can configure the [servers for the Tessera API](../../Reference/TesseraAPI.md) in the Tessera [configuration file](Tessera.md).
@@ -29,112 +32,115 @@ You can also [configure CORS](#configure-cors) for the `ThirdParty` server type.
 
 ### HTTP server configuration
 
-<!--tabs-->
+<Tabs>
 
-# Syntax
+  <TabItem value="Syntax" label="Syntax" default>
 
-```json
-{
-  "app": "<app type>",
-  "serverAddress": "http://[host]:[port]/[path]",
-  "communicationType": "REST"
-}
-```
+    ```json
+    {
+      "app": "<app type>",
+      "serverAddress": "http://[host]:[port]/[path]",
+      "communicationType": "REST"
+    }
+    ```
+  </TabItem>
+  <TabItem value="ThirdParty example" label="ThirdParty example">
 
-# ThirdParty example
+    ```json
+    {
+      "app": "ThirdParty",
+      "serverAddress": "http://localhost:9081",
+      "communicationType": "REST"
+    }
+    ```
 
-```json
-{
-  "app": "ThirdParty",
-  "serverAddress": "http://localhost:9081",
-  "communicationType": "REST"
-}
-```
-
-<!--/tabs-->
+  </TabItem>
+</Tabs>
 
 ### HTTPS server configuration
 
-<!--tabs-->
+<Tabs>
 
-# Syntax
+  <TabItem value="Syntax" label="Syntax" default>
 
-```json
-{
-    "app": "<app type>",
-    "serverAddress": "https://[host]:[port]/[path]",
-    "communicationType" : "REST",
-    "sslConfig": {
-        <SSL settings>
+    ```json
+    {
+        "app": "<app type>",
+        "serverAddress": "https://[host]:[port]/[path]",
+        "communicationType" : "REST",
+        "sslConfig": {
+            <SSL settings>
+        }
     }
-}
-```
+    ```
+  </TabItem>
+  <TabItem value="P2P example" label="P2P example">
 
-# P2P example
+    ```json
+    {
+      "app": "P2P",
+      "serverAddress": "http://localhost:9001",
+      "sslConfig": {
+        "tls": "enum STRICT,OFF",
+        "generateKeyStoreIfNotExisted": "boolean",
+        "serverKeyStore": "Path",
+        "serverTlsKeyPath": "Path",
+        "serverTlsCertificatePath": "Path",
+        "serverKeyStorePassword": "String",
+        "serverTrustStore": "Path",
+        "serverTrustCertificates": ["Path"],
+        "serverTrustStorePassword": "String",
+        "serverTrustMode": "TOFU",
+        "clientKeyStore": "Path",
+        "clientTlsKeyPath": "Path",
+        "clientTlsCertificatePath": "Path",
+        "clientKeyStorePassword": "String",
+        "clientTrustStore": "Path",
+        "clientTrustCertificates": ["Path"],
+        "clientTrustStorePassword": "String",
+        "clientTrustMode": "TOFU",
+        "knownClientsFile": "Path",
+        "knownServersFile": "Path"
+      },
+      "communicationType": "REST",
+      "properties": {
+        "partyInfoInterval": "Long",
+        "enclaveKeySyncInterval": "Long",
+        "syncInterval": "Long",
+        "resendWaitTime": "Long"
+      }
+    }
+    ```
 
-```json
-{
-  "app": "P2P",
-  "serverAddress": "http://localhost:9001",
-  "sslConfig": {
-    "tls": "enum STRICT,OFF",
-    "generateKeyStoreIfNotExisted": "boolean",
-    "serverKeyStore": "Path",
-    "serverTlsKeyPath": "Path",
-    "serverTlsCertificatePath": "Path",
-    "serverKeyStorePassword": "String",
-    "serverTrustStore": "Path",
-    "serverTrustCertificates": ["Path"],
-    "serverTrustStorePassword": "String",
-    "serverTrustMode": "TOFU",
-    "clientKeyStore": "Path",
-    "clientTlsKeyPath": "Path",
-    "clientTlsCertificatePath": "Path",
-    "clientKeyStorePassword": "String",
-    "clientTrustStore": "Path",
-    "clientTrustCertificates": ["Path"],
-    "clientTrustStorePassword": "String",
-    "clientTrustMode": "TOFU",
-    "knownClientsFile": "Path",
-    "knownServersFile": "Path"
-  },
-  "communicationType": "REST",
-  "properties": {
-    "partyInfoInterval": "Long",
-    "enclaveKeySyncInterval": "Long",
-    "syncInterval": "Long",
-    "resendWaitTime": "Long"
-  }
-}
-```
-
-<!--/tabs-->
+  </TabItem>
+</Tabs>
 
 ### Unix socket server configuration
 
-<!--tabs-->
+<Tabs>
 
-# Syntax
+  <TabItem value="Syntax" label="Syntax" default>
 
-```json
-{
-  "app": "<app type>",
-  "serverAddress": "unix://[path]",
-  "communicationType": "REST"
-}
-```
+    ```json
+    {
+      "app": "<app type>",
+      "serverAddress": "unix://[path]",
+      "communicationType": "REST"
+    }
+    ```
+  </TabItem>
+  <TabItem value="Q2T example" label="Q2T example">
 
-# Q2T Example
+    ```json
+    {
+      "app": "Q2T",
+      "serverAddress": "unix:/tmp/tm.ipc",
+      "communicationType": "REST"
+    }
+    ```
 
-```json
-{
-  "app": "Q2T",
-  "serverAddress": "unix:/tmp/tm.ipc",
-  "communicationType": "REST"
-}
-```
-
-<!--/tabs-->
+  </TabItem>
+</Tabs>
 
 ### Configure CORS
 

@@ -4,6 +4,9 @@ description: Configure file-based key pairs.
 sidebar_position: 4
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # File-based key pairs
 
 To configure Tessera to use file-based [key pairs](Overview.md), provide the location of the files in the [configuration file](../../../Reference/SampleConfiguration.md#keydata). You can use Tessera to [generate file-based keys].
@@ -28,9 +31,9 @@ The contents of the public key file must contain the public key only.
 
 The contents of the private key file must contain the private key in the [inline key pair](Inline-Key-Pairs.md) format.
 
-<!--tabs-->
+<Tabs>
 
-# Password protected
+  <TabItem value="Password protected" label="Password protected" default>
 
 ```json
 {
@@ -50,6 +53,8 @@ The contents of the private key file must contain the private key in the [inline
 ```
 
 # Unprotected
+  </TabItem>
+  <TabItem value="Unprotected" label="Unprotected" >
 
 :::danger "Security warning"
 
@@ -65,8 +70,8 @@ Inline unprotected keys are not secure because the private key is exposed. Do no
   }
 }
 ```
-
-<!--/tabs-->
+  </TabItem>
+</Tabs>
 
 Provide passwords using the following methods to ensure Tessera can decrypt and use the private keys.
 

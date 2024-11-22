@@ -1,80 +1,83 @@
 ---
+title: Database
 description: Database configuration
+sidebar_position: 8
 ---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 # Database configuration
 
-You can configure the [`jdbc`](../../Reference/SampleConfiguration.md#jdbc) item in the Tessera
-[configuration file](Tessera.md) to connect to an external database.
-You can specify any valid JDBC URL.
-Refer to your provider's details to construct a valid JDBC URL.
+You can configure the [`jdbc`](../../Reference/SampleConfiguration.md#jdbc) item in the Tessera [configuration file](Tessera.md) to connect to an external database. You can specify any valid JDBC URL. Refer to your provider's details to construct a valid JDBC URL.
 
-!!! example "JDBC configuration"
-
-    ```json
-    "jdbc": {
-      "url": "[JDBC URL]",
-      "username": "[JDBC Username]",
-      "password": "[JDBC Password]"
-    }
-    ```
+```json title="JDBC configuration"
+"jdbc": {
+    "url": "[JDBC URL]",
+    "username": "[JDBC Username]",
+    "password": "[JDBC Password]"
+}
+```
 
 ## Database password encryption
 
-We recommend encrypting your database password.
-You can do this using [Jasypt](https://github.com/jasypt/jasypt).
+We recommend encrypting your database password. You can do this using [Jasypt](https://github.com/jasypt/jasypt).
 
 To enable this feature, replace your plaintext database password with its encrypted value and wrap it inside an `ENC()` function.
 
-!!! example "JDBC configuration with encrypted password"
+```json title="JDBC configuration with encrypted password"
+"jdbc": {
+    "username": "sa",
+    "password": "ENC(ujMeokIQ9UFHSuBYetfRjQTpZASgaua3)",
+    "url": "jdbc:h2:/qdata/c1/db1",
+    "autoCreateTables": true
+}
+```
 
-    ```json
-    "jdbc": {
-        "username": "sa",
-        "password": "ENC(ujMeokIQ9UFHSuBYetfRjQTpZASgaua3)",
-        "url": "jdbc:h2:/qdata/c1/db1",
-        "autoCreateTables": true
-    }
-    ```
+Jasypt requires a secret key (password) and a configured algorithm to encrypt/decrypt this configuration entry. This password can either be loaded into Tessera from the file system or user input. For file system input, the location of this secret file must set in the `TESSERA_CONFIG_SECRET` environment variable.
 
-Jasypt requires a secret key (password) and a configured algorithm to encrypt/decrypt this configuration entry.
-This password can either be loaded into Tessera from the file system or user input.
-For file system input, the location of this secret file must set in the `TESSERA_CONFIG_SECRET` environment variable.
+If the database password isn't wrapped inside `ENC()`, Tessera treats it as a plaintext password. This approach is not recommended for production environments.
 
-If the database password isn't wrapped inside `ENC()`, Tessera treats it as a plaintext password.
-This approach is not recommended for production environments.
+:::note
 
-!!! note
+Jasypt encryption is currently only available for the `jdbc.password` field.
 
-    Jasypt encryption is currently only available for the `jdbc.password` field.
+:::
 
 ### How to encrypt the database password
 
 1. Download and unzip [Jasypt](https://github.com/jasypt/jasypt) and navigate to the `bin` directory.
 1. Encrypt the password using the following command:
 
-    === "Command"
+<Tabs>
 
-        ```bash
-        ./encrypt.sh input=dbpassword password=quorum
-        ```
+<TabItem value="Command" label="Command" default>  
 
-    === "Output"
+```bash
+./encrypt.sh input=dbpassword password=quorum
+```
 
-        ```bash
-        ----ENVIRONMENT-----------------
+</TabItem>
+<TabItem value="Output" label="Output">
 
-        Runtime: Oracle Corporation Java HotSpot(TM) 64-Bit Server VM 25.171-b11
+    ```bash
+    ----ENVIRONMENT-----------------
 
-        ----ARGUMENTS-------------------
+    Runtime: Oracle Corporation Java HotSpot(TM) 64-Bit Server VM 25.171-b11
 
-        input: dbpassword
-        password: quorum
+    ----ARGUMENTS-------------------
 
-        ----OUTPUT----------------------
+    input: dbpassword
+    password: quorum
 
-        rJ70hNidkrpkTwHoVn2sGSp3h3uBWxjb
-        ```
+    ----OUTPUT----------------------
+
+    rJ70hNidkrpkTwHoVn2sGSp3h3uBWxjb
+    ```
+
+
+</TabItem>
+</Tabs>
 
 1. Place the wrapped output, `ENC(rJ70hNidkrpkTwHoVn2sGSp3h3uBWxjb)`, in the configuration JSON file.
 
@@ -89,8 +92,8 @@ cp some-jdbc-driver.jar tessera-[version]/lib/
 ./tessera-[version]/bin/tessera -configfile config.json
 ```
 
-[DDL scripts] are available for more popular databases.
-These can be adapted to whichever database you choose.
+[DDL scripts] are available for more popular databases. These can be adapted to whichever database you choose.
 
 <!-- links -->
+
 [DDL scripts]: https://github.com/ConsenSys/tessera/tree/master/ddls/create-table

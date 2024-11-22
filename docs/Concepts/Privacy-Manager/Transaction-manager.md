@@ -1,5 +1,7 @@
 ---
+title: Transaction manager
 description: Overview of Tessera transaction manager
+sidebar_position: 2
 ---
 
 # Transaction manager
@@ -13,8 +15,6 @@ Tessera's transaction manager:
 
 ## Private transaction flow
 
-The transaction manager distributes private payloads received from the privacy-enabled
-Ethereum clients.
+The transaction manager distributes private payloads received from the privacy-enabled Ethereum clients.
 
-Refer to the [GoQuorum private transaction documentation](https://consensys.net/docs/goquorum/en/stable/concepts/privacy/private-transaction-lifecycle/)
-to see the transaction manager's role in the private transaction lifecycle.
+Refer to the [GoQuorum private transaction documentation](https://consensys.net/docs/goquorum/en/stable/concepts/privacy/private-transaction-lifecycle/) to see the transaction manager's role in the private transaction lifecycle.

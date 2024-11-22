@@ -1,15 +1,14 @@
 ---
+title: Overview
 description: Configure access to public and private key pairs.
+sidebar_position: 1
 ---
 
 # Overview
 
-Tessera uses private and public keys pairs to provide transaction privacy.
-You can use existing key pairs or [use Tessera to generate new key pairs](../../Generate-Keys).
+Tessera uses private and public keys pairs to provide transaction privacy. You can use existing key pairs or [use Tessera to generate new key pairs](../../Generate-Keys).
 
-You can configure Tessera to use one or more keys.
-Configure access to the keys by specifying [`keys`](../../../Reference/SampleConfiguration.md#keys) in the
-Tessera [configuration file](../Tessera.md).
+You can configure Tessera to use one or more keys. Configure access to the keys by specifying [`keys`](../../../Reference/SampleConfiguration.md#keys) in the Tessera [configuration file](../Tessera.md).
 
 !!! Example "Keys configuration"
 
@@ -30,26 +29,22 @@ Tessera [configuration file](../Tessera.md).
     }
     ```
 
-Configure the [`keyData`](../../../Reference/SampleConfiguration.md#keydata) object to access the key pair using any of
-the following methods:
+Configure the [`keyData`](../../../Reference/SampleConfiguration.md#keydata) object to access the key pair using any of the following methods:
 
-| Configuration method  | Description                                                                             |
-|:----------------------|:----------------------------------------------------------------------------------------|
-| [Direct]              | Provide the key pair data in plain text.                                                |
-| [Inline]              | Provide the key pair data in plain text with the private key in a `config` JSON object. |
-| [File-based]          | Provide the location of the key pair files.                                             |
-| [Azure Key Vault]     | Provide the location of the keys in the [configured Azure Key Vault].                   |
-| [AWS Secrets Manager] | Provide the location of the keys in the [configured AWS Secrets Manager].               |
-| [HashiCorp Vault]     | Provide the location of the keys in the [configured HashiCorp Vault].                   |
+| Configuration method | Description |
+| :-- | :-- |
+| [Direct] | Provide the key pair data in plain text. |
+| [Inline] | Provide the key pair data in plain text with the private key in a `config` JSON object. |
+| [File-based] | Provide the location of the key pair files. |
+| [Azure Key Vault] | Provide the location of the keys in the [configured Azure Key Vault]. |
+| [AWS Secrets Manager] | Provide the location of the keys in the [configured AWS Secrets Manager]. |
+| [HashiCorp Vault] | Provide the location of the keys in the [configured HashiCorp Vault]. |
 
-If using a vault to store your keys, use the [`keyVaultConfigs`](../../../Reference/SampleConfiguration.md#keyvaultconfigs)
-object to configure the details to access the vault.
+If using a vault to store your keys, use the [`keyVaultConfigs`](../../../Reference/SampleConfiguration.md#keyvaultconfigs) object to configure the details to access the vault.
 
 ## Use multiple keys
 
-You can configure multiple key pairs for a Tessera node.
-In this case, any one of the public keys can be used to address a private transaction to that node.
-Tessera tries each key to find one that can decrypt the payload.
+You can configure multiple key pairs for a Tessera node. In this case, any one of the public keys can be used to address a private transaction to that node. Tessera tries each key to find one that can decrypt the payload.
 
 !!! note
 
@@ -57,8 +52,7 @@ Tessera tries each key to find one that can decrypt the payload.
 
 ## View the keys registered for a node
 
-You can use the `ThirdParty` API [`/keys`](https://consensys.github.io/tessera/#operation/getPublicKeys) endpoint to
-view the public keys of your Tessera node.
+You can use the `ThirdParty` API [`/keys`](https://consensys.github.io/tessera/#operation/getPublicKeys) endpoint to view the public keys of your Tessera node.
 
 !!! example "`/keys` request"
 
@@ -80,9 +74,7 @@ You must [configure the corresponding server](../TesseraAPI.md).
 
 ## Provide key passwords at runtime
 
-Tessera displays a CLI prompt if it has incomplete password data for its [locked keys](Secure-Keys.md).
-You can use this prompt to provide the required passwords for each key instead of providing them in the
-configuration file itself.
+Tessera displays a CLI prompt if it has incomplete password data for its [locked keys](Secure-Keys.md). You can use this prompt to provide the required passwords for each key instead of providing them in the configuration file itself.
 
 !!! example "CLI password prompt"
 
@@ -100,25 +92,20 @@ configuration file itself.
 
 If you [generate new keys](../../Generate-Keys), you can update the Tessera configuration file manually.
 
-However, you can use the [`tessera keygen -configfile`](../../../Reference/CLI/CLI-Subcommands.md#configfile-config-file) option to
-automatically update a configuration file.
-This is particularly useful for scripting.
-For example:
+However, you can use the [`tessera keygen -configfile`](../../../Reference/CLI/CLI-Subcommands.md#configfile-config-file) option to automatically update a configuration file. This is particularly useful for scripting. For example:
 
 ```bash
 tessera -keygen -filename key1 -configfile /path/to/config.json --configout /path/to/new.json --pwdout /path/to/new.pwds
 ```
 
-The command prompts for a password and generates the `key1` pair.
-The Tessera configuration `/path/to/config.json` is updated and saved to `/path/to/new.json`.
+The command prompts for a password and generates the `key1` pair. The Tessera configuration `/path/to/config.json` is updated and saved to `/path/to/new.json`.
 
 New passwords are appended to the existing password file defined in `/path/to/config.json` and written to `/path/to/new.pwds`.
 
-If the [`--configout`](../../../Reference/CLI/CLI-Subcommands.md#configout) and
-[`--pwdout`](../../../Reference/CLI/CLI-Subcommands.md#pwdout) options are not provided, the updated
-JSON configuration prints to the terminal.
+If the [`--configout`](../../../Reference/CLI/CLI-Subcommands.md#configout) and [`--pwdout`](../../../Reference/CLI/CLI-Subcommands.md#pwdout) options are not provided, the updated JSON configuration prints to the terminal.
 
 <!-- links -->
+
 [Direct]: Direct-Key-Pairs.md
 [Inline]: Inline-Key-Pairs.md
 [File-based]: File-Based-Key-Pairs.md

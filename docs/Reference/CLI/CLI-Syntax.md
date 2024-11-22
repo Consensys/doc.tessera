@@ -1,6 +1,11 @@
 ---
-Description: Tessera command line options.
+title: Options
+description: Tessera command line options.
+sidebar_position: 1
 ---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 # Tessera command line
 
@@ -16,82 +21,93 @@ tessera [OPTIONS] [SUBCOMMAND] [SUBCOMMAND OPTIONS]
 
 ### `configfile`, `config-file`
 
-=== "Syntax"
+<Tabs>
 
-    ```bash
-    --configfile <FILE>
-    ```
+  <TabItem value="Syntax" label="Syntax" default>
 
-=== "Example"
+```bash
+--configfile <FILE>
+```
 
-    ```bash
-    --configfile /home/me/me_node/tessera.conf
-    ```
+  </TabItem>
+  <TabItem value="Example" label="Example" >
+
+```bash
+--configfile /home/me/me_node/tessera.conf
+```
+
+  </TabItem>
+</Tabs>
 
 Path to the node's [configuration file](../../HowTo/Configure/Tessera.md).
 
 ### `debug`
 
-=== "Syntax"
-
-    ```bash
-    --debug
-    ```
+```bash
+--debug
+```
 
 Prints full exception stack traces to `stdout`.
 
 ### `help`
 
-=== "Syntax"
-
-    ```bash
-    --help
-    ```
+```bash
+--help
+```
 
 Shows the help message and exits.
 
 ### `override`
 
-=== "Syntax"
+<Tabs>
 
-    ```bash
-    --override <STRING=STRING>
-    ```
+  <TabItem value="Syntax" label="Syntax" default>
 
-=== "Example"
+```bash
+--override <STRING=STRING>
+```
 
-    ```bash
-    --override jdbc.username=admin
-    ```
+  </TabItem>
+  <TabItem value="Example" label="Example" >
 
-Overrides a value in the configuration file specified using [`--configfile`](#configfile-config-file).
-This option can be specified multiple times.
+```bash
+--override jdbc.username=admin
+```
+
+  </TabItem>
+</Tabs>
+
+Overrides a value in the configuration file specified using [`--configfile`](#configfile-config-file). This option can be specified multiple times.
 
 Short syntax for this option is `-o <STRING=STRING>`.
 
 ### `pidfile`
 
-=== "Syntax"
+<Tabs>
 
-    ```bash
-    --pidfile <FILE>
-    ```
+  <TabItem value="Syntax" label="Syntax" default>
 
-=== "Example"
+```bash
+--pidfile <FILE>
+```
 
-    ```bash
-    --pidfile node1PID
-    ```
+  </TabItem>
+  <TabItem value="Example" label="Example" >
+
+```bash
+--pidfile node1PID
+```
+
+  </TabItem>
+</Tabs>
 
 Creates the specified file containing the process ID (PID) of the Tessera instance.
 
 ### `recover`
 
-=== "Syntax"
-
-    ```bash
-    --recover
-    ```
+```bash
+--recover
+```
 
 Runs Tessera in [data recovery mode](../../HowTo/Use/Data-Recovery.md).
 

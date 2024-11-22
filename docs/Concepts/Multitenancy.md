@@ -5,12 +5,12 @@ description: Tessera and GoQuorum multi-tenancy
 # Multi-tenancy
 
 In a typical [GoQuorum](https://consensys.net/docs/goquorum/en/stable/) or
-[Hyperledger Besu privacy-enabled](https://besu.hyperledger.org/en/stable/Concepts/Privacy/Privacy-Overview/) network,
-each participant (tenant) uses their own GoQuorum or Besu node and Tessera node.
+[Hyperledger Besu versions prior to 25.1.0 privacy-enabled](https://besu.hyperledger.org/en/stable/Concepts/Privacy/Privacy-Overview/) network,
+each participant (tenant) uses their own GoQuorum or Besu (versions prior to 25.1.0) node and Tessera node.
 Tessera can be configured to manage multiple key pairs owned by one tenant.
 This model is costly to run and scale as more tenants join the network.
 
-Multi-tenancy allows multiple tenants to use the same GoQuorum or Besu node, with each tenant having its own private state.
+Multi-tenancy allows multiple tenants to use the same GoQuorum or Besu (versions prior to 25.1.0 node), with each tenant having its own private state.
 Each tenant can perform all operations (create, read, and write) on any contract in its private state.
 Multi-tenancy provides a user experience similar to a user running their own managed node.
 
@@ -20,7 +20,7 @@ multiple private states.
 The public state remains publicly available to all tenants, and private states are logically separated.
 
 For more information about GoQuorum multi-tenancy via MPS, see the [GoQuorum multi-tenancy documentation](https://consensys.net/docs/goquorum/en/stable/concepts/multi-tenancy/).
-For more information about Besu multi-tenancy, see the [Besu multi-tenancy documentation](https://besu.hyperledger.org/en/stable/Concepts/Privacy/Multi-Tenancy/).
+For more information about Besu (versions prior to 25.1.0) multi-tenancy, see the [Besu multi-tenancy documentation](https://besu.hyperledger.org/en/stable/Concepts/Privacy/Multi-Tenancy/).
 
 ## Use GoQuorum multi-tenancy
 
@@ -40,8 +40,8 @@ To use GoQuorum multi-tenancy via MPS:
 
 3. You can also [add a new tenant to a multi-tenant node](https://consensys.net/docs/goquorum/en/stable/configure-and-manage/manage/multi-tenancy/multi-tenancy/).
 
-## Use Besu multi-tenancy
+## Use Besu (versions prior to 25.1.0) multi-tenancy
 
-To use Besu multi-tenancy, you must [create a privacy-enabled network](https://besu.hyperledger.org/en/stable/Tutorials/Privacy/Configuring-Privacy/).
+To use Besu versions prior to 25.1.0 multi-tenancy, you must [create a privacy-enabled network](https://besu.hyperledger.org/en/stable/Tutorials/Privacy/Configuring-Privacy/).
 
-Configure multi-tenant Besu and Tessera nodes according to the [Besu multi-tenancy configuration tutorial](https://besu.hyperledger.org/en/stable/Tutorials/Privacy/Configuring-Multi-Tenancy/).
+Configure multi-tenant Besu (versions prior to 25.1.0) and Tessera nodes according to the [Besu multi-tenancy configuration tutorial](https://besu.hyperledger.org/en/stable/Tutorials/Privacy/Configuring-Multi-Tenancy/).

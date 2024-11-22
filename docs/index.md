@@ -10,7 +10,7 @@ description: Tessera is an open-source private transaction manager developed und
 Tessera is an open-source private transaction manager developed under the Apache 2.0 license and
 written in Java. The primary application of Tessera is as the privacy manager for privacy-enabled
 Ethereum clients such as [GoQuorum](https://docs.goquorum.consensys.net) and
-[Hyperledger Besu](https://besu.hyperledger.org/en/stable/).
+[Hyperledger Besu versions prior to 25.1.0](https://besu.hyperledger.org/en/stable/).
 
 ## What can you do with Tessera?
 

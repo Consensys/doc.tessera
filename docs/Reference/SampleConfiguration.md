@@ -152,7 +152,7 @@ Configuration items can be [overridden from the command line].
 
 ### `mode`
 
-Set the `mode` to `orion` to use Tessera as the privacy manager when using [Hyperledger Besu versions prior to 25.1.0 in non-GoQuorum mode](https://besu.hyperledger.org/en/stable/HowTo/Use-Privacy/Use-GoQuorum-compatible-privacy/). [Enabling this mode](../HowTo/Configure/Orion-Mode.md) changes Tessera's behavior. This property is optional.
+Set the `mode` to `orion` to use Tessera as the privacy manager when using [Hyperledger Besu (versions earlier than 25.1.0) in non-GoQuorum mode](https://besu.hyperledger.org/en/stable/HowTo/Use-Privacy/Use-GoQuorum-compatible-privacy/). [Enabling this mode](../HowTo/Configure/Orion-Mode.md) changes Tessera's behavior. This property is optional.
 
 ### `useWhiteList`
 

@@ -6,7 +6,7 @@ sidebar_position: 1
 
 # Privacy manager
 
-Tessera is the privacy manager for the [GoQuorum](https://docs.goquorum.consensys.net) and [Hyperledger Besu](https://besu.hyperledger.org/en/stable/) Ethereum clients.
+Tessera is the privacy manager for [GoQuorum](https://docs.goquorum.consensys.net) and [Hyperledger Besu versions earlier than 25.1.0](https://besu.hyperledger.org/en/stable/).
 
 A privacy manager consists of two components, each with their own responsibilities:
 

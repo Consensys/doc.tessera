@@ -6,7 +6,8 @@ sidebar_position: 1
 
 # Migrating from Orion to Tessera
 
-A utility is included in Tessera which enables migration of an Orion configuration file and database to a Tessera configuration file and database for Hyperledger Besu users.
+Tessera includes a utility that enables migration of an Orion configuration file and database to a Tessera configuration file and database,
+for Hyperledger Besu (versions earlier than 25.1.0).
 
 A full migration workflow would be as follows:
 
